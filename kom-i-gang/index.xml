@@ -10,16 +10,16 @@
     <atom:link href="https://xqus.github.io/openpgp-docs/kom-i-gang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Some Chapter title</title>
+      <title>Kom i gang med OpenPGP</title>
       <link>https://xqus.github.io/openpgp-docs/kom-i-gang/</link>
       <pubDate>Wed, 22 Feb 2017 10:58:45 +0100</pubDate>
       
       <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/</guid>
       <description>
 
-&lt;h3 id=&#34;chapter-x&#34;&gt;Chapter X&lt;/h3&gt;
+&lt;h3 id=&#34;kapittel-1&#34;&gt;Kapittel 1&lt;/h3&gt;
 
-&lt;h1 id=&#34;some-chapter-title&#34;&gt;Some Chapter title&lt;/h1&gt;
+&lt;h1 id=&#34;kom-i-gang-med-openpgp&#34;&gt;Kom i gang med OpenPGP&lt;/h1&gt;
 
 &lt;p&gt;Lorem ipsum&lt;/p&gt;
 </description>
