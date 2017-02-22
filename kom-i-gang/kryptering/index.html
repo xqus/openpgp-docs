@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kom i gang med OpenPGP</title>
+    <title>Kryptering</title>
     <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/openpgp-docs/kom-i-gang/">
+  <body class="" data-url="/openpgp-docs/kom-i-gang/kryptering/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -52,7 +52,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/openpgp-docs/kom-i-gang/">
+      <li class="dd-item  parent" data-nav-id="/openpgp-docs/kom-i-gang/">
         <a href="/openpgp-docs/kom-i-gang/">
           <span>
             
@@ -108,7 +108,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/kryptering/">
+            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/kryptering/">
               <a href="/openpgp-docs/kom-i-gang/kryptering/">
                 <span>Kryptering     </i></span>
               </a>
@@ -203,46 +203,81 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
                 
                 
                 
                   
                     
                     
+                <a href="/openpgp-docs/kom-i-gang/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                    
                   
                 
                   
                 
-                <span itemprop="title"> Kom i gang med OpenPGP</span>
+                <span itemprop="title"> Kryptering</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
               
 
             </div>
             
-              <div id="chapter">
-            
     	        <div id="body-inner">
                 
+                <h1>Kryptering</h1>
+                
+
+<p>Kryptering av en melding eller fil gjør at ingen andre enn avsender og
+mottaker kan lese innholdet. Når du skal sende og motta krypterte meldinger har
+din offentlige og private nøkkel helt klare funksjoner. Du kan se på din offentlige
+nøkkel som en åpen safe. Når du krypterer et dokument legger du det inn i safen
+og vrir om kodelåsen flere ganger. Den private nøkkelen er kombinasjonen du
+trenger for å åpne safen.</p>
+
+<p>Hvis du vil kryptere en melding til Alice bruker du Alice sin offentlige nøkkel.
+Hun kan da dekryptere den med sin private nøkkel. Hvis Alice vil sende deg en
+kryptert melding krypterer hun den med din offentlige nøkkel. Du kan da
+dekryptere den med din private nøkkel.</p>
+
+<p>Før du kan sende krypterte meldinger må du importere den offentlige nøkkelen til
+mottakeren, slik som beskrevet i Nøkkelring-kapittelet.</p>
+
+<div class="notices warning" ><p>Før du sender en kryptert melding er det viktig at du verifiserer at du bruker riktig offentlig nøkkel.</p>
+</div>
 
 
+<pre><code> C:\&gt;gpg --output doc.gpg --encrypt --recipient alice@cyb.org doc.txt
+</code></pre>
 
-<h3 id="kapittel-1">Kapittel 1</h3>
+<p><code>--recipient</code> parameteren spesifiseres en gang for hver mottaker og er
+etterfulgt av en mottaker. I dette tilfellet <code>alice@cyb.org</code>. Dersom du selv
+skal kunne dekryptere dokumentet må du også spesifisere deg selv som mottaker i
+tillegg.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<p>For å dekryptere et dokument benyttes <code>--decrypt</code> parameteren. Du trenger da
+den private nøkkelen som tilhører den offentlige nøkkelen som ble brukt for å
+kryptere dokumentet.</p>
 
-<p>Lorem ipsum</p>
+<pre><code>C:\&gt;gpg --output doc.txt --decrypt doc.gpg
+</code></pre>
 
 
-      
-        </div> 
       
       </div>
     </div>
 
     <div id="navigation">
         
-        
-        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/hva-er-openpgp" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/signering"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/wot" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

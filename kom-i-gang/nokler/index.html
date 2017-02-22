@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Hva er OpenPGP</title>
+    <title>Komme i gang med nøkler</title>
     <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
+  <body class="" data-url="/openpgp-docs/kom-i-gang/nokler/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -68,7 +68,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
               <a href="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
                 <span>Hva er OpenPGP     </i></span>
               </a>
@@ -84,7 +84,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/nokler/">
+            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/nokler/">
               <a href="/openpgp-docs/kom-i-gang/nokler/">
                 <span>Komme i gang med nøkler     </i></span>
               </a>
@@ -217,7 +217,7 @@
                 
                   
                 
-                <span itemprop="title"> Hva er OpenPGP</span>
+                <span itemprop="title"> Komme i gang med nøkler</span>
               </div>
               
                   <div class="progress">
@@ -226,10 +226,11 @@
 <ul>
 <li>
 <ul>
-<li><a href="#før-du-starter">Før du starter</a></li>
-<li><a href="#kom-i-gang">Kom i gang</a></li>
-<li><a href="#installere-på-windows">Installere på Windows</a></li>
-<li><a href="#installere-på-linux">Installere på Linux</a></li>
+<li><a href="#offentlig-nøkkel">Offentlig nøkkel</a></li>
+<li><a href="#privat-nøkkel">Privat nøkkel</a></li>
+<li><a href="#brukeridentiteter">Brukeridentiteter</a></li>
+<li><a href="#generer-dine-egne-nøkler">Generer dine egne nøkler</a></li>
+<li><a href="#tilbakekallingssertifikat">Tilbakekallingssertifikat</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -242,89 +243,171 @@
             
     	        <div id="body-inner">
                 
-                <h1>Hva er OpenPGP</h1>
+                <h1>Komme i gang med nøkler</h1>
                 
 
 
 
-<p>OpenPGP er en standard som definerer formater for kryptering og signering av
-digitale meldinger og filer. OpenPGP benyttes i stor grad til kryptering av
-epost og kan installeres som et tilegg til flere epostklienter.</p>
+<p>Dine OpenPGP-nøkler er det du, eller de du kommuniserer med bruker som grunnalag
+i de kryptografiske funksjonene. I OpenPGP består dine nøkler av flere
+forskjellige nøkler som til sammen danner ditt nøkkelpar.</p>
 
-<p>OpenPGP benytter en krypteringsmetode som gjør at de partene som skal
-kommunisere ikke trenger å avtale krypteringnøkkel på forhånd. I steden benyttes
-mottakers offentlige nøkkel til å kryptere data med. Denne kan da bare
-dekrypteres dersom man ha den tilhørende private nøkkelen.</p>
+<p>Et OpenPGP nøkkelpar identifiseres med det som kalles et fingerprint eller
+fingeravtrykk. Et fingeravtrykk kan se slik ut:
+<code>EAB9 F918 6C7F E39E EBA3  BAA8 D775 F425 69CD DB80</code>
+Bare ved å verifisere hele fingeravtrykket kan du være sikker på at det er
+riktig nøkkel.</p>
 
-<p>Signering fungerer på motsatt måte. Avsender signerer med sin private nøkkel.
-Denne signaturen kan så valideres med den offentlige nøkkelen.</p>
+<p>Fingeravtrykket for din nøkkel vil være det samme uansett hvilke endringer du
+gjør med nøkkelen din.</p>
 
-<h2 id="før-du-starter">Før du starter</h2>
+<h2 id="offentlig-nøkkel">Offentlig nøkkel</h2>
 
-<p>Dersom du vil benytte OpenPGP til kryptering og signering av epost anbefaler jeg
-<a href="https://emailselfdefense.fsf.org/en/">Email Self Defense Guiden</a> til Free
-Software Foundation. Denne guider deg gjennom installasjon av GnuPG og Thunderbird
-med Enigmail, og hjelper deg sende din første kryptere epost.</p>
+<p>Din offentlige nøkkel er den delen av nøkkelen du skal dele med andre. Denne
+benyttes til å kryptere meldinger som skal sendes til deg, og til å verifisere
+meldinger du har signert med OpenPGP.</p>
 
-<p>Innholdet videre i denne guiden forklarer OpenPGP konspter bruken av GnuPG fra
-kommandolinjen. Bruk av kommandolinjeverktøy er ikke noe alle vil bruke i
-hverdagen, men til tross for at du kanske vil benytte et grafisk grensesnitt
-i for eksempel Thunderbird vil denne guiden være nyttig da den forklarer
-grunnleggende prinsipper med OpenPGP.</p>
+<div class="notices note" ><p>Meldinger som er kryptert med din offentlige nøkkel kan bare dekrypteres med din private nøkkel.</p>
+</div>
 
-<h2 id="kom-i-gang">Kom i gang</h2>
 
-<p>For å komme i gang med OpenPGP trenger du først og fremst selve OpenPGP
-programvaren. Det finnes et par alternativer men vi skal installere den
-vanligste <em>Gnu Privacy Guard</em>, forkortet GnuPG eller GPG.</p>
+<h2 id="privat-nøkkel">Privat nøkkel</h2>
 
-<p>GnuPG finnes til de vanligste operativsystem og kan lastes ned fra <a href="http://www.gnupg.org">GnuPG</a> sine
-hjemmesider.</p>
+<p>Din private nøkkel benyttes til å signere meldinger du sender, samt å dekryptere
+meldinger som er kryptert med din offentlige nøkkel. Det er mulig å ha flere
+undernøkler i ditt nøkkelpar, til forskjellig bruk eller til forskjellige
+enheter. De private nøklene kan ha flere funksjoner:</p>
 
-<p>GnuPG er et kommandolinjeverktøy. Det betyr at det i utgangspunktet ikke finnes
-noe grafisk grensesnitt og at det kjøres fra kommandolinjen. Det finnes
-heldigvis grafiske grensesnitt til en del epostklienter slik at bruken av GnuPG
-ikke kompliserer bruken av epost. For å gjøre det enklest mulig anbefaler jeg at
-du bruker Thunderbird med Enigmail til epost.</p>
+<ol>
+<li><strong>Autorisering:</strong> Benyttes for å signere andre nøkler og brukeridentiteter for å bevise at de tilhører ditt nøkkelpar.</li>
+<li><strong>Kryptering:</strong> Benyttes til å motte krypterte meldinger.</li>
+<li><strong>Signering:</strong> Benyttes til å signere utgående meldinger for å bevise at de er sendt av eieren av en bestemt OpenPGP nøkkel.</li>
+<li><strong>Autentisering:</strong> Benyttes til blandt annet autntisering av SSH.</li>
+</ol>
 
-<h2 id="installere-på-windows">Installere på Windows</h2>
+<p>Når du lager ditt nøkkelpar må du velge hvilken nøkkeltype din primære nøkkel
+skal ha. Din primære nøkkel vil alltid benyttes til <em>autorisering</em> av eventuelt
+andre nøkler og av brukeridentiter.</p>
 
-<p>Last ned <strong>Simple installer for GnuPG modern</strong> og følg installeringsveiviseren.
-Når den er ferdig skal du kunne kjøre <code>gpg</code> kommandoen fra kommandolinjen.
-For å åpne kommandolinjen trykk <code>WIN+R</code> skriv inn <code>cmd</code> og trykk ENTER.</p>
+<div class="notices warning" ><p>Gjør alt du kan for å holde din private nøkkel privat.</p>
+</div>
 
-<p>For å kontrollere at alt har gått som det skal kan du skrive: <code>gpg --version</code>
-og trykke ENTER.
-Det skal gi deg noe slikt som:</p>
 
-<pre><code>C:\&gt;gpg --version
-gpg (GnuPG) 2.1.17
-libgcrypt 1.7.5
-Copyright (C) 2016 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later &lt;https://gnu.org/licenses/gpl.html&gt;
+<h2 id="brukeridentiteter">Brukeridentiteter</h2>
+
+<p>Brukeridentiteter er det som tilegner et navn og en epostadresse til din nøkkel.
+Et nøkkelpar kan ha så mange brukeridentiteter man vil, men en av de vil være
+primær og vil bli brukt for å gi navn til nøkkelen i OpenPGP verktøyene.
+En brukeridentitet består av <code>Navn (kommentar) &lt;epost&gt;</code>. Kommentar og epost er
+i utgangspunktet frivillig.</p>
+
+<h2 id="generer-dine-egne-nøkler">Generer dine egne nøkler</h2>
+
+<p>For å generere dine nøkler starter du GnuPG med <code>--gen-key</code> parameteren.
+Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
+er avhengig av bruken.</p>
+
+<pre><code>C:\&gt;gpg --gen-key
+gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
-Home: C:/Users/BRUKERNAVN/AppData/Roaming/gnupg
-Supported algorithms:
-Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
-Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
-      CAMELLIA128, CAMELLIA192, CAMELLIA256
-Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
-Compression: Uncompressed, ZIP, ZLIB, BZIP2
+Please select what kind of key you want:
+(1) RSA and RSA (default)
+(2) DSA and Elgamal
+(3) DSA (sign only)
+(4) RSA (sign only)
+Your selection?
 </code></pre>
 
-<p>Legg merke til <code>Home: C:/Users/BRUKERNAVN/AppData/Roaming/gnupg</code>. Det er i
-denne mappen konfigurasjonsfiler og nøkler lagres. Den kan være forskjellig
-på din datamaskin.</p>
+<p>Du får da velg om hvilken nøkkel du ønsker. I utgangspunktet er valg 1 greit.</p>
 
-<h2 id="installere-på-linux">Installere på Linux</h2>
-
-<p>For å installere GnuPG søk etter GnuPG pakken i ditt pakkesystem. På Ubuntu for
-eksempel installere det slik:</p>
-
-<pre><code>apt-get install gnupg2
+<pre><code>Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
 </code></pre>
+
+<p>Deretter må du velge nøkkellengde. I utgangspunktet er både <code>2048</code> og <code>4096</code>
+greie valg. Større nøkler er i utganspunktet bedre, men dersom du for eksempel
+vil benytte en Yubikey for å lagre nøkkelen din må du velge <code>2048</code>.</p>
+
+<pre><code>What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+       0 = key does not expire
+    &lt;n&gt;  = key expires in n days
+    &lt;n&gt;w = key expires in n weeks
+    &lt;n&gt;m = key expires in n months
+    &lt;n&gt;y = key expires in n years
+Key is valid for? (0)
+</code></pre>
+
+<p>Neste steg er gyldighetsperioden til nøkkelen. Denne kan du endre når som helst,
+også etter at den er gått ut. Derfor anbefaler jeg at du setter denne til et år,
+slik at dersom du mister tilgangen til nøkkelen og må lage en ny så går den gamle
+ut på et eller annet tidspunkt.</p>
+
+<pre><code>Key is valid for? (0) 1y
+Key expires at 12/29/17 19:06:04 W. Europe Standard Time
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name:
+</code></pre>
+
+<p>Nå skal du lage nøkkelparets første brukeridentitet. Det er dette som vises
+når andre laster inn ditt nøkkelpar. Skriv inn ditt navn og epostadresse.</p>
+
+<pre><code>Real name: Simba Larki
+Email address: simba@exaple.com
+Comment:
+You selected this USER-ID:
+    &quot;Simba Larki &lt;simba@exaple.com&gt;&quot;
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+You need a Passphrase to protect your secret key.
+</code></pre>
+
+<p>Siste steget er å valge et passord, eller passfrase. Velg et skikkelig passord,
+eller en setning. Det er dette som hindrer at andre får tilgang til din private
+nøkkel dersom de får tilgang til datmaskinen eller filene dine.</p>
+
+<pre><code>We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key 86D91256 marked as ultimately trusted
+public and secret key created and signed.
+
+pub   2048R/86D91256 2016-12-29 [expires: 2017-12-29]
+      Key fingerprint = A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256
+uid       [ultimate] Simba Larki &lt;simba@example.org&gt;
+sub   2048R/27FA711C 2016-12-29 [expires: 2017-12-29]
+</code></pre>
+
+<p>Du kan nå se at nøkkelen med fingeravtrykket
+<code>A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256</code> og nøkkelid <code>0x86D91256</code>
+er opprettet.</p>
+
+<div class="notices note" ><p>Nøkkelid består av de 8 (kort nøkkelid) eller 16 (lang nøkkelid) siste tegnene i fingeravtrykket med <code>0x</code> rett forran.</p>
+</div>
+
+
+<p>Du kan se dine nøkkelpar med kommandoen <code>C:\&gt;gpg -K --fingerprint</code></p>
+
+<h2 id="tilbakekallingssertifikat">Tilbakekallingssertifikat</h2>
+
+<p>Et tilbakekallingssertifikat benyttes dersom du ikke lenger har kontroll over din
+private nøkkel. Dette kan brukes uten at du har tilgang til den private nøkkelen.
+Dersom du tilbakekaller nøkkelen din vil den ikke lenger kunne brukes til å
+signere eller kryptere meldinger.</p>
+
+<pre><code>C:\&gt;gpg --output revoke.asc --gen-revoke simba@example.org
+</code></pre>
+
+<p>Dette vil lagre ditt tilbakekallingssertifikat som <code>revoke.asc</code>. Ta godt vare
+på dette. Dersom andre får tilgang til det kan de tilbakekalle dit nøkkelpar.</p>
 
 
       
@@ -333,8 +416,8 @@ eksempel installere det slik:</p>
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/konsepter/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/konsepter"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/noekkelring" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

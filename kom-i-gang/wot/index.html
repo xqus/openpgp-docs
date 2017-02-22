@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kom i gang med OpenPGP</title>
+    <title>Tillitsnett</title>
     <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/openpgp-docs/kom-i-gang/">
+  <body class="" data-url="/openpgp-docs/kom-i-gang/wot/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -52,7 +52,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/openpgp-docs/kom-i-gang/">
+      <li class="dd-item  parent" data-nav-id="/openpgp-docs/kom-i-gang/">
         <a href="/openpgp-docs/kom-i-gang/">
           <span>
             
@@ -116,7 +116,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/wot/">
+            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/wot/">
               <a href="/openpgp-docs/kom-i-gang/wot/">
                 <span>Tillitsnett     </i></span>
               </a>
@@ -203,46 +203,84 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
                 
                 
                 
                   
                     
                     
+                <a href="/openpgp-docs/kom-i-gang/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                    
                   
                 
                   
                 
-                <span itemprop="title"> Kom i gang med OpenPGP</span>
+                <span itemprop="title"> Tillitsnett</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#sertifisering">Sertifisering</a></li>
+<li><a href="#tillit">Tillit</a></li>
+<li><a href="#nøkkelservere">Nøkkelservere</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
-              <div id="chapter">
-            
     	        <div id="body-inner">
+                
+                <h1>Tillitsnett</h1>
                 
 
 
 
-<h3 id="kapittel-1">Kapittel 1</h3>
+<p>Hvordan kan man vite at en nøkkel virkelig tilhører den personen som den
+tilsynelatende tilhører? Hvem som helst kan lage et nøkkelpar og skrive hvilket
+navn og hvilken epostadresse de vil. Tillitsnettet (Web Of Trust) forsøker å
+skape et nettverk av nøkler du stoler på slik at man lettere kan knytte et
+nøkkelpar til en person.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<h2 id="sertifisering">Sertifisering</h2>
 
-<p>Lorem ipsum</p>
+<p>Sertifisering (eller signering) gjør man når man har verifisert sammenhengen
+mellom nøkkel og person. Når man sertifiserer en nøkkel signerer du den med din
+private nøkkel, slik at andre ser at du går god for denne nøkkelen.</p>
+
+<h2 id="tillit">Tillit</h2>
+
+<p>Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
+eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir seg
+for å være. Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert
+Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.</p>
+
+<h2 id="nøkkelservere">Nøkkelservere</h2>
+
+<p>Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
+Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
+du kommuniserer med. Dette er eneste måte å vite at nøkkelen for eksempel ikke
+er tilbakekalt.</p>
 
 
-      
-        </div> 
       
       </div>
     </div>
 
     <div id="navigation">
         
-        
-        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/hva-er-openpgp" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/kryptering"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//riktig-bruk/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

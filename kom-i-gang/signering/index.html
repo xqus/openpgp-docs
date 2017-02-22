@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kom i gang med OpenPGP</title>
+    <title>Signering</title>
     <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/openpgp-docs/kom-i-gang/">
+  <body class="" data-url="/openpgp-docs/kom-i-gang/signering/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -52,7 +52,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/openpgp-docs/kom-i-gang/">
+      <li class="dd-item  parent" data-nav-id="/openpgp-docs/kom-i-gang/">
         <a href="/openpgp-docs/kom-i-gang/">
           <span>
             
@@ -100,7 +100,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/signering/">
+            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/signering/">
               <a href="/openpgp-docs/kom-i-gang/signering/">
                 <span>Signering     </i></span>
               </a>
@@ -203,46 +203,131 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
                 
                 
                 
                   
                     
                     
+                <a href="/openpgp-docs/kom-i-gang/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                    
                   
                 
                   
                 
-                <span itemprop="title"> Kom i gang med OpenPGP</span>
+                <span itemprop="title"> Signering</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#klartekstsignatur">Klartekstsignatur</a></li>
+<li><a href="#frakoblet-signatur">Frakoblet signatur</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
-              <div id="chapter">
-            
     	        <div id="body-inner">
+                
+                <h1>Signering</h1>
                 
 
 
 
-<h3 id="kapittel-1">Kapittel 1</h3>
+<p>Man kan signere meldinger med OpenPGP for å verifisere at eieren av et bestemt
+nøkkelpar har skrevet meldingen, og at ingen har modifisert den på veien.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<p>For å verifisere signaturen bruker man den offentlige nøkkelen tilhørende
+nøkkelparet.</p>
 
-<p>Lorem ipsum</p>
+<p>OpenPGP pakker normalt sett signatur og filen man signerer inn i en og samme fil.</p>
+
+<pre><code>C:\&gt;gpg -output doc.sig --sign doc.txt
+</code></pre>
+
+<p>Dette produserer et signert dokument <code>doc.sig</code>. Dokumentet inneholder både din
+digitale signatur og det originale dokumentet. Dokumentet er komprimert og i
+binært format.</p>
+
+<p>Hvis du mottar et signert dokument kan du kontrollere signaturen samtidig som
+du gjennoppretter det originale dokumentet.</p>
+
+<pre><code>C:\&gt;gpg --output doc.txt --decrypt doc.sig
+</code></pre>
+
+<p>gpg: Signature made Sun Jan 1 12:02:38 2017 CDT using RSA key ID AB4T76AC
+  gpg: Good signature from &ldquo;Alice (Judge) <a href="mailto:alice@cyb.org">alice@cyb.org</a>&ldquo;</p>
+
+<h2 id="klartekstsignatur">Klartekstsignatur</h2>
+
+<p>Et vanlig bruksområde for digitale signaturer er epost eller andre digitale
+meldinger. I tilfeller der det ikker er ønskelig å komprimere meldingen og pakke
+den inn i en binær fil kan man bruke klartekstsignaturer.</p>
+
+<p>En klartekstsignatur gjøres med <code>--clearsign</code> parameteren som produserer en
+ASCII signatur som omgir det originale dokumentet.</p>
+
+<pre><code>C:\&gt;gpg --clearsign doc.txt
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice (Judge) &lt;alice@cyb.org&gt;&quot;
+2048-bit RSA key, ID AB4T76AC, created 2016-06-04
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA2
+
+[...]
+-----BEGIN PGP SIGNATURE-----
+iEYEARECAAYFAjdYCQoACgkQJ9S6ULt1dqz6IwCfQ7wP6i/i8HhbcOSKF4ELyQB1
+oCoAoOuqpRqEzr4kOkQqHRLE/b8/Rw2k
+=y6kj
+-----END PGP SIGNATURE-----
+</code></pre>
+
+<h2 id="frakoblet-signatur">Frakoblet signatur</h2>
+
+<p>Begge de to måtene beskrevet over har begrenset nytteverdi, og begge metodene
+gjør endringer i det originale dokumentet. Derfor finnes det en tredje metode
+som lagrer signaturen i en separat fil, uten å gjøre endringer i det originale
+dokumentet. Dette gjøres med <code>--detach-sig</code> parameteren.</p>
+
+<pre><code>C:\&gt;gpg --output doc.sig --detach-sig doc.txt
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice (Judge) &lt;alice@cyb.org&gt;&quot;
+2048-bit RSA key, ID AB4T76AC, created 2016-06-04
+
+Enter passphrase:
+</code></pre>
+
+<p>For å verfifisere signaturen trenger man både det originale dokumentet og
+signaturen.</p>
+
+<pre><code>C:\&gt;gpg --verify doc.sig doc.txt
+gpg: Signature made Fri Jun  4 12:38:46 2016 CDT using RSA key ID AB4T76AC
+gpg: Good signature from &quot;Alice (Judge) &lt;alice@cyb.org&gt;&quot;
+</code></pre>
 
 
-      
-        </div> 
       
       </div>
     </div>
 
     <div id="navigation">
         
-        
-        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/hva-er-openpgp" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/noekkelring"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/kryptering" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kom i gang med OpenPGP</title>
+    <title>Nøkkelpreferanser</title>
     <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/openpgp-docs/kom-i-gang/">
+  <body class="" data-url="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -52,7 +52,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/openpgp-docs/kom-i-gang/">
+      <li class="dd-item  " data-nav-id="/openpgp-docs/kom-i-gang/">
         <a href="/openpgp-docs/kom-i-gang/">
           <span>
             
@@ -136,7 +136,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/openpgp-docs/riktig-bruk/">
+      <li class="dd-item  parent" data-nav-id="/openpgp-docs/riktig-bruk/">
         <a href="/openpgp-docs/riktig-bruk/">
           <span>
             
@@ -152,7 +152,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
+            <li class="dd-item active" data-nav-id="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
               <a href="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
                 <span>Nøkkelpreferanser     </i></span>
               </a>
@@ -203,46 +203,91 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 
                 
+                
+                
+                  
                 
                   
                     
                     
+                <a href="/openpgp-docs/riktig-bruk/" itemprop="url"><span itemprop="title">Riktig bruk</span></a> <i class="fa fa-angle-right"></i>
+                    
                   
                 
-                  
-                
-                <span itemprop="title"> Kom i gang med OpenPGP</span>
+                <span itemprop="title"> Nøkkelpreferanser</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#nøkkeltype">Nøkkeltype</a></li>
+<li><a href="#undernøkler">Undernøkler</a></li>
+<li><a href="#nøkkellengde">Nøkkellengde</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
-              <div id="chapter">
-            
     	        <div id="body-inner">
+                
+                <h1>Nøkkelpreferanser</h1>
                 
 
 
 
-<h3 id="kapittel-1">Kapittel 1</h3>
+<p>Når du genererer dine OpenPGP nøkler har du mange forskjellige valg når det
+gjelder type nøkkel, funksjonen til nøklene og nøkkellengde. Hva som passer best
+for deg er vanskelig å si da hver enkelt har forskjellige behov. Jeg har alikavel
+forsøkt å oppsummere hva som er god praksis.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<h2 id="nøkkeltype">Nøkkeltype</h2>
 
-<p>Lorem ipsum</p>
+<p>Når du genererer nøkler kan du velge mellom RSA, DSA og Elgamal. Du kan også
+velge å bare generere signerings nøkler. Det vil si at det ikke er mulig å
+kryptere data til den offentlige nøkkelen. Dette kan være fornuftig dersom du
+ønsker å lagre din mesternøkkel på en datamaskin som du ikke bruker til daglig.
+I så fall må du lage en egen undernøkkel til bruk for kryptering.</p>
+
+<p>I utgangspunktet anbefales RSA forran DSA av flere årsaker
+(se <a href="https://www.gnupg.org/faq/gnupg-faq.html#recommended_ciphers">GnuPG.org sin FAQ</a>).</p>
+
+<h2 id="undernøkler">Undernøkler</h2>
+
+<p>Det er mulig å opprette undernøkler til ditt masternøkkelpar. Du kan for eksempel
+opprette en signeringsnøkkel for hver enhet du sender e-post fra. Det er dersverre
+problematisk å ha flere undernøkler for kryptering da bare en av de vil bli brukt
+når data krypteres. Det vil si at meldingen bare kan dekrypteres på en enhet.</p>
+
+<h2 id="nøkkellengde">Nøkkellengde</h2>
+
+<p>GnuPG støtter RSA nøkler opp til 4096 bits men anbefalingen er RSA 2048.
+Grunnen til det er at RSA-4096 gir minimalt bedre sikkerhet enn RSA-2048 mens
+ytelsen reduseres drastisk med RSA-4096.</p>
+
+<p>Hvis du ikke føler at RSA-2048 er godt nok anbefales eliptisk-kurve-algoritmer.</p>
+
+<p>Se foreøvrig <a href="https://www.gnupg.org/faq/gnupg-faq.html#please_use_ecc">GnuPG.org sin FAQ</a>.</p>
 
 
-      
-        </div> 
       
       </div>
     </div>
 
     <div id="navigation">
         
-        
-        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/hva-er-openpgp" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//riktig-bruk"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//riktig-bruk/sikre-noekler" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>
