@@ -1,0 +1,5 @@
+languageCode = "en-us"
+title = "My New Hugo Site"
+baseURL = "https://xqus.github.io/openpgp-docs/"
+
+theme = "hugo-theme-learn"
