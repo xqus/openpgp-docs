@@ -1,0 +1,1382 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Norsk OpenPGP guide</title>
+    <link>https://xqus.github.io/openpgp-docs/index.xml</link>
+    <description>Recent content on Norsk OpenPGP guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Feb 2017 12:31:51 +0100</lastBuildDate>
+    <atom:link href="https://xqus.github.io/openpgp-docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Nøkkelpreferanser</title>
+      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/noekkelpreferanser/</link>
+      <pubDate>Wed, 22 Feb 2017 12:31:51 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/noekkelpreferanser/</guid>
+      <description>
+
+&lt;p&gt;Når du genererer dine OpenPGP nøkler har du mange forskjellige valg når det
+gjelder type nøkkel, funksjonen til nøklene og nøkkellengde. Hva som passer best
+for deg er vanskelig å si da hver enkelt har forskjellige behov. Jeg har alikavel
+forsøkt å oppsummere hva som er god praksis.&lt;/p&gt;
+
+&lt;h2 id=&#34;nøkkeltype&#34;&gt;Nøkkeltype&lt;/h2&gt;
+
+&lt;p&gt;Når du genererer nøkler kan du velge mellom RSA, DSA og Elgamal. Du kan også
+velge å bare generere signerings nøkler. Det vil si at det ikke er mulig å
+kryptere data til den offentlige nøkkelen. Dette kan være fornuftig dersom du
+ønsker å lagre din mesternøkkel på en datamaskin som du ikke bruker til daglig.
+I så fall må du lage en egen undernøkkel til bruk for kryptering.&lt;/p&gt;
+
+&lt;p&gt;I utgangspunktet anbefales RSA forran DSA av flere årsaker
+(se &lt;a href=&#34;https://www.gnupg.org/faq/gnupg-faq.html#recommended_ciphers&#34;&gt;GnuPG.org sin FAQ&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&#34;undernøkler&#34;&gt;Undernøkler&lt;/h2&gt;
+
+&lt;p&gt;Det er mulig å opprette undernøkler til ditt masternøkkelpar. Du kan for eksempel
+opprette en signeringsnøkkel for hver enhet du sender e-post fra. Det er dersverre
+problematisk å ha flere undernøkler for kryptering da bare en av de vil bli brukt
+når data krypteres. Det vil si at meldingen bare kan dekrypteres på en enhet.&lt;/p&gt;
+
+&lt;h2 id=&#34;nøkkellengde&#34;&gt;Nøkkellengde&lt;/h2&gt;
+
+&lt;p&gt;GnuPG støtter RSA nøkler opp til 4096 bits men anbefalingen er RSA 2048.
+Grunnen til det er at RSA-4096 gir minimalt bedre sikkerhet enn RSA-2048 mens
+ytelsen reduseres drastisk med RSA-4096.&lt;/p&gt;
+
+&lt;p&gt;Hvis du ikke føler at RSA-2048 er godt nok anbefales eliptisk-kurve-algoritmer.&lt;/p&gt;
+
+&lt;p&gt;Se foreøvrig &lt;a href=&#34;https://www.gnupg.org/faq/gnupg-faq.html#please_use_ecc&#34;&gt;GnuPG.org sin FAQ&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hva er OpenPGP</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/hva-er-openpgp/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/hva-er-openpgp/</guid>
+      <description>
+
+&lt;p&gt;OpenPGP er en standard som definerer formater for kryptering og signering av
+digitale meldinger og filer. OpenPGP benyttes i stor grad til kryptering av
+epost og kan installeres som et tilegg til flere epostklienter.&lt;/p&gt;
+
+&lt;p&gt;OpenPGP benytter en krypteringsmetode som gjør at de partene som skal
+kommunisere ikke trenger å avtale krypteringnøkkel på forhånd. I steden benyttes
+mottakers offentlige nøkkel til å kryptere data med. Denne kan da bare
+dekrypteres dersom man ha den tilhørende private nøkkelen.&lt;/p&gt;
+
+&lt;p&gt;Signering fungerer på motsatt måte. Avsender signerer med sin private nøkkel.
+Denne signaturen kan så valideres med den offentlige nøkkelen.&lt;/p&gt;
+
+&lt;h2 id=&#34;før-du-starter&#34;&gt;Før du starter&lt;/h2&gt;
+
+&lt;p&gt;Dersom du vil benytte OpenPGP til kryptering og signering av epost anbefaler jeg
+&lt;a href=&#34;https://emailselfdefense.fsf.org/en/&#34;&gt;Email Self Defense Guiden&lt;/a&gt; til Free
+Software Foundation. Denne guider deg gjennom installasjon av GnuPG og Thunderbird
+med Enigmail, og hjelper deg sende din første kryptere epost.&lt;/p&gt;
+
+&lt;p&gt;Innholdet videre i denne guiden forklarer OpenPGP konspter bruken av GnuPG fra
+kommandolinjen. Bruk av kommandolinjeverktøy er ikke noe alle vil bruke i
+hverdagen, men til tross for at du kanske vil benytte et grafisk grensesnitt
+i for eksempel Thunderbird vil denne guiden være nyttig da den forklarer
+grunnleggende prinsipper med OpenPGP.&lt;/p&gt;
+
+&lt;h2 id=&#34;kom-i-gang&#34;&gt;Kom i gang&lt;/h2&gt;
+
+&lt;p&gt;For å komme i gang med OpenPGP trenger du først og fremst selve OpenPGP
+programvaren. Det finnes et par alternativer men vi skal installere den
+vanligste &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;, forkortet GnuPG eller GPG.&lt;/p&gt;
+
+&lt;p&gt;GnuPG finnes til de vanligste operativsystem og kan lastes ned fra &lt;a href=&#34;http://www.gnupg.org&#34;&gt;GnuPG&lt;/a&gt; sine
+hjemmesider.&lt;/p&gt;
+
+&lt;p&gt;GnuPG er et kommandolinjeverktøy. Det betyr at det i utgangspunktet ikke finnes
+noe grafisk grensesnitt og at det kjøres fra kommandolinjen. Det finnes
+heldigvis grafiske grensesnitt til en del epostklienter slik at bruken av GnuPG
+ikke kompliserer bruken av epost. For å gjøre det enklest mulig anbefaler jeg at
+du bruker Thunderbird med Enigmail til epost.&lt;/p&gt;
+
+&lt;h2 id=&#34;installere-på-windows&#34;&gt;Installere på Windows&lt;/h2&gt;
+
+&lt;p&gt;Last ned &lt;strong&gt;Simple installer for GnuPG modern&lt;/strong&gt; og følg installeringsveiviseren.
+Når den er ferdig skal du kunne kjøre &lt;code&gt;gpg&lt;/code&gt; kommandoen fra kommandolinjen.
+For å åpne kommandolinjen trykk &lt;code&gt;WIN+R&lt;/code&gt; skriv inn &lt;code&gt;cmd&lt;/code&gt; og trykk ENTER.&lt;/p&gt;
+
+&lt;p&gt;For å kontrollere at alt har gått som det skal kan du skrive: &lt;code&gt;gpg --version&lt;/code&gt;
+og trykke ENTER.
+Det skal gi deg noe slikt som:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --version
+gpg (GnuPG) 2.1.17
+libgcrypt 1.7.5
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &amp;lt;https://gnu.org/licenses/gpl.html&amp;gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: C:/Users/BRUKERNAVN/AppData/Roaming/gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+      CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Legg merke til &lt;code&gt;Home: C:/Users/BRUKERNAVN/AppData/Roaming/gnupg&lt;/code&gt;. Det er i
+denne mappen konfigurasjonsfiler og nøkler lagres. Den kan være forskjellig
+på din datamaskin.&lt;/p&gt;
+
+&lt;h2 id=&#34;installere-på-linux&#34;&gt;Installere på Linux&lt;/h2&gt;
+
+&lt;p&gt;For å installere GnuPG søk etter GnuPG pakken i ditt pakkesystem. På Ubuntu for
+eksempel installere det slik:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get install gnupg2
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sikker oppbevaring av nøkler</title>
+      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/sikre-noekler/</link>
+      <pubDate>Wed, 22 Feb 2017 12:31:51 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/sikre-noekler/</guid>
+      <description>
+
+&lt;p&gt;Sikker oppbevaring av din private nøkkel er viktig av flere årsaker. For det
+første vil personer med tilgang til din nøkkel kunne lese meldinger du har
+mottatt, samtidig som man kan signere meldinger på vegne av deg.&lt;/p&gt;
+
+&lt;p&gt;Dersom du mister din egen nøkkel vil du måtte generere nye, distribuere de
+til de du kommuniserer med samt du må bygge et nytt tillitsnettverk. Alt dette
+er arbeid som med enkle steg kan ungås.&lt;/p&gt;
+
+&lt;p&gt;I dette kapittelet skal vi generere nøkler på en sikker installasjon av Tails,
+som lagres kryptert på en USB-minnepinne.&lt;/p&gt;
+
+&lt;h2 id=&#34;tails&#34;&gt;Tails&lt;/h2&gt;
+
+&lt;p&gt;For å ungå at en angriper får tilgang til dine nøkler ved hjelp av malware eller
+lignende installert på din maskin anbefales &lt;a href=&#34;https://tails.boum.org/&#34;&gt;Tails&lt;/a&gt;.
+Tails er et operativsystem som installeres på en USB-minnepinne, som ikke
+lagrer endringer som blir gjort.
+Vi beskriver ikke selve installasjoen av Tails da den er meget godt beskrevet i
+&lt;a href=&#34;https://tails.boum.org/install/os/index.en.html&#34;&gt;installasjonsguiden for Tails&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Når du installerer Tails må du sette opp varig (&lt;em&gt;persistent&lt;/em&gt;) lagring. Dette må også &lt;a href=&#34;https://tails.boum.org/doc/first_steps/persistence/configure/&#34;&gt;aktiveres for GnuPG&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Etter at du har installert Tails, og satt opp varig lagring for GnuPG må du teste
+at dette fungerer. Det gjør du ved å generere en testnøkkel, og så restarter du
+maskinen. Dersom denne fremdeles er der etter en restart vet du at det virker.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;oppsett&#34;&gt;Oppsett&lt;/h2&gt;
+
+&lt;p&gt;Det vi ønsker å oppnå er å lagre hovednøkkelen på en kryptert USB-minnepinne,
+mens vi kopierer ut en undernøkkel for kryptering og signering til de enhetene
+vi ønsker. Dersom denne enheten eller nøkkelen komprimiteres kan vi tilbakekalle
+undernøkkelen og generere en ny. Så lenge vår krypterete USB-minnepinne ikke
+komprimiteres kan vi beholde vår hovednøkkel og dermed også fingeravtrykket og
+tillitsnettet vårt.&lt;/p&gt;
+
+&lt;h2 id=&#34;generere-nøkler&#34;&gt;Generere nøkler&lt;/h2&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Tails kommer med både GnuPG 2.0 og 1.4. For å bruke 2.0 kjører vi &lt;em&gt;gpg2&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --gen-key
+gpg (GnuPG) 2.0.26; Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 4
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &amp;lt;n&amp;gt;  = key expires in n days
+      &amp;lt;n&amp;gt;w = key expires in n weeks
+      &amp;lt;n&amp;gt;m = key expires in n months
+      &amp;lt;n&amp;gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Tue 20 Feb 2018 06:19:33 PM UTC
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Alice
+Email address: alice@example.com
+Comment:
+You selected this USER-ID:
+    &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot;
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+You need a Passphrase to protect your secret key.
+
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key 0x9384FE7B9D82D22F marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: next trustdb check due at 2018-02-20
+pub   2048R/0x9384FE7B9D82D22F 2017-02-20 [expires: 2018-02-20]
+      Key fingerprint = CB24 6911 23AD 4842 6247  EA24 9384 FE7B 9D82 D22F
+uid                 [ultimate] Alice &amp;lt;alice@example.com&amp;gt;
+
+Note that this key cannot be used for encryption.  You may want to use
+the command &amp;quot;--edit-key&amp;quot; to generate a subkey for this purpose.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vi genererer nøkler på vanlig måte, men legg merke til at vi bare laget
+signeringsnøkkel. Vi må nå lage en undernøkkel for å motta krypterte meldinger,
+samt en undernøkkel for å signere meldinger.&lt;/p&gt;
+
+&lt;h2 id=&#34;gnerere-undernøkler&#34;&gt;Gnerere undernøkler&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --edit-key alice@example.com
+gpg (GnuPG) 2.0.26; Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  2048R/0x9384FE7B9D82D22F  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; addkey
+Key is protected.
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot;
+2048-bit RSA key, ID 0x9384FE7B9D82D22F, created 2017-02-20
+
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+Your selection? 4
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &amp;lt;n&amp;gt;  = key expires in n days
+      &amp;lt;n&amp;gt;w = key expires in n weeks
+      &amp;lt;n&amp;gt;m = key expires in n months
+      &amp;lt;n&amp;gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Tue 20 Feb 2018 06:33:24 PM UTC
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+pub  2048R/0x9384FE7B9D82D22F  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub  2048R/0x3FA64433C98A17BA  created: 2017-02-20  expires: 2018-02-20  usage: S
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; addkey
+Key is protected.
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot;
+2048-bit RSA key, ID 0x9384FE7B9D82D22F, created 2017-02-20
+
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+Your selection? 6
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &amp;lt;n&amp;gt;  = key expires in n days
+      &amp;lt;n&amp;gt;w = key expires in n weeks
+      &amp;lt;n&amp;gt;m = key expires in n months
+      &amp;lt;n&amp;gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Tue 20 Feb 2018 06:33:44 PM UTC
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+pub  2048R/0x9384FE7B9D82D22F  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub  2048R/0x3FA64433C98A17BA  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub  2048R/0x8797A8A2930D2881  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; save
+amnesia@amnesia:~$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Du kan nå se at det finnes to undernøkler (&lt;em&gt;sub&lt;/em&gt;), en for kryptering (&lt;em&gt;E&lt;/em&gt;), og en
+for signering (&lt;em&gt;S&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h2 id=&#34;eksportere-undernøkler&#34;&gt;Eksportere undernøkler&lt;/h2&gt;
+
+&lt;p&gt;Vi kan nå eksportere undernøklene til de enhenten vi bruker i hverdagen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --export-secret-subkeys &amp;gt; subkeys.gpg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dette lagrer våre &lt;em&gt;private&lt;/em&gt; undernøkler i filen &lt;em&gt;subkeys.gpg&lt;/em&gt;. Disse har
+samme passord som vi satt når vi genererte hovednøkkelen. Denne filen kan vi
+nå kopiere til de klientne vi vil benytte OpenPGP på.&lt;/p&gt;
+
+&lt;h2 id=&#34;importere-nøkler-på-klienten&#34;&gt;Importere nøkler på klienten&lt;/h2&gt;
+
+&lt;p&gt;Når du har kopiert &lt;em&gt;subkeys.gpg&lt;/em&gt; inn på klienten din importerer vi undernøklene
+våre.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --import subkeys.gpg
+gpg: key 0x9384FE7B9D82D22F: secret key imported
+gpg: key 0x9384FE7B9D82D22F: public key &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot; imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+gpg:       secret keys read: 1
+gpg:   secret keys imported: 1
+
+amnesia@amnesia:~$ gpg2 -K
+/home/amnesia/.gnupg/secring.gpg
+--------------------------------
+sec#  2048R/0x9384FE7B9D82D22F 2017-02-20 [expires: 2018-02-20]
+      Key fingerprint = CB24 6911 23AD 4842 6247  EA24 9384 FE7B 9D82 D22F
+uid                            Alice &amp;lt;alice@example.com&amp;gt;
+ssb   2048R/0x3FA64433C98A17BA 2017-02-20
+ssb   2048R/0x8797A8A2930D2881 2017-02-20
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vi ser nå at nøklene er importert, men også at vår hovednøkkel (&lt;em&gt;sec&lt;/em&gt;) er etterfulgt
+av en firkant (&lt;em&gt;#&lt;/em&gt;). Dette betyr at denne nøkkelen ikke er tilgjengelig på denne
+enheten.&lt;/p&gt;
+
+&lt;h2 id=&#34;ta-backup&#34;&gt;Ta backup&lt;/h2&gt;
+
+&lt;p&gt;Det er nå på tide å &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering&#34;&gt;sikkerhetskopiere&lt;/a&gt; nøklene.
+Sikkerhetskopien lagrer du på en egen USB-minnepinne. Du har nå en kopi av nøklene
+på din Tails minnepinne, samt en ekstra kopi på en egen USB-minnepinne.&lt;/p&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Sikkerhetskopien er bare beskyttet av passordet du satt når du genererte nøklene. Husk derfor å bare benytte denne minnepinnen når du kjører Tails.&lt;/p&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Konsepter</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/konsepter/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/konsepter/</guid>
+      <description>
+
+&lt;h2 id=&#34;symmetrisk-kryptering&#34;&gt;Symmetrisk kryptering&lt;/h2&gt;
+
+&lt;p&gt;En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og
+dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige
+om nøkkelen på forhånd. Så snart de er enige kryterer senderen en melding med
+nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den
+samme nøkkelen. For eksempel bruker den Tyske Enigma maskien symmetrisk algoritme,
+og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som
+sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.
+Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfisk og IDEA.&lt;/p&gt;
+
+&lt;p&gt;En god krypteringsalgoritme legger all sikkerheten i nøklene og ingen i selve
+algoritmen. Med andre ord skal det ikke være til hjelp for en angriper å vite
+hvilken algoritme som benyttes. Bare hvis han vet nøkkelen er behovet for å vite
+aloritmen viktig. Algiritmene som benyttes i OpenPGP har denne egenskapen.&lt;/p&gt;
+
+&lt;p&gt;Siden all sikkerheten er i nøkkelen er det svært viktig at det er veldig vanskelig
+å gjette nøkkelen. Med andre ord må antall mulige nøkler være mange. På engelsk
+kalles dette &lt;em&gt;key space&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Britene brukte maskiner til å gjette nøkler under 2. verdenskrig. Den Tyske
+Enigma maskinen hadde mange mulige nøkler, men britene bygget spesialiserte maskiner
+som gjettet seg frem til dagen nøkkel ved å prøve alle muligheter. Det betyr at
+noen dager fant de dagens nøkkel etter få timer mens andre dager fant de aldri
+riktig nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Dagens datamaskiner kan gjette nøkler utrolig hurtig, og det er derfor nøkkellengde
+er viktig i moderne kryptosystemer. Krypteringsalgoritmen DES bruker en 56-bit nøkkel,
+som betyr at det er 2&lt;sup&gt;56&lt;/sup&gt; mulige nøkler. 2&lt;sup&gt;56&lt;/sup&gt; er 72 057 594 037 927 936
+nøkler. Dette er veldig mange nøkler, men en vanlig datamaskin kan prøve alle
+mulige nøkler i løpet av noen dager. En spesielisert datamaskin kan prøve de i
+løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfisk og IDEA
+bruker 128-bit nøkler som betyr at det er 2&lt;sup&gt;128&lt;/sup&gt; mulige nøkler.
+Dette er mange, mange, mange fler nøkler og selv om alle datamaskinene på
+planeten sammarbeidet ville de aldri klart å gjette seg frem til riktig nøkkel.&lt;/p&gt;
+
+&lt;h2 id=&#34;offentlig-nøkkel-kryptering&#34;&gt;Offentlig-nøkkel kryptering&lt;/h2&gt;
+
+&lt;p&gt;Hovedproblemet med symmertrisk kryptering er ikke sikkerheten men utvekslingen
+av nøkler. Når sender og mottaker har utvekslet nøkler, så kan denne nøkkelen
+benyttes til å kommunisere sikkert. Men hvilken sikker kommunikasjonskanal ble
+benyttet for å utveksle nøkkelen. I virkeligeten vil det nok often være lettere
+for en angriper å snappe opp nøkkelen i steden for å gjette seg frem til riktig
+nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Offentlig-nøkkel kryptering ble funnet opp for å unngå hele nøkkelutvekslings-problemet.
+Offentlig-nøkkel kryptering benytter et par med nøkler for å sende meldinger.
+Begge nøklene tilhører personen som mottar meldingen. En nøkkel er den &lt;em&gt;offentlige nøkkelen&lt;/em&gt;
+og kan deles med hvem som helst. Den andre nøkkelen er en &lt;em&gt;privat nøkkel&lt;/em&gt; og
+holdes hemmelig av eieren. En sender krypterer en melding med den offentlige
+nøkkelen og når den er kryptert kan den bare dekrypteres med den private nøkkelen.&lt;/p&gt;
+
+&lt;p&gt;Denne protokollen løser problemet med utveksling av nøkler som eksisterer med
+symmetrisk kryptering. Det er ikke behov for sender og mottaker å bli enige
+om en nøkkel på forhånd. Det eneste som kreves er at senderen av meldingen får
+den offentlige nøkkelen til mottakeren på et tidspunkt før de skal kommunisere.
+I tillegg kan den ene offentlige nøkkelen benyttes av alle som ønsker å kommunisere
+med eieren.&lt;/p&gt;
+
+&lt;p&gt;Offentlig-nøkkel kryptering baserer seg på enveis falldør-funksjoner. En enveisfunksjon
+er en funksjon som er lett å regne ut men vanskelig å reversere. For eksempel
+er det lett å gange to primtall for å få et kompositt tall, men det er vanskelig
+å faktorisere et kompositt-tall til sine primtallkomponenter. En enveis falldør
+funksjon er lik, men den har en falldør. Det betyr at dersom en del av infomasjonen
+er kjent så blir det lett å reversere funksjonen. For eksempe dersom du har et
+tall som er faktoren av to primtall, så vil det å vite det ene primtallet gjøre
+det lett å regne seg frem til det andre. Gitt att offentlig-nøkkel kryptering
+baserer seg på primfaktorisering, den offentlige nøkkelen består av et kompositt-tall
+som er faktoren av to primtall og krypteringsalgoritmen bruker dette tallet for
+å kryptere meldingen. Algoritmen for å dekryptere meldingen krever at du vet begge
+primtallene så det å dekryptere er enkelt hvis du har den private nøkkelen som
+inneholder ett av primtallene men veldig vanskelig dersom du ikke har den.&lt;/p&gt;
+
+&lt;p&gt;Som med gode symmetriske algoritmer så ligger all sikkerheten til offentlig-nøkkel
+algoritmer i nøkkelen. Derfor er nøkkelelngde en måleenhet for systemets sikkerhet.
+Men du kan ikke sammenligne størrelsen på nøkkelene til en symmetrisk algoritme
+og en offentlig-nøkkel algoritme for å sammenligne sikkerheten til de to algoritmene.
+I et &lt;em&gt;brute-force&lt;/em&gt; angrep på en symmetrisk algoritme med en nøkkellengde på 80 bit, må
+angriperen forsøke opp til 2&lt;sup&gt;80&lt;/sup&gt; nøkler for å finne den riktige nøkkelen.
+I et &lt;em&gt;brute-force&lt;/em&gt; angrep på en offentlig-nøkkel algoritme med en nøkkelstørrelse på
+512 bit må angriperen faktorisere et kompositt-tall kodet i 512 bit (opp til 155 desimaltall).
+Arbeidsmengen til en angriper er fundamentalt anderledes avhengig av hvilken type
+algoritme han angriper. Mens 256 bit er tilstrekkelig for symmetrisk algoritmer,
+gitt dagens faktoriserings-teknologi offenlitge nøkler med 2048 bits er anbefalt
+for de fleste tilfeller.&lt;/p&gt;
+
+&lt;h2 id=&#34;hybride-systemer&#34;&gt;Hybride-systemer&lt;/h2&gt;
+
+&lt;p&gt;Offentlig-nøkkel algoritmer er ingen perfekt løsning. Menage symmetriske algoritmer
+er sterkere fra et sikkerhetsstandpunkt., og offentlig-nøkkel kryptering og
+dekryptering er mer krevende enn de tilsvarende operasjonene i en symmetrisk
+algoritme. Offentlig-nøkkel algoritmer er derimot et effektivt verktøy for å
+distribuere symmetriske krypteringsnøkler, og det er slik de benyttes i hybride
+systemer.&lt;/p&gt;
+
+&lt;p&gt;Et hybrid-system benytter både en symmetrisk algoritme og en offentlig-nøkkel
+algoritme. Det virker slik at det benytter en offentlig-nøkkel algoritme for å
+utveksle en nøkkel som brukes for den symmetriske algoritmen. Den faktiske
+maldingen er kryptert med en symmetrisk algoritme før den sendes til mottakeren.
+Siden utveksling av den symmetriske nøkkelen er sikker, er denne nøkkelen
+forskjellige for hver melding som sendes. Derfor kalles den ofte &lt;em&gt;sesjonsnøkkel&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;OpenPGP benytter hybride-systemer. Sesjonsnøkkelen, kryptert med den offentlige-
+nøkkelen og meldingen som sendes, kryptert med sesjonsnøkkelen er automatisk
+kobinert i en pakke. Mottakeren benytter sin private nøkkel for å dekryptere
+sesjonsnøkkelen som deretter benyttes for å dekryptere selve meldingen.&lt;/p&gt;
+
+&lt;p&gt;Et hybrid-system er ikke sikere enn den svakeste algoritmen som benyttes. I OpenPGP
+er muligens offentlig-nøkkel algoritmen den svakeste av de to. Heldigvis, hvis en
+angriper klarer å dekryptere en sesjonsnøkkel vil den bare klare å dekryptere
+en melding. Angriperen må så starte på nytt og dekryptere en sesjonsnøkkel til
+for å klare å lese en annen melding.&lt;/p&gt;
+
+&lt;h2 id=&#34;digitale-signaturer&#34;&gt;Digitale signaturer&lt;/h2&gt;
+
+&lt;p&gt;En sjekksum er en kort kode som brukes til å sjekke integriteten av data, eller
+den matematiske funksjonen av dataene, algoritmen, som genererer koden,
+ofte kalt hash-funksjon.&lt;/p&gt;
+
+&lt;p&gt;Et dokuments digitale signatur er resultatet av en hash-funksjon av dokumentet.
+For å være nytteig må en hash-funksjon ha to viktige egenskaper. For det første
+bør det være vanskelig å finne to dokumenter som resulterer i samme sjekksum. I
+tillegg bør det være vanskelig å gjennopprette det originale dokumentet ut fra en
+sjekksum.&lt;/p&gt;
+
+&lt;p&gt;Ved å bruke en slik hash-funksjon et dokument kan signeres ved å produsere en
+sjeksum, og denne er signaturen. En annen person kan sjekke signaturen ved å
+kjøre dokumentet gjennom samme hash-funksjon og sammenligne sin sjekksum men den
+som kom som signatur. Dersom de er like, er det nestne helt sikkert at dokumentene
+er identiske.&lt;/p&gt;
+
+&lt;p&gt;Problemet er å benytte en hahs-funksjon uten å tillate at en angiper interferer
+med signatur-kontrollen. Hvis dokumentet og signaturen er sendt ukryptert, så kan
+en angriper modifere dokumentet og generere en ny signatur uten at mottaker
+merker det. Dersom bare dokumentet er kryptert en angriper kan endre på signaturen
+og gjøre slik at kontrollen av signaturen feiler.&lt;/p&gt;
+
+&lt;p&gt;En algiritme som virker er å benytte en offentlig-nøkkel algoritme får å kryptere
+signaturen. Faktisk så krypteres sjekksummen med den private nøkkelen til personen
+som signerer, og hvem som helst kan kontrollere signaturen ved å benytte den offentlige
+signaturen. Det signerte dokumentet kan senes ved å benytte hvilken som helst
+annen krypteringsalgoritme, eller det kan sendes ukryptert. Hvis dokumentet
+modifiseres vil signaturkontrollen feile. &lt;em&gt;The Digital Signature Standard (DSA)&lt;/em&gt;
+er en offentlig-nøkkel algoritme som virker som akkurat beskrevet. DSA er en del
+av OpenPGP standaren, men RSA kan også benyttes til digitale signaturer.&lt;/p&gt;
+
+&lt;h2 id=&#34;eliptiske-kurver&#34;&gt;Eliptiske kurver&lt;/h2&gt;
+
+&lt;p&gt;Eliptiske kurver skal løse samme utfordring som tradisjonelle
+offentlig-nøkkel algoritmer. Nemmelig å lage en ennveis falldør-funksjon.
+Problemet med tradisjonelle offentlig-nøkkel algoritmer er at forholdet mellom
+nøkkelstørrelse og sikkerhet ikke er lineært. Det betyr at en dobling i
+nøkkelstørrelse ikke gir en dobling av sikkerheten, men tiden det tar for å
+kryptere / dekryptere i beste fall dobles. Det betyr at på et eller annet
+tidspunkt må vi gå over til en annen type falldør-funksjon.&lt;/p&gt;
+
+&lt;p&gt;Eliptiske kurver er spesielle kurver som kan gjennkjennes på sin symmetriske
+utforming. Under er et eksempel på noen kurver. Kurvene som benyttes i
+kryptering er mye mer komplekse, men disse eksemplene gjør det lett å se for seg
+hvordan det virker.&lt;/p&gt;
+
+&lt;p&gt;.. figure:: ecc-lines.png
+   :alt: Eksempel på eliptiske kurver&lt;/p&gt;
+
+&lt;p&gt;Eksempel på eliptiske kurver fra &lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve&#34;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eliptiske kurver har den egenskapen at dersom du trekker en ikke horisontal
+linje fra et punkt &lt;em&gt;A&lt;/em&gt; på kurven til et annet &lt;em&gt;B&lt;/em&gt; gjennom punkt &lt;em&gt;C&lt;/em&gt;. Så vil &lt;em&gt;C&lt;/em&gt;
+invertert være &lt;em&gt;A + B&lt;/em&gt;. Denne egenskapen er det vi benytter i eliptisk krurve
+kryptografi.&lt;/p&gt;
+
+&lt;p&gt;Meget forenklet kan det forklares slik: Vår private nøkkel er et tilfeldig valgt
+tall &lt;em&gt;n&lt;/em&gt; som vi ganger opp med et forhåndsbestemt punkt på kurven, &lt;em&gt;G&lt;/em&gt; for å få
+et annet punkt på kurven. Dette er vår offentlige nøkkel &lt;em&gt;K&lt;/em&gt;.  *K = n * G*.
+Dette er et eneklt regnestykke, men dersom du vet &lt;em&gt;K&lt;/em&gt; og &lt;em&gt;G&lt;/em&gt; og vil komme frem til
+&lt;em&gt;n&lt;/em&gt;, så er dette meget komplisert.&lt;/p&gt;
+
+&lt;p&gt;Ved å benytte eliptiske kurver i kryptografi kan man redusere nøkkellengden
+betraktelig i forhold til tradisjonell kryptering. Det sies at en 256 bit ECC nøkkel
+skal gi samme sikkerhet som en 3072 bit RSA nøkkel.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rotere undernøkler</title>
+      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/rotere-noekler/</link>
+      <pubDate>Wed, 22 Feb 2017 12:31:51 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/rotere-noekler/</guid>
+      <description>
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Dette kapittelet forutsetter at du har et offline nøkkelpar som beskrevet i kapittelet om &lt;em&gt;Sikker oppbevaring av nøkler&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Dersom dine undernøkler går tapt eller komprimiteres kan du enkelt tilbakekalle
+disse, og generere nye ved å bruke din minnepinne med Tails som har dine hovednøkler på.
+Når vi tilbakekaller nøklene sier vi til omverden av disse ikke lenger skal benyttes.
+Dersom noen signerer en melding med nøkler som er tilbakekalt vi ikke signaturen
+være gyldig.  Deretter gernerer vi nye undernøkler som vi kopierer tilbake på
+klientene våre, som beskrevet i kapittelet om &lt;em&gt;Sikker oppbevaring av nøkler&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Det er viktig at din nye offentlige nøkkel lastes opp til nøkkelserverene. Det
+er slik omverden får vite om dine nye undernøkler, og at de gamle er tilbakekalt.&lt;/p&gt;
+
+&lt;h2 id=&#34;tilbakekall-dine-gamle-nøkler&#34;&gt;Tilbakekall dine gamle nøkler&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --edit-key alice@example.com
+gpg (GnuPG) 2.0.26; Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; key 1
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub* 2048R/0x94B56B273C610BDB  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; key 2
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub* 2048R/0x94B56B273C610BDB  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub* 2048R/0xE69C73D0FFA0432F  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; revkey
+Do you really want to revoke the selected subkeys? (y/N) y
+Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+Your decision? 1
+Enter an optional description; end it with an empty line:
+&amp;gt;
+Reason for revocation: Key has been compromised
+(No description given)
+Is this okay? (y/N) y
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;generer-nye-undernøkler&#34;&gt;Generer nye undernøkler&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --edit-key alice@example.com
+gpg (GnuPG) 2.0.26; Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; addkey
+Key is protected.
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+Your selection? 4
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &amp;lt;n&amp;gt;  = key expires in n days
+      &amp;lt;n&amp;gt;w = key expires in n weeks
+      &amp;lt;n&amp;gt;m = key expires in n months
+      &amp;lt;n&amp;gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Tue 20 Feb 2018 07:45:00 PM UTC
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+sub  2048R/0x8EE8D15759878C5A  created: 2017-02-20  expires: 2018-02-20  usage: S
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; addkey
+Key is protected.
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice &amp;lt;alice@example.com&amp;gt;&amp;quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+Your selection? 6
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &amp;lt;n&amp;gt;  = key expires in n days
+      &amp;lt;n&amp;gt;w = key expires in n weeks
+      &amp;lt;n&amp;gt;m = key expires in n months
+      &amp;lt;n&amp;gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Tue 20 Feb 2018 07:45:11 PM UTC
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &amp;lt;alice@example.com&amp;gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+sub  2048R/0x8EE8D15759878C5A  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub  2048R/0x737E8D0A5B17C472  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.com&amp;gt;
+
+gpg&amp;gt; save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;oppdater-nøkkelserverene&#34;&gt;Oppdater nøkkelserverene&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --send-keys 0x50AD20916F557D14
+gpg: sending key 0x50AD20916F557D14 to hkps server hkps.pool.sks-keyservers.net
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Komme i gang med nøkler</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/nokler/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/nokler/</guid>
+      <description>
+
+&lt;p&gt;Dine OpenPGP-nøkler er det du, eller de du kommuniserer med bruker som grunnalag
+i de kryptografiske funksjonene. I OpenPGP består dine nøkler av flere
+forskjellige nøkler som til sammen danner ditt nøkkelpar.&lt;/p&gt;
+
+&lt;p&gt;Et OpenPGP nøkkelpar identifiseres med det som kalles et fingerprint eller
+fingeravtrykk. Et fingeravtrykk kan se slik ut:
+&lt;code&gt;EAB9 F918 6C7F E39E EBA3  BAA8 D775 F425 69CD DB80&lt;/code&gt;
+Bare ved å verifisere hele fingeravtrykket kan du være sikker på at det er
+riktig nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Fingeravtrykket for din nøkkel vil være det samme uansett hvilke endringer du
+gjør med nøkkelen din.&lt;/p&gt;
+
+&lt;h2 id=&#34;offentlig-nøkkel&#34;&gt;Offentlig nøkkel&lt;/h2&gt;
+
+&lt;p&gt;Din offentlige nøkkel er den delen av nøkkelen du skal dele med andre. Denne
+benyttes til å kryptere meldinger som skal sendes til deg, og til å verifisere
+meldinger du har signert med OpenPGP.&lt;/p&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Meldinger som er kryptert med din offentlige nøkkel kan bare dekrypteres med din private nøkkel.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;privat-nøkkel&#34;&gt;Privat nøkkel&lt;/h2&gt;
+
+&lt;p&gt;Din private nøkkel benyttes til å signere meldinger du sender, samt å dekryptere
+meldinger som er kryptert med din offentlige nøkkel. Det er mulig å ha flere
+undernøkler i ditt nøkkelpar, til forskjellig bruk eller til forskjellige
+enheter. De private nøklene kan ha flere funksjoner:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Autorisering:&lt;/strong&gt; Benyttes for å signere andre nøkler og brukeridentiteter for å bevise at de tilhører ditt nøkkelpar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kryptering:&lt;/strong&gt; Benyttes til å motte krypterte meldinger.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Signering:&lt;/strong&gt; Benyttes til å signere utgående meldinger for å bevise at de er sendt av eieren av en bestemt OpenPGP nøkkel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Autentisering:&lt;/strong&gt; Benyttes til blandt annet autntisering av SSH.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Når du lager ditt nøkkelpar må du velge hvilken nøkkeltype din primære nøkkel
+skal ha. Din primære nøkkel vil alltid benyttes til &lt;em&gt;autorisering&lt;/em&gt; av eventuelt
+andre nøkler og av brukeridentiter.&lt;/p&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Gjør alt du kan for å holde din private nøkkel privat.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;brukeridentiteter&#34;&gt;Brukeridentiteter&lt;/h2&gt;
+
+&lt;p&gt;Brukeridentiteter er det som tilegner et navn og en epostadresse til din nøkkel.
+Et nøkkelpar kan ha så mange brukeridentiteter man vil, men en av de vil være
+primær og vil bli brukt for å gi navn til nøkkelen i OpenPGP verktøyene.
+En brukeridentitet består av &lt;code&gt;Navn (kommentar) &amp;lt;epost&amp;gt;&lt;/code&gt;. Kommentar og epost er
+i utgangspunktet frivillig.&lt;/p&gt;
+
+&lt;h2 id=&#34;generer-dine-egne-nøkler&#34;&gt;Generer dine egne nøkler&lt;/h2&gt;
+
+&lt;p&gt;For å generere dine nøkler starter du GnuPG med &lt;code&gt;--gen-key&lt;/code&gt; parameteren.
+Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
+er avhengig av bruken.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --gen-key
+gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+(1) RSA and RSA (default)
+(2) DSA and Elgamal
+(3) DSA (sign only)
+(4) RSA (sign only)
+Your selection?
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Du får da velg om hvilken nøkkel du ønsker. I utgangspunktet er valg 1 greit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Deretter må du velge nøkkellengde. I utgangspunktet er både &lt;code&gt;2048&lt;/code&gt; og &lt;code&gt;4096&lt;/code&gt;
+greie valg. Større nøkler er i utganspunktet bedre, men dersom du for eksempel
+vil benytte en Yubikey for å lagre nøkkelen din må du velge &lt;code&gt;2048&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+       0 = key does not expire
+    &amp;lt;n&amp;gt;  = key expires in n days
+    &amp;lt;n&amp;gt;w = key expires in n weeks
+    &amp;lt;n&amp;gt;m = key expires in n months
+    &amp;lt;n&amp;gt;y = key expires in n years
+Key is valid for? (0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Neste steg er gyldighetsperioden til nøkkelen. Denne kan du endre når som helst,
+også etter at den er gått ut. Derfor anbefaler jeg at du setter denne til et år,
+slik at dersom du mister tilgangen til nøkkelen og må lage en ny så går den gamle
+ut på et eller annet tidspunkt.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Key is valid for? (0) 1y
+Key expires at 12/29/17 19:06:04 W. Europe Standard Time
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nå skal du lage nøkkelparets første brukeridentitet. Det er dette som vises
+når andre laster inn ditt nøkkelpar. Skriv inn ditt navn og epostadresse.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Real name: Simba Larki
+Email address: simba@exaple.com
+Comment:
+You selected this USER-ID:
+    &amp;quot;Simba Larki &amp;lt;simba@exaple.com&amp;gt;&amp;quot;
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+You need a Passphrase to protect your secret key.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Siste steget er å valge et passord, eller passfrase. Velg et skikkelig passord,
+eller en setning. Det er dette som hindrer at andre får tilgang til din private
+nøkkel dersom de får tilgang til datmaskinen eller filene dine.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key 86D91256 marked as ultimately trusted
+public and secret key created and signed.
+
+pub   2048R/86D91256 2016-12-29 [expires: 2017-12-29]
+      Key fingerprint = A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256
+uid       [ultimate] Simba Larki &amp;lt;simba@example.org&amp;gt;
+sub   2048R/27FA711C 2016-12-29 [expires: 2017-12-29]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Du kan nå se at nøkkelen med fingeravtrykket
+&lt;code&gt;A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256&lt;/code&gt; og nøkkelid &lt;code&gt;0x86D91256&lt;/code&gt;
+er opprettet.&lt;/p&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Nøkkelid består av de 8 (kort nøkkelid) eller 16 (lang nøkkelid) siste tegnene i fingeravtrykket med &lt;code&gt;0x&lt;/code&gt; rett forran.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Du kan se dine nøkkelpar med kommandoen &lt;code&gt;C:\&amp;gt;gpg -K --fingerprint&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tilbakekallingssertifikat&#34;&gt;Tilbakekallingssertifikat&lt;/h2&gt;
+
+&lt;p&gt;Et tilbakekallingssertifikat benyttes dersom du ikke lenger har kontroll over din
+private nøkkel. Dette kan brukes uten at du har tilgang til den private nøkkelen.
+Dersom du tilbakekaller nøkkelen din vil den ikke lenger kunne brukes til å
+signere eller kryptere meldinger.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --output revoke.asc --gen-revoke simba@example.org
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dette vil lagre ditt tilbakekallingssertifikat som &lt;code&gt;revoke.asc&lt;/code&gt;. Ta godt vare
+på dette. Dersom andre får tilgang til det kan de tilbakekalle dit nøkkelpar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Din nøkkelring</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/noekkelring/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/noekkelring/</guid>
+      <description>
+
+&lt;p&gt;Din nøkkelring inneholder ikke bare dine egne offentlige og private nøkler,
+men også de offentlige nøklene de du kommuniserer med. I tillegg til selve
+nøklene finnes det også annen informasjon i den. Du bør derfor jevnlig ta
+sikkerhetskopi av nøkkelringen. Denne bør du lagre på et trygt sted.&lt;/p&gt;
+
+&lt;h2 id=&#34;importere-nøkler&#34;&gt;Importere nøkler&lt;/h2&gt;
+
+&lt;p&gt;Det letteste når du skal importere offentlige nøkler er å søke på en nøkkelserver.
+For å søke etter en offentlig nøkkel på en nøkkelserver bruker du &lt;code&gt;--search-keys&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Før du kan ta i bruk nøkkelserver må du spesifisere dette i &lt;code&gt;gpg.conf&lt;/code&gt;. Denne
+filen finner du i &lt;code&gt;C:\Users\BRUKERNAVN\AppData\Roaming\gnupg&lt;/code&gt; i Windows eller
+&lt;code&gt;~\.gnupg&lt;/code&gt; på Linux. Åpne denne filen i en valgfri teksteditor
+(Notepad for eksmepel) og legg inn følgende linje.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;keyserver hkp://pool.sks-keyservers.net
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;pool.sks-keyservers.net&lt;/em&gt; er et nettverk av nøkkelservere som synkroniserer seg
+selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --search-keys alice@cyb.org
+gpg: searching for &amp;quot;alice@cyb.org&amp;quot; from hkps server keys.drup.no
+(1)     Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;
+          1024 bit DSA key FB5797A9, created: 2000-06-06
+Keys 1-1 of 1 for &amp;quot;alice@cyb.org&amp;quot;.  Enter number(s), N)ext, or Q)uit &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Velg så nøkkelen du vil importere. Husk å å verfiser hele fingeravtrykket sammen
+med eieren til nøkkelen før du tar den i bruk.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Keys 1-1 of 1 for &amp;quot;alice@cyb.org&amp;quot;.  Enter number(s), N)ext, or Q)uit &amp;gt; 1
+gpg: requesting key FB5797A9 from hkps server keys.drup.no
+gpg: key FB5797A9: public key &amp;quot;Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;&amp;quot; imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Du kan nå se at den nye offentlige nøkkelen er kommet inn i din nøkkelring
+sammen med ditt eget nøkkelpar når du bruker  &lt;code&gt;-k --fingerprint&lt;/code&gt; kommandoen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg -k --fingerprint
+pub   2048R/86D91256 2016-12-29 [expires: 2017-12-29]
+      Key fingerprint = A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256
+uid       [ultimate] Simba Larki &amp;lt;simba@example.org&amp;gt;
+sub   2048R/27FA711C 2016-12-29 [expires: 2017-12-29]
+
+pub   1024D/FB5797A9 2000-06-06
+      Key fingerprint = 738C 2FE2 AF16 B223 B2CC  4CED 5B2A 0A6D FB57 97A9
+uid       [ unknown] Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;
+sub   1024g/C8B3998F 2000-06-06
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dersom du har mottat en offentlig nøkkel i for eksmepel et vedlegg til en epost
+kan du importere den med &lt;code&gt;--import&lt;/code&gt; paramteren.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --import -i key.asc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Når nøklene er i din nøkkelring kan du benytte de til å kryptere meldinger og
+verifisere signaturer.&lt;/p&gt;
+
+&lt;h2 id=&#34;eksportere-nøkler&#34;&gt;Eksportere nøkler&lt;/h2&gt;
+
+&lt;p&gt;For at andre skal kunne kryptere meldinger til deg eller verifisere dine digitale
+signaturer er de avhengig å importert din offentlige nøkkel føsr.&lt;/p&gt;
+
+&lt;p&gt;For å eksportere din offentlige nøkkel til en fil som du for eksempel kan legge
+ved epost bruker du &lt;code&gt;--export&lt;/code&gt; paramteren.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg -a --export alice@cyb.org -o key.asc
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2
+
+mQENBFgM8S4BCACsRH
+[...]
+w49DLEkc
+=h9GD
+-----END PGP PUBLIC KEY BLOCK-----
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Du kan også laste opp nøkkelen din til en nøkkelserver slik at andre kan søke
+den opp og laste den ned der.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --send-keys 0x69CDDB86
+gpg: sending key 69CDDB86 to hkps server keys.drup.no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Når du kommuniserer med nøkkelservere må du benytte nøkkelid. For eksempel 0x69CDDB86.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;sette-tillit-til-nøkler&#34;&gt;Sette tillit til nøkler&lt;/h2&gt;
+
+&lt;p&gt;Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
+eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir
+seg for å være. Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert
+Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Du setter tillit til en nøkkel med &lt;code&gt;--edit-key&lt;/code&gt; parameteren.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --edit-key alice@cyb.org
+gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+
+pub  1024D/FB5797A9  created: 2000-06-06  expires: never       usage: SCA
+                     trust: unknown       validity: unknown
+sub  1024g/C8B3998F  created: 2000-06-06  expires: never       usage: E
+[ unknown] (1). Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;
+
+gpg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Du blir nå vist hvilken nøkkel du skal endre. For å sette tillit bruker vi
+&lt;code&gt;trust&lt;/code&gt; kommandoen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg&amp;gt; trust
+pub  1024D/FB5797A9  created: 2000-06-06  expires: never       usage: SCA
+                   trust: unknown       validity: unknown
+sub  1024g/C8B3998F  created: 2000-06-06  expires: never       usage: E
+[ unknown] (1). Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;
+
+Please decide how far you trust this user to correctly verify other users&#39; keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+1 = I don&#39;t know or won&#39;t say
+2 = I do NOT trust
+3 = I trust marginally
+4 = I trust fully
+5 = I trust ultimately
+m = back to the main menu
+
+Your decision?
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Spesifiser hvor god tillit du har til eieren av denne nøkkelen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg&amp;gt; save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For å lagre endringene bruker vi &lt;code&gt;save&lt;/code&gt; kommandoen.&lt;/p&gt;
+
+&lt;h2 id=&#34;sertifisere-nøkler&#34;&gt;Sertifisere nøkler&lt;/h2&gt;
+
+&lt;p&gt;Sertifisering (eller signering) gjør man når man har verifisert sammenhengen
+mellom nøkkel og person. Når man sertifiserer en nøkkel signerer du den med din
+private nøkkel, slik at andre ser at du går god for denne nøkkelen.&lt;/p&gt;
+
+&lt;p&gt;For å signere nøkler gjør du samme som over, men i steden for &lt;code&gt;trust&lt;/code&gt; bruker
+du &lt;code&gt;sign&lt;/code&gt; kommandoen.&lt;/p&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Bare signer nøkler der du har verifisert sammenhengen mellom nøkkelen og personen. Verifiser &lt;strong&gt;alltid&lt;/strong&gt; hele fingeravtrykket til en nøkkel før du signerer den.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Når du har signert en nøkkel kan du laste opp din signatur til nøkkelserverene
+slik at andre kan se at du har verifisert nøkkelen og identiten til eieren.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --send-keys 0xFB5797A9
+gpg: sending key FB5797A9 to hkps server keys.drup.no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;oppdatere-offentlige-nøkler&#34;&gt;Oppdatere offentlige nøkler&lt;/h2&gt;
+
+&lt;p&gt;Nøkler kan tilbakekalles eller signeres av andre brukere uten at du nødvendigvis
+får vite det. Slike endringer er viktig at du får med deg. Derfor bør du synkronisere
+din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med &lt;code&gt;--refresh-keys&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --refresh-keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;sikkerhetkopiering&#34;&gt;Sikkerhetkopiering&lt;/h2&gt;
+
+&lt;p&gt;Etterhvert som nøkkelringen vokser blir det viktigere å viktigere å ha en
+sikkerhetskopi av denne.&lt;/p&gt;
+
+&lt;p&gt;Det er tre ting som må sikkerhetkopieres: Offentlige nøkler, tillitsdatabasen og
+private nøkler.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Offentlige nøkler&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For å sikkerhetskopiere de offentlige nøklene kopierer du bare filene
+&lt;code&gt;pubring.gpg&lt;/code&gt; og &lt;code&gt;pubring.kbx&lt;/code&gt; fra  &lt;code&gt;C:\Users\BRUKERNAVN\AppData\Roaming\gnupg&lt;/code&gt;
+mappen på Windows eller i &lt;code&gt;~/.gnupg&lt;/code&gt; mappen på Linux/Unix.&lt;/p&gt;
+
+&lt;p&gt;Får gjennopprette disse kan du bare kopiere disse tilbake på samme sted.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tillitsdatabase&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Tillitsdatabasen kopieres med følgende kommando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --export-ownertrust &amp;gt; ownertrust-gpg.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;og importeres med denne kommandoen&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --import-ownertrust ownertrust-gpg.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Private nøkler&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dine private nøkler eksporteres med &lt;code&gt;--export-secret-keys&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg -a --export-secret-keys -o private-keys.asc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For å importere dine private nøkler bruker du &lt;code&gt;--import&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --import private-keys.asc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Gjør alt du kan for å holde din private nøkkel privat.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Alle 4 filene bør lagres sikkert og ikke på datamaskinen, gjerne på en minnepinne.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Signering</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/signering/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/signering/</guid>
+      <description>
+
+&lt;p&gt;Man kan signere meldinger med OpenPGP for å verifisere at eieren av et bestemt
+nøkkelpar har skrevet meldingen, og at ingen har modifisert den på veien.&lt;/p&gt;
+
+&lt;p&gt;For å verifisere signaturen bruker man den offentlige nøkkelen tilhørende
+nøkkelparet.&lt;/p&gt;
+
+&lt;p&gt;OpenPGP pakker normalt sett signatur og filen man signerer inn i en og samme fil.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg -output doc.sig --sign doc.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dette produserer et signert dokument &lt;code&gt;doc.sig&lt;/code&gt;. Dokumentet inneholder både din
+digitale signatur og det originale dokumentet. Dokumentet er komprimert og i
+binært format.&lt;/p&gt;
+
+&lt;p&gt;Hvis du mottar et signert dokument kan du kontrollere signaturen samtidig som
+du gjennoppretter det originale dokumentet.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --output doc.txt --decrypt doc.sig
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gpg: Signature made Sun Jan 1 12:02:38 2017 CDT using RSA key ID AB4T76AC
+  gpg: Good signature from &amp;ldquo;Alice (Judge) &lt;a href=&#34;mailto:alice@cyb.org&#34;&gt;alice@cyb.org&lt;/a&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;klartekstsignatur&#34;&gt;Klartekstsignatur&lt;/h2&gt;
+
+&lt;p&gt;Et vanlig bruksområde for digitale signaturer er epost eller andre digitale
+meldinger. I tilfeller der det ikker er ønskelig å komprimere meldingen og pakke
+den inn i en binær fil kan man bruke klartekstsignaturer.&lt;/p&gt;
+
+&lt;p&gt;En klartekstsignatur gjøres med &lt;code&gt;--clearsign&lt;/code&gt; parameteren som produserer en
+ASCII signatur som omgir det originale dokumentet.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --clearsign doc.txt
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice (Judge) &amp;lt;alice@cyb.org&amp;gt;&amp;quot;
+2048-bit RSA key, ID AB4T76AC, created 2016-06-04
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA2
+
+[...]
+-----BEGIN PGP SIGNATURE-----
+iEYEARECAAYFAjdYCQoACgkQJ9S6ULt1dqz6IwCfQ7wP6i/i8HhbcOSKF4ELyQB1
+oCoAoOuqpRqEzr4kOkQqHRLE/b8/Rw2k
+=y6kj
+-----END PGP SIGNATURE-----
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;frakoblet-signatur&#34;&gt;Frakoblet signatur&lt;/h2&gt;
+
+&lt;p&gt;Begge de to måtene beskrevet over har begrenset nytteverdi, og begge metodene
+gjør endringer i det originale dokumentet. Derfor finnes det en tredje metode
+som lagrer signaturen i en separat fil, uten å gjøre endringer i det originale
+dokumentet. Dette gjøres med &lt;code&gt;--detach-sig&lt;/code&gt; parameteren.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --output doc.sig --detach-sig doc.txt
+
+You need a passphrase to unlock the secret key for
+user: &amp;quot;Alice (Judge) &amp;lt;alice@cyb.org&amp;gt;&amp;quot;
+2048-bit RSA key, ID AB4T76AC, created 2016-06-04
+
+Enter passphrase:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For å verfifisere signaturen trenger man både det originale dokumentet og
+signaturen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --verify doc.sig doc.txt
+gpg: Signature made Fri Jun  4 12:38:46 2016 CDT using RSA key ID AB4T76AC
+gpg: Good signature from &amp;quot;Alice (Judge) &amp;lt;alice@cyb.org&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kryptering</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/kryptering/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/kryptering/</guid>
+      <description>&lt;p&gt;Kryptering av en melding eller fil gjør at ingen andre enn avsender og
+mottaker kan lese innholdet. Når du skal sende og motta krypterte meldinger har
+din offentlige og private nøkkel helt klare funksjoner. Du kan se på din offentlige
+nøkkel som en åpen safe. Når du krypterer et dokument legger du det inn i safen
+og vrir om kodelåsen flere ganger. Den private nøkkelen er kombinasjonen du
+trenger for å åpne safen.&lt;/p&gt;
+
+&lt;p&gt;Hvis du vil kryptere en melding til Alice bruker du Alice sin offentlige nøkkel.
+Hun kan da dekryptere den med sin private nøkkel. Hvis Alice vil sende deg en
+kryptert melding krypterer hun den med din offentlige nøkkel. Du kan da
+dekryptere den med din private nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Før du kan sende krypterte meldinger må du importere den offentlige nøkkelen til
+mottakeren, slik som beskrevet i Nøkkelring-kapittelet.&lt;/p&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Før du sender en kryptert melding er det viktig at du verifiserer at du bruker riktig offentlig nøkkel.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt; C:\&amp;gt;gpg --output doc.gpg --encrypt --recipient alice@cyb.org doc.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;--recipient&lt;/code&gt; parameteren spesifiseres en gang for hver mottaker og er
+etterfulgt av en mottaker. I dette tilfellet &lt;code&gt;alice@cyb.org&lt;/code&gt;. Dersom du selv
+skal kunne dekryptere dokumentet må du også spesifisere deg selv som mottaker i
+tillegg.&lt;/p&gt;
+
+&lt;p&gt;For å dekryptere et dokument benyttes &lt;code&gt;--decrypt&lt;/code&gt; parameteren. Du trenger da
+den private nøkkelen som tilhører den offentlige nøkkelen som ble brukt for å
+kryptere dokumentet.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --output doc.txt --decrypt doc.gpg
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tillitsnett</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/wot/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/wot/</guid>
+      <description>
+
+&lt;p&gt;Hvordan kan man vite at en nøkkel virkelig tilhører den personen som den
+tilsynelatende tilhører? Hvem som helst kan lage et nøkkelpar og skrive hvilket
+navn og hvilken epostadresse de vil. Tillitsnettet (Web Of Trust) forsøker å
+skape et nettverk av nøkler du stoler på slik at man lettere kan knytte et
+nøkkelpar til en person.&lt;/p&gt;
+
+&lt;h2 id=&#34;sertifisering&#34;&gt;Sertifisering&lt;/h2&gt;
+
+&lt;p&gt;Sertifisering (eller signering) gjør man når man har verifisert sammenhengen
+mellom nøkkel og person. Når man sertifiserer en nøkkel signerer du den med din
+private nøkkel, slik at andre ser at du går god for denne nøkkelen.&lt;/p&gt;
+
+&lt;h2 id=&#34;tillit&#34;&gt;Tillit&lt;/h2&gt;
+
+&lt;p&gt;Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
+eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir seg
+for å være. Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert
+Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p&gt;
+
+&lt;h2 id=&#34;nøkkelservere&#34;&gt;Nøkkelservere&lt;/h2&gt;
+
+&lt;p&gt;Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
+Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
+du kommuniserer med. Dette er eneste måte å vite at nøkkelen for eksempel ikke
+er tilbakekalt.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Riktig bruk</title>
+      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/</link>
+      <pubDate>Wed, 22 Feb 2017 12:31:28 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/</guid>
+      <description>
+
+&lt;h3 id=&#34;kapittel-2&#34;&gt;Kapittel 2&lt;/h3&gt;
+
+&lt;h1 id=&#34;riktig-bruk&#34;&gt;Riktig bruk&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kom i gang med OpenPGP</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/</link>
+      <pubDate>Wed, 22 Feb 2017 10:58:45 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/</guid>
+      <description>
+
+&lt;h3 id=&#34;kapittel-1&#34;&gt;Kapittel 1&lt;/h3&gt;
+
+&lt;h1 id=&#34;kom-i-gang-med-openpgp&#34;&gt;Kom i gang med OpenPGP&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

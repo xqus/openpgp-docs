@@ -1,5 +1,10 @@
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Norsk OpenPGP guide"
 baseURL = "https://xqus.github.io/openpgp-docs/"
-
+publishDir = "docs"
 theme = "hugo-theme-learn"
+
+[params]
+  editURL = "https://github.com/xqus/openpgp-docs/edit/master/content/"
+  description = "Norsk OpenPGP guide"
+  author = "Audun Larsen"

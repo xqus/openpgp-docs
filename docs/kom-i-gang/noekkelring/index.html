@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="description" content="Norsk OpenPGP guide">
+<meta name="author" content="Audun Larsen">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Din nøkkelring</title>
+    <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/featherlight.min.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/horsey.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/theme.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/hugo-theme.css" rel="stylesheet">
+    <script src="https://xqus.github.io/openpgp-docs//js/jquery-2.x.min.js"></script>
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    
+
+  </head>
+  <body class="" data-url="/openpgp-docs/kom-i-gang/noekkelring/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      Norsk <strong>OpenPGP</strong> guide
+
+    </div>
+    
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+        
+      
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  parent" data-nav-id="/openpgp-docs/kom-i-gang/">
+        <a href="/openpgp-docs/kom-i-gang/">
+          <span>
+            
+              <b>1. </b>
+            
+             Kom i gang med OpenPGP
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
+              <a href="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
+                <span>Hva er OpenPGP     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/konsepter/">
+              <a href="/openpgp-docs/kom-i-gang/konsepter/">
+                <span>Konsepter     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/nokler/">
+              <a href="/openpgp-docs/kom-i-gang/nokler/">
+                <span>Komme i gang med nøkler     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/noekkelring/">
+              <a href="/openpgp-docs/kom-i-gang/noekkelring/">
+                <span>Din nøkkelring     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/signering/">
+              <a href="/openpgp-docs/kom-i-gang/signering/">
+                <span>Signering     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/kryptering/">
+              <a href="/openpgp-docs/kom-i-gang/kryptering/">
+                <span>Kryptering     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/wot/">
+              <a href="/openpgp-docs/kom-i-gang/wot/">
+                <span>Tillitsnett     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/openpgp-docs/riktig-bruk/">
+        <a href="/openpgp-docs/riktig-bruk/">
+          <span>
+            
+              <b>2. </b>
+            
+             Riktig bruk
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
+              <a href="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
+                <span>Nøkkelpreferanser     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/riktig-bruk/sikre-noekler/">
+              <a href="/openpgp-docs/riktig-bruk/sikre-noekler/">
+                <span>Sikker oppbevaring av nøkler     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/riktig-bruk/rotere-noekler/">
+              <a href="/openpgp-docs/riktig-bruk/rotere-noekler/">
+                <span>Rotere undernøkler     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+     
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+                
+                
+                
+              <div id="top-github-link">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/kom-i-gang/noekkelring.md" target="blank">
+                    <i class="fa fa-code-fork"></i>
+                    Edit this page
+                  </a>
+              </div>
+                
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                    
+                    
+                <a href="/openpgp-docs/kom-i-gang/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                  
+                
+                <span itemprop="title"> Din nøkkelring</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#importere-nøkler">Importere nøkler</a></li>
+<li><a href="#eksportere-nøkler">Eksportere nøkler</a></li>
+<li><a href="#sette-tillit-til-nøkler">Sette tillit til nøkler</a></li>
+<li><a href="#sertifisere-nøkler">Sertifisere nøkler</a></li>
+<li><a href="#oppdatere-offentlige-nøkler">Oppdatere offentlige nøkler</a></li>
+<li><a href="#sikkerhetkopiering">Sikkerhetkopiering</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Din nøkkelring</h1>
+                
+
+
+
+<p>Din nøkkelring inneholder ikke bare dine egne offentlige og private nøkler,
+men også de offentlige nøklene de du kommuniserer med. I tillegg til selve
+nøklene finnes det også annen informasjon i den. Du bør derfor jevnlig ta
+sikkerhetskopi av nøkkelringen. Denne bør du lagre på et trygt sted.</p>
+
+<h2 id="importere-nøkler">Importere nøkler</h2>
+
+<p>Det letteste når du skal importere offentlige nøkler er å søke på en nøkkelserver.
+For å søke etter en offentlig nøkkel på en nøkkelserver bruker du <code>--search-keys</code>.</p>
+
+<p>Før du kan ta i bruk nøkkelserver må du spesifisere dette i <code>gpg.conf</code>. Denne
+filen finner du i <code>C:\Users\BRUKERNAVN\AppData\Roaming\gnupg</code> i Windows eller
+<code>~\.gnupg</code> på Linux. Åpne denne filen i en valgfri teksteditor
+(Notepad for eksmepel) og legg inn følgende linje.</p>
+
+<pre><code>keyserver hkp://pool.sks-keyservers.net
+</code></pre>
+
+<p><em>pool.sks-keyservers.net</em> er et nettverk av nøkkelservere som synkroniserer seg
+selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.</p>
+
+<pre><code>C:\&gt;gpg --search-keys alice@cyb.org
+gpg: searching for &quot;alice@cyb.org&quot; from hkps server keys.drup.no
+(1)     Alice (Rechtsanwältin) &lt;alice@cyb.org&gt;
+          1024 bit DSA key FB5797A9, created: 2000-06-06
+Keys 1-1 of 1 for &quot;alice@cyb.org&quot;.  Enter number(s), N)ext, or Q)uit &gt;
+</code></pre>
+
+<p>Velg så nøkkelen du vil importere. Husk å å verfiser hele fingeravtrykket sammen
+med eieren til nøkkelen før du tar den i bruk.</p>
+
+<pre><code>Keys 1-1 of 1 for &quot;alice@cyb.org&quot;.  Enter number(s), N)ext, or Q)uit &gt; 1
+gpg: requesting key FB5797A9 from hkps server keys.drup.no
+gpg: key FB5797A9: public key &quot;Alice (Rechtsanwältin) &lt;alice@cyb.org&gt;&quot; imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+</code></pre>
+
+<p>Du kan nå se at den nye offentlige nøkkelen er kommet inn i din nøkkelring
+sammen med ditt eget nøkkelpar når du bruker  <code>-k --fingerprint</code> kommandoen.</p>
+
+<pre><code>C:\&gt;gpg -k --fingerprint
+pub   2048R/86D91256 2016-12-29 [expires: 2017-12-29]
+      Key fingerprint = A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256
+uid       [ultimate] Simba Larki &lt;simba@example.org&gt;
+sub   2048R/27FA711C 2016-12-29 [expires: 2017-12-29]
+
+pub   1024D/FB5797A9 2000-06-06
+      Key fingerprint = 738C 2FE2 AF16 B223 B2CC  4CED 5B2A 0A6D FB57 97A9
+uid       [ unknown] Alice (Rechtsanwältin) &lt;alice@cyb.org&gt;
+sub   1024g/C8B3998F 2000-06-06
+</code></pre>
+
+<p>Dersom du har mottat en offentlig nøkkel i for eksmepel et vedlegg til en epost
+kan du importere den med <code>--import</code> paramteren.</p>
+
+<pre><code>C:\&gt;gpg --import -i key.asc
+</code></pre>
+
+<p>Når nøklene er i din nøkkelring kan du benytte de til å kryptere meldinger og
+verifisere signaturer.</p>
+
+<h2 id="eksportere-nøkler">Eksportere nøkler</h2>
+
+<p>For at andre skal kunne kryptere meldinger til deg eller verifisere dine digitale
+signaturer er de avhengig å importert din offentlige nøkkel føsr.</p>
+
+<p>For å eksportere din offentlige nøkkel til en fil som du for eksempel kan legge
+ved epost bruker du <code>--export</code> paramteren.</p>
+
+<pre><code>C:\&gt;gpg -a --export alice@cyb.org -o key.asc
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2
+
+mQENBFgM8S4BCACsRH
+[...]
+w49DLEkc
+=h9GD
+-----END PGP PUBLIC KEY BLOCK-----
+</code></pre>
+
+<p>Du kan også laste opp nøkkelen din til en nøkkelserver slik at andre kan søke
+den opp og laste den ned der.</p>
+
+<pre><code>C:\&gt;gpg --send-keys 0x69CDDB86
+gpg: sending key 69CDDB86 to hkps server keys.drup.no
+</code></pre>
+
+<div class="notices note" ><p>Når du kommuniserer med nøkkelservere må du benytte nøkkelid. For eksempel 0x69CDDB86.</p>
+</div>
+
+
+<h2 id="sette-tillit-til-nøkler">Sette tillit til nøkler</h2>
+
+<p>Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
+eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir
+seg for å være. Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert
+Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.</p>
+
+<p>Du setter tillit til en nøkkel med <code>--edit-key</code> parameteren.</p>
+
+<pre><code>C:\&gt;gpg --edit-key alice@cyb.org
+gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+
+pub  1024D/FB5797A9  created: 2000-06-06  expires: never       usage: SCA
+                     trust: unknown       validity: unknown
+sub  1024g/C8B3998F  created: 2000-06-06  expires: never       usage: E
+[ unknown] (1). Alice (Rechtsanwältin) &lt;alice@cyb.org&gt;
+
+gpg&gt;
+</code></pre>
+
+<p>Du blir nå vist hvilken nøkkel du skal endre. For å sette tillit bruker vi
+<code>trust</code> kommandoen.</p>
+
+<pre><code>gpg&gt; trust
+pub  1024D/FB5797A9  created: 2000-06-06  expires: never       usage: SCA
+                   trust: unknown       validity: unknown
+sub  1024g/C8B3998F  created: 2000-06-06  expires: never       usage: E
+[ unknown] (1). Alice (Rechtsanwältin) &lt;alice@cyb.org&gt;
+
+Please decide how far you trust this user to correctly verify other users' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+1 = I don't know or won't say
+2 = I do NOT trust
+3 = I trust marginally
+4 = I trust fully
+5 = I trust ultimately
+m = back to the main menu
+
+Your decision?
+</code></pre>
+
+<p>Spesifiser hvor god tillit du har til eieren av denne nøkkelen.</p>
+
+<pre><code>gpg&gt; save
+</code></pre>
+
+<p>For å lagre endringene bruker vi <code>save</code> kommandoen.</p>
+
+<h2 id="sertifisere-nøkler">Sertifisere nøkler</h2>
+
+<p>Sertifisering (eller signering) gjør man når man har verifisert sammenhengen
+mellom nøkkel og person. Når man sertifiserer en nøkkel signerer du den med din
+private nøkkel, slik at andre ser at du går god for denne nøkkelen.</p>
+
+<p>For å signere nøkler gjør du samme som over, men i steden for <code>trust</code> bruker
+du <code>sign</code> kommandoen.</p>
+
+<div class="notices warning" ><p>Bare signer nøkler der du har verifisert sammenhengen mellom nøkkelen og personen. Verifiser <strong>alltid</strong> hele fingeravtrykket til en nøkkel før du signerer den.</p>
+</div>
+
+
+<p>Når du har signert en nøkkel kan du laste opp din signatur til nøkkelserverene
+slik at andre kan se at du har verifisert nøkkelen og identiten til eieren.</p>
+
+<pre><code>C:\&gt;gpg --send-keys 0xFB5797A9
+gpg: sending key FB5797A9 to hkps server keys.drup.no
+</code></pre>
+
+<h2 id="oppdatere-offentlige-nøkler">Oppdatere offentlige nøkler</h2>
+
+<p>Nøkler kan tilbakekalles eller signeres av andre brukere uten at du nødvendigvis
+får vite det. Slike endringer er viktig at du får med deg. Derfor bør du synkronisere
+din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med <code>--refresh-keys</code></p>
+
+<pre><code>C:\&gt;gpg --refresh-keys
+</code></pre>
+
+<h2 id="sikkerhetkopiering">Sikkerhetkopiering</h2>
+
+<p>Etterhvert som nøkkelringen vokser blir det viktigere å viktigere å ha en
+sikkerhetskopi av denne.</p>
+
+<p>Det er tre ting som må sikkerhetkopieres: Offentlige nøkler, tillitsdatabasen og
+private nøkler.</p>
+
+<p><strong>Offentlige nøkler</strong></p>
+
+<p>For å sikkerhetskopiere de offentlige nøklene kopierer du bare filene
+<code>pubring.gpg</code> og <code>pubring.kbx</code> fra  <code>C:\Users\BRUKERNAVN\AppData\Roaming\gnupg</code>
+mappen på Windows eller i <code>~/.gnupg</code> mappen på Linux/Unix.</p>
+
+<p>Får gjennopprette disse kan du bare kopiere disse tilbake på samme sted.</p>
+
+<p><strong>Tillitsdatabase</strong></p>
+
+<p>Tillitsdatabasen kopieres med følgende kommando</p>
+
+<pre><code>C:\&gt;gpg --export-ownertrust &gt; ownertrust-gpg.txt
+</code></pre>
+
+<p>og importeres med denne kommandoen</p>
+
+<pre><code>C:\&gt;gpg --import-ownertrust ownertrust-gpg.txt
+</code></pre>
+
+<p><strong>Private nøkler</strong></p>
+
+<p>Dine private nøkler eksporteres med <code>--export-secret-keys</code>.</p>
+
+<pre><code>C:\&gt;gpg -a --export-secret-keys -o private-keys.asc
+</code></pre>
+
+<p>For å importere dine private nøkler bruker du <code>--import</code></p>
+
+<pre><code>C:\&gt;gpg --import private-keys.asc
+</code></pre>
+
+<div class="notices warning" ><p>Gjør alt du kan for å holde din private nøkkel privat.</p>
+</div>
+
+
+<p>Alle 4 filene bør lagres sikkert og ikke på datamaskinen, gjerne på en minnepinne.</p>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/noekler"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/signering" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://xqus.github.io/openpgp-docs//js/clipboard.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/perfect-scrollbar.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/jquery.sticky-kit.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/featherlight.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/html5shiv-printshiv.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://xqus.github.io/openpgp-docs//js/modernizr.custom.71422.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/learn.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+

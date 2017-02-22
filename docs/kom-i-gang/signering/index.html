@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="description" content="Norsk OpenPGP guide">
+<meta name="author" content="Audun Larsen">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Signering</title>
+    <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/featherlight.min.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/horsey.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/theme.css" rel="stylesheet">
+    <link href="https://xqus.github.io/openpgp-docs//css/hugo-theme.css" rel="stylesheet">
+    <script src="https://xqus.github.io/openpgp-docs//js/jquery-2.x.min.js"></script>
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    
+
+  </head>
+  <body class="" data-url="/openpgp-docs/kom-i-gang/signering/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      Norsk <strong>OpenPGP</strong> guide
+
+    </div>
+    
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+        
+      
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  parent" data-nav-id="/openpgp-docs/kom-i-gang/">
+        <a href="/openpgp-docs/kom-i-gang/">
+          <span>
+            
+              <b>1. </b>
+            
+             Kom i gang med OpenPGP
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
+              <a href="/openpgp-docs/kom-i-gang/hva-er-openpgp/">
+                <span>Hva er OpenPGP     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/konsepter/">
+              <a href="/openpgp-docs/kom-i-gang/konsepter/">
+                <span>Konsepter     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/nokler/">
+              <a href="/openpgp-docs/kom-i-gang/nokler/">
+                <span>Komme i gang med nøkler     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/noekkelring/">
+              <a href="/openpgp-docs/kom-i-gang/noekkelring/">
+                <span>Din nøkkelring     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/signering/">
+              <a href="/openpgp-docs/kom-i-gang/signering/">
+                <span>Signering     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/kryptering/">
+              <a href="/openpgp-docs/kom-i-gang/kryptering/">
+                <span>Kryptering     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/wot/">
+              <a href="/openpgp-docs/kom-i-gang/wot/">
+                <span>Tillitsnett     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/openpgp-docs/riktig-bruk/">
+        <a href="/openpgp-docs/riktig-bruk/">
+          <span>
+            
+              <b>2. </b>
+            
+             Riktig bruk
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
+              <a href="/openpgp-docs/riktig-bruk/noekkelpreferanser/">
+                <span>Nøkkelpreferanser     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/riktig-bruk/sikre-noekler/">
+              <a href="/openpgp-docs/riktig-bruk/sikre-noekler/">
+                <span>Sikker oppbevaring av nøkler     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp-docs/riktig-bruk/rotere-noekler/">
+              <a href="/openpgp-docs/riktig-bruk/rotere-noekler/">
+                <span>Rotere undernøkler     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+     
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+                
+                
+                
+              <div id="top-github-link">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/kom-i-gang/signering.md" target="blank">
+                    <i class="fa fa-code-fork"></i>
+                    Edit this page
+                  </a>
+              </div>
+                
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                    
+                    
+                <a href="/openpgp-docs/kom-i-gang/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                  
+                
+                <span itemprop="title"> Signering</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#klartekstsignatur">Klartekstsignatur</a></li>
+<li><a href="#frakoblet-signatur">Frakoblet signatur</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Signering</h1>
+                
+
+
+
+<p>Man kan signere meldinger med OpenPGP for å verifisere at eieren av et bestemt
+nøkkelpar har skrevet meldingen, og at ingen har modifisert den på veien.</p>
+
+<p>For å verifisere signaturen bruker man den offentlige nøkkelen tilhørende
+nøkkelparet.</p>
+
+<p>OpenPGP pakker normalt sett signatur og filen man signerer inn i en og samme fil.</p>
+
+<pre><code>C:\&gt;gpg -output doc.sig --sign doc.txt
+</code></pre>
+
+<p>Dette produserer et signert dokument <code>doc.sig</code>. Dokumentet inneholder både din
+digitale signatur og det originale dokumentet. Dokumentet er komprimert og i
+binært format.</p>
+
+<p>Hvis du mottar et signert dokument kan du kontrollere signaturen samtidig som
+du gjennoppretter det originale dokumentet.</p>
+
+<pre><code>C:\&gt;gpg --output doc.txt --decrypt doc.sig
+</code></pre>
+
+<p>gpg: Signature made Sun Jan 1 12:02:38 2017 CDT using RSA key ID AB4T76AC
+  gpg: Good signature from &ldquo;Alice (Judge) <a href="mailto:alice@cyb.org">alice@cyb.org</a>&ldquo;</p>
+
+<h2 id="klartekstsignatur">Klartekstsignatur</h2>
+
+<p>Et vanlig bruksområde for digitale signaturer er epost eller andre digitale
+meldinger. I tilfeller der det ikker er ønskelig å komprimere meldingen og pakke
+den inn i en binær fil kan man bruke klartekstsignaturer.</p>
+
+<p>En klartekstsignatur gjøres med <code>--clearsign</code> parameteren som produserer en
+ASCII signatur som omgir det originale dokumentet.</p>
+
+<pre><code>C:\&gt;gpg --clearsign doc.txt
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice (Judge) &lt;alice@cyb.org&gt;&quot;
+2048-bit RSA key, ID AB4T76AC, created 2016-06-04
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA2
+
+[...]
+-----BEGIN PGP SIGNATURE-----
+iEYEARECAAYFAjdYCQoACgkQJ9S6ULt1dqz6IwCfQ7wP6i/i8HhbcOSKF4ELyQB1
+oCoAoOuqpRqEzr4kOkQqHRLE/b8/Rw2k
+=y6kj
+-----END PGP SIGNATURE-----
+</code></pre>
+
+<h2 id="frakoblet-signatur">Frakoblet signatur</h2>
+
+<p>Begge de to måtene beskrevet over har begrenset nytteverdi, og begge metodene
+gjør endringer i det originale dokumentet. Derfor finnes det en tredje metode
+som lagrer signaturen i en separat fil, uten å gjøre endringer i det originale
+dokumentet. Dette gjøres med <code>--detach-sig</code> parameteren.</p>
+
+<pre><code>C:\&gt;gpg --output doc.sig --detach-sig doc.txt
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice (Judge) &lt;alice@cyb.org&gt;&quot;
+2048-bit RSA key, ID AB4T76AC, created 2016-06-04
+
+Enter passphrase:
+</code></pre>
+
+<p>For å verfifisere signaturen trenger man både det originale dokumentet og
+signaturen.</p>
+
+<pre><code>C:\&gt;gpg --verify doc.sig doc.txt
+gpg: Signature made Fri Jun  4 12:38:46 2016 CDT using RSA key ID AB4T76AC
+gpg: Good signature from &quot;Alice (Judge) &lt;alice@cyb.org&gt;&quot;
+</code></pre>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/noekkelring"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//kom-i-gang/kryptering" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://xqus.github.io/openpgp-docs//js/clipboard.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/perfect-scrollbar.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/jquery.sticky-kit.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/featherlight.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/html5shiv-printshiv.min.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://xqus.github.io/openpgp-docs//js/modernizr.custom.71422.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/learn.js"></script>
+    <script src="https://xqus.github.io/openpgp-docs//js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+
