@@ -1,16 +1,16 @@
 +++
 date = "2017-02-22T10:58:45+01:00"
-icon = "<b>X. </b>"
+icon = "<b>1. </b>"
 chapter = true
 next = "/next/path"
 prev = "/prev/path"
 weight = 0
-title = "Some Chapter title"
+title = "Kom i gang med OpenPGP"
 
 +++
 
-### Chapter X
+### Kapittel 1
 
-# Some Chapter title
+# Kom i gang med OpenPGP
 
 Lorem ipsum
