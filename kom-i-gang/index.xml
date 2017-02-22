@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kom-i-gangs on My New Hugo Site</title>
+    <link>https://xqus.github.io/openpgp-docs/kom-i-gang/index.xml</link>
+    <description>Recent content in Kom-i-gangs on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Feb 2017 10:58:45 +0100</lastBuildDate>
+    <atom:link href="https://xqus.github.io/openpgp-docs/kom-i-gang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Some Chapter title</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/</link>
+      <pubDate>Wed, 22 Feb 2017 10:58:45 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/</guid>
+      <description>
+
+&lt;h3 id=&#34;chapter-x&#34;&gt;Chapter X&lt;/h3&gt;
+
+&lt;h1 id=&#34;some-chapter-title&#34;&gt;Some Chapter title&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Some Title</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/hva-er-openpgp/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/hva-er-openpgp/</guid>
+      <description>&lt;p&gt;Lorem Ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
