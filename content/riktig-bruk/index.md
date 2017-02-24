@@ -1,6 +1,6 @@
 +++
 next = "/riktig-bruk/noekkelpreferanser"
-prev = "/kom-i-gang/wot"
+prev = "/kom-i-gang/fallgruver"
 weight = 0
 title = "Riktig bruk"
 date = "2017-02-22T12:31:28+01:00"

@@ -1,7 +1,7 @@
 +++
 date = "2017-02-22T10:59:58+01:00"
 toc = true
-next = "/riktig-bruk/"
+next = "/kom-i-gang/fallgruver"
 prev = "/kom-i-gang/kryptering"
 weight = 7
 title = "Tillitsnett"
