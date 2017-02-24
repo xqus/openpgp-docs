@@ -13,4 +13,4 @@ chapter = true
 
 # Riktig bruk
 
-Lorem ipsum
+Et kapittel om riktig bruk av OpenPGP, tips og triks.

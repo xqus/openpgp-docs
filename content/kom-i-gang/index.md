@@ -13,4 +13,4 @@ title = "Kom i gang med OpenPGP"
 
 # Kom i gang med OpenPGP
 
-Lorem ipsum
+Grunnleggende innføring i bruk av GnuPG, og konseptene bak OpenPGP.
