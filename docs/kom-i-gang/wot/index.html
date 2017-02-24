@@ -257,9 +257,12 @@
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#sertifisering">Sertifisering</a></li>
 <li><a href="#tillit">Tillit</a></li>
 <li><a href="#nøkkelservere">Nøkkelservere</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -277,26 +280,29 @@
 
 
 
-<p>Hvordan kan man vite at en nøkkel virkelig tilhører den personen som den
-tilsynelatende tilhører? Hvem som helst kan lage et nøkkelpar og skrive hvilket
-navn og hvilken epostadresse de vil. Tillitsnettet (Web Of Trust) forsøker å
-skape et nettverk av nøkler du stoler på slik at man lettere kan knytte et
-nøkkelpar til en person.</p>
+<p>Før du sender en kryptert melding må du være sikker på at den offentlige
+nøkkelen du bruker for å kryptere meldingen faktisk tilhører den personen du
+skal sende meldingen til. Det at en nøkkel finnes på en nøkkelserver betyr ikke
+at den faktisk tilhører personen du vil kommunisere med. Hvem som helst kan lage
+et nøkkelpar og skrive hvilket navn og hvilken epostadresse de vil.
+Tillitsnettet (Web Of Trust) forsøker å skape et nettverk av nøkler du stoler på
+slik at man lettere kan knytte et nøkkelpar til en person.</p>
 
-<h2 id="sertifisering">Sertifisering</h2>
+<h3 id="sertifisering">Sertifisering</h3>
 
-<p>Sertifisering (eller signering) gjør man når man har verifisert sammenhengen
-mellom nøkkel og person. Når man sertifiserer en nøkkel signerer du den med din
-private nøkkel, slik at andre ser at du går god for denne nøkkelen.</p>
+<p>Når du <a href="/openpgp-docs/kom-i-gang/noekkelring/#sertifisere-nøkler">sertifiserer en nøkkel</a>
+forteller du omverden at du har verifisert sammenhengen mellom <em>navn</em> og <em>epostadresse</em>
+spesifisert i nøkkelen og den faktiske eieren av nøkkelen.</p>
 
-<h2 id="tillit">Tillit</h2>
+<h3 id="tillit">Tillit</h3>
 
 <p>Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
-eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir seg
-for å være. Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert
-Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.</p>
+eieren til nøkkelen verifiserer at eieren til nøklene han/hun sertifiserer
+er den han/hun utgir seg for å være.
+Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert Alice sin nøkkel
+vil du automatisk også ha tillit til Alice sin nøkkel.</p>
 
-<h2 id="nøkkelservere">Nøkkelservere</h2>
+<h3 id="nøkkelservere">Nøkkelservere</h3>
 
 <p>Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
 Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de

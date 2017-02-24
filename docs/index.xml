@@ -1388,26 +1388,29 @@ kryptere dokumentet.&lt;/p&gt;
       <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/wot/</guid>
       <description>
 
-&lt;p&gt;Hvordan kan man vite at en nøkkel virkelig tilhører den personen som den
-tilsynelatende tilhører? Hvem som helst kan lage et nøkkelpar og skrive hvilket
-navn og hvilken epostadresse de vil. Tillitsnettet (Web Of Trust) forsøker å
-skape et nettverk av nøkler du stoler på slik at man lettere kan knytte et
-nøkkelpar til en person.&lt;/p&gt;
+&lt;p&gt;Før du sender en kryptert melding må du være sikker på at den offentlige
+nøkkelen du bruker for å kryptere meldingen faktisk tilhører den personen du
+skal sende meldingen til. Det at en nøkkel finnes på en nøkkelserver betyr ikke
+at den faktisk tilhører personen du vil kommunisere med. Hvem som helst kan lage
+et nøkkelpar og skrive hvilket navn og hvilken epostadresse de vil.
+Tillitsnettet (Web Of Trust) forsøker å skape et nettverk av nøkler du stoler på
+slik at man lettere kan knytte et nøkkelpar til en person.&lt;/p&gt;
 
-&lt;h2 id=&#34;sertifisering&#34;&gt;Sertifisering&lt;/h2&gt;
+&lt;h3 id=&#34;sertifisering&#34;&gt;Sertifisering&lt;/h3&gt;
 
-&lt;p&gt;Sertifisering (eller signering) gjør man når man har verifisert sammenhengen
-mellom nøkkel og person. Når man sertifiserer en nøkkel signerer du den med din
-private nøkkel, slik at andre ser at du går god for denne nøkkelen.&lt;/p&gt;
+&lt;p&gt;Når du &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/noekkelring/#sertifisere-nøkler&#34;&gt;sertifiserer en nøkkel&lt;/a&gt;
+forteller du omverden at du har verifisert sammenhengen mellom &lt;em&gt;navn&lt;/em&gt; og &lt;em&gt;epostadresse&lt;/em&gt;
+spesifisert i nøkkelen og den faktiske eieren av nøkkelen.&lt;/p&gt;
 
-&lt;h2 id=&#34;tillit&#34;&gt;Tillit&lt;/h2&gt;
+&lt;h3 id=&#34;tillit&#34;&gt;Tillit&lt;/h3&gt;
 
 &lt;p&gt;Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
-eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir seg
-for å være. Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert
-Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p&gt;
+eieren til nøkkelen verifiserer at eieren til nøklene han/hun sertifiserer
+er den han/hun utgir seg for å være.
+Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert Alice sin nøkkel
+vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p&gt;
 
-&lt;h2 id=&#34;nøkkelservere&#34;&gt;Nøkkelservere&lt;/h2&gt;
+&lt;h3 id=&#34;nøkkelservere&#34;&gt;Nøkkelservere&lt;/h3&gt;
 
 &lt;p&gt;Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
 Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
@@ -1431,7 +1434,7 @@ oftest skaper problemer for de som benytter OpenPGP.&lt;/p&gt;
 
 &lt;h3 id=&#34;dårlig-passord&#34;&gt;Dårlig passord&lt;/h3&gt;
 
-&lt;p&gt;I kapittelet om &lt;a href=&#34;openpgp-docs/kom-i-gang/konsepter/&#34;&gt;konsepter&lt;/a&gt; skrev jeg at
+&lt;p&gt;I kapittelet om &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/konsepter/&#34;&gt;konsepter&lt;/a&gt; skrev jeg at
 all sikkerheten i krypteringsalgortimene ligger i din private nøkkel. Det
 eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
 på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
