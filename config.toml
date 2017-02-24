@@ -1,4 +1,4 @@
-languageCode = "en-us"
+languageCode = "nb-no"
 title = "Norsk OpenPGP guide"
 baseURL = "https://xqus.github.io/openpgp-docs/"
 publishDir = "docs"
