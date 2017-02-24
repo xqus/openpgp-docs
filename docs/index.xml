@@ -5,7 +5,7 @@
     <link>https://xqus.github.io/openpgp-docs/index.xml</link>
     <description>Recent content on Norsk OpenPGP guide</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>nb-no</language>
     <lastBuildDate>Wed, 22 Feb 2017 12:31:51 +0100</lastBuildDate>
     <atom:link href="https://xqus.github.io/openpgp-docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -138,6 +138,76 @@ eksempel installere det slik:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;apt-get install gnupg2
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kryptert epost med Enigmail</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/enigmail/</link>
+      <pubDate>Fri, 24 Feb 2017 08:57:52 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/enigmail/</guid>
+      <description>
+
+&lt;h2 id=&#34;installer-thunderbird&#34;&gt;Installer Thunderbird&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.mozilla.org/nb-NO/thunderbird/&#34;&gt;Thunderbird&lt;/a&gt; er en &lt;strong&gt;gratis&lt;/strong&gt;
+åpen-kildekode &lt;strong&gt;epost klient&lt;/strong&gt; utviklet av Mozilla, de samme som har utviklet
+&lt;strong&gt;Firebird&lt;/strong&gt;. En epost klient som Thunderbird fungerer fint som en erstating for
+det nettleserbaserte grenesnittet til din eposttilbyder (Gmail eller lignende).
+Det første du må gjøre er å sette opp Thunderbird til å lese din e-post. Første
+gang du starter &lt;a href=&#34;https://www.mozilla.org/nb-NO/thunderbird/&#34;&gt;Thunderbird&lt;/a&gt; vil
+den veilede deg gjennom oppsettet av din epost.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../images/step1a-install-wizard.png?width=30%&#34; alt=&#34;Steg 1a&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;installer-gnupg&#34;&gt;Installer GnuPG&lt;/h2&gt;
+
+&lt;p&gt;Dersom du ikke har installert GnuPG enda følg veilednignen
+&lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/hva-er-openpgp/#kom-i-gang&#34;&gt;her&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;installer-enigmail&#34;&gt;Installer Enigmail&lt;/h2&gt;
+
+&lt;p&gt;Enigmail er en utvidelse til Thunderbird som gir deg et grensesnitt til &lt;em&gt;GnuPG&lt;/em&gt;
+for automatisk å kryptere og signere epost. Denne utvidelsen kan installeres
+gjennom Utvidelses grensesnittet til Thunderbird.&lt;/p&gt;
+
+&lt;p&gt;I Thunderbird velg &lt;strong&gt;Verktøy&lt;/strong&gt; og så &lt;strong&gt;Utvidelser&lt;/strong&gt;.
+&lt;img src=&#34;../../images/step1b-01-tools-addons.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
+Søk etter &lt;strong&gt;Enigmail&lt;/strong&gt; i søkreruten øverst til høyre.
+&lt;img src=&#34;../../images/step1b-02-search.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
+Finn &lt;strong&gt;Enigmail&lt;/strong&gt; i listen og velg installer.
+&lt;img src=&#34;../../images/step1b-03-install.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
+Følg anvisingene på skjermen og restart Thunderbird når du er ferdig.&lt;/p&gt;
+
+&lt;h2 id=&#34;lag-dine-nøkler&#34;&gt;Lag dine nøkler&lt;/h2&gt;
+
+&lt;p&gt;Før du kan sende og motta kryptert epost, og sende epost signert med din digitale
+signatur må du opprette et nøkkelpar.
+&lt;img src=&#34;../../images/step2a-01-make-keypair.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Første gang du starter Thunderbird etter at Enigmail er installert skal
+&lt;strong&gt;Oppsettsveilederen&lt;/strong&gt; starte. Dersom den ikke gjør det kan du starte den ved å
+velge &lt;strong&gt;Enigmail&lt;/strong&gt; og så &lt;strong&gt;Oppsettsveileder&lt;/strong&gt;.
+Følg anvinsingen på skjermen så vil programet generere nøklene for deg.
+Før du lager dine nøkler anbefaler jeg at du leser
+&lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/nokler/&#34;&gt;Komme i gang med nøkler&lt;/a&gt; (du trenger &lt;strong&gt;ikke&lt;/strong&gt;
+generere dine nøkler slik som beskrevet her) og
+&lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/riktig-bruk/noekkelpreferanser/&#34;&gt;Nøkkelpreferanser&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;Nøkler du oppretter og importerer i Enigmail vil være tilgjengelig i GnuPG og omvendt.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;publiser-din-offentlige-nøkkel&#34;&gt;Publiser din offentlige nøkkel&lt;/h2&gt;
+
+&lt;p&gt;For at andre lettere skal kunne finne din offentlige nøkkel kan du laste den
+opp til en &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/wot/#nøkkelservere&#34;&gt;nøkkeltjener&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For å gjøre dette velg &lt;strong&gt;Thunderbird&lt;/strong&gt; og så &lt;strong&gt;Nøkkelhåndtering&lt;/strong&gt;.
+Høyreklikk på din nøkkel og velg &lt;strong&gt;Last opp offentlige nøkler til nøkkeltjener&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Images are copyright © 2014-2016 Free Software Foundation, Inc.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -785,7 +855,7 @@ gpg: sending key 0x50AD20916F557D14 to hkps server hkps.pool.sks-keyservers.net
     </item>
     
     <item>
-      <title>Komme i gang med nøkler</title>
+      <title>Oppbygningen av nøkler</title>
       <link>https://xqus.github.io/openpgp-docs/kom-i-gang/nokler/</link>
       <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
       
@@ -1358,7 +1428,7 @@ er tilbakekalt.&lt;/p&gt;
 
 &lt;h1 id=&#34;riktig-bruk&#34;&gt;Riktig bruk&lt;/h1&gt;
 
-&lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;p&gt;Et kapittel om riktig bruk av OpenPGP, tips og triks.&lt;/p&gt;
 </description>
     </item>
     
@@ -1374,7 +1444,7 @@ er tilbakekalt.&lt;/p&gt;
 
 &lt;h1 id=&#34;kom-i-gang-med-openpgp&#34;&gt;Kom i gang med OpenPGP&lt;/h1&gt;
 
-&lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;p&gt;Grunnleggende innføring i bruk av GnuPG, og konseptene bak OpenPGP.&lt;/p&gt;
 </description>
     </item>
     

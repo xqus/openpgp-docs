@@ -5,7 +5,7 @@
     <link>https://xqus.github.io/openpgp-docs/riktig-bruk/index.xml</link>
     <description>Recent content in Riktig-bruks on Norsk OpenPGP guide</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>nb-no</language>
     <lastBuildDate>Wed, 22 Feb 2017 12:31:28 +0100</lastBuildDate>
     <atom:link href="https://xqus.github.io/openpgp-docs/riktig-bruk/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,7 +21,7 @@
 
 &lt;h1 id=&#34;riktig-bruk&#34;&gt;Riktig bruk&lt;/h1&gt;
 
-&lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;p&gt;Et kapittel om riktig bruk av OpenPGP, tips og triks.&lt;/p&gt;
 </description>
     </item>
     
