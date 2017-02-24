@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Riktig bruk</title>
+    <title>Fallgruver</title>
     <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/openpgp-docs/riktig-bruk/">
+  <body class="" data-url="/openpgp-docs/kom-i-gang/fallgruver/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -52,7 +52,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/openpgp-docs/kom-i-gang/">
+      <li class="dd-item  parent" data-nav-id="/openpgp-docs/kom-i-gang/">
         <a href="/openpgp-docs/kom-i-gang/">
           <span>
             
@@ -132,7 +132,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/fallgruver/">
+            <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/fallgruver/">
               <a href="/openpgp-docs/kom-i-gang/fallgruver/">
                 <span>Fallgruver     </i></span>
               </a>
@@ -152,7 +152,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/openpgp-docs/riktig-bruk/">
+      <li class="dd-item  " data-nav-id="/openpgp-docs/riktig-bruk/">
         <a href="/openpgp-docs/riktig-bruk/">
           <span>
             
@@ -220,7 +220,7 @@
                     <i class="fa fa-github"></i>
                     Foreslå endring
                   </a> |
-                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/riktig-bruk/index.md" target="blank">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/kom-i-gang/fallgruver.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Rediger side
                   </a>
@@ -234,46 +234,138 @@
                       </a>
                   </span>
                 
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 
                 
                 
-                  
                 
                   
                     
                     
+                <a href="/openpgp-docs/kom-i-gang/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                    
                   
                 
-                <span itemprop="title"> Riktig bruk</span>
+                  
+                
+                <span itemprop="title"> Fallgruver</span>
               </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#dårlig-passord">Dårlig passord</a></li>
+<li><a href="#metadata">Metadata</a></li>
+<li><a href="#tapte-nøkler">Tapte nøkler</a></li>
+<li><a href="#ikke-oppdaterte-nøkler">Ikke oppdaterte nøkler</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
               
 
             </div>
             
-              <div id="chapter">
-            
     	        <div id="body-inner">
+                
+                <h1>Fallgruver</h1>
                 
 
 
 
-<h3 id="kapittel-2">Kapittel 2</h3>
+<p>OpenPGP er ikke en magisk flosshatt som løser alle problemer i verden uten å
+skape noen nye utfordringer. Det finnes flere fallgruver ved bruk av OpenPGP.
+Dette er ikke en komplett liste, men en oversikt over noen av de fallgruvene som
+oftest skaper problemer for de som benytter OpenPGP.</p>
 
-<h1 id="riktig-bruk">Riktig bruk</h1>
+<h3 id="dårlig-passord">Dårlig passord</h3>
 
-<p>Et kapittel om riktig bruk av OpenPGP, tips og triks.</p>
+<p>I kapittelet om <a href="openpgp-docs/kom-i-gang/konsepter/">konsepter</a> skrev jeg at
+all sikkerheten i krypteringsalgortimene ligger i din private nøkkel. Det
+eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
+på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
+for din private nøkkel. Derfor er det veldig viktig at denne passfrasen er god.</p>
+
+<p><img src="https://imgs.xkcd.com/comics/password_strength.png?width=50%&amp;classes=border" alt="Password Strength" /></p>
+
+<p>Det finnes mange meninger om hvordan man skal lage seg et bra passord, og hvor
+mange passord man skal ha. Hvis det er et passord som bør være forskjellig fra
+alle andre så er det passordet som beskytter din private nøkkel. Tegnestripen over
+er ikke bare morsom, men også et veldig bra tips.</p>
+
+<p>Det finnes flere måter å generere en passfrase. <a href="http://world.std.com/~reinhold/diceware.html">Diceware</a>
+er kanskje en av de mest nerdete, men da får du et meget bra passord. Bitcoin
+lommebøker bruker en variant av Diceware. Jeg anbefaler <a href="https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt">følgende ordliste</a>
+hvis du vil lage deg en diceware passfrase. Denne ordlisten inneholder ikke ord
+som staves nesten likt. Dersom du vil generere en passfrase automatisk fra denne
+ordlisten finnes det et <a href="https://iancoleman.github.io/bip39/">online verktøy</a>.</p>
+
+<h3 id="metadata">Metadata</h3>
+
+<p>En av de største svakhetene med OpenPGP når det brukes til kryptering av epost
+er at det bare selve innholdet i meldingen som krypteres. Det betyr at metadata
+i eposten er synlig for epostopertøren og andre snokere. Innholdet i denne
+metadataen varierer litt avhengig av epostklient og hvordan den blir sendt, men
+i de fleste tilfeller vil denne inneholde:</p>
+
+<ul>
+<li>Emne</li>
+<li>Avsender</li>
+<li>Mottaker</li>
+<li>Epostserver som ble benyttet</li>
+<li>Tidspunkt når meldingen ble sendt</li>
+</ul>
+
+<p>Merk at metadata vil være identisk enten du bruker OpenPGP eller ikke til å
+kryptere epost. Lekasjen av metadata blir ikke større om du benytter OpenPGP men
+det betyr at selv om du sender en kryptert epost så vil deler av den være
+ukryptert.</p>
+
+<div class="notices tip" ><p>Noen epostklienter (bl.a. <em>Thunderbird</em>) støtter kryptering av emnefeltet. Selv
+dette ikke er en standarisert metode kan det være verdt å undersøke.</p>
+</div>
 
 
-      
-        </div> 
+<h3 id="tapte-nøkler">Tapte nøkler</h3>
+
+<p>Dersom du mister tilgangen til din egen private nøkkel vil du ikke lenger være
+i stand til å dekryptere meldinger som var kryptert med den nøkkelen som mottaker.
+Dette er normalt sett ikke et stort problem med kryptert epost, men kan være et
+større problem dersom du hadde en kryptert backup av feriebildene. Det er derfor
+veldig viktig med
+<a href="/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering">sikkerhetskopi</a> av
+din private nøkkel.</p>
+
+<p>Oppbevar sikkerhetskopien på en minnepinne som du oppbevarer et trygt sted.
+Sammen med denne minnepinnen bør du også ha en lapp med passfrasen som
+beskytter nøkkelen din.</p>
+
+<h3 id="ikke-oppdaterte-nøkler">Ikke oppdaterte nøkler</h3>
+
+<p>Dersom de du kommuniserer med ikke oppdaterer din offentlige nøkkel fra
+nøkkeltjenere regelmessig, og du ikke oppdaterer de offentlige nøklene til de du
+kommuniserer med kan man rissikere at du krypterer meldinger med nøkler som
+er utgått eller tilbakekalt. I beste falle får du beskjed om å kryptere meldingen
+på nytt med mottakeren sin nye nøkkel. I værste fall kan meldingen havne i
+hendene til en angriper som har fått tilgang til den private nøkkelen.</p>
+
+
       
       </div>
     </div>
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/fallgruver"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//riktig-bruk/noekkelpreferanser" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://xqus.github.io/openpgp-docs//kom-i-gang/wot"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://xqus.github.io/openpgp-docs//riktig-bruk/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

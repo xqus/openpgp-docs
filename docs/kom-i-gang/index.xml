@@ -937,5 +937,91 @@ er tilbakekalt.&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>Fallgruver</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/fallgruver/</link>
+      <pubDate>Fri, 24 Feb 2017 16:09:30 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/fallgruver/</guid>
+      <description>
+
+&lt;p&gt;OpenPGP er ikke en magisk flosshatt som løser alle problemer i verden uten å
+skape noen nye utfordringer. Det finnes flere fallgruver ved bruk av OpenPGP.
+Dette er ikke en komplett liste, men en oversikt over noen av de fallgruvene som
+oftest skaper problemer for de som benytter OpenPGP.&lt;/p&gt;
+
+&lt;h3 id=&#34;dårlig-passord&#34;&gt;Dårlig passord&lt;/h3&gt;
+
+&lt;p&gt;I kapittelet om &lt;a href=&#34;openpgp-docs/kom-i-gang/konsepter/&#34;&gt;konsepter&lt;/a&gt; skrev jeg at
+all sikkerheten i krypteringsalgortimene ligger i din private nøkkel. Det
+eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
+på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
+for din private nøkkel. Derfor er det veldig viktig at denne passfrasen er god.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/password_strength.png?width=50%&amp;amp;classes=border&#34; alt=&#34;Password Strength&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Det finnes mange meninger om hvordan man skal lage seg et bra passord, og hvor
+mange passord man skal ha. Hvis det er et passord som bør være forskjellig fra
+alle andre så er det passordet som beskytter din private nøkkel. Tegnestripen over
+er ikke bare morsom, men også et veldig bra tips.&lt;/p&gt;
+
+&lt;p&gt;Det finnes flere måter å generere en passfrase. &lt;a href=&#34;http://world.std.com/~reinhold/diceware.html&#34;&gt;Diceware&lt;/a&gt;
+er kanskje en av de mest nerdete, men da får du et meget bra passord. Bitcoin
+lommebøker bruker en variant av Diceware. Jeg anbefaler &lt;a href=&#34;https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt&#34;&gt;følgende ordliste&lt;/a&gt;
+hvis du vil lage deg en diceware passfrase. Denne ordlisten inneholder ikke ord
+som staves nesten likt. Dersom du vil generere en passfrase automatisk fra denne
+ordlisten finnes det et &lt;a href=&#34;https://iancoleman.github.io/bip39/&#34;&gt;online verktøy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;metadata&#34;&gt;Metadata&lt;/h3&gt;
+
+&lt;p&gt;En av de største svakhetene med OpenPGP når det brukes til kryptering av epost
+er at det bare selve innholdet i meldingen som krypteres. Det betyr at metadata
+i eposten er synlig for epostopertøren og andre snokere. Innholdet i denne
+metadataen varierer litt avhengig av epostklient og hvordan den blir sendt, men
+i de fleste tilfeller vil denne inneholde:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Emne&lt;/li&gt;
+&lt;li&gt;Avsender&lt;/li&gt;
+&lt;li&gt;Mottaker&lt;/li&gt;
+&lt;li&gt;Epostserver som ble benyttet&lt;/li&gt;
+&lt;li&gt;Tidspunkt når meldingen ble sendt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Merk at metadata vil være identisk enten du bruker OpenPGP eller ikke til å
+kryptere epost. Lekasjen av metadata blir ikke større om du benytter OpenPGP men
+det betyr at selv om du sender en kryptert epost så vil deler av den være
+ukryptert.&lt;/p&gt;
+
+&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;Noen epostklienter (bl.a. &lt;em&gt;Thunderbird&lt;/em&gt;) støtter kryptering av emnefeltet. Selv
+dette ikke er en standarisert metode kan det være verdt å undersøke.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;tapte-nøkler&#34;&gt;Tapte nøkler&lt;/h3&gt;
+
+&lt;p&gt;Dersom du mister tilgangen til din egen private nøkkel vil du ikke lenger være
+i stand til å dekryptere meldinger som var kryptert med den nøkkelen som mottaker.
+Dette er normalt sett ikke et stort problem med kryptert epost, men kan være et
+større problem dersom du hadde en kryptert backup av feriebildene. Det er derfor
+veldig viktig med
+&lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering&#34;&gt;sikkerhetskopi&lt;/a&gt; av
+din private nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Oppbevar sikkerhetskopien på en minnepinne som du oppbevarer et trygt sted.
+Sammen med denne minnepinnen bør du også ha en lapp med passfrasen som
+beskytter nøkkelen din.&lt;/p&gt;
+
+&lt;h3 id=&#34;ikke-oppdaterte-nøkler&#34;&gt;Ikke oppdaterte nøkler&lt;/h3&gt;
+
+&lt;p&gt;Dersom de du kommuniserer med ikke oppdaterer din offentlige nøkkel fra
+nøkkeltjenere regelmessig, og du ikke oppdaterer de offentlige nøklene til de du
+kommuniserer med kan man rissikere at du krypterer meldinger med nøkler som
+er utgått eller tilbakekalt. I beste falle får du beskjed om å kryptere meldingen
+på nytt med mottakeren sin nye nøkkel. I værste fall kan meldingen havne i
+hendene til en angriper som har fått tilgang til den private nøkkelen.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
