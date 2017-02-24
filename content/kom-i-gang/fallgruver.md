@@ -14,7 +14,7 @@ Dette er ikke en komplett liste, men en oversikt over noen av de fallgruvene som
 oftest skaper problemer for de som benytter OpenPGP.
 
 ### Dårlig passord
-I kapittelet om [konsepter](openpgp-docs/kom-i-gang/konsepter/) skrev jeg at
+I kapittelet om [konsepter](/openpgp-docs/kom-i-gang/konsepter/) skrev jeg at
 all sikkerheten i krypteringsalgortimene ligger i din private nøkkel. Det
 eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
 på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
