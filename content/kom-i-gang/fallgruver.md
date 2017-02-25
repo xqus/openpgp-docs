@@ -54,7 +54,7 @@ ukryptert.
 
 {{% notice tip %}}
 Noen epostklienter (bl.a. *Thunderbird*) støtter kryptering av emnefeltet. Selv
-dette ikke er en standarisert metode kan det være verdt å undersøke.
+om dette ikke er en standarisert metode kan det være verdt å undersøke.
 {{% /notice %}}  
 
 ### Tapte nøkler

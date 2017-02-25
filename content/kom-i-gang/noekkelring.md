@@ -104,7 +104,6 @@ Når du kommuniserer med nøkkelservere må du benytte nøkkelid. For eksempel 0
 
 Sette tillit til nøkler
 -----------------------
-
 Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
 eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir
 seg for å være. Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert
