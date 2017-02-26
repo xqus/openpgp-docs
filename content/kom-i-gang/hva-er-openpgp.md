@@ -21,6 +21,12 @@ Signering fungerer på motsatt måte. Avsender signerer med sin private nøkkel.
 Denne signaturen kan så valideres med den offentlige nøkkelen.
 
 ### Før du starter
+
+{{% notice tip %}}
+Jeg har en [norsk epostliste](http://list.drup.no/mailman/listinfo/openpgp_list.drup.no)
+du kan melde deg på dersom du ønsker å diskutere OpenPGP relaterte ting.
+{{% /notice %}}
+
 Dersom du vil benytte OpenPGP til kryptering og signering av epost anbefaler jeg
 [Email Self Defense Guiden](https://emailselfdefense.fsf.org/en/) til Free
 Software Foundation. Denne guider deg gjennom installasjon av GnuPG og Thunderbird
