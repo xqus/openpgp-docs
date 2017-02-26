@@ -20,6 +20,11 @@ eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
 på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
 for din private nøkkel. Derfor er det veldig viktig at denne passfrasen er god.
 
+{{% notice info %}}
+Ordet *passfrase* brukes besvisst i steden for ordet passord. Meningen er å oppmuntre til
+bruk av setninger eller flere ord som passord.
+{{% /notice %}}  
+
 ![Password Strength](https://imgs.xkcd.com/comics/password_strength.png?width=50%&classes=border)
 
 Det finnes mange meninger om hvordan man skal lage seg et bra passord, og hvor
