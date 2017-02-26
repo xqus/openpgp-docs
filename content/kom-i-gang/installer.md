@@ -8,7 +8,7 @@ next = "/kom-i-gang/enigmail"
 
 +++
 
-GnuPG er en komplett, **gratis** og **åpen kildekode** *implementasjon* av
+[GnuPG](http://gnupg.org) er en komplett, **gratis** og **åpen kildekode** *implementasjon* av
 OpenPGP standaren. GnuPG lar deg kryptere og signere dine data og meldinger.
 Du kan i tillegg administrere dine private og andres offentlige nøkler.
 
@@ -17,15 +17,42 @@ Det finnes grafiske grensesnitt for GnuPG, som for eksempel Enigmail som beskriv
 seinere i håndboken men de fleste eksempler som er beskrevet i håndboken viser
 bruk av GnuPG fra kommandolinjen.
 
-{{% notice tip %}}
+{{% notice info %}}
 Konseptene og teorien bak er like både fra kommandolinjen og gjennom de forskjellige grafiske grensesnittene,
 så det anbefales at du leser gjennom eksemplene selv om du bruker et grafisk grensesnitt.
 {{% /notice %}}
 
+#### Forskjellige versjoner
+
 ### Installere på Windows
-Last ned **Simple installer for GnuPG modern** og følg installeringsveiviseren.
-Når den er ferdig skal du kunne kjøre `gpg` kommandoen fra kommandolinjen.
+De forskjellige installasjonsfilene for Windows er tilgjengelig **nederst** på
+[nedlastingssiden](https://www.gnupg.org/download/index.html) til GnuPG.
+Last ned **Simple installer for GnuPG modern** eller **Gpg4win** avhengig av
+hvilken versjon du ønker.
+
+#### Integritetskontroll
+Før du installerer GnuPG må du kontrollere at ingen har modifisert programvaren
+du skal installere. Siden du ikke har GnuPG fra før er det beste vi kan gjøre
+å kontrollere sjekksummen til filen. Dette må vi gjøre fra kommandolinjen.
+For å gjøre det enklere kan du kopiere filen du akkurat lastet ned til
+`C:\Users\DITTBRUKERNAVN`
+
 For å åpne kommandolinjen trykk `WIN+R` skriv inn `cmd` og trykk ENTER.
+Skriv inn følgende kommando, men bytt `filnavn.exe` med filnavnet til filen
+du akkurat lastet ned.
+
+    certUtil -hashfile filnavn.exe sha1
+
+Dersom du lastet ned *Gpg4win* sammenligner du resultet med sjekksummen for filen
+du lastet ned med [denne](https://www.gpg4win.org/download.html)
+listen, lastet du ned *GnuPG modern* bruker du
+[denne](https://www.gnupg.org/download/integrity_check.html) listen.
+
+#### Start installasjonsveiviseren
+For å installere OpenPGP dobbeltklikker du på filen du lastet ned. Dette starter
+installasjonsveiviseren.
+
+Når den er ferdig skal du kunne kjøre `gpg` kommandoen fra kommandolinjen.
 
 {{% notice tip %}}
 Eksemplene i denne håndboken er tatt fra et Linux operativsystem.
@@ -33,8 +60,8 @@ Alle eksemplene virker på Windows også, men må du erstatte `gpg2` i eksemplen
 med `gpg` dersom du bruker Windows.
 {{% /notice %}}
 
-For å kontrollere at alt har gått som det skal kan du skrive: `gpg --version`
-og trykke ENTER.
+For å kontrollere at alt har gått som det skal, kan du skrive følgende i kommandolinjen:
+`gpg --version` og trykke ENTER. For å åpne kommandolinjen trykker du `WIN+R`, skriv inn `cmd` og trykk ENTER.
 Det skal gi deg noe slikt som:
 
     C:\>gpg --version
