@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Oppbygningen av nøkler</title>
+    <title>Dine nøkler</title>
     <link href="https://xqus.github.io/openpgp-docs//css/nucleus.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://xqus.github.io/openpgp-docs//css/hybrid.css" rel="stylesheet">
@@ -22,14 +22,18 @@
     <script src="https://xqus.github.io/openpgp-docs//js/jquery-2.x.min.js"></script>
     <style type="text/css">:root #header + #content > #left > #rlblock_left
     {display:none !important;}</style>
-    
+    <link href="/openpgp-docs/css/styles.css" rel="stylesheet">
 
   </head>
   <body class="" data-url="/openpgp-docs/kom-i-gang/nokler/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
-      Norsk <strong>OpenPGP</strong> guide
+      <a href="https://xqus.github.io/openpgp-docs/">
+  <strong>OpenPGP</strong>
+  <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+  <small>håndbok</small>
+</a>
 
     </div>
     
@@ -76,6 +80,14 @@
           
           
           
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/installer/">
+              <a href="/openpgp-docs/kom-i-gang/installer/">
+                <span>Installere GnuPG     </i></span>
+              </a>
+            </li>
+          
+          
+          
             <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/enigmail/">
               <a href="/openpgp-docs/kom-i-gang/enigmail/">
                 <span>Kryptert epost med Enigmail     </i></span>
@@ -94,7 +106,7 @@
           
             <li class="dd-item active" data-nav-id="/openpgp-docs/kom-i-gang/nokler/">
               <a href="/openpgp-docs/kom-i-gang/nokler/">
-                <span>Oppbygningen av nøkler     </i></span>
+                <span>Dine nøkler     </i></span>
               </a>
             </li>
           
@@ -200,7 +212,12 @@
     <hr>
      
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+      <p>
+        Skrevet med <i class="fa fa-heart"></i></a> av Audun Larsen.
+      </p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons-lisens" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />Dette verk er lisensieret under en <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens</a>.
+      </p>
     </section>
   </div>
 </nav>
@@ -248,7 +265,7 @@
                 
                   
                 
-                <span itemprop="title"> Oppbygningen av nøkler</span>
+                <span itemprop="title"> Dine nøkler</span>
               </div>
               
                   <div class="progress">
@@ -274,7 +291,7 @@
             
     	        <div id="body-inner">
                 
-                <h1>Oppbygningen av nøkler</h1>
+                <h1>Dine nøkler</h1>
                 
 
 
@@ -338,7 +355,7 @@ i utgangspunktet frivillig.</p>
 Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
 er avhengig av bruken.</p>
 
-<pre><code>C:\&gt;gpg --gen-key
+<pre><code>amnesia@amnesia:~$ gpg2 --gen-key
 gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -425,7 +442,7 @@ er opprettet.</p>
 </div>
 
 
-<p>Du kan se dine nøkkelpar med kommandoen <code>C:\&gt;gpg -K --fingerprint</code></p>
+<p>Du kan se dine nøkkelpar med kommandoen <code>amnesia@amnesia:~$ gpg2 -K --fingerprint</code></p>
 
 <h2 id="tilbakekallingssertifikat">Tilbakekallingssertifikat</h2>
 
@@ -434,7 +451,7 @@ private nøkkel. Dette kan brukes uten at du har tilgang til den private nøkkel
 Dersom du tilbakekaller nøkkelen din vil den ikke lenger kunne brukes til å
 signere eller kryptere meldinger.</p>
 
-<pre><code>C:\&gt;gpg --output revoke.asc --gen-revoke simba@example.org
+<pre><code>amnesia@amnesia:~$ gpg2 --output revoke.asc --gen-revoke simba@example.org
 </code></pre>
 
 <p>Dette vil lagre ditt tilbakekallingssertifikat som <code>revoke.asc</code>. Ta godt vare
@@ -466,7 +483,11 @@ på dette. Dersom andre får tilgang til det kan de tilbakekalle dit nøkkelpar.
     <script src="https://xqus.github.io/openpgp-docs//js/modernizr.custom.71422.js"></script>
     <script src="https://xqus.github.io/openpgp-docs//js/learn.js"></script>
     <script src="https://xqus.github.io/openpgp-docs//js/hugo-learn.js"></script>
-    
+    <script>
+jQuery(document).ready(function() {
+    $('#body-inner a:not(:has(img)):not(.btn)').removeClass('highlight');
+});
+</script>
 
   </body>
 </html>

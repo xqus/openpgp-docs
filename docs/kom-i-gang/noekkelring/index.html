@@ -22,14 +22,18 @@
     <script src="https://xqus.github.io/openpgp-docs//js/jquery-2.x.min.js"></script>
     <style type="text/css">:root #header + #content > #left > #rlblock_left
     {display:none !important;}</style>
-    
+    <link href="/openpgp-docs/css/styles.css" rel="stylesheet">
 
   </head>
   <body class="" data-url="/openpgp-docs/kom-i-gang/noekkelring/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
-      Norsk <strong>OpenPGP</strong> guide
+      <a href="https://xqus.github.io/openpgp-docs/">
+  <strong>OpenPGP</strong>
+  <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+  <small>håndbok</small>
+</a>
 
     </div>
     
@@ -76,6 +80,14 @@
           
           
           
+            <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/installer/">
+              <a href="/openpgp-docs/kom-i-gang/installer/">
+                <span>Installere GnuPG     </i></span>
+              </a>
+            </li>
+          
+          
+          
             <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/enigmail/">
               <a href="/openpgp-docs/kom-i-gang/enigmail/">
                 <span>Kryptert epost med Enigmail     </i></span>
@@ -94,7 +106,7 @@
           
             <li class="dd-item " data-nav-id="/openpgp-docs/kom-i-gang/nokler/">
               <a href="/openpgp-docs/kom-i-gang/nokler/">
-                <span>Oppbygningen av nøkler     </i></span>
+                <span>Dine nøkler     </i></span>
               </a>
             </li>
           
@@ -200,7 +212,12 @@
     <hr>
      
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+      <p>
+        Skrevet med <i class="fa fa-heart"></i></a> av Audun Larsen.
+      </p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons-lisens" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />Dette verk er lisensieret under en <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens</a>.
+      </p>
     </section>
   </div>
 </nav>
@@ -301,7 +318,7 @@ filen finner du i <code>C:\Users\BRUKERNAVN\AppData\Roaming\gnupg</code> i Windo
 <p><em>pool.sks-keyservers.net</em> er et nettverk av nøkkelservere som synkroniserer seg
 selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.</p>
 
-<pre><code>C:\&gt;gpg --search-keys alice@cyb.org
+<pre><code>amnesia@amnesia:~$ gpg2 --search-keys alice@cyb.org
 gpg: searching for &quot;alice@cyb.org&quot; from hkps server keys.drup.no
 (1)     Alice (Rechtsanwältin) &lt;alice@cyb.org&gt;
           1024 bit DSA key FB5797A9, created: 2000-06-06
@@ -321,7 +338,7 @@ gpg:               imported: 1
 <p>Du kan nå se at den nye offentlige nøkkelen er kommet inn i din nøkkelring
 sammen med ditt eget nøkkelpar når du bruker  <code>-k --fingerprint</code> kommandoen.</p>
 
-<pre><code>C:\&gt;gpg -k --fingerprint
+<pre><code>amnesia@amnesia:~$ gpg2 -k --fingerprint
 pub   2048R/86D91256 2016-12-29 [expires: 2017-12-29]
       Key fingerprint = A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256
 uid       [ultimate] Simba Larki &lt;simba@example.org&gt;
@@ -336,7 +353,7 @@ sub   1024g/C8B3998F 2000-06-06
 <p>Dersom du har mottat en offentlig nøkkel i for eksmepel et vedlegg til en epost
 kan du importere den med <code>--import</code> paramteren.</p>
 
-<pre><code>C:\&gt;gpg --import -i key.asc
+<pre><code>amnesia@amnesia:~$ gpg2 --import -i key.asc
 </code></pre>
 
 <p>Når nøklene er i din nøkkelring kan du benytte de til å kryptere meldinger og
@@ -350,7 +367,7 @@ signaturer er de avhengig å importert din offentlige nøkkel føsr.</p>
 <p>For å eksportere din offentlige nøkkel til en fil som du for eksempel kan legge
 ved epost bruker du <code>--export</code> paramteren.</p>
 
-<pre><code>C:\&gt;gpg -a --export alice@cyb.org -o key.asc
+<pre><code>amnesia@amnesia:~$ gpg2 -a --export alice@cyb.org -o key.asc
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2
 
@@ -364,7 +381,7 @@ w49DLEkc
 <p>Du kan også laste opp nøkkelen din til en nøkkelserver slik at andre kan søke
 den opp og laste den ned der.</p>
 
-<pre><code>C:\&gt;gpg --send-keys 0x69CDDB86
+<pre><code>amnesia@amnesia:~$ gpg2 --send-keys 0x69CDDB86
 gpg: sending key 69CDDB86 to hkps server keys.drup.no
 </code></pre>
 
@@ -381,7 +398,7 @@ Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.</p>
 
 <p>Du setter tillit til en nøkkel med <code>--edit-key</code> parameteren.</p>
 
-<pre><code>C:\&gt;gpg --edit-key alice@cyb.org
+<pre><code>amnesia@amnesia:~$ gpg2 --edit-key alice@cyb.org
 gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -440,7 +457,7 @@ du <code>sign</code> kommandoen.</p>
 <p>Når du har signert en nøkkel kan du laste opp din signatur til nøkkelserverene
 slik at andre kan se at du har verifisert nøkkelen og identiten til eieren.</p>
 
-<pre><code>C:\&gt;gpg --send-keys 0xFB5797A9
+<pre><code>amnesia@amnesia:~$ gpg2 -send-keys 0xFB5797A9
 gpg: sending key FB5797A9 to hkps server keys.drup.no
 </code></pre>
 
@@ -450,7 +467,7 @@ gpg: sending key FB5797A9 to hkps server keys.drup.no
 får vite det. Slike endringer er viktig at du får med deg. Derfor bør du synkronisere
 din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med <code>--refresh-keys</code></p>
 
-<pre><code>C:\&gt;gpg --refresh-keys
+<pre><code>amnesia@amnesia:~$ gpg2 --refresh-keys
 </code></pre>
 
 <h2 id="sikkerhetkopiering">Sikkerhetkopiering</h2>
@@ -473,7 +490,7 @@ mappen på Windows eller i <code>~/.gnupg</code> mappen på Linux/Unix.</p>
 
 <p>Tillitsdatabasen kopieres med følgende kommando</p>
 
-<pre><code>C:\&gt;gpg --export-ownertrust &gt; ownertrust-gpg.txt
+<pre><code>amnesia@amnesia:~$ gpg2 --export-ownertrust &gt; ownertrust-gpg.txt
 </code></pre>
 
 <p>og importeres med denne kommandoen</p>
@@ -485,12 +502,12 @@ mappen på Windows eller i <code>~/.gnupg</code> mappen på Linux/Unix.</p>
 
 <p>Dine private nøkler eksporteres med <code>--export-secret-keys</code>.</p>
 
-<pre><code>C:\&gt;gpg -a --export-secret-keys -o private-keys.asc
+<pre><code>amnesia@amnesia:~$ gpg2 -a --export-secret-keys -o private-keys.asc
 </code></pre>
 
 <p>For å importere dine private nøkler bruker du <code>--import</code></p>
 
-<pre><code>C:\&gt;gpg --import private-keys.asc
+<pre><code>amnesia@amnesia:~$ gpg2 --import private-keys.asc
 </code></pre>
 
 <div class="notices warning" ><p>Gjør alt du kan for å holde din private nøkkel privat.</p>
@@ -525,7 +542,11 @@ mappen på Windows eller i <code>~/.gnupg</code> mappen på Linux/Unix.</p>
     <script src="https://xqus.github.io/openpgp-docs//js/modernizr.custom.71422.js"></script>
     <script src="https://xqus.github.io/openpgp-docs//js/learn.js"></script>
     <script src="https://xqus.github.io/openpgp-docs//js/hugo-learn.js"></script>
-    
+    <script>
+jQuery(document).ready(function() {
+    $('#body-inner a:not(:has(img)):not(.btn)').removeClass('highlight');
+});
+</script>
 
   </body>
 </html>

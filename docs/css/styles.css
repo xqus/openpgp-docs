@@ -1,0 +1,42 @@
+/* background behind the logo*/
+#header {
+    background: #0E1B20;
+    border-color: <color>;
+}
+#header-wrapper {
+    background: #0E1B20;
+    color: #fff;
+    text-align: center;
+    border-bottom: 4px solid #7F8A8F;
+    padding: 1rem;
+}
+
+/* Background color of the menu */
+#sidebar {
+  background-color: #19323C;
+}
+
+/* Background color of the menu, when clicked */
+#sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
+  background-color: #152932;
+}
+
+#body-inner a {
+  border-bottom: 1px solid #0E1B20;
+  background-color: #E9EBEC;
+}
+
+a {
+   color: #152932;
+}
+a:hover {
+   color: #152932;
+}
+
+#sidebar hr {
+    border-bottom: 4px solid #7F8A8F;
+}
+
+#footer {
+    padding-top: 0;
+}

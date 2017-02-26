@@ -72,12 +72,13 @@ dekrypteres dersom man ha den tilhørende private nøkkelen.&lt;/p&gt;
 &lt;p&gt;Signering fungerer på motsatt måte. Avsender signerer med sin private nøkkel.
 Denne signaturen kan så valideres med den offentlige nøkkelen.&lt;/p&gt;
 
-&lt;h2 id=&#34;før-du-starter&#34;&gt;Før du starter&lt;/h2&gt;
+&lt;h3 id=&#34;før-du-starter&#34;&gt;Før du starter&lt;/h3&gt;
 
 &lt;p&gt;Dersom du vil benytte OpenPGP til kryptering og signering av epost anbefaler jeg
 &lt;a href=&#34;https://emailselfdefense.fsf.org/en/&#34;&gt;Email Self Defense Guiden&lt;/a&gt; til Free
 Software Foundation. Denne guider deg gjennom installasjon av GnuPG og Thunderbird
-med Enigmail, og hjelper deg sende din første kryptere epost.&lt;/p&gt;
+med Enigmail, og hjelper deg sende din første kryptere epost. Det finnes også
+en &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/enigmail&#34;&gt;enklere versjon&lt;/a&gt; av denne guiden i denne håndboken.&lt;/p&gt;
 
 &lt;p&gt;Innholdet videre i denne guiden forklarer OpenPGP konspter bruken av GnuPG fra
 kommandolinjen. Bruk av kommandolinjeverktøy er ikke noe alle vil bruke i
@@ -85,7 +86,7 @@ hverdagen, men til tross for at du kanske vil benytte et grafisk grensesnitt
 i for eksempel Thunderbird vil denne guiden være nyttig da den forklarer
 grunnleggende prinsipper med OpenPGP.&lt;/p&gt;
 
-&lt;h2 id=&#34;kom-i-gang&#34;&gt;Kom i gang&lt;/h2&gt;
+&lt;h3 id=&#34;kom-i-gang&#34;&gt;Kom i gang&lt;/h3&gt;
 
 &lt;p&gt;For å komme i gang med OpenPGP trenger du først og fremst selve OpenPGP
 programvaren. Det finnes et par alternativer men vi skal installere den
@@ -100,14 +101,91 @@ heldigvis grafiske grensesnitt til en del epostklienter slik at bruken av GnuPG
 ikke kompliserer bruken av epost. For å gjøre det enklest mulig anbefaler jeg at
 du bruker Thunderbird med Enigmail til epost.&lt;/p&gt;
 
-&lt;h2 id=&#34;installere-på-windows&#34;&gt;Installere på Windows&lt;/h2&gt;
+&lt;p&gt;I neste kapittel beskriver jeg hvordan du &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/installer/&#34;&gt;installerer GnuPG&lt;/a&gt;
+og deretter beskrives installasjon av &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/enigmail/&#34;&gt;Thunderbird og Enigmail&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installere GnuPG</title>
+      <link>https://xqus.github.io/openpgp-docs/kom-i-gang/installer/</link>
+      <pubDate>Sun, 26 Feb 2017 11:07:38 +0100</pubDate>
+      
+      <guid>https://xqus.github.io/openpgp-docs/kom-i-gang/installer/</guid>
+      <description>
 
-&lt;p&gt;Last ned &lt;strong&gt;Simple installer for GnuPG modern&lt;/strong&gt; og følg installeringsveiviseren.
-Når den er ferdig skal du kunne kjøre &lt;code&gt;gpg&lt;/code&gt; kommandoen fra kommandolinjen.
-For å åpne kommandolinjen trykk &lt;code&gt;WIN+R&lt;/code&gt; skriv inn &lt;code&gt;cmd&lt;/code&gt; og trykk ENTER.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://gnupg.org&#34;&gt;GnuPG&lt;/a&gt; er en komplett, &lt;strong&gt;gratis&lt;/strong&gt; og &lt;strong&gt;åpen kildekode&lt;/strong&gt; &lt;em&gt;implementasjon&lt;/em&gt; av
+OpenPGP standaren. GnuPG lar deg kryptere og signere dine data og meldinger.
+Du kan i tillegg administrere dine private og andres offentlige nøkler.&lt;/p&gt;
 
-&lt;p&gt;For å kontrollere at alt har gått som det skal kan du skrive: &lt;code&gt;gpg --version&lt;/code&gt;
-og trykke ENTER.
+&lt;p&gt;GnuPG er et kommandolinje verktøy for enkel integrering mot andre applikasjoner.
+Det finnes grafiske grensesnitt for GnuPG, som for eksempel Enigmail som beskrives
+seinere i håndboken men de fleste eksempler som er beskrevet i håndboken viser
+bruk av GnuPG fra kommandolinjen.&lt;/p&gt;
+
+&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Konseptene og teorien bak er like både fra kommandolinjen og gjennom de forskjellige grafiske grensesnittene,
+så det anbefales at du leser gjennom eksemplene selv om du bruker et grafisk grensesnitt.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h4 id=&#34;forskjellige-versjoner&#34;&gt;Forskjellige versjoner&lt;/h4&gt;
+
+&lt;p&gt;GnuPG kommer i tre versjoner.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stable.&lt;/strong&gt;
+Versjon 2.0. Den stabile versjonen av GnuGP. Støtter SSH autentisering
+og S/MIME.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modern.&lt;/strong&gt;
+Versjon 2.1. Den mest moderne versjonen av GnuPG. Skal snart erstatte &lt;em&gt;stable&lt;/em&gt;. Støtter ECC.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Classic.&lt;/strong&gt;
+Versjon 1.4. Gammel arkitektur. Anbefales ikke med mindre operativsystemet ikke støtter &lt;em&gt;stable&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I de aller fleste tilfeller anbefaler jeg &lt;em&gt;Stable&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;installere-på-windows&#34;&gt;Installere på Windows&lt;/h3&gt;
+
+&lt;p&gt;De forskjellige installasjonsfilene for Windows er tilgjengelig &lt;strong&gt;nederst&lt;/strong&gt; på
+&lt;a href=&#34;https://www.gnupg.org/download/index.html&#34;&gt;nedlastingssiden&lt;/a&gt; til GnuPG.
+Last ned &lt;strong&gt;Simple installer for GnuPG modern&lt;/strong&gt; eller &lt;strong&gt;Gpg4win&lt;/strong&gt; avhengig av
+hvilken versjon du ønker.&lt;/p&gt;
+
+&lt;h4 id=&#34;integritetskontroll&#34;&gt;Integritetskontroll&lt;/h4&gt;
+
+&lt;p&gt;Før du installerer GnuPG må du kontrollere at ingen har modifisert programvaren
+du skal installere. Siden du ikke har GnuPG fra før er det beste vi kan gjøre
+å kontrollere sjekksummen til filen. Dette må vi gjøre fra kommandolinjen.
+For å gjøre det enklere kan du kopiere filen du akkurat lastet ned til
+&lt;code&gt;C:\Users\DITTBRUKERNAVN&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For å åpne kommandolinjen trykk &lt;code&gt;WIN+R&lt;/code&gt; skriv inn &lt;code&gt;cmd&lt;/code&gt; og trykk ENTER.
+Skriv inn følgende kommando, men bytt &lt;code&gt;filnavn.exe&lt;/code&gt; med filnavnet til filen
+du akkurat lastet ned.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;certUtil -hashfile filnavn.exe sha1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dersom du lastet ned &lt;em&gt;Gpg4win&lt;/em&gt; sammenligner du resultet med sjekksummen for filen
+du lastet ned med &lt;a href=&#34;https://www.gpg4win.org/download.html&#34;&gt;denne&lt;/a&gt;
+listen, lastet du ned &lt;em&gt;GnuPG modern&lt;/em&gt; bruker du
+&lt;a href=&#34;https://www.gnupg.org/download/integrity_check.html&#34;&gt;denne&lt;/a&gt; listen.&lt;/p&gt;
+
+&lt;h4 id=&#34;start-installasjonsveiviseren&#34;&gt;Start installasjonsveiviseren&lt;/h4&gt;
+
+&lt;p&gt;For å installere OpenPGP dobbeltklikker du på filen du lastet ned. Dette starter
+installasjonsveiviseren.&lt;/p&gt;
+
+&lt;p&gt;Når den er ferdig skal du kunne kjøre &lt;code&gt;gpg&lt;/code&gt; kommandoen fra kommandolinjen.&lt;/p&gt;
+
+&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;Eksemplene i denne håndboken er tatt fra et Linux operativsystem.
+Alle eksemplene virker på Windows også, men må du erstatte &lt;code&gt;gpg2&lt;/code&gt; i eksemplene
+med &lt;code&gt;gpg&lt;/code&gt; dersom du bruker Windows.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;For å kontrollere at alt har gått som det skal, kan du skrive følgende i kommandolinjen:
+&lt;code&gt;gpg --version&lt;/code&gt; og trykke ENTER. For å åpne kommandolinjen trykker du &lt;code&gt;WIN+R&lt;/code&gt;, skriv inn &lt;code&gt;cmd&lt;/code&gt; og trykk ENTER.
 Det skal gi deg noe slikt som:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --version
@@ -127,16 +205,41 @@ Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
 Compression: Uncompressed, ZIP, ZLIB, BZIP2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Legg merke til &lt;code&gt;Home: C:/Users/BRUKERNAVN/AppData/Roaming/gnupg&lt;/code&gt;. Det er i
+&lt;p&gt;Legg merke til Home: &lt;code&gt;C:/Users/BRUKERNAVN/AppData/Roaming/gnupg&lt;/code&gt;. Det er i
 denne mappen konfigurasjonsfiler og nøkler lagres. Den kan være forskjellig
-på din datamaskin.&lt;/p&gt;
+på din datamaskin. Vi kommer tilbake til denne mappen seinere i håndboken så det
+kan være greit å legge merke til denne.&lt;/p&gt;
 
-&lt;h2 id=&#34;installere-på-linux&#34;&gt;Installere på Linux&lt;/h2&gt;
+&lt;h3 id=&#34;installere-på-linux&#34;&gt;Installere på Linux&lt;/h3&gt;
 
-&lt;p&gt;For å installere GnuPG søk etter GnuPG pakken i ditt pakkesystem. På Ubuntu for
-eksempel installere det slik:&lt;/p&gt;
+&lt;p&gt;For å installere GnuPG &lt;em&gt;stable&lt;/em&gt; søk etter GnuPG pakken i ditt pakkesystem.
+På Ubuntu for eksempel installeres det slik:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;apt-get install gnupg2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;GnuPG &lt;em&gt;classic&lt;/em&gt; kommer som regel forhåndsinstallert, men kan eksistere sammen
+med GnuPG &lt;em&gt;stable&lt;/em&gt;. GnuPG &lt;em&gt;stable&lt;/em&gt; er tilgangelig som &lt;code&gt;gpg2&lt;/code&gt; fra terminalen.
+Jeg anbefaler ikke å bruke GnuPG &lt;em&gt;classic&lt;/em&gt; selv om det er forhåndsinstallert på
+ditt system.&lt;/p&gt;
+
+&lt;p&gt;For å verifisere at GnuPG er installert som det skal kan du kjøre &lt;code&gt;gpg2 --version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --version
+gpg (GnuPG) 2.0.26
+libgcrypt 1.6.3
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &amp;lt;http://gnu.org/licenses/gpl.html&amp;gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA, RSA, ELG, DSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -634,10 +737,8 @@ utforming. Under er et eksempel på noen kurver. Kurvene som benyttes i
 kryptering er mye mer komplekse, men disse eksemplene gjør det lett å se for seg
 hvordan det virker.&lt;/p&gt;
 
-&lt;p&gt;.. figure:: ecc-lines.png
-   :alt: Eksempel på eliptiske kurver&lt;/p&gt;
-
-&lt;p&gt;Eksempel på eliptiske kurver fra &lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve&#34;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/images/ecc-lines.png&#34; alt=&#34;Eliptiske kurver&#34; /&gt;
+Eksempel på eliptiske kurver fra &lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve&#34;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Eliptiske kurver har den egenskapen at dersom du trekker en ikke horisontal
 linje fra et punkt &lt;em&gt;A&lt;/em&gt; på kurven til et annet &lt;em&gt;B&lt;/em&gt; gjennom punkt &lt;em&gt;C&lt;/em&gt;. Så vil &lt;em&gt;C&lt;/em&gt;
@@ -855,7 +956,7 @@ gpg: sending key 0x50AD20916F557D14 to hkps server hkps.pool.sks-keyservers.net
     </item>
     
     <item>
-      <title>Oppbygningen av nøkler</title>
+      <title>Dine nøkler</title>
       <link>https://xqus.github.io/openpgp-docs/kom-i-gang/nokler/</link>
       <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
       
@@ -921,7 +1022,7 @@ i utgangspunktet frivillig.&lt;/p&gt;
 Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
 er avhengig av bruken.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --gen-key
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --gen-key
 gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -1008,7 +1109,7 @@ er opprettet.&lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;p&gt;Du kan se dine nøkkelpar med kommandoen &lt;code&gt;C:\&amp;gt;gpg -K --fingerprint&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Du kan se dine nøkkelpar med kommandoen &lt;code&gt;amnesia@amnesia:~$ gpg2 -K --fingerprint&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;tilbakekallingssertifikat&#34;&gt;Tilbakekallingssertifikat&lt;/h2&gt;
 
@@ -1017,7 +1118,7 @@ private nøkkel. Dette kan brukes uten at du har tilgang til den private nøkkel
 Dersom du tilbakekaller nøkkelen din vil den ikke lenger kunne brukes til å
 signere eller kryptere meldinger.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --output revoke.asc --gen-revoke simba@example.org
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --output revoke.asc --gen-revoke simba@example.org
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Dette vil lagre ditt tilbakekallingssertifikat som &lt;code&gt;revoke.asc&lt;/code&gt;. Ta godt vare
@@ -1054,7 +1155,7 @@ filen finner du i &lt;code&gt;C:\Users\BRUKERNAVN\AppData\Roaming\gnupg&lt;/code
 &lt;p&gt;&lt;em&gt;pool.sks-keyservers.net&lt;/em&gt; er et nettverk av nøkkelservere som synkroniserer seg
 selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --search-keys alice@cyb.org
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --search-keys alice@cyb.org
 gpg: searching for &amp;quot;alice@cyb.org&amp;quot; from hkps server keys.drup.no
 (1)     Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;
           1024 bit DSA key FB5797A9, created: 2000-06-06
@@ -1074,7 +1175,7 @@ gpg:               imported: 1
 &lt;p&gt;Du kan nå se at den nye offentlige nøkkelen er kommet inn i din nøkkelring
 sammen med ditt eget nøkkelpar når du bruker  &lt;code&gt;-k --fingerprint&lt;/code&gt; kommandoen.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg -k --fingerprint
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 -k --fingerprint
 pub   2048R/86D91256 2016-12-29 [expires: 2017-12-29]
       Key fingerprint = A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256
 uid       [ultimate] Simba Larki &amp;lt;simba@example.org&amp;gt;
@@ -1089,7 +1190,7 @@ sub   1024g/C8B3998F 2000-06-06
 &lt;p&gt;Dersom du har mottat en offentlig nøkkel i for eksmepel et vedlegg til en epost
 kan du importere den med &lt;code&gt;--import&lt;/code&gt; paramteren.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --import -i key.asc
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --import -i key.asc
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Når nøklene er i din nøkkelring kan du benytte de til å kryptere meldinger og
@@ -1103,7 +1204,7 @@ signaturer er de avhengig å importert din offentlige nøkkel føsr.&lt;/p&gt;
 &lt;p&gt;For å eksportere din offentlige nøkkel til en fil som du for eksempel kan legge
 ved epost bruker du &lt;code&gt;--export&lt;/code&gt; paramteren.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg -a --export alice@cyb.org -o key.asc
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 -a --export alice@cyb.org -o key.asc
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2
 
@@ -1117,7 +1218,7 @@ w49DLEkc
 &lt;p&gt;Du kan også laste opp nøkkelen din til en nøkkelserver slik at andre kan søke
 den opp og laste den ned der.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --send-keys 0x69CDDB86
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --send-keys 0x69CDDB86
 gpg: sending key 69CDDB86 to hkps server keys.drup.no
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1134,7 +1235,7 @@ Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p
 
 &lt;p&gt;Du setter tillit til en nøkkel med &lt;code&gt;--edit-key&lt;/code&gt; parameteren.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --edit-key alice@cyb.org
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --edit-key alice@cyb.org
 gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -1193,7 +1294,7 @@ du &lt;code&gt;sign&lt;/code&gt; kommandoen.&lt;/p&gt;
 &lt;p&gt;Når du har signert en nøkkel kan du laste opp din signatur til nøkkelserverene
 slik at andre kan se at du har verifisert nøkkelen og identiten til eieren.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --send-keys 0xFB5797A9
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 -send-keys 0xFB5797A9
 gpg: sending key FB5797A9 to hkps server keys.drup.no
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1203,7 +1304,7 @@ gpg: sending key FB5797A9 to hkps server keys.drup.no
 får vite det. Slike endringer er viktig at du får med deg. Derfor bør du synkronisere
 din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med &lt;code&gt;--refresh-keys&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --refresh-keys
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --refresh-keys
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;sikkerhetkopiering&#34;&gt;Sikkerhetkopiering&lt;/h2&gt;
@@ -1226,7 +1327,7 @@ mappen på Windows eller i &lt;code&gt;~/.gnupg&lt;/code&gt; mappen på Linux/Un
 
 &lt;p&gt;Tillitsdatabasen kopieres med følgende kommando&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --export-ownertrust &amp;gt; ownertrust-gpg.txt
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --export-ownertrust &amp;gt; ownertrust-gpg.txt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;og importeres med denne kommandoen&lt;/p&gt;
@@ -1238,12 +1339,12 @@ mappen på Windows eller i &lt;code&gt;~/.gnupg&lt;/code&gt; mappen på Linux/Un
 
 &lt;p&gt;Dine private nøkler eksporteres med &lt;code&gt;--export-secret-keys&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg -a --export-secret-keys -o private-keys.asc
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 -a --export-secret-keys -o private-keys.asc
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;For å importere dine private nøkler bruker du &lt;code&gt;--import&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --import private-keys.asc
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --import private-keys.asc
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Gjør alt du kan for å holde din private nøkkel privat.&lt;/p&gt;
