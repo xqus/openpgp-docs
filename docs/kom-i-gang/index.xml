@@ -47,6 +47,11 @@ Denne signaturen kan så valideres med den offentlige nøkkelen.&lt;/p&gt;
 
 &lt;h3 id=&#34;før-du-starter&#34;&gt;Før du starter&lt;/h3&gt;
 
+&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;Jeg har en &lt;a href=&#34;http://list.drup.no/mailman/listinfo/openpgp_list.drup.no&#34;&gt;norsk epostliste&lt;/a&gt;
+du kan melde deg på dersom du ønsker å diskutere OpenPGP relaterte ting.&lt;/p&gt;
+&lt;/div&gt;
+
+
 &lt;p&gt;Dersom du vil benytte OpenPGP til kryptering og signering av epost anbefaler jeg
 &lt;a href=&#34;https://emailselfdefense.fsf.org/en/&#34;&gt;Email Self Defense Guiden&lt;/a&gt; til Free
 Software Foundation. Denne guider deg gjennom installasjon av GnuPG og Thunderbird
@@ -670,7 +675,7 @@ filen finner du i &lt;code&gt;C:\Users\BRUKERNAVN\AppData\Roaming\gnupg&lt;/code
 &lt;code&gt;~\.gnupg&lt;/code&gt; på Linux. Åpne denne filen i en valgfri teksteditor
 (Notepad for eksmepel) og legg inn følgende linje.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;keyserver hkp://pool.sks-keyservers.net
+&lt;pre&gt;&lt;code&gt;keyserver hkps://pool.sks-keyservers.net
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;em&gt;pool.sks-keyservers.net&lt;/em&gt; er et nettverk av nøkkelservere som synkroniserer seg
@@ -1120,6 +1125,10 @@ slik at man lettere kan knytte et nøkkelpar til en person.&lt;/p&gt;
 forteller du omverden at du har verifisert sammenhengen mellom &lt;em&gt;navn&lt;/em&gt; og &lt;em&gt;epostadresse&lt;/em&gt;
 spesifisert i nøkkelen og den faktiske eieren av nøkkelen.&lt;/p&gt;
 
+&lt;p&gt;En sertifisering sier ikke noe om du kan stole på personen som eier nøkkelen eller
+ikke. Det eneste en sertifisering betyr er at sammenhengen mellom den offentlige
+nøkkelen og brukeridentiteten er bekreftet.&lt;/p&gt;
+
 &lt;h3 id=&#34;tillit&#34;&gt;Tillit&lt;/h3&gt;
 
 &lt;p&gt;Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
@@ -1131,9 +1140,27 @@ vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p&gt;
 &lt;h3 id=&#34;nøkkelservere&#34;&gt;Nøkkelservere&lt;/h3&gt;
 
 &lt;p&gt;Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
-Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
+Det finnes mange nækkelservere, og de fleste sammarbeider om å holde seg
+oppdatert. Jeg anbefaler at du &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/noekkelring/#importere-nøkler&#34;&gt;bruker&lt;/a&gt; &lt;code&gt;hkps://hkps.pool.sks-keyservers.net&lt;/code&gt;
+som nøkkelserver. Dette er ikke en enkelt nøkkelserver men en samling av oppdaterte
+servere.&lt;/p&gt;
+
+&lt;p&gt;Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
 du kommuniserer med. Dette er eneste måte å vite at nøkkelen for eksempel ikke
-er tilbakekalt.&lt;/p&gt;
+er tilbakekalt. På samme måte er det viktig at du laster opp endringer i din
+offentlige nøkkel dersom du gjør endringer som:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Endret utløpsdato&lt;/li&gt;
+&lt;li&gt;Tilbakekalt nøkkel&lt;/li&gt;
+&lt;li&gt;Ny brukeridentitet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Tilstedeværelsen av en nøkkel på en nøkkelserver sier ikke noe om gyldigheten eller
+tilliten til en nøkkel. Husk å &lt;strong&gt;alltid&lt;/strong&gt; verifiser hele fingeravtrykket til en nøkkel
+før du bruker den.&lt;/p&gt;
+&lt;/div&gt;
+
 </description>
     </item>
     
@@ -1157,6 +1184,11 @@ all sikkerheten i krypteringsalgortimene ligger i din private nøkkel. Det
 eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
 på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
 for din private nøkkel. Derfor er det veldig viktig at denne passfrasen er god.&lt;/p&gt;
+
+&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Ordet &lt;em&gt;passfrase&lt;/em&gt; brukes besvisst i steden for ordet passord. Meningen er å oppmuntre til
+bruk av setninger eller flere ord som passord.&lt;/p&gt;
+&lt;/div&gt;
+
 
 &lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/password_strength.png?width=50%&amp;amp;classes=border&#34; alt=&#34;Password Strength&#34; /&gt;&lt;/p&gt;
 

@@ -311,6 +311,10 @@ slik at man lettere kan knytte et nøkkelpar til en person.</p>
 forteller du omverden at du har verifisert sammenhengen mellom <em>navn</em> og <em>epostadresse</em>
 spesifisert i nøkkelen og den faktiske eieren av nøkkelen.</p>
 
+<p>En sertifisering sier ikke noe om du kan stole på personen som eier nøkkelen eller
+ikke. Det eneste en sertifisering betyr er at sammenhengen mellom den offentlige
+nøkkelen og brukeridentiteten er bekreftet.</p>
+
 <h3 id="tillit">Tillit</h3>
 
 <p>Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
@@ -322,9 +326,27 @@ vil du automatisk også ha tillit til Alice sin nøkkel.</p>
 <h3 id="nøkkelservere">Nøkkelservere</h3>
 
 <p>Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
-Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
+Det finnes mange nækkelservere, og de fleste sammarbeider om å holde seg
+oppdatert. Jeg anbefaler at du <a href="/openpgp-docs/kom-i-gang/noekkelring/#importere-nøkler">bruker</a> <code>hkps://hkps.pool.sks-keyservers.net</code>
+som nøkkelserver. Dette er ikke en enkelt nøkkelserver men en samling av oppdaterte
+servere.</p>
+
+<p>Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
 du kommuniserer med. Dette er eneste måte å vite at nøkkelen for eksempel ikke
-er tilbakekalt.</p>
+er tilbakekalt. På samme måte er det viktig at du laster opp endringer i din
+offentlige nøkkel dersom du gjør endringer som:</p>
+
+<ul>
+<li>Endret utløpsdato</li>
+<li>Tilbakekalt nøkkel</li>
+<li>Ny brukeridentitet</li>
+</ul>
+
+<div class="notices warning" ><p>Tilstedeværelsen av en nøkkel på en nøkkelserver sier ikke noe om gyldigheten eller
+tilliten til en nøkkel. Husk å <strong>alltid</strong> verifiser hele fingeravtrykket til en nøkkel
+før du bruker den.</p>
+</div>
+
 
 
       
