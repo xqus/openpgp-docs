@@ -8,6 +8,20 @@ next = "/kom-i-gang/enigmail"
 
 +++
 
+GnuPG er en komplett, **gratis** og **åpen kildekode** *implementasjon* av
+OpenPGP standaren. GnuPG lar deg kryptere og signere dine data og meldinger.
+Du kan i tillegg administrere dine private og andres offentlige nøkler.
+
+GnuPG er et kommandolinje verktøy for enkel integrering mot andre applikasjoner.
+Det finnes grafiske grensesnitt for GnuPG, som for eksempel Enigmail som beskrives
+seinere i håndboken men de fleste eksempler som er beskrevet i håndboken viser
+bruk av GnuPG fra kommandolinjen.
+
+{{% notice tip %}}
+Konseptene og teorien bak er like både fra kommandolinjen og gjennom de forskjellige grafiske grensesnittene,
+så det anbefales at du leser gjennom eksemplene selv om du bruker et grafisk grensesnitt.
+{{% /notice %}}
+
 ### Installere på Windows
 Last ned **Simple installer for GnuPG modern** og følg installeringsveiviseren.
 Når den er ferdig skal du kunne kjøre `gpg` kommandoen fra kommandolinjen.
