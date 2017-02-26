@@ -24,7 +24,7 @@ filen finner du i `C:\Users\BRUKERNAVN\AppData\Roaming\gnupg` i Windows eller
 `~\.gnupg` på Linux. Åpne denne filen i en valgfri teksteditor
 (Notepad for eksmepel) og legg inn følgende linje.
 
-    keyserver hkp://pool.sks-keyservers.net
+    keyserver hkps://pool.sks-keyservers.net
 
 *pool.sks-keyservers.net* er et nettverk av nøkkelservere som synkroniserer seg
 selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.

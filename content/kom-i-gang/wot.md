@@ -21,6 +21,10 @@ Når du [sertifiserer en nøkkel](/openpgp-docs/kom-i-gang/noekkelring/#sertifis
 forteller du omverden at du har verifisert sammenhengen mellom *navn* og *epostadresse*
 spesifisert i nøkkelen og den faktiske eieren av nøkkelen.
 
+En sertifisering sier ikke noe om du kan stole på personen som eier nøkkelen eller
+ikke. Det eneste en sertifisering betyr er at sammenhengen mellom den offentlige
+nøkkelen og brukeridentiteten er bekreftet.
+
 ### Tillit
 Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
 eieren til nøkkelen verifiserer at eieren til nøklene han/hun sertifiserer
@@ -30,6 +34,22 @@ vil du automatisk også ha tillit til Alice sin nøkkel.
 
 ### Nøkkelservere
 Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
+Det finnes mange nækkelservere, og de fleste sammarbeider om å holde seg
+oppdatert. Jeg anbefaler at du [bruker](/openpgp-docs/kom-i-gang/noekkelring/#importere-nøkler) `hkps://hkps.pool.sks-keyservers.net`
+som nøkkelserver. Dette er ikke en enkelt nøkkelserver men en samling av oppdaterte
+servere.
+
 Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
 du kommuniserer med. Dette er eneste måte å vite at nøkkelen for eksempel ikke
-er tilbakekalt.
+er tilbakekalt. På samme måte er det viktig at du laster opp endringer i din
+offentlige nøkkel dersom du gjør endringer som:
+
+ * Endret utløpsdato
+ * Tilbakekalt nøkkel
+ * Ny brukeridentitet
+
+{{% notice warning %}}
+Tilstedeværelsen av en nøkkel på en nøkkelserver sier ikke noe om gyldigheten eller
+tilliten til en nøkkel. Husk å **alltid** verifiser hele fingeravtrykket til en nøkkel
+før du bruker den.
+{{% /notice %}}  
