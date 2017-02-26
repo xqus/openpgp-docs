@@ -13,10 +13,15 @@ Last ned **Simple installer for GnuPG modern** og følg installeringsveiviseren.
 Når den er ferdig skal du kunne kjøre `gpg` kommandoen fra kommandolinjen.
 For å åpne kommandolinjen trykk `WIN+R` skriv inn `cmd` og trykk ENTER.
 
+{{% notice tip %}}
+Eksemplene i denne håndboken er tatt fra et Linux operativsystem.
+Alle eksemplene virker på Windows også, men må du erstatte `gpg2` i eksemplene
+med `gpg` dersom du bruker Windows.
+{{% /notice %}}
+
 For å kontrollere at alt har gått som det skal kan du skrive: `gpg --version`
 og trykke ENTER.
 Det skal gi deg noe slikt som:
-
 
     C:\>gpg --version
     gpg (GnuPG) 2.1.17
@@ -42,7 +47,6 @@ kan være greit å legge merke til denne.
 ### Installere på Linux
 For å installere GnuPG *stable* søk etter GnuPG pakken i ditt pakkesystem.
 På Ubuntu for eksempel installeres det slik:
-
 
     apt-get install gnupg2
 
