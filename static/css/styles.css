@@ -36,3 +36,7 @@ a:hover {
 #sidebar hr {
     border-bottom: 4px solid #7F8A8F;
 }
+
+#footer {
+    padding-top: 0;
+}
