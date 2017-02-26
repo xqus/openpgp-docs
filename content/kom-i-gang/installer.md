@@ -23,6 +23,17 @@ så det anbefales at du leser gjennom eksemplene selv om du bruker et grafisk gr
 {{% /notice %}}
 
 #### Forskjellige versjoner
+GnuPG kommer i tre versjoner.
+
+ * **Stable.**
+ Versjon 2.0. Den stabile versjonen av GnuGP. Støtter SSH autentisering
+ og S/MIME.
+ * **Modern.**
+Versjon 2.1. Den mest moderne versjonen av GnuPG. Skal snart erstatte *stable*. Støtter ECC.
+ * **Classic.**
+ Versjon 1.4. Gammel arkitektur. Anbefales ikke med mindre operativsystemet ikke støtter *stable*.
+
+I de aller fleste tilfeller anbefaler jeg *Stable*.
 
 ### Installere på Windows
 De forskjellige installasjonsfilene for Windows er tilgjengelig **nederst** på
