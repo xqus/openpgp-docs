@@ -4,7 +4,7 @@ toc = true
 next = "/kom-i-gang/noekkelring"
 prev = "/kom-i-gang/konsepter"
 weight = 3
-title = "Oppbygningen av nøkler"
+title = "Dine nøkler"
 
 +++
 
