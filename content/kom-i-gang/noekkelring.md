@@ -30,7 +30,7 @@ filen finner du i `C:\Users\BRUKERNAVN\AppData\Roaming\gnupg` i Windows eller
 selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.
 
 
-    C:\>gpg --search-keys alice@cyb.org
+    amnesia@amnesia:~$ gpg2 --search-keys alice@cyb.org
     gpg: searching for "alice@cyb.org" from hkps server keys.drup.no
     (1)     Alice (Rechtsanwältin) <alice@cyb.org>
               1024 bit DSA key FB5797A9, created: 2000-06-06
@@ -50,7 +50,7 @@ Du kan nå se at den nye offentlige nøkkelen er kommet inn i din nøkkelring
 sammen med ditt eget nøkkelpar når du bruker  `-k --fingerprint` kommandoen.
 
 
-    C:\>gpg -k --fingerprint
+    amnesia@amnesia:~$ gpg2 -k --fingerprint
     pub   2048R/86D91256 2016-12-29 [expires: 2017-12-29]
           Key fingerprint = A0EF C173 8E8E 8772 25AC  AAFD 3E7C 7812 86D9 1256
     uid       [ultimate] Simba Larki <simba@example.org>
@@ -66,7 +66,7 @@ Dersom du har mottat en offentlig nøkkel i for eksmepel et vedlegg til en epost
 kan du importere den med `--import` paramteren.
 
 
-    C:\>gpg --import -i key.asc
+    amnesia@amnesia:~$ gpg2 --import -i key.asc
 
 Når nøklene er i din nøkkelring kan du benytte de til å kryptere meldinger og
 verifisere signaturer.
@@ -81,7 +81,7 @@ For å eksportere din offentlige nøkkel til en fil som du for eksempel kan legg
 ved epost bruker du `--export` paramteren.
 
 
-    C:\>gpg -a --export alice@cyb.org -o key.asc
+    amnesia@amnesia:~$ gpg2 -a --export alice@cyb.org -o key.asc
     -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: GnuPG v2
 
@@ -95,7 +95,7 @@ Du kan også laste opp nøkkelen din til en nøkkelserver slik at andre kan søk
 den opp og laste den ned der.
 
 
-    C:\>gpg --send-keys 0x69CDDB86
+    amnesia@amnesia:~$ gpg2 --send-keys 0x69CDDB86
     gpg: sending key 69CDDB86 to hkps server keys.drup.no
 
 {{% notice note %}}
@@ -112,7 +112,7 @@ Alice sin nøkkel vil du automatisk også ha tillit til Alice sin nøkkel.
 Du setter tillit til en nøkkel med `--edit-key` parameteren.
 
 
-    C:\>gpg --edit-key alice@cyb.org
+    amnesia@amnesia:~$ gpg2 --edit-key alice@cyb.org
     gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
     This is free software: you are free to change and redistribute it.
     There is NO WARRANTY, to the extent permitted by law.
@@ -170,7 +170,7 @@ du `sign` kommandoen.
 Når du har signert en nøkkel kan du laste opp din signatur til nøkkelserverene
 slik at andre kan se at du har verifisert nøkkelen og identiten til eieren.
 
-    C:\>gpg --send-keys 0xFB5797A9
+    amnesia@amnesia:~$ gpg2 -send-keys 0xFB5797A9
     gpg: sending key FB5797A9 to hkps server keys.drup.no
 
 
@@ -181,7 +181,7 @@ Nøkler kan tilbakekalles eller signeres av andre brukere uten at du nødvendigv
 får vite det. Slike endringer er viktig at du får med deg. Derfor bør du synkronisere
 din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med `--refresh-keys`
 
-    C:\>gpg --refresh-keys
+    amnesia@amnesia:~$ gpg2 --refresh-keys
 
 Sikkerhetkopiering
 ------------------
@@ -204,7 +204,7 @@ Får gjennopprette disse kan du bare kopiere disse tilbake på samme sted.
 
 Tillitsdatabasen kopieres med følgende kommando
 
-    C:\>gpg --export-ownertrust > ownertrust-gpg.txt
+    amnesia@amnesia:~$ gpg2 --export-ownertrust > ownertrust-gpg.txt
 
 og importeres med denne kommandoen
 
@@ -214,12 +214,12 @@ og importeres med denne kommandoen
 
 Dine private nøkler eksporteres med `--export-secret-keys`.
 
-    C:\>gpg -a --export-secret-keys -o private-keys.asc
+    amnesia@amnesia:~$ gpg2 -a --export-secret-keys -o private-keys.asc
 
 For å importere dine private nøkler bruker du `--import`
 
 
-    C:\>gpg --import private-keys.asc
+    amnesia@amnesia:~$ gpg2 --import private-keys.asc
 
 {{% notice warning %}}
 Gjør alt du kan for å holde din private nøkkel privat.

@@ -70,7 +70,7 @@ Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
 er avhengig av bruken.
 
 
-    C:\>gpg --gen-key
+    amnesia@amnesia:~$ gpg2 --gen-key
     gpg (GnuPG) 2.0.30; Copyright (C) 2015 Free Software Foundation, Inc.
     This is free software: you are free to change and redistribute it.
     There is NO WARRANTY, to the extent permitted by law.
@@ -157,7 +157,7 @@ er opprettet.
 Nøkkelid består av de 8 (kort nøkkelid) eller 16 (lang nøkkelid) siste tegnene i fingeravtrykket med `0x` rett forran.
 {{% /notice %}}
 
-Du kan se dine nøkkelpar med kommandoen `C:\>gpg -K --fingerprint`
+Du kan se dine nøkkelpar med kommandoen `amnesia@amnesia:~$ gpg2 -K --fingerprint`
 
 Tilbakekallingssertifikat
 -------------------------
@@ -168,7 +168,7 @@ Dersom du tilbakekaller nøkkelen din vil den ikke lenger kunne brukes til å
 signere eller kryptere meldinger.
 
 
-    C:\>gpg --output revoke.asc --gen-revoke simba@example.org
+    amnesia@amnesia:~$ gpg2 --output revoke.asc --gen-revoke simba@example.org
 
 Dette vil lagre ditt tilbakekallingssertifikat som `revoke.asc`. Ta godt vare
 på dette. Dersom andre får tilgang til det kan de tilbakekalle dit nøkkelpar.
