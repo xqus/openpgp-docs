@@ -34,10 +34,6 @@
                 {{ $Site := .Site }}
                 {{with $File.Path }}
               <div id="top-github-link">
-                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/issues/new" target="blank">
-                    <i class="fa fa-github"></i>
-                    Foreslå endring
-                  </a> |
                   <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Rediger side
