@@ -245,7 +245,7 @@ enheten.
 Ta backup
 ---------
 
-Det er nå på tide å [sikkerhetskopiere](/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering) nøklene.
+Det er nå på tide å [sikkerhetskopiere](/kom-i-gang/noekkelring/#sikkerhetkopiering) nøklene.
 Sikkerhetskopien lagrer du på en egen USB-minnepinne. Du har nå en kopi av nøklene
 på din Tails minnepinne, samt en ekstra kopi på en egen USB-minnepinne.
 
