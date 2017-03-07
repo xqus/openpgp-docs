@@ -14,7 +14,7 @@ Dette er ikke en komplett liste, men en oversikt over noen av de fallgruvene som
 oftest skaper problemer for de som benytter OpenPGP.
 
 ### Dårlig passord
-I kapittelet om [konsepter](/openpgp-docs/kom-i-gang/konsepter/) skrev jeg at
+I kapittelet om [konsepter](/kom-i-gang/konsepter/) skrev jeg at
 all sikkerheten i krypteringsalgortimene ligger i din private nøkkel. Det
 eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
 på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
@@ -68,7 +68,7 @@ i stand til å dekryptere meldinger som var kryptert med den nøkkelen som motta
 Dette er normalt sett ikke et stort problem med kryptert epost, men kan være et
 større problem dersom du hadde en kryptert backup av feriebildene. Det er derfor
 veldig viktig med
-[sikkerhetskopi](/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering) av
+[sikkerhetskopi](/kom-i-gang/noekkelring/#sikkerhetkopiering) av
 din private nøkkel.
 
 Oppbevar sikkerhetskopien på en minnepinne som du oppbevarer et trygt sted.

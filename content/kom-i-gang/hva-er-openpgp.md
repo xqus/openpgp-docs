@@ -31,7 +31,7 @@ Dersom du vil benytte OpenPGP til kryptering og signering av epost anbefaler jeg
 [Email Self Defense Guiden](https://emailselfdefense.fsf.org/en/) til Free
 Software Foundation. Denne guider deg gjennom installasjon av GnuPG og Thunderbird
 med Enigmail, og hjelper deg sende din første kryptere epost. Det finnes også
-en [enklere versjon](/openpgp-docs/kom-i-gang/enigmail) av denne guiden i denne håndboken.
+en [enklere versjon](/kom-i-gang/enigmail) av denne guiden i denne håndboken.
 
 Innholdet videre i denne guiden forklarer OpenPGP konspter bruken av GnuPG fra
 kommandolinjen. Bruk av kommandolinjeverktøy er ikke noe alle vil bruke i
@@ -53,5 +53,5 @@ heldigvis grafiske grensesnitt til en del epostklienter slik at bruken av GnuPG
 ikke kompliserer bruken av epost. For å gjøre det enklest mulig anbefaler jeg at
 du bruker Thunderbird med Enigmail til epost.
 
-I neste kapittel beskriver jeg hvordan du [installerer GnuPG](/openpgp-docs/kom-i-gang/installer/)
-og deretter beskrives installasjon av [Thunderbird og Enigmail](/openpgp-docs/kom-i-gang/enigmail/).
+I neste kapittel beskriver jeg hvordan du [installerer GnuPG](/kom-i-gang/installer/)
+og deretter beskrives installasjon av [Thunderbird og Enigmail](/kom-i-gang/enigmail/).
