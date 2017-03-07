@@ -56,7 +56,7 @@ du kan melde deg på dersom du ønsker å diskutere OpenPGP relaterte ting.&lt;/
 &lt;a href=&#34;https://emailselfdefense.fsf.org/en/&#34;&gt;Email Self Defense Guiden&lt;/a&gt; til Free
 Software Foundation. Denne guider deg gjennom installasjon av GnuPG og Thunderbird
 med Enigmail, og hjelper deg sende din første kryptere epost. Det finnes også
-en &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/enigmail&#34;&gt;enklere versjon&lt;/a&gt; av denne guiden i denne håndboken.&lt;/p&gt;
+en &lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/enigmail&#34;&gt;enklere versjon&lt;/a&gt; av denne guiden i denne håndboken.&lt;/p&gt;
 
 &lt;p&gt;Innholdet videre i denne guiden forklarer OpenPGP konspter bruken av GnuPG fra
 kommandolinjen. Bruk av kommandolinjeverktøy er ikke noe alle vil bruke i
@@ -79,8 +79,8 @@ heldigvis grafiske grensesnitt til en del epostklienter slik at bruken av GnuPG
 ikke kompliserer bruken av epost. For å gjøre det enklest mulig anbefaler jeg at
 du bruker Thunderbird med Enigmail til epost.&lt;/p&gt;
 
-&lt;p&gt;I neste kapittel beskriver jeg hvordan du &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/installer/&#34;&gt;installerer GnuPG&lt;/a&gt;
-og deretter beskrives installasjon av &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/enigmail/&#34;&gt;Thunderbird og Enigmail&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I neste kapittel beskriver jeg hvordan du &lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/installer/&#34;&gt;installerer GnuPG&lt;/a&gt;
+og deretter beskrives installasjon av &lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/enigmail/&#34;&gt;Thunderbird og Enigmail&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -240,12 +240,12 @@ Det første du må gjøre er å sette opp Thunderbird til å lese din e-post. F�
 gang du starter &lt;a href=&#34;https://www.mozilla.org/nb-NO/thunderbird/&#34;&gt;Thunderbird&lt;/a&gt; vil
 den veilede deg gjennom oppsettet av din epost.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../../images/step1a-install-wizard.png?width=30%&#34; alt=&#34;Steg 1a&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kryptosikkerhet.no/images/step1a-install-wizard.png?width=30%&#34; alt=&#34;Steg 1a&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;installer-gnupg&#34;&gt;Installer GnuPG&lt;/h2&gt;
 
 &lt;p&gt;Dersom du ikke har installert GnuPG enda følg veilednignen
-&lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/hva-er-openpgp/#kom-i-gang&#34;&gt;her&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/hva-er-openpgp/#kom-i-gang&#34;&gt;her&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;installer-enigmail&#34;&gt;Installer Enigmail&lt;/h2&gt;
 
@@ -254,27 +254,27 @@ for automatisk å kryptere og signere epost. Denne utvidelsen kan installeres
 gjennom Utvidelses grensesnittet til Thunderbird.&lt;/p&gt;
 
 &lt;p&gt;I Thunderbird velg &lt;strong&gt;Verktøy&lt;/strong&gt; og så &lt;strong&gt;Utvidelser&lt;/strong&gt;.
-&lt;img src=&#34;../../images/step1b-01-tools-addons.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
+&lt;img src=&#34;https://kryptosikkerhet.no/images/step1b-01-tools-addons.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
 Søk etter &lt;strong&gt;Enigmail&lt;/strong&gt; i søkreruten øverst til høyre.
-&lt;img src=&#34;../../images/step1b-02-search.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
+&lt;img src=&#34;https://kryptosikkerhet.no/images/step1b-02-search.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
 Finn &lt;strong&gt;Enigmail&lt;/strong&gt; i listen og velg installer.
-&lt;img src=&#34;../../images/step1b-03-install.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
+&lt;img src=&#34;https://kryptosikkerhet.no/images/step1b-03-install.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;
 Følg anvisingene på skjermen og restart Thunderbird når du er ferdig.&lt;/p&gt;
 
 &lt;h2 id=&#34;lag-dine-nøkler&#34;&gt;Lag dine nøkler&lt;/h2&gt;
 
 &lt;p&gt;Før du kan sende og motta kryptert epost, og sende epost signert med din digitale
 signatur må du opprette et nøkkelpar.
-&lt;img src=&#34;../../images/step2a-01-make-keypair.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://kryptosikkerhet.no/images/step2a-01-make-keypair.png?width=20%&#34; alt=&#34;Steg 1b&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Første gang du starter Thunderbird etter at Enigmail er installert skal
 &lt;strong&gt;Oppsettsveilederen&lt;/strong&gt; starte. Dersom den ikke gjør det kan du starte den ved å
 velge &lt;strong&gt;Enigmail&lt;/strong&gt; og så &lt;strong&gt;Oppsettsveileder&lt;/strong&gt;.
 Følg anvinsingen på skjermen så vil programet generere nøklene for deg.
 Før du lager dine nøkler anbefaler jeg at du leser
-&lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/nokler/&#34;&gt;Komme i gang med nøkler&lt;/a&gt; (du trenger &lt;strong&gt;ikke&lt;/strong&gt;
+&lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/nokler/&#34;&gt;Komme i gang med nøkler&lt;/a&gt; (du trenger &lt;strong&gt;ikke&lt;/strong&gt;
 generere dine nøkler slik som beskrevet her) og
-&lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/riktig-bruk/noekkelpreferanser/&#34;&gt;Nøkkelpreferanser&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://kryptosikkerhet.no/riktig-bruk/noekkelpreferanser/&#34;&gt;Nøkkelpreferanser&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;Nøkler du oppretter og importerer i Enigmail vil være tilgjengelig i GnuPG og omvendt.&lt;/p&gt;
 &lt;/div&gt;
@@ -283,7 +283,7 @@ generere dine nøkler slik som beskrevet her) og
 &lt;h2 id=&#34;publiser-din-offentlige-nøkkel&#34;&gt;Publiser din offentlige nøkkel&lt;/h2&gt;
 
 &lt;p&gt;For at andre lettere skal kunne finne din offentlige nøkkel kan du laste den
-opp til en &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/wot/#nøkkelservere&#34;&gt;nøkkeltjener&lt;/a&gt;.&lt;/p&gt;
+opp til en &lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/wot/#nøkkelservere&#34;&gt;nøkkeltjener&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For å gjøre dette velg &lt;strong&gt;Thunderbird&lt;/strong&gt; og så &lt;strong&gt;Nøkkelhåndtering&lt;/strong&gt;.
 Høyreklikk på din nøkkel og velg &lt;strong&gt;Last opp offentlige nøkler til nøkkeltjener&lt;/strong&gt;.&lt;/p&gt;
@@ -1121,7 +1121,7 @@ slik at man lettere kan knytte et nøkkelpar til en person.&lt;/p&gt;
 
 &lt;h3 id=&#34;sertifisering&#34;&gt;Sertifisering&lt;/h3&gt;
 
-&lt;p&gt;Når du &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/noekkelring/#sertifisere-nøkler&#34;&gt;sertifiserer en nøkkel&lt;/a&gt;
+&lt;p&gt;Når du &lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/noekkelring/#sertifisere-nøkler&#34;&gt;sertifiserer en nøkkel&lt;/a&gt;
 forteller du omverden at du har verifisert sammenhengen mellom &lt;em&gt;navn&lt;/em&gt; og &lt;em&gt;epostadresse&lt;/em&gt;
 spesifisert i nøkkelen og den faktiske eieren av nøkkelen.&lt;/p&gt;
 
@@ -1141,7 +1141,7 @@ vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p&gt;
 
 &lt;p&gt;Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
 Det finnes mange nækkelservere, og de fleste sammarbeider om å holde seg
-oppdatert. Jeg anbefaler at du &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/noekkelring/#importere-nøkler&#34;&gt;bruker&lt;/a&gt; &lt;code&gt;hkps://hkps.pool.sks-keyservers.net&lt;/code&gt;
+oppdatert. Jeg anbefaler at du &lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/noekkelring/#importere-nøkler&#34;&gt;bruker&lt;/a&gt; &lt;code&gt;hkps://hkps.pool.sks-keyservers.net&lt;/code&gt;
 som nøkkelserver. Dette er ikke en enkelt nøkkelserver men en samling av oppdaterte
 servere.&lt;/p&gt;
 
@@ -1179,7 +1179,7 @@ oftest skaper problemer for de som benytter OpenPGP.&lt;/p&gt;
 
 &lt;h3 id=&#34;dårlig-passord&#34;&gt;Dårlig passord&lt;/h3&gt;
 
-&lt;p&gt;I kapittelet om &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/konsepter/&#34;&gt;konsepter&lt;/a&gt; skrev jeg at
+&lt;p&gt;I kapittelet om &lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/konsepter/&#34;&gt;konsepter&lt;/a&gt; skrev jeg at
 all sikkerheten i krypteringsalgortimene ligger i din private nøkkel. Det
 eneste som beskytter din private nøkkel fra å bli missbrukt dersom den kommer
 på avveie er passfrasen som beskytter den. Passfrasen er faktisk en kryteringsnøkkel
@@ -1237,7 +1237,7 @@ i stand til å dekryptere meldinger som var kryptert med den nøkkelen som motta
 Dette er normalt sett ikke et stort problem med kryptert epost, men kan være et
 større problem dersom du hadde en kryptert backup av feriebildene. Det er derfor
 veldig viktig med
-&lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering&#34;&gt;sikkerhetskopi&lt;/a&gt; av
+&lt;a href=&#34;https://kryptosikkerhet.no/kom-i-gang/noekkelring/#sikkerhetkopiering&#34;&gt;sikkerhetskopi&lt;/a&gt; av
 din private nøkkel.&lt;/p&gt;
 
 &lt;p&gt;Oppbevar sikkerhetskopien på en minnepinne som du oppbevarer et trygt sted.
