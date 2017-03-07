@@ -461,7 +461,7 @@ utforming. Under er et eksempel på noen kurver. Kurvene som benyttes i
 kryptering er mye mer komplekse, men disse eksemplene gjør det lett å se for seg
 hvordan det virker.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://kryptosikkerhet.no/openpgp-docs/images/ecc-lines.png&#34; alt=&#34;Eliptiske kurver&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://kryptosikkerhet.no/images/ecc-lines.png&#34; alt=&#34;Eliptiske kurver&#34; /&gt;
 Eksempel på eliptiske kurver fra &lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve&#34;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Eliptiske kurver har den egenskapen at dersom du trekker en ikke horisontal
