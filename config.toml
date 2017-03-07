@@ -1,6 +1,6 @@
 languageCode = "nb-no"
 title = "Norsk OpenPGP guide"
-baseURL = "https://xqus.github.io/openpgp-docs/"
+baseURL = "https://kryptosikkerhet.no/"
 publishDir = "docs"
 theme = "hugo-theme-learn"
 

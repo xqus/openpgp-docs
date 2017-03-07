@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Riktig-bruks on Norsk OpenPGP guide</title>
-    <link>https://xqus.github.io/openpgp-docs/riktig-bruk/index.xml</link>
+    <link>https://kryptosikkerhet.no/riktig-bruk/index.xml</link>
     <description>Recent content in Riktig-bruks on Norsk OpenPGP guide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
     <lastBuildDate>Wed, 22 Feb 2017 12:31:28 +0100</lastBuildDate>
-    <atom:link href="https://xqus.github.io/openpgp-docs/riktig-bruk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kryptosikkerhet.no/riktig-bruk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Riktig bruk</title>
-      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/</link>
+      <link>https://kryptosikkerhet.no/riktig-bruk/</link>
       <pubDate>Wed, 22 Feb 2017 12:31:28 +0100</pubDate>
       
-      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/</guid>
+      <guid>https://kryptosikkerhet.no/riktig-bruk/</guid>
       <description>
 
 &lt;h3 id=&#34;kapittel-2&#34;&gt;Kapittel 2&lt;/h3&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Nøkkelpreferanser</title>
-      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/noekkelpreferanser/</link>
+      <link>https://kryptosikkerhet.no/riktig-bruk/noekkelpreferanser/</link>
       <pubDate>Wed, 22 Feb 2017 12:31:51 +0100</pubDate>
       
-      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/noekkelpreferanser/</guid>
+      <guid>https://kryptosikkerhet.no/riktig-bruk/noekkelpreferanser/</guid>
       <description>
 
 &lt;p&gt;Når du genererer dine OpenPGP nøkler har du mange forskjellige valg når det
@@ -70,10 +70,10 @@ ytelsen reduseres drastisk med RSA-4096.&lt;/p&gt;
     
     <item>
       <title>Sikker oppbevaring av nøkler</title>
-      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/sikre-noekler/</link>
+      <link>https://kryptosikkerhet.no/riktig-bruk/sikre-noekler/</link>
       <pubDate>Wed, 22 Feb 2017 12:31:51 +0100</pubDate>
       
-      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/sikre-noekler/</guid>
+      <guid>https://kryptosikkerhet.no/riktig-bruk/sikre-noekler/</guid>
       <description>
 
 &lt;p&gt;Sikker oppbevaring av din private nøkkel er viktig av flere årsaker. For det
@@ -312,7 +312,7 @@ enheten.&lt;/p&gt;
 
 &lt;h2 id=&#34;ta-backup&#34;&gt;Ta backup&lt;/h2&gt;
 
-&lt;p&gt;Det er nå på tide å &lt;a href=&#34;https://xqus.github.io/openpgp-docs/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering&#34;&gt;sikkerhetskopiere&lt;/a&gt; nøklene.
+&lt;p&gt;Det er nå på tide å &lt;a href=&#34;https://kryptosikkerhet.no/openpgp-docs/kom-i-gang/noekkelring/#sikkerhetkopiering&#34;&gt;sikkerhetskopiere&lt;/a&gt; nøklene.
 Sikkerhetskopien lagrer du på en egen USB-minnepinne. Du har nå en kopi av nøklene
 på din Tails minnepinne, samt en ekstra kopi på en egen USB-minnepinne.&lt;/p&gt;
 
@@ -324,10 +324,10 @@ på din Tails minnepinne, samt en ekstra kopi på en egen USB-minnepinne.&lt;/p&
     
     <item>
       <title>Rotere undernøkler</title>
-      <link>https://xqus.github.io/openpgp-docs/riktig-bruk/rotere-noekler/</link>
+      <link>https://kryptosikkerhet.no/riktig-bruk/rotere-noekler/</link>
       <pubDate>Wed, 22 Feb 2017 12:31:51 +0100</pubDate>
       
-      <guid>https://xqus.github.io/openpgp-docs/riktig-bruk/rotere-noekler/</guid>
+      <guid>https://kryptosikkerhet.no/riktig-bruk/rotere-noekler/</guid>
       <description>
 
 &lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Dette kapittelet forutsetter at du har et offline nøkkelpar som beskrevet i kapittelet om &lt;em&gt;Sikker oppbevaring av nøkler&lt;/em&gt;.&lt;/p&gt;
