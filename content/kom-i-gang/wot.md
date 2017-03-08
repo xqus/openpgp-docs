@@ -17,7 +17,7 @@ Tillitsnettet (Web Of Trust) forsøker å skape et nettverk av nøkler du stoler
 slik at man lettere kan knytte et nøkkelpar til en person.
 
 ### Sertifisering
-Når du [sertifiserer en nøkkel](/openpgp-docs/kom-i-gang/noekkelring/#sertifisere-nøkler)
+Når du [sertifiserer en nøkkel](/kom-i-gang/noekkelring/#sertifisere-nøkler)
 forteller du omverden at du har verifisert sammenhengen mellom *navn* og *epostadresse*
 spesifisert i nøkkelen og den faktiske eieren av nøkkelen.
 
@@ -35,7 +35,7 @@ vil du automatisk også ha tillit til Alice sin nøkkel.
 ### Nøkkelservere
 Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
 Det finnes mange nækkelservere, og de fleste sammarbeider om å holde seg
-oppdatert. Jeg anbefaler at du [bruker](/openpgp-docs/kom-i-gang/noekkelring/#importere-nøkler) `hkps://hkps.pool.sks-keyservers.net`
+oppdatert. Jeg anbefaler at du [bruker](/kom-i-gang/noekkelring/#importere-nøkler) `hkps://hkps.pool.sks-keyservers.net`
 som nøkkelserver. Dette er ikke en enkelt nøkkelserver men en samling av oppdaterte
 servere.
 
