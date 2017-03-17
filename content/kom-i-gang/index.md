@@ -1,15 +1,15 @@
 +++
 date = "2017-02-22T10:58:45+01:00"
-icon = "<b>1. </b>"
+icon = "<b>2. </b>"
 chapter = true
 next = "/kom-i-gang/hva-er-openpgp"
-#prev = "/prev/path"
+prev = "/grunnleggende/passord"
 weight = 0
 title = "Kom i gang med OpenPGP"
 
 +++
 
-### Kapittel 1
+### Kapittel 2
 
 # Kom i gang med OpenPGP
 
