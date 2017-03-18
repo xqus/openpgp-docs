@@ -21,7 +21,7 @@ nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den
 samme nøkkelen. For eksempel bruker den Tyske Enigma maskien symmetrisk algoritme,
 og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som
 sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.
-Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfisk og IDEA.
+Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfish og IDEA.
 
 En god krypteringsalgoritme legger all sikkerheten i nøklene og ingen i selve
 algoritmen. Med andre ord skal det ikke være til hjelp for en angriper å vite
