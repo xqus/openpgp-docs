@@ -27,7 +27,7 @@ den veilede deg gjennom oppsettet av din epost.
 Installer GnuPG
 ---------------
 Dersom du ikke har installert GnuPG enda følg veilednignen
-[her](/openpgp/hva-er-openpgp/#openpgp).
+[her](/openpgp/hva-er-openpgp/#kom-i-gang).
 
 Installer Enigmail
 ------------------

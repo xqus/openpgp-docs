@@ -1,10 +1,15 @@
 +++
-prev = "/kom-i-gang/hva-er-openpgp"
+prev = "/openpgp/hva-er-openpgp"
 weight = 2
 title = "Installere GnuPG"
 date = "2017-02-26T11:07:38+01:00"
 toc = true
-next = "/kom-i-gang/enigmail"
+next = "/openpgp/enigmail"
+
+
+aliases = [
+    "/kom-i-gang/installer"
+]
 
 +++
 

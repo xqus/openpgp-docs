@@ -1,10 +1,14 @@
 +++
 date = "2017-02-22T10:59:58+01:00"
 toc = true
-next = "/kom-i-gang/kryptering"
-prev = "/kom-i-gang/noekkelring"
+next = "/openpgp/kryptering"
+prev = "/openpgp/noekkelring"
 weight = 6
 title = "Signering"
+
+aliases = [
+    "/kom-i-gang/signering"
+]
 
 +++
 

@@ -1,10 +1,15 @@
 +++
 date = "2017-02-22T10:59:58+01:00"
 toc = true
-next = "/kom-i-gang/signering"
-prev = "/kom-i-gang/nokler"
+next = "/openpgp/signering"
+prev = "/openpgp/nokler"
 weight = 4
 title = "Din nøkkelring"
+
+aliases = [
+    "/kom-i-gang/noekkelring"
+]
+
 
 +++
 

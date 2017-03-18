@@ -1,11 +1,15 @@
 +++
 date = "2017-02-22T10:59:58+01:00"
 toc = true
-next = "/kom-i-gang/wot"
-prev = "/kom-i-gang/signering"
+next = "/openpgp/wot"
+prev = "/openpgp/signering"
 weight = 7
 title = "Kryptering"
 
+
+aliases = [
+    "/kom-i-gang/kryptering"
+]
 +++
 
 Kryptering av en melding eller fil gjør at ingen andre enn avsender og

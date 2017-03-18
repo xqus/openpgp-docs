@@ -13,4 +13,4 @@ chapter = true
 
 # Grunnleggende sikkerhet
 
-Lorem ipsum
+Grunnleggende informasjonssikkerhet.
