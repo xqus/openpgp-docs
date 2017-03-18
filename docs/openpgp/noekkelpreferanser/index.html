@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kryptert epost med Enigmail</title>
+    <title>Nøkkelpreferanser</title>
     <link href="https://kryptosikkerhet.no//css/nucleus.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/kom-i-gang/enigmail/">
+  <body class="" data-url="/openpgp/noekkelpreferanser/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -100,7 +100,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/kom-i-gang/enigmail/">
+      <li class="dd-item  " data-nav-id="/kom-i-gang/enigmail/">
         <a href="/kom-i-gang/enigmail/">
           <span>
             
@@ -120,7 +120,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/openpgp/">
+      <li class="dd-item  parent" data-nav-id="/openpgp/">
         <a href="/openpgp/">
           <span>
             
@@ -208,7 +208,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp/noekkelpreferanser/">
+            <li class="dd-item active" data-nav-id="/openpgp/noekkelpreferanser/">
               <a href="/openpgp/noekkelpreferanser/">
                 <span>Nøkkelpreferanser     </i></span>
               </a>
@@ -265,7 +265,7 @@
                 
                 
               <div id="top-github-link">
-                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/kom-i-gang/enigmail.md" target="blank">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/noekkelpreferanser.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Rediger side
                   </a>
@@ -287,13 +287,15 @@
                   
                 
                   
+                
+                  
                     
+                    
+                <a href="/openpgp/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
-                  
-                
-                <span itemprop="title"> Kryptert epost med Enigmail</span>
+                <span itemprop="title"> Nøkkelpreferanser</span>
               </div>
               
                   <div class="progress">
@@ -302,11 +304,9 @@
 <ul>
 <li>
 <ul>
-<li><a href="#installer-thunderbird">Installer Thunderbird</a></li>
-<li><a href="#installer-gnupg">Installer GnuPG</a></li>
-<li><a href="#installer-enigmail">Installer Enigmail</a></li>
-<li><a href="#lag-dine-nøkler">Lag dine nøkler</a></li>
-<li><a href="#publiser-din-offentlige-nøkkel">Publiser din offentlige nøkkel</a></li>
+<li><a href="#nøkkeltype">Nøkkeltype</a></li>
+<li><a href="#undernøkler">Undernøkler</a></li>
+<li><a href="#nøkkellengde">Nøkkellengde</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -319,70 +319,43 @@
             
     	        <div id="body-inner">
                 
-                <h1>Kryptert epost med Enigmail</h1>
+                <h1>Nøkkelpreferanser</h1>
                 
 
 
 
-<h2 id="installer-thunderbird">Installer Thunderbird</h2>
+<p>Når du genererer dine OpenPGP nøkler har du mange forskjellige valg når det
+gjelder type nøkkel, funksjonen til nøklene og nøkkellengde. Hva som passer best
+for deg er vanskelig å si da hver enkelt har forskjellige behov. Jeg har alikavel
+forsøkt å oppsummere hva som er god praksis.</p>
 
-<p><a href="https://www.mozilla.org/nb-NO/thunderbird/">Thunderbird</a> er en <strong>gratis</strong>
-åpen-kildekode <strong>epost klient</strong> utviklet av Mozilla, de samme som har utviklet
-<strong>Firebird</strong>. En epost klient som Thunderbird fungerer fint som en erstating for
-det nettleserbaserte grenesnittet til din eposttilbyder (Gmail eller lignende).
-Det første du må gjøre er å sette opp Thunderbird til å lese din e-post. Første
-gang du starter <a href="https://www.mozilla.org/nb-NO/thunderbird/">Thunderbird</a> vil
-den veilede deg gjennom oppsettet av din epost.</p>
+<h2 id="nøkkeltype">Nøkkeltype</h2>
 
-<p><img src="/images/step1a-install-wizard.png?width=30%" alt="Steg 1a" /></p>
+<p>Når du genererer nøkler kan du velge mellom RSA, DSA og Elgamal. Du kan også
+velge å bare generere signerings nøkler. Det vil si at det ikke er mulig å
+kryptere data til den offentlige nøkkelen. Dette kan være fornuftig dersom du
+ønsker å lagre din mesternøkkel på en datamaskin som du ikke bruker til daglig.
+I så fall må du lage en egen undernøkkel til bruk for kryptering.</p>
 
-<h2 id="installer-gnupg">Installer GnuPG</h2>
+<p>I utgangspunktet anbefales RSA forran DSA av flere årsaker
+(se <a href="https://www.gnupg.org/faq/gnupg-faq.html#recommended_ciphers">GnuPG.org sin FAQ</a>).</p>
 
-<p>Dersom du ikke har installert GnuPG enda følg veilednignen
-<a href="/openpgp/hva-er-openpgp/#openpgp">her</a>.</p>
+<h2 id="undernøkler">Undernøkler</h2>
 
-<h2 id="installer-enigmail">Installer Enigmail</h2>
+<p>Det er mulig å opprette undernøkler til ditt masternøkkelpar. Du kan for eksempel
+opprette en signeringsnøkkel for hver enhet du sender e-post fra. Det er dersverre
+problematisk å ha flere undernøkler for kryptering da bare en av de vil bli brukt
+når data krypteres. Det vil si at meldingen bare kan dekrypteres på en enhet.</p>
 
-<p>Enigmail er en utvidelse til Thunderbird som gir deg et grensesnitt til <em>GnuPG</em>
-for automatisk å kryptere og signere epost. Denne utvidelsen kan installeres
-gjennom Utvidelses grensesnittet til Thunderbird.</p>
+<h2 id="nøkkellengde">Nøkkellengde</h2>
 
-<p>I Thunderbird velg <strong>Verktøy</strong> og så <strong>Utvidelser</strong>.
-<img src="/images/step1b-01-tools-addons.png?width=20%" alt="Steg 1b" />
-Søk etter <strong>Enigmail</strong> i søkreruten øverst til høyre.
-<img src="/images/step1b-02-search.png?width=20%" alt="Steg 1b" />
-Finn <strong>Enigmail</strong> i listen og velg installer.
-<img src="/images/step1b-03-install.png?width=20%" alt="Steg 1b" />
-Følg anvisingene på skjermen og restart Thunderbird når du er ferdig.</p>
+<p>GnuPG støtter RSA nøkler opp til 4096 bits men anbefalingen er RSA 2048.
+Grunnen til det er at RSA-4096 gir minimalt bedre sikkerhet enn RSA-2048 mens
+ytelsen reduseres drastisk med RSA-4096.</p>
 
-<h2 id="lag-dine-nøkler">Lag dine nøkler</h2>
+<p>Hvis du ikke føler at RSA-2048 er godt nok anbefales eliptisk-kurve-algoritmer.</p>
 
-<p>Før du kan sende og motta kryptert epost, og sende epost signert med din digitale
-signatur må du opprette et nøkkelpar.
-<img src="/images/step2a-01-make-keypair.png?width=20%" alt="Steg 1b" /></p>
-
-<p>Første gang du starter Thunderbird etter at Enigmail er installert skal
-<strong>Oppsettsveilederen</strong> starte. Dersom den ikke gjør det kan du starte den ved å
-velge <strong>Enigmail</strong> og så <strong>Oppsettsveileder</strong>.
-Følg anvinsingen på skjermen så vil programet generere nøklene for deg.
-Før du lager dine nøkler anbefaler jeg at du leser
-<a href="/openpgp/nokler/">Komme i gang med nøkler</a> (du trenger <strong>ikke</strong>
-generere dine nøkler slik som beskrevet her) og
-<a href="/riktig-bruk/noekkelpreferanser/">Nøkkelpreferanser</a>.</p>
-
-<div class="notices tip" ><p>Nøkler du oppretter og importerer i Enigmail vil være tilgjengelig i GnuPG og omvendt.</p>
-</div>
-
-
-<h2 id="publiser-din-offentlige-nøkkel">Publiser din offentlige nøkkel</h2>
-
-<p>For at andre lettere skal kunne finne din offentlige nøkkel kan du laste den
-opp til en <a href="/openpgp/wot/#nøkkelservere">nøkkeltjener</a>.</p>
-
-<p>For å gjøre dette velg <strong>Thunderbird</strong> og så <strong>Nøkkelhåndtering</strong>.
-Høyreklikk på din nøkkel og velg <strong>Last opp offentlige nøkler til nøkkeltjener</strong>.</p>
-
-<p><em>Images are copyright © 2014-2016 Free Software Foundation, Inc.</em></p>
+<p>Se foreøvrig <a href="https://www.gnupg.org/faq/gnupg-faq.html#please_use_ecc">GnuPG.org sin FAQ</a>.</p>
 
 
       
@@ -391,8 +364,8 @@ Høyreklikk på din nøkkel og velg <strong>Last opp offentlige nøkler til nøk
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://kryptosikkerhet.no//openpgp/installer"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://kryptosikkerhet.no//openpgp/nokler" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://kryptosikkerhet.no//openpgp/fallgruver"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://kryptosikkerhet.no//openpgp/sikre-noekler" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

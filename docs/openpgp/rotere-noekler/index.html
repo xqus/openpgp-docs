@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="description" content="Norsk OpenPGP guide">
+<meta name="author" content="Audun Larsen">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Rotere undernøkler</title>
+    <link href="https://kryptosikkerhet.no//css/nucleus.css" rel="stylesheet">
+    <link href="https://kryptosikkerhet.no//css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://kryptosikkerhet.no//css/hybrid.css" rel="stylesheet">
+    <link href="https://kryptosikkerhet.no//css/featherlight.min.css" rel="stylesheet">
+    <link href="https://kryptosikkerhet.no//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://kryptosikkerhet.no//css/horsey.css" rel="stylesheet">
+    <link href="https://kryptosikkerhet.no//css/theme.css" rel="stylesheet">
+    <link href="https://kryptosikkerhet.no//css/hugo-theme.css" rel="stylesheet">
+    <script src="https://kryptosikkerhet.no//js/jquery-2.x.min.js"></script>
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    <link href="/css/styles.css" rel="stylesheet">
+
+  </head>
+  <body class="" data-url="/openpgp/rotere-noekler/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://kryptosikkerhet.no/">
+  <strong>Krypto</strong>
+  <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+  <small>håndboken</small>
+</a>
+
+    </div>
+    
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+        
+      
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/grunnleggende/">
+        <a href="/grunnleggende/">
+          <span>
+            
+              <b>1. </b>
+            
+             Grunnleggende sikkerhet
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/grunnleggende/passord/">
+              <a href="/grunnleggende/passord/">
+                <span>Gode passord     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/grunnleggende/kryptering/">
+              <a href="/grunnleggende/kryptering/">
+                <span>Kort om kryptering     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/kom-i-gang/enigmail/">
+        <a href="/kom-i-gang/enigmail/">
+          <span>
+            
+             Kryptert epost med Enigmail
+            
+           </span>
+        </a>
+        
+      </li>
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  parent" data-nav-id="/openpgp/">
+        <a href="/openpgp/">
+          <span>
+            
+              <b>2. </b>
+            
+             Kom i gang med OpenPGP
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/hva-er-openpgp/">
+              <a href="/openpgp/hva-er-openpgp/">
+                <span>Hva er OpenPGP     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/installer/">
+              <a href="/openpgp/installer/">
+                <span>Installere GnuPG     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/enigmail/">
+              <a href="/openpgp/enigmail/">
+                <span>Kryptert epost med Enigmail     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/nokler/">
+              <a href="/openpgp/nokler/">
+                <span>Dine nøkler     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/noekkelring/">
+              <a href="/openpgp/noekkelring/">
+                <span>Din nøkkelring     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/signering/">
+              <a href="/openpgp/signering/">
+                <span>Signering     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/kryptering/">
+              <a href="/openpgp/kryptering/">
+                <span>Kryptering     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/wot/">
+              <a href="/openpgp/wot/">
+                <span>Tillitsnett     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/fallgruver/">
+              <a href="/openpgp/fallgruver/">
+                <span>Fallgruver     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/noekkelpreferanser/">
+              <a href="/openpgp/noekkelpreferanser/">
+                <span>Nøkkelpreferanser     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/openpgp/sikre-noekler/">
+              <a href="/openpgp/sikre-noekler/">
+                <span>Sikker oppbevaring av nøkler     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/openpgp/rotere-noekler/">
+              <a href="/openpgp/rotere-noekler/">
+                <span>Rotere undernøkler     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+     
+     <section id="footer">
+       <p>
+         <a href="http://list.drup.no/mailman/listinfo/openpgp_list.drup.no">Epostliste</a> for diskusjon av OpenPGP.
+       </p>
+       <p>&nbsp;</p>
+      <p>
+        Skrevet med <i class="fa fa-heart"></i></a> av Audun Larsen.
+      </p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons-lisens" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />Dette verk er lisensieret under en <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens</a>.
+      </p>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+                
+                
+                
+              <div id="top-github-link">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/rotere-noekler.md" target="blank">
+                    <i class="fa fa-code-fork"></i>
+                    Rediger side
+                  </a>
+              </div>
+                
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                
+                  
+                
+                  
+                    
+                    
+                <a href="/openpgp/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                <span itemprop="title"> Rotere undernøkler</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#tilbakekall-dine-gamle-nøkler">Tilbakekall dine gamle nøkler</a></li>
+<li><a href="#generer-nye-undernøkler">Generer nye undernøkler</a></li>
+<li><a href="#oppdater-nøkkelserverene">Oppdater nøkkelserverene</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Rotere undernøkler</h1>
+                
+
+
+
+<div class="notices note" ><p>Dette kapittelet forutsetter at du har et offline nøkkelpar som beskrevet i kapittelet om <em>Sikker oppbevaring av nøkler</em>.</p>
+</div>
+
+
+<p>Dersom dine undernøkler går tapt eller komprimiteres kan du enkelt tilbakekalle
+disse, og generere nye ved å bruke din minnepinne med Tails som har dine hovednøkler på.
+Når vi tilbakekaller nøklene sier vi til omverden av disse ikke lenger skal benyttes.
+Dersom noen signerer en melding med nøkler som er tilbakekalt vi ikke signaturen
+være gyldig.  Deretter gernerer vi nye undernøkler som vi kopierer tilbake på
+klientene våre, som beskrevet i kapittelet om <em>Sikker oppbevaring av nøkler</em>.</p>
+
+<p>Det er viktig at din nye offentlige nøkkel lastes opp til nøkkelserverene. Det
+er slik omverden får vite om dine nye undernøkler, og at de gamle er tilbakekalt.</p>
+
+<h2 id="tilbakekall-dine-gamle-nøkler">Tilbakekall dine gamle nøkler</h2>
+
+<pre><code>amnesia@amnesia:~$ gpg2 --edit-key alice@example.com
+gpg (GnuPG) 2.0.26; Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &lt;alice@example.com&gt;
+
+gpg&gt; key 1
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub* 2048R/0x94B56B273C610BDB  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &lt;alice@example.com&gt;
+
+gpg&gt; key 2
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+sub* 2048R/0x94B56B273C610BDB  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub* 2048R/0xE69C73D0FFA0432F  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &lt;alice@example.com&gt;
+
+gpg&gt; revkey
+Do you really want to revoke the selected subkeys? (y/N) y
+Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+Your decision? 1
+Enter an optional description; end it with an empty line:
+&gt;
+Reason for revocation: Key has been compromised
+(No description given)
+Is this okay? (y/N) y
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice &lt;alice@example.com&gt;&quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice &lt;alice@example.com&gt;&quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+[ultimate] (1). Alice &lt;alice@example.com&gt;
+
+gpg&gt; save
+</code></pre>
+
+<h2 id="generer-nye-undernøkler">Generer nye undernøkler</h2>
+
+<pre><code>amnesia@amnesia:~$ gpg2 --edit-key alice@example.com
+gpg (GnuPG) 2.0.26; Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+[ultimate] (1). Alice &lt;alice@example.com&gt;
+
+gpg&gt; addkey
+Key is protected.
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice &lt;alice@example.com&gt;&quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+Your selection? 4
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Tue 20 Feb 2018 07:45:00 PM UTC
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+sub  2048R/0x8EE8D15759878C5A  created: 2017-02-20  expires: 2018-02-20  usage: S
+[ultimate] (1). Alice &lt;alice@example.com&gt;
+
+gpg&gt; addkey
+Key is protected.
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice &lt;alice@example.com&gt;&quot;
+2048-bit RSA key, ID 0x50AD20916F557D14, created 2017-02-20
+
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+Your selection? 6
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Tue 20 Feb 2018 07:45:11 PM UTC
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+pub  2048R/0x50AD20916F557D14  created: 2017-02-20  expires: 2018-02-20  usage: SC
+                               trust: ultimate      validity: ultimate
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0x94B56B273C610BDB  created: 2017-02-20  revoked: 2017-02-20  usage: S
+The following key was revoked on 2017-02-20 by RSA key 0x50AD20916F557D14 Alice &lt;alice@example.com&gt;
+sub  2048R/0xE69C73D0FFA0432F  created: 2017-02-20  revoked: 2017-02-20  usage: E
+sub  2048R/0x8EE8D15759878C5A  created: 2017-02-20  expires: 2018-02-20  usage: S
+sub  2048R/0x737E8D0A5B17C472  created: 2017-02-20  expires: 2018-02-20  usage: E
+[ultimate] (1). Alice &lt;alice@example.com&gt;
+
+gpg&gt; save
+</code></pre>
+
+<h2 id="oppdater-nøkkelserverene">Oppdater nøkkelserverene</h2>
+
+<pre><code>amnesia@amnesia:~$ gpg2 --send-keys 0x50AD20916F557D14
+gpg: sending key 0x50AD20916F557D14 to hkps server hkps.pool.sks-keyservers.net
+</code></pre>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        <a class="nav nav-prev" href="https://kryptosikkerhet.no/openpgp/sikre-noekler"> <i class="fa fa-chevron-left"></i></a>
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://kryptosikkerhet.no//js/clipboard.min.js"></script>
+    <script src="https://kryptosikkerhet.no//js/perfect-scrollbar.min.js"></script>
+    <script src="https://kryptosikkerhet.no//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://kryptosikkerhet.no//js/jquery.sticky-kit.min.js"></script>
+    <script src="https://kryptosikkerhet.no//js/featherlight.min.js"></script>
+    <script src="https://kryptosikkerhet.no//js/html5shiv-printshiv.min.js"></script>
+    <script src="https://kryptosikkerhet.no//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://kryptosikkerhet.no//js/modernizr.custom.71422.js"></script>
+    <script src="https://kryptosikkerhet.no//js/learn.js"></script>
+    <script src="https://kryptosikkerhet.no//js/hugo-learn.js"></script>
+    <script>
+jQuery(document).ready(function() {
+    $('#body-inner a:not(:has(img)):not(.btn)').removeClass('highlight');
+});
+</script>
+
+  </body>
+</html>
+

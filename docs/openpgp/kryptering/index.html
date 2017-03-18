@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kryptert epost med Enigmail</title>
+    <title>Kryptering</title>
     <link href="https://kryptosikkerhet.no//css/nucleus.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/kom-i-gang/enigmail/">
+  <body class="" data-url="/openpgp/kryptering/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -100,7 +100,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/kom-i-gang/enigmail/">
+      <li class="dd-item  " data-nav-id="/kom-i-gang/enigmail/">
         <a href="/kom-i-gang/enigmail/">
           <span>
             
@@ -120,7 +120,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/openpgp/">
+      <li class="dd-item  parent" data-nav-id="/openpgp/">
         <a href="/openpgp/">
           <span>
             
@@ -184,7 +184,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp/kryptering/">
+            <li class="dd-item active" data-nav-id="/openpgp/kryptering/">
               <a href="/openpgp/kryptering/">
                 <span>Kryptering     </i></span>
               </a>
@@ -265,7 +265,7 @@
                 
                 
               <div id="top-github-link">
-                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/kom-i-gang/enigmail.md" target="blank">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/kryptering.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Rediger side
                   </a>
@@ -287,13 +287,15 @@
                   
                 
                   
+                
+                  
                     
+                    
+                <a href="/openpgp/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
-                  
-                
-                <span itemprop="title"> Kryptert epost med Enigmail</span>
+                <span itemprop="title"> Kryptering</span>
               </div>
               
                   <div class="progress">
@@ -302,11 +304,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#installer-thunderbird">Installer Thunderbird</a></li>
-<li><a href="#installer-gnupg">Installer GnuPG</a></li>
-<li><a href="#installer-enigmail">Installer Enigmail</a></li>
-<li><a href="#lag-dine-nøkler">Lag dine nøkler</a></li>
-<li><a href="#publiser-din-offentlige-nøkkel">Publiser din offentlige nøkkel</a></li>
+<li><a href="#kryptering">Kryptering</a>
+<ul>
+<li><a href="#dekryptering">Dekryptering</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -319,70 +320,77 @@
             
     	        <div id="body-inner">
                 
-                <h1>Kryptert epost med Enigmail</h1>
+                <h1>Kryptering</h1>
                 
 
 
 
-<h2 id="installer-thunderbird">Installer Thunderbird</h2>
+<p>Kryptering av en melding eller fil gjør at ingen andre enn avsender og
+mottaker kan lese innholdet. Når du skal sende og motta krypterte meldinger har
+din offentlige og private nøkkel helt klare funksjoner. Du kan se på din offentlige
+nøkkel som en åpen safe. Når du krypterer et dokument legger du det inn i safen
+og vrir om kodelåsen flere ganger. Den private nøkkelen er kombinasjonen du
+trenger for å åpne safen.</p>
 
-<p><a href="https://www.mozilla.org/nb-NO/thunderbird/">Thunderbird</a> er en <strong>gratis</strong>
-åpen-kildekode <strong>epost klient</strong> utviklet av Mozilla, de samme som har utviklet
-<strong>Firebird</strong>. En epost klient som Thunderbird fungerer fint som en erstating for
-det nettleserbaserte grenesnittet til din eposttilbyder (Gmail eller lignende).
-Det første du må gjøre er å sette opp Thunderbird til å lese din e-post. Første
-gang du starter <a href="https://www.mozilla.org/nb-NO/thunderbird/">Thunderbird</a> vil
-den veilede deg gjennom oppsettet av din epost.</p>
+<p>Hvis du vil kryptere en melding til Alice bruker du Alice sin offentlige nøkkel.
+Hun kan da dekryptere den med sin private nøkkel. Hvis Alice vil sende deg en
+kryptert melding krypterer hun den med din offentlige nøkkel. Du kan da
+dekryptere den med din private nøkkel.</p>
 
-<p><img src="/images/step1a-install-wizard.png?width=30%" alt="Steg 1a" /></p>
+<h2 id="kryptering">Kryptering</h2>
 
-<h2 id="installer-gnupg">Installer GnuPG</h2>
-
-<p>Dersom du ikke har installert GnuPG enda følg veilednignen
-<a href="/openpgp/hva-er-openpgp/#openpgp">her</a>.</p>
-
-<h2 id="installer-enigmail">Installer Enigmail</h2>
-
-<p>Enigmail er en utvidelse til Thunderbird som gir deg et grensesnitt til <em>GnuPG</em>
-for automatisk å kryptere og signere epost. Denne utvidelsen kan installeres
-gjennom Utvidelses grensesnittet til Thunderbird.</p>
-
-<p>I Thunderbird velg <strong>Verktøy</strong> og så <strong>Utvidelser</strong>.
-<img src="/images/step1b-01-tools-addons.png?width=20%" alt="Steg 1b" />
-Søk etter <strong>Enigmail</strong> i søkreruten øverst til høyre.
-<img src="/images/step1b-02-search.png?width=20%" alt="Steg 1b" />
-Finn <strong>Enigmail</strong> i listen og velg installer.
-<img src="/images/step1b-03-install.png?width=20%" alt="Steg 1b" />
-Følg anvisingene på skjermen og restart Thunderbird når du er ferdig.</p>
-
-<h2 id="lag-dine-nøkler">Lag dine nøkler</h2>
-
-<p>Før du kan sende og motta kryptert epost, og sende epost signert med din digitale
-signatur må du opprette et nøkkelpar.
-<img src="/images/step2a-01-make-keypair.png?width=20%" alt="Steg 1b" /></p>
-
-<p>Første gang du starter Thunderbird etter at Enigmail er installert skal
-<strong>Oppsettsveilederen</strong> starte. Dersom den ikke gjør det kan du starte den ved å
-velge <strong>Enigmail</strong> og så <strong>Oppsettsveileder</strong>.
-Følg anvinsingen på skjermen så vil programet generere nøklene for deg.
-Før du lager dine nøkler anbefaler jeg at du leser
-<a href="/openpgp/nokler/">Komme i gang med nøkler</a> (du trenger <strong>ikke</strong>
-generere dine nøkler slik som beskrevet her) og
-<a href="/riktig-bruk/noekkelpreferanser/">Nøkkelpreferanser</a>.</p>
-
-<div class="notices tip" ><p>Nøkler du oppretter og importerer i Enigmail vil være tilgjengelig i GnuPG og omvendt.</p>
+<div class="notices warning" ><p>Før du kan sende krypterte meldinger må du importere den offentlige nøkkelen til
+mottakeren, slik som beskrevet i Nøkkelring-kapittelet.</p>
 </div>
 
 
-<h2 id="publiser-din-offentlige-nøkkel">Publiser din offentlige nøkkel</h2>
+<pre><code> amnesia@amnesia:~$ gpg2 --output doc.gpg --encrypt -r alice@example.com test.txt
+</code></pre>
 
-<p>For at andre lettere skal kunne finne din offentlige nøkkel kan du laste den
-opp til en <a href="/openpgp/wot/#nøkkelservere">nøkkeltjener</a>.</p>
+<p><code>-r</code> parameteren spesifiseres en gang for hver mottaker og er
+etterfulgt av en mottaker. I dette tilfellet <code>aliceexample.com</code>. Dersom du selv
+skal kunne dekryptere dokumentet må du også spesifisere deg selv som mottaker i
+tillegg.</p>
 
-<p>For å gjøre dette velg <strong>Thunderbird</strong> og så <strong>Nøkkelhåndtering</strong>.
-Høyreklikk på din nøkkel og velg <strong>Last opp offentlige nøkler til nøkkeltjener</strong>.</p>
+<p>Du kan også lagre de krypterte dokumentet som ASCII tekst som er litt mer lesbart
+ved å bruke <code>--armor</code> parameteren.</p>
 
-<p><em>Images are copyright © 2014-2016 Free Software Foundation, Inc.</em></p>
+<pre><code>amnesia@amnesia:~$ gpg2 --armor --output doc.asc --encrypt -r alice@example.com test.txt
+amnesia@amnesia:~$ cat doc.asc
+-----BEGIN PGP MESSAGE-----
+
+hQEMA2t88U6yRa3AAQgAslk5MYEmM8Mqjtj9dACFzuOIwfM+vwGZ06zXheOo9oId
+SsV3Uowpxi74YApXbPvEoMpSpQMUgegF0GafBbBzFL/W/f0IK3nBM4mxsK07M98e
+Ub77azNkx2oLilKnYstN4IhZr9Xu2fFSle0hRFo/u0XU0+GS97bKri64ABJFWZwF
+Y+kiFaB9QG0ETPSWulCL2us6miZ8x8yDZQ/tUNCsaIYukYAxiqZYbSn2vQ+yB1sJ
+ki6MqWPw6lLLl90XJumL3YMS3s2Yi+yUOU9xhpqLGt2kaN86AEQJcSSUC7fxDJu3
+kJyEjAe8aNcWk0o16VNhCdqIzwnBCVnFExfcezUzDdJSAc1ql7DCa8XN2BmM/DzE
+S2TYrahjX9J+JN+vu+h5/Y733Yekxd2wt7HWAbYcFGiL+UGFiXxmHKW1fsTMh/d2
+0Idfdb8BsZ/ROkv2JFfHMBboFw==
+=E/Yx
+-----END PGP MESSAGE-----
+</code></pre>
+
+<h3 id="dekryptering">Dekryptering</h3>
+
+<p>For å dekryptere et dokument benyttes <code>--decrypt</code> parameteren. Du trenger da
+den private nøkkelen som tilhører den offentlige nøkkelen som ble brukt for å
+kryptere dokumentet.</p>
+
+<pre><code>amnesia@amnesia:~$ gpg2 --output doc.txt --decrypt doc.gpg
+
+You need a passphrase to unlock the secret key for
+user: &quot;Alice &lt;alice@example.com&gt;&quot;
+2048-bit RSA key, ID 0x6B7CF14EB245ADC0, created 2017-02-25
+     (subkey on main key ID 0x3E2A6E298A8C9B2C)
+
+gpg: encrypted with 2048-bit RSA key, ID 0x6B7CF14EB245ADC0, created 2017-02-25
+  &quot;Alice &lt;alice@example.com&gt;&quot;
+amnesia@amnesia:~$ cat doc.txt
+Hello World
+Hello
+amnesia@amnesia:~$
+</code></pre>
 
 
       
@@ -391,8 +399,8 @@ Høyreklikk på din nøkkel og velg <strong>Last opp offentlige nøkler til nøk
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://kryptosikkerhet.no//openpgp/installer"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://kryptosikkerhet.no//openpgp/nokler" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://kryptosikkerhet.no//openpgp/signering"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://kryptosikkerhet.no//openpgp/wot" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

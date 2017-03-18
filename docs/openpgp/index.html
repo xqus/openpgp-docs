@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kryptert epost med Enigmail</title>
+    <title>Kom i gang med OpenPGP</title>
     <link href="https://kryptosikkerhet.no//css/nucleus.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/kom-i-gang/enigmail/">
+  <body class="" data-url="/openpgp/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -100,7 +100,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/kom-i-gang/enigmail/">
+      <li class="dd-item  " data-nav-id="/kom-i-gang/enigmail/">
         <a href="/kom-i-gang/enigmail/">
           <span>
             
@@ -120,7 +120,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/openpgp/">
+      <li class="dd-item active parent" data-nav-id="/openpgp/">
         <a href="/openpgp/">
           <span>
             
@@ -265,7 +265,7 @@
                 
                 
               <div id="top-github-link">
-                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/kom-i-gang/enigmail.md" target="blank">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/index.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Rediger side
                   </a>
@@ -279,10 +279,10 @@
                       </a>
                   </span>
                 
-                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 
                 
                 
+                  
                 
                   
                 
@@ -291,108 +291,36 @@
                     
                   
                 
-                  
-                
-                <span itemprop="title"> Kryptert epost med Enigmail</span>
+                <span itemprop="title"> Kom i gang med OpenPGP</span>
               </div>
-              
-                  <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#installer-thunderbird">Installer Thunderbird</a></li>
-<li><a href="#installer-gnupg">Installer GnuPG</a></li>
-<li><a href="#installer-enigmail">Installer Enigmail</a></li>
-<li><a href="#lag-dine-nøkler">Lag dine nøkler</a></li>
-<li><a href="#publiser-din-offentlige-nøkkel">Publiser din offentlige nøkkel</a></li>
-</ul></li>
-</ul>
-</nav>
-    </div>
-</div>
-
               
 
             </div>
             
+              <div id="chapter">
+            
     	        <div id="body-inner">
                 
-                <h1>Kryptert epost med Enigmail</h1>
-                
 
 
 
-<h2 id="installer-thunderbird">Installer Thunderbird</h2>
+<h3 id="kapittel-2">Kapittel 2</h3>
 
-<p><a href="https://www.mozilla.org/nb-NO/thunderbird/">Thunderbird</a> er en <strong>gratis</strong>
-åpen-kildekode <strong>epost klient</strong> utviklet av Mozilla, de samme som har utviklet
-<strong>Firebird</strong>. En epost klient som Thunderbird fungerer fint som en erstating for
-det nettleserbaserte grenesnittet til din eposttilbyder (Gmail eller lignende).
-Det første du må gjøre er å sette opp Thunderbird til å lese din e-post. Første
-gang du starter <a href="https://www.mozilla.org/nb-NO/thunderbird/">Thunderbird</a> vil
-den veilede deg gjennom oppsettet av din epost.</p>
+<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
 
-<p><img src="/images/step1a-install-wizard.png?width=30%" alt="Steg 1a" /></p>
-
-<h2 id="installer-gnupg">Installer GnuPG</h2>
-
-<p>Dersom du ikke har installert GnuPG enda følg veilednignen
-<a href="/openpgp/hva-er-openpgp/#openpgp">her</a>.</p>
-
-<h2 id="installer-enigmail">Installer Enigmail</h2>
-
-<p>Enigmail er en utvidelse til Thunderbird som gir deg et grensesnitt til <em>GnuPG</em>
-for automatisk å kryptere og signere epost. Denne utvidelsen kan installeres
-gjennom Utvidelses grensesnittet til Thunderbird.</p>
-
-<p>I Thunderbird velg <strong>Verktøy</strong> og så <strong>Utvidelser</strong>.
-<img src="/images/step1b-01-tools-addons.png?width=20%" alt="Steg 1b" />
-Søk etter <strong>Enigmail</strong> i søkreruten øverst til høyre.
-<img src="/images/step1b-02-search.png?width=20%" alt="Steg 1b" />
-Finn <strong>Enigmail</strong> i listen og velg installer.
-<img src="/images/step1b-03-install.png?width=20%" alt="Steg 1b" />
-Følg anvisingene på skjermen og restart Thunderbird når du er ferdig.</p>
-
-<h2 id="lag-dine-nøkler">Lag dine nøkler</h2>
-
-<p>Før du kan sende og motta kryptert epost, og sende epost signert med din digitale
-signatur må du opprette et nøkkelpar.
-<img src="/images/step2a-01-make-keypair.png?width=20%" alt="Steg 1b" /></p>
-
-<p>Første gang du starter Thunderbird etter at Enigmail er installert skal
-<strong>Oppsettsveilederen</strong> starte. Dersom den ikke gjør det kan du starte den ved å
-velge <strong>Enigmail</strong> og så <strong>Oppsettsveileder</strong>.
-Følg anvinsingen på skjermen så vil programet generere nøklene for deg.
-Før du lager dine nøkler anbefaler jeg at du leser
-<a href="/openpgp/nokler/">Komme i gang med nøkler</a> (du trenger <strong>ikke</strong>
-generere dine nøkler slik som beskrevet her) og
-<a href="/riktig-bruk/noekkelpreferanser/">Nøkkelpreferanser</a>.</p>
-
-<div class="notices tip" ><p>Nøkler du oppretter og importerer i Enigmail vil være tilgjengelig i GnuPG og omvendt.</p>
-</div>
+<p>Grunnleggende innføring i bruk av GnuPG, og konseptene bak OpenPGP.</p>
 
 
-<h2 id="publiser-din-offentlige-nøkkel">Publiser din offentlige nøkkel</h2>
-
-<p>For at andre lettere skal kunne finne din offentlige nøkkel kan du laste den
-opp til en <a href="/openpgp/wot/#nøkkelservere">nøkkeltjener</a>.</p>
-
-<p>For å gjøre dette velg <strong>Thunderbird</strong> og så <strong>Nøkkelhåndtering</strong>.
-Høyreklikk på din nøkkel og velg <strong>Last opp offentlige nøkler til nøkkeltjener</strong>.</p>
-
-<p><em>Images are copyright © 2014-2016 Free Software Foundation, Inc.</em></p>
-
-
+      
+        </div> 
       
       </div>
     </div>
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://kryptosikkerhet.no//openpgp/installer"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://kryptosikkerhet.no//openpgp/nokler" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://kryptosikkerhet.no//grunnleggende/"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://kryptosikkerhet.no//openpgp/hva-er-openpgp" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

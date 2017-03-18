@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kryptosikkerhet.no/riktig-bruk/noekkelpreferanser/</loc>
-    <lastmod>2017-02-22T12:31:51+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/grunnleggende/passord/</loc>
+    <lastmod>2017-03-13T12:24:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/hva-er-openpgp/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/hva-er-openpgp/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/installer/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/installer/</loc>
     <lastmod>2017-02-26T11:07:38+01:00</lastmod>
   </url>
   
@@ -22,75 +22,91 @@
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/riktig-bruk/sikre-noekler/</loc>
-    <lastmod>2017-02-22T12:31:51+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/openpgp/enigmail/</loc>
+    <lastmod>2017-02-24T08:57:52+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/konsepter/</loc>
+    <loc>https://kryptosikkerhet.no/grunnleggende/kryptering/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/riktig-bruk/rotere-noekler/</loc>
-    <lastmod>2017-02-22T12:31:51+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/nokler/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/nokler/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/noekkelring/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/noekkelring/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/signering/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/signering/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/kryptering/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/kryptering/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/wot/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/wot/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/fallgruver/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/fallgruver/</loc>
     <lastmod>2017-02-24T16:09:30+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/riktig-bruk/</loc>
-    <lastmod>2017-02-22T12:31:28+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/openpgp/noekkelpreferanser/</loc>
+    <lastmod>2017-02-22T12:31:51+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/kom-i-gang/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/sikre-noekler/</loc>
+    <lastmod>2017-02-22T12:31:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/openpgp/rotere-noekler/</loc>
+    <lastmod>2017-02-22T12:31:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/grunnleggende/</loc>
+    <lastmod>2017-03-13T12:24:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/openpgp/</loc>
     <lastmod>2017-02-22T10:58:45+01:00</lastmod>
   </url>
   
   <url>
+    <loc>https://kryptosikkerhet.no/grunnleggende/</loc>
+    <lastmod>2017-03-13T12:24:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kryptosikkerhet.no/kom-i-gang/</loc>
-    <lastmod>2017-02-22T10:58:45+01:00</lastmod>
+    <lastmod>2017-02-24T08:57:52+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kryptosikkerhet.no/</loc>
-    <lastmod>2017-02-22T12:31:51+01:00</lastmod>
+    <lastmod>2017-03-13T12:24:25+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/riktig-bruk/</loc>
-    <lastmod>2017-02-22T12:31:28+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/openpgp/</loc>
+    <lastmod>2017-02-22T10:58:45+01:00</lastmod>
     <priority>0</priority>
   </url>
   
