@@ -38,10 +38,9 @@ er ikke bare morsom, men også et veldig bra tips.
 
 Det finnes flere måter å generere en passfrase. [Diceware](http://world.std.com/~reinhold/diceware.html)
 er kanskje en av de mest nerdete, men da får du et meget bra passord. Bitcoin
-lommebøker bruker en variant av Diceware. Jeg anbefaler [følgende ordliste](https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt)
+lommebøker bruker en variant av Diceware. Jeg anbefaler [følgende ordliste](https://gist.github.com/xqus/6f779b73b617aeb180800fe38965ac0e)
 hvis du vil lage deg en diceware passfrase. Denne ordlisten inneholder ikke ord
-som staves nesten likt. Dersom du vil generere en passfrase automatisk fra denne
-ordlisten finnes det et [online verktøy](https://iancoleman.github.io/bip39/).
+som staves nesten likt.
 
 ### Metadata
 En av de største svakhetene med OpenPGP når det brukes til kryptering av epost

@@ -40,3 +40,22 @@ noen tips.
  2. Bruk *aldri* det samme passordet på tvers av internettjenester.
  3. Husk de passordene du trenger hver dag. Resten kan du skrive ned hjemme. Det finnes god software for lagring av passord.
  4. Bruk to-faktors autentisering der det er mulig (hvertfall på epost kontoen din).
+
+### Diceware
+
+{{% notice info %}}
+I mange tilfeller brukes ordet *passfrase* brukes besvisst i steden for ordet passord. Meningen er å oppmuntre til
+bruk av setninger eller flere ord som passord.
+{{% /notice %}}
+
+[Diceware](http://world.std.com/~reinhold/diceware.html) er en meteode for å generere passord ved bruk av terninger. Tanken er
+at man benytter en liste med numererte ord og et sett med vanlige terninger til
+å lage en passfrase bestående av flere tilfeldige ord fra ordlisten.
+Alle sifferne som blir brukt i nummereringen av ordene i ordlisten er mellom 1 og
+6, slik at du kan bruke utfallet av terningene til å velge ord.
+
+Det finnes utallige ordlister, noen krever 5 terninger, andre krever 4. Antall ord
+i ordlisten sammen med antall ord i paafrasen vil avgjøre styrken til passordet.
+
+Jeg har satt sammen en [Norsk ordliste](6f779b73b617aeb180800fe38965ac0e) der
+vanskelige ord, og ord som ligner på hverandre er tatt ut.
