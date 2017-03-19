@@ -6,53 +6,107 @@
     <description>Recent content on Norsk OpenPGP guide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
-    <lastBuildDate>Mon, 13 Mar 2017 12:24:25 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 19 Mar 2017 13:54:13 +0100</lastBuildDate>
     <atom:link href="https://kryptosikkerhet.no/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Gode passord</title>
-      <link>https://kryptosikkerhet.no/grunnleggende/passord/</link>
-      <pubDate>Mon, 13 Mar 2017 12:24:25 +0100</pubDate>
+      <title>Introduksjon</title>
+      <link>https://kryptosikkerhet.no/grunnleggende/introduksjon/</link>
+      <pubDate>Sun, 19 Mar 2017 13:54:13 +0100</pubDate>
       
-      <guid>https://kryptosikkerhet.no/grunnleggende/passord/</guid>
+      <guid>https://kryptosikkerhet.no/grunnleggende/introduksjon/</guid>
       <description>
 
-&lt;p&gt;Et av de grunnleggende krav i all sikker kommunikasjon er valg av passord.
-Det finnes utallige tanker om hvordan man lager, husker, oppbevarer og bytter
-passord. De fleste konseptene er basert på antagelser og tradisjon, fremfor
-forskning og sunn fornuft.&lt;/p&gt;
+&lt;h3 id=&#34;informasjonssikkerhet&#34;&gt;Informasjonssikkerhet&lt;/h3&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;Rule 1 about passwords is &amp;ldquo;there are no rules!&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Informasjonssikkerhet er et fellesbegrep for veldig mange ting. De aller fleste
+har et forhold til hva det betyr, selv om det å komme med en enkel definisjon er
+vanskelig. Kort sagt så er det tre hovedprisipper vi ønsker å oppnå med
+informasjonssikkerhet.&lt;/p&gt;
 
-&lt;h3 id=&#34;hvorfor-er-gode-passord-viktig&#34;&gt;Hvorfor er gode passord viktig?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Konfidensialitet&lt;/li&gt;
+&lt;li&gt;Integritet&lt;/li&gt;
+&lt;li&gt;Tilgjengelighet&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Gode passord er viktig av flere årsaker. Passordet er ofte det eneste som står
-mellom en angriper og full tilgang til din Facebook-konto, datamaskin eller epost.
-Det finnes avanserte dataprogramer som kan gjette seg frem til ditt passord basert
-på offentlig informasjon om deg, som for eksempel navn på samboer/ektefelle, barn
-kjæledyr osv. Det betyr at navnet på katten etterfulgt av fødselsåret til barna
-er typisk passord som enkelt kan gjettes.&lt;/p&gt;
+&lt;h4 id=&#34;konfidensialitet&#34;&gt;Konfidensialitet&lt;/h4&gt;
 
-&lt;h3 id=&#34;så-hva-er-et-bra-passord&#34;&gt;Så hva er et bra passord?&lt;/h3&gt;
+&lt;p&gt;Konfidensialitet går ut på å skjule vår data fra andre enn den tiltenkte mottakgeren,
+enten det er oss selv, eller andre. Dette gjøres som regel med kryptering. Det
+finnes utallige typer kryptering, og hver type har også utallige algoritmer, eller
+formler for å skjule informasjonen fra uvedkommede.&lt;/p&gt;
 
-&lt;p&gt;Et godt passord er et passord som ikke enkelt kan gjettes basert på informasjon
-om deg som person. Det er også en fordel at du klarer å huske passordet ditt.&lt;/p&gt;
+&lt;h4 id=&#34;integritet&#34;&gt;Integritet&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/password_strength.png&#34; alt=&#34;XKCD: Password Strength&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Integriteten til data er også viktig. Det å kunne stole på at en melding ikke
+har blitt endret med på veien, eller at ingen har tuklet med arkivet ditt over
+kontoutskrifter gir deg trygghet slik at du kan stole på informasjonen.&lt;/p&gt;
 
-&lt;p&gt;Man kan diskutere om budskapet i stripen over er riktig eller ikke, men den er i
-alle tilfeller inne på noe. Gammeldagsepassord tips er, gammeldagse.
-Jeg skrev i starten at det ikke finnes noen regler om passord, men det finnes
-noen tips.&lt;/p&gt;
+&lt;h4 id=&#34;tilgjengelighet&#34;&gt;Tilgjengelighet&lt;/h4&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Et passord skal være lett å huske, men vanskelig å gjette. Bruk gjerne setininger.&lt;/li&gt;
-&lt;li&gt;Bruk &lt;em&gt;aldri&lt;/em&gt; det samme passordet på tvers av internettjenester.&lt;/li&gt;
-&lt;li&gt;Husk de passordene du trenger hver dag. Resten kan du skrive ned hjemme. Det finnes god software for lagring av passord.&lt;/li&gt;
-&lt;li&gt;Bruk to-faktors autentisering der det er mulig (hvertfall på epost kontoen din).&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Tilgjengelighet går ut på at din data er tilgjengelig for deg når du trenger den.
+Vi skal ikke snakke så mye om dette punktet i denne håndboken da det i hovedsak
+berører de som drifter it-systemer. Det du skal huske på er &lt;strong&gt;sikkerhetskopiering&lt;/strong&gt;, alltid.&lt;/p&gt;
+
+&lt;h3 id=&#34;kommunikasjonssikkerhet&#34;&gt;Kommunikasjonssikkerhet&lt;/h3&gt;
+
+&lt;p&gt;Det meste i denne håndboken omhandler kommunikasjonssikkerhet. Kommunikasjonssikkerhet
+kan man se på som et samlebegrep for &lt;strong&gt;konfidensialitet&lt;/strong&gt; og &lt;strong&gt;integritet&lt;/strong&gt;.
+Hvis vi skal kommunisere sikkert med noen er vi helt avhengig av begge disse to.
+Det finnes mangen måter å oppnå konfidensialitet og integritet på, og metodene
+varierer med hvilken form for kommunikasjon vi driver med. Jeg liker å dele inn
+informasjon inn i to grupper, siden måten vi praktiserer kommunikasjonssikkerhet
+er veldig forskjellig basert på hvilken type data vi snakker om.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hvilende data&lt;/li&gt;
+&lt;li&gt;Data i transit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;data-i-transit&#34;&gt;Data i transit&lt;/h4&gt;
+
+&lt;p&gt;Data i transit er kortlevd informasjon. Som for eksempel når du sender
+fødselsnummeret ditt til nettbanken din for å starte innloggingsprosessen.
+Data i transit er altså &lt;strong&gt;data som beveger seg fra en enhet til en annen&lt;/strong&gt;. Mye av
+data i transit går over til hvilende data når den når sin destinasjon.
+De aller fleste kjenner igjen den grønne hengelåsen og informasjon om selskapet
+bak nettsiden i adressefeltet i nettleseren når vi besøker &amp;ldquo;sikre&amp;rdquo; nettsider.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://kryptosikkerhet.no/images/https.png&#34; alt=&#34;HTTPS&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Denne hengelåsen forteller oss ingen ting om hvor sikkert et nettsted er. Det
+denne hengelåsen forteller oss er at informasjonen som sendes fra din nettleser
+til nettsiden er kryptert, og hvem som driver nettsiden. Dette gir oss
+&lt;em&gt;konfindeisalitet&lt;/em&gt; og &lt;em&gt;integritet&lt;/em&gt; på informasjonen i transit mellom nettleser og
+nettsiden. Den forteller ingen ting om hva som skjer med informasjonen på
+systemene til de som mottar den. Dersom denne informasjonen lagres på dette
+systemet liker jeg å se på den som &lt;em&gt;hvilende data&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Data i transit bør sikres så godt man kan da denne informasjonen sendes over internett og passerer mange
+enhter. Disse enhetene eies av mange forskjellige firma og organisasjoner, og alle
+er utenfor din kontroll. Det betyr at man kan ikke vite hvordan disse behandler
+informasjonen dersom den ikke er kryptert. Ukryptert informasjon kan snappes opp og
+endres på veien. Man kan se på det som å sende et postkort i posten. Alle som
+jobber i posten i de forskjellige landene kortet passerer kan både lese det og
+endre innholdet uten at avsender eller mottaker merker det.&lt;/p&gt;
+
+&lt;h4 id=&#34;hvilende-data&#34;&gt;Hvilende data&lt;/h4&gt;
+
+&lt;p&gt;Det finnes mange typer hvilende data. All data som lagres er egentlig hvilende
+data. Grunnen til at jeg liker å skille disse to datatypene er at de systemene
+som beskytter data i transit ikke beskytter hvilende data. Det betyr at selv om
+nettbutikker har en kryptert forbindelse til din nettleser (grønn hengelås) betyr
+ikke det at kredittkortinformasjonen din lagres på en slik måte at den er
+beskyttet. Krypteringssystemet som beskyttet kredittkortnummeret ditt på veien
+til nettbutikken vil ikke lenger være til hjelp etter at det er kommet frem.&lt;/p&gt;
+
+&lt;p&gt;Hvilende data som er kryptert kan sendes fra en enhet til en annen uten at
+man trenger å benytte de systemene som skal beskytte data i transit.&lt;/p&gt;
+
+&lt;p&gt;Denne guiden handler i stor grad om OpenPGP / GnuPG som et system for kryptering
+av hvilende data. OpenPGP brukes i stor grad til kryptering av epost, samt digital
+signering av programvare.&lt;/p&gt;
 </description>
     </item>
     
@@ -112,6 +166,72 @@ du bruker Thunderbird med Enigmail til epost.&lt;/p&gt;
 
 &lt;p&gt;I neste kapittel beskriver jeg hvordan du &lt;a href=&#34;https://kryptosikkerhet.no/openpgp/installer/&#34;&gt;installerer GnuPG&lt;/a&gt;
 og deretter beskrives installasjon av &lt;a href=&#34;https://kryptosikkerhet.no/openpgp/enigmail/&#34;&gt;Thunderbird og Enigmail&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gode passord</title>
+      <link>https://kryptosikkerhet.no/grunnleggende/passord/</link>
+      <pubDate>Mon, 13 Mar 2017 12:24:25 +0100</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/grunnleggende/passord/</guid>
+      <description>
+
+&lt;p&gt;Et av de grunnleggende krav i all sikker kommunikasjon er valg av passord.
+Det finnes utallige tanker om hvordan man lager, husker, oppbevarer og bytter
+passord. De fleste konseptene er basert på antagelser og tradisjon, fremfor
+forskning og sunn fornuft.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Rule 1 about passwords is &amp;ldquo;there are no rules!&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;hvorfor-er-gode-passord-viktig&#34;&gt;Hvorfor er gode passord viktig?&lt;/h3&gt;
+
+&lt;p&gt;Gode passord er viktig av flere årsaker. Passordet er ofte det eneste som står
+mellom en angriper og full tilgang til din Facebook-konto, datamaskin eller epost.
+Det finnes avanserte dataprogramer som kan gjette seg frem til ditt passord basert
+på offentlig informasjon om deg, som for eksempel navn på samboer/ektefelle, barn
+kjæledyr osv. Det betyr at navnet på katten etterfulgt av fødselsåret til barna
+er typisk passord som enkelt kan gjettes.&lt;/p&gt;
+
+&lt;h3 id=&#34;så-hva-er-et-bra-passord&#34;&gt;Så hva er et bra passord?&lt;/h3&gt;
+
+&lt;p&gt;Et godt passord er et passord som ikke enkelt kan gjettes basert på informasjon
+om deg som person. Det er også en fordel at du klarer å huske passordet ditt.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/password_strength.png&#34; alt=&#34;XKCD: Password Strength&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Man kan diskutere om budskapet i stripen over er riktig eller ikke, men den er i
+alle tilfeller inne på noe. Gammeldagsepassord tips er, gammeldagse.
+Jeg skrev i starten at det ikke finnes noen regler om passord, men det finnes
+noen tips.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Et passord skal være lett å huske, men vanskelig å gjette. Bruk gjerne setininger.&lt;/li&gt;
+&lt;li&gt;Bruk &lt;em&gt;aldri&lt;/em&gt; det samme passordet på tvers av internettjenester.&lt;/li&gt;
+&lt;li&gt;Husk de passordene du trenger hver dag. Resten kan du skrive ned hjemme. Det finnes god software for lagring av passord.&lt;/li&gt;
+&lt;li&gt;Bruk to-faktors autentisering der det er mulig (hvertfall på epost kontoen din).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;diceware&#34;&gt;Diceware&lt;/h3&gt;
+
+&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;I mange tilfeller brukes ordet &lt;em&gt;passfrase&lt;/em&gt; brukes besvisst i steden for ordet passord. Meningen er å oppmuntre til
+bruk av setninger eller flere ord som passord.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://world.std.com/~reinhold/diceware.html&#34;&gt;Diceware&lt;/a&gt; er en meteode for å generere passord ved bruk av terninger. Tanken er
+at man benytter en liste med numererte ord og et sett med vanlige terninger til
+å lage en passfrase bestående av flere tilfeldige ord fra ordlisten.
+Alle sifferne som blir brukt i nummereringen av ordene i ordlisten er mellom 1 og
+6, slik at du kan bruke utfallet av terningene til å velge ord.&lt;/p&gt;
+
+&lt;p&gt;Det finnes utallige ordlister, noen krever 5 terninger, andre krever 4. Antall ord
+i ordlisten sammen med antall ord i paafrasen vil avgjøre styrken til passordet.&lt;/p&gt;
+
+&lt;p&gt;Jeg har satt sammen en &lt;a href=&#34;6f779b73b617aeb180800fe38965ac0e&#34;&gt;Norsk ordliste&lt;/a&gt; der
+vanskelige ord, og ord som ligner på hverandre er tatt ut.&lt;/p&gt;
 </description>
     </item>
     
@@ -324,195 +444,6 @@ Høyreklikk på din nøkkel og velg &lt;strong&gt;Last opp offentlige nøkler ti
     </item>
     
     <item>
-      <title>Kort om kryptering</title>
-      <link>https://kryptosikkerhet.no/grunnleggende/kryptering/</link>
-      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
-      
-      <guid>https://kryptosikkerhet.no/grunnleggende/kryptering/</guid>
-      <description>
-
-&lt;h2 id=&#34;symmetrisk-kryptering&#34;&gt;Symmetrisk kryptering&lt;/h2&gt;
-
-&lt;p&gt;En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og
-dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige
-om nøkkelen på forhånd. Så snart de er enige kryterer senderen en melding med
-nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den
-samme nøkkelen. For eksempel bruker den Tyske Enigma maskien symmetrisk algoritme,
-og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som
-sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.
-Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfisk og IDEA.&lt;/p&gt;
-
-&lt;p&gt;En god krypteringsalgoritme legger all sikkerheten i nøklene og ingen i selve
-algoritmen. Med andre ord skal det ikke være til hjelp for en angriper å vite
-hvilken algoritme som benyttes. Bare hvis han vet nøkkelen er behovet for å vite
-aloritmen viktig. Algiritmene som benyttes i OpenPGP har denne egenskapen.&lt;/p&gt;
-
-&lt;p&gt;Siden all sikkerheten er i nøkkelen er det svært viktig at det er veldig vanskelig
-å gjette nøkkelen. Med andre ord må antall mulige nøkler være mange. På engelsk
-kalles dette &lt;em&gt;key space&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Britene brukte maskiner til å gjette nøkler under 2. verdenskrig. Den Tyske
-Enigma maskinen hadde mange mulige nøkler, men britene bygget spesialiserte maskiner
-som gjettet seg frem til dagen nøkkel ved å prøve alle muligheter. Det betyr at
-noen dager fant de dagens nøkkel etter få timer mens andre dager fant de aldri
-riktig nøkkel.&lt;/p&gt;
-
-&lt;p&gt;Dagens datamaskiner kan gjette nøkler utrolig hurtig, og det er derfor nøkkellengde
-er viktig i moderne kryptosystemer. Krypteringsalgoritmen DES bruker en 56-bit nøkkel,
-som betyr at det er 2&lt;sup&gt;56&lt;/sup&gt; mulige nøkler. 2&lt;sup&gt;56&lt;/sup&gt; er 72 057 594 037 927 936
-nøkler. Dette er veldig mange nøkler, men en vanlig datamaskin kan prøve alle
-mulige nøkler i løpet av noen dager. En spesielisert datamaskin kan prøve de i
-løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfisk og IDEA
-bruker 128-bit nøkler som betyr at det er 2&lt;sup&gt;128&lt;/sup&gt; mulige nøkler.
-Dette er mange, mange, mange fler nøkler og selv om alle datamaskinene på
-planeten sammarbeidet ville de aldri klart å gjette seg frem til riktig nøkkel.&lt;/p&gt;
-
-&lt;h2 id=&#34;offentlig-nøkkel-kryptering&#34;&gt;Offentlig-nøkkel kryptering&lt;/h2&gt;
-
-&lt;p&gt;Hovedproblemet med symmertrisk kryptering er ikke sikkerheten men utvekslingen
-av nøkler. Når sender og mottaker har utvekslet nøkler, så kan denne nøkkelen
-benyttes til å kommunisere sikkert. Men hvilken sikker kommunikasjonskanal ble
-benyttet for å utveksle nøkkelen. I virkeligeten vil det nok often være lettere
-for en angriper å snappe opp nøkkelen i steden for å gjette seg frem til riktig
-nøkkel.&lt;/p&gt;
-
-&lt;p&gt;Offentlig-nøkkel kryptering ble funnet opp for å unngå hele nøkkelutvekslings-problemet.
-Offentlig-nøkkel kryptering benytter et par med nøkler for å sende meldinger.
-Begge nøklene tilhører personen som mottar meldingen. En nøkkel er den &lt;em&gt;offentlige nøkkelen&lt;/em&gt;
-og kan deles med hvem som helst. Den andre nøkkelen er en &lt;em&gt;privat nøkkel&lt;/em&gt; og
-holdes hemmelig av eieren. En sender krypterer en melding med den offentlige
-nøkkelen og når den er kryptert kan den bare dekrypteres med den private nøkkelen.&lt;/p&gt;
-
-&lt;p&gt;Denne protokollen løser problemet med utveksling av nøkler som eksisterer med
-symmetrisk kryptering. Det er ikke behov for sender og mottaker å bli enige
-om en nøkkel på forhånd. Det eneste som kreves er at senderen av meldingen får
-den offentlige nøkkelen til mottakeren på et tidspunkt før de skal kommunisere.
-I tillegg kan den ene offentlige nøkkelen benyttes av alle som ønsker å kommunisere
-med eieren.&lt;/p&gt;
-
-&lt;p&gt;Offentlig-nøkkel kryptering baserer seg på enveis falldør-funksjoner. En enveisfunksjon
-er en funksjon som er lett å regne ut men vanskelig å reversere. For eksempel
-er det lett å gange to primtall for å få et kompositt tall, men det er vanskelig
-å faktorisere et kompositt-tall til sine primtallkomponenter. En enveis falldør
-funksjon er lik, men den har en falldør. Det betyr at dersom en del av infomasjonen
-er kjent så blir det lett å reversere funksjonen. For eksempe dersom du har et
-tall som er faktoren av to primtall, så vil det å vite det ene primtallet gjøre
-det lett å regne seg frem til det andre. Gitt att offentlig-nøkkel kryptering
-baserer seg på primfaktorisering, den offentlige nøkkelen består av et kompositt-tall
-som er faktoren av to primtall og krypteringsalgoritmen bruker dette tallet for
-å kryptere meldingen. Algoritmen for å dekryptere meldingen krever at du vet begge
-primtallene så det å dekryptere er enkelt hvis du har den private nøkkelen som
-inneholder ett av primtallene men veldig vanskelig dersom du ikke har den.&lt;/p&gt;
-
-&lt;p&gt;Som med gode symmetriske algoritmer så ligger all sikkerheten til offentlig-nøkkel
-algoritmer i nøkkelen. Derfor er nøkkelelngde en måleenhet for systemets sikkerhet.
-Men du kan ikke sammenligne størrelsen på nøkkelene til en symmetrisk algoritme
-og en offentlig-nøkkel algoritme for å sammenligne sikkerheten til de to algoritmene.
-I et &lt;em&gt;brute-force&lt;/em&gt; angrep på en symmetrisk algoritme med en nøkkellengde på 80 bit, må
-angriperen forsøke opp til 2&lt;sup&gt;80&lt;/sup&gt; nøkler for å finne den riktige nøkkelen.
-I et &lt;em&gt;brute-force&lt;/em&gt; angrep på en offentlig-nøkkel algoritme med en nøkkelstørrelse på
-512 bit må angriperen faktorisere et kompositt-tall kodet i 512 bit (opp til 155 desimaltall).
-Arbeidsmengen til en angriper er fundamentalt anderledes avhengig av hvilken type
-algoritme han angriper. Mens 256 bit er tilstrekkelig for symmetrisk algoritmer,
-gitt dagens faktoriserings-teknologi offenlitge nøkler med 2048 bits er anbefalt
-for de fleste tilfeller.&lt;/p&gt;
-
-&lt;h2 id=&#34;hybride-systemer&#34;&gt;Hybride-systemer&lt;/h2&gt;
-
-&lt;p&gt;Offentlig-nøkkel algoritmer er ingen perfekt løsning. Menage symmetriske algoritmer
-er sterkere fra et sikkerhetsstandpunkt., og offentlig-nøkkel kryptering og
-dekryptering er mer krevende enn de tilsvarende operasjonene i en symmetrisk
-algoritme. Offentlig-nøkkel algoritmer er derimot et effektivt verktøy for å
-distribuere symmetriske krypteringsnøkler, og det er slik de benyttes i hybride
-systemer.&lt;/p&gt;
-
-&lt;p&gt;Et hybrid-system benytter både en symmetrisk algoritme og en offentlig-nøkkel
-algoritme. Det virker slik at det benytter en offentlig-nøkkel algoritme for å
-utveksle en nøkkel som brukes for den symmetriske algoritmen. Den faktiske
-maldingen er kryptert med en symmetrisk algoritme før den sendes til mottakeren.
-Siden utveksling av den symmetriske nøkkelen er sikker, er denne nøkkelen
-forskjellige for hver melding som sendes. Derfor kalles den ofte &lt;em&gt;sesjonsnøkkel&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;OpenPGP benytter hybride-systemer. Sesjonsnøkkelen, kryptert med den offentlige-
-nøkkelen og meldingen som sendes, kryptert med sesjonsnøkkelen er automatisk
-kobinert i en pakke. Mottakeren benytter sin private nøkkel for å dekryptere
-sesjonsnøkkelen som deretter benyttes for å dekryptere selve meldingen.&lt;/p&gt;
-
-&lt;p&gt;Et hybrid-system er ikke sikere enn den svakeste algoritmen som benyttes. I OpenPGP
-er muligens offentlig-nøkkel algoritmen den svakeste av de to. Heldigvis, hvis en
-angriper klarer å dekryptere en sesjonsnøkkel vil den bare klare å dekryptere
-en melding. Angriperen må så starte på nytt og dekryptere en sesjonsnøkkel til
-for å klare å lese en annen melding.&lt;/p&gt;
-
-&lt;h2 id=&#34;digitale-signaturer&#34;&gt;Digitale signaturer&lt;/h2&gt;
-
-&lt;p&gt;En sjekksum er en kort kode som brukes til å sjekke integriteten av data, eller
-den matematiske funksjonen av dataene, algoritmen, som genererer koden,
-ofte kalt hash-funksjon.&lt;/p&gt;
-
-&lt;p&gt;Et dokuments digitale signatur er resultatet av en hash-funksjon av dokumentet.
-For å være nytteig må en hash-funksjon ha to viktige egenskaper. For det første
-bør det være vanskelig å finne to dokumenter som resulterer i samme sjekksum. I
-tillegg bør det være vanskelig å gjennopprette det originale dokumentet ut fra en
-sjekksum.&lt;/p&gt;
-
-&lt;p&gt;Ved å bruke en slik hash-funksjon et dokument kan signeres ved å produsere en
-sjeksum, og denne er signaturen. En annen person kan sjekke signaturen ved å
-kjøre dokumentet gjennom samme hash-funksjon og sammenligne sin sjekksum men den
-som kom som signatur. Dersom de er like, er det nestne helt sikkert at dokumentene
-er identiske.&lt;/p&gt;
-
-&lt;p&gt;Problemet er å benytte en hahs-funksjon uten å tillate at en angiper interferer
-med signatur-kontrollen. Hvis dokumentet og signaturen er sendt ukryptert, så kan
-en angriper modifere dokumentet og generere en ny signatur uten at mottaker
-merker det. Dersom bare dokumentet er kryptert en angriper kan endre på signaturen
-og gjøre slik at kontrollen av signaturen feiler.&lt;/p&gt;
-
-&lt;p&gt;En algiritme som virker er å benytte en offentlig-nøkkel algoritme får å kryptere
-signaturen. Faktisk så krypteres sjekksummen med den private nøkkelen til personen
-som signerer, og hvem som helst kan kontrollere signaturen ved å benytte den offentlige
-signaturen. Det signerte dokumentet kan senes ved å benytte hvilken som helst
-annen krypteringsalgoritme, eller det kan sendes ukryptert. Hvis dokumentet
-modifiseres vil signaturkontrollen feile. &lt;em&gt;The Digital Signature Standard (DSA)&lt;/em&gt;
-er en offentlig-nøkkel algoritme som virker som akkurat beskrevet. DSA er en del
-av OpenPGP standaren, men RSA kan også benyttes til digitale signaturer.&lt;/p&gt;
-
-&lt;h2 id=&#34;eliptiske-kurver&#34;&gt;Eliptiske kurver&lt;/h2&gt;
-
-&lt;p&gt;Eliptiske kurver skal løse samme utfordring som tradisjonelle
-offentlig-nøkkel algoritmer. Nemmelig å lage en ennveis falldør-funksjon.
-Problemet med tradisjonelle offentlig-nøkkel algoritmer er at forholdet mellom
-nøkkelstørrelse og sikkerhet ikke er lineært. Det betyr at en dobling i
-nøkkelstørrelse ikke gir en dobling av sikkerheten, men tiden det tar for å
-kryptere / dekryptere i beste fall dobles. Det betyr at på et eller annet
-tidspunkt må vi gå over til en annen type falldør-funksjon.&lt;/p&gt;
-
-&lt;p&gt;Eliptiske kurver er spesielle kurver som kan gjennkjennes på sin symmetriske
-utforming. Under er et eksempel på noen kurver. Kurvene som benyttes i
-kryptering er mye mer komplekse, men disse eksemplene gjør det lett å se for seg
-hvordan det virker.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://kryptosikkerhet.no/images/ecc-lines.png&#34; alt=&#34;Eliptiske kurver&#34; /&gt;
-Eksempel på eliptiske kurver fra &lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve&#34;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Eliptiske kurver har den egenskapen at dersom du trekker en ikke horisontal
-linje fra et punkt &lt;em&gt;A&lt;/em&gt; på kurven til et annet &lt;em&gt;B&lt;/em&gt; gjennom punkt &lt;em&gt;C&lt;/em&gt;. Så vil &lt;em&gt;C&lt;/em&gt;
-invertert være &lt;em&gt;A + B&lt;/em&gt;. Denne egenskapen er det vi benytter i eliptisk krurve
-kryptografi.&lt;/p&gt;
-
-&lt;p&gt;Meget forenklet kan det forklares slik: Vår private nøkkel er et tilfeldig valgt
-tall &lt;em&gt;n&lt;/em&gt; som vi ganger opp med et forhåndsbestemt punkt på kurven, &lt;em&gt;G&lt;/em&gt; for å få
-et annet punkt på kurven. Dette er vår offentlige nøkkel &lt;em&gt;K&lt;/em&gt;.  *K = n * G*.
-Dette er et eneklt regnestykke, men dersom du vet &lt;em&gt;K&lt;/em&gt; og &lt;em&gt;G&lt;/em&gt; og vil komme frem til
-&lt;em&gt;n&lt;/em&gt;, så er dette meget komplisert.&lt;/p&gt;
-
-&lt;p&gt;Ved å benytte eliptiske kurver i kryptografi kan man redusere nøkkellengden
-betraktelig i forhold til tradisjonell kryptering. Det sies at en 256 bit ECC nøkkel
-skal gi samme sikkerhet som en 3072 bit RSA nøkkel.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Dine nøkler</title>
       <link>https://kryptosikkerhet.no/openpgp/nokler/</link>
       <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
@@ -680,6 +611,195 @@ signere eller kryptere meldinger.&lt;/p&gt;
 
 &lt;p&gt;Dette vil lagre ditt tilbakekallingssertifikat som &lt;code&gt;revoke.asc&lt;/code&gt;. Ta godt vare
 på dette. Dersom andre får tilgang til det kan de tilbakekalle dit nøkkelpar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kryptering</title>
+      <link>https://kryptosikkerhet.no/grunnleggende/kryptering/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/grunnleggende/kryptering/</guid>
+      <description>
+
+&lt;h3 id=&#34;symmetrisk-kryptering&#34;&gt;Symmetrisk kryptering&lt;/h3&gt;
+
+&lt;p&gt;En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og
+dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige
+om nøkkelen på forhånd. Så snart de er enige krypterer senderen en melding med
+nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den
+samme nøkkelen. For eksempel brukte den Tyske Enigma maskien symmetrisk algoritme,
+og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som
+sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.
+Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfish og IDEA.&lt;/p&gt;
+
+&lt;p&gt;En god krypteringsalgoritme legger all sikkerheten i nøklene og ingen i selve
+algoritmen. Med andre ord skal det ikke være til hjelp for en angriper å vite
+hvilken algoritme som benyttes. Bare hvis han vet nøkkelen er behovet for å vite
+aloritmen viktig. Algoritmene som benyttes i OpenPGP har denne egenskapen.&lt;/p&gt;
+
+&lt;p&gt;Siden all sikkerheten er i nøkkelen er det svært viktig at det er veldig vanskelig
+å gjette nøkkelen. Med andre ord må antall mulige nøkler være mange. På engelsk
+kalles antall mulig nøkler &lt;em&gt;key space&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Britene brukte maskiner til å gjette nøkler under 2. verdenskrig. Den Tyske
+Enigma maskinen hadde mange mulige nøkler, men britene bygget spesialiserte maskiner
+som gjettet seg frem til dagen nøkkel ved å prøve alle muligheter. Det betyr at
+noen dager fant de dagens nøkkel etter få timer mens andre dager fant de aldri
+riktig nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Dagens datamaskiner kan gjette nøkler utrolig hurtig, og det er derfor nøkkellengde
+er viktig i moderne kryptosystemer. Krypteringsalgoritmen DES bruker en 56-bit nøkkel,
+som betyr at det er 2&lt;sup&gt;56&lt;/sup&gt; mulige nøkler. 2&lt;sup&gt;56&lt;/sup&gt; er 72 057 594 037 927 936
+nøkler. Dette er veldig mange nøkler, men en vanlig datamaskin kan prøve alle
+mulige nøkler i løpet av noen dager. En spesielisert datamaskin kan prøve de i
+løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfish og IDEA
+bruker 128-bit nøkler som betyr at det er 2&lt;sup&gt;128&lt;/sup&gt; mulige nøkler.
+Dette er mange, mange, mange fler nøkler og selv om alle datamaskinene på
+planeten sammarbeidet ville de aldri klart å gjette seg frem til riktig nøkkel.&lt;/p&gt;
+
+&lt;h3 id=&#34;offentlig-nøkkel-kryptering&#34;&gt;Offentlig-nøkkel kryptering&lt;/h3&gt;
+
+&lt;p&gt;Hovedproblemet med symmertrisk kryptering er ikke sikkerheten men utvekslingen
+av nøkler. Når sender og mottaker har utvekslet nøkler, så kan denne nøkkelen
+benyttes til å kommunisere sikkert. Men hvilken sikker kommunikasjonskanal ble
+benyttet for å utveksle nøkkelen. I virkeligeten vil det nok ofte være lettere
+for en angriper å snappe opp nøkkelen i steden for å gjette seg frem til riktig
+nøkkel.&lt;/p&gt;
+
+&lt;p&gt;Offentlig-nøkkel kryptering ble funnet opp for å unngå hele nøkkelutvekslings-problemet.
+Offentlig-nøkkel kryptering benytter et par med nøkler for å sende meldinger.
+Begge nøklene tilhører personen som mottar meldingen. En nøkkel er den &lt;em&gt;offentlige nøkkelen&lt;/em&gt;
+og kan deles med hvem som helst. Den andre nøkkelen er en &lt;em&gt;privat nøkkel&lt;/em&gt; og
+holdes hemmelig av eieren. En sender krypterer en melding med den offentlige
+nøkkelen og når den er kryptert kan den bare dekrypteres med den private nøkkelen.&lt;/p&gt;
+
+&lt;p&gt;Denne protokollen løser problemet med utveksling av nøkler som eksisterer med
+symmetrisk kryptering. Det er ikke behov for sender og mottaker å bli enige
+om en nøkkel på forhånd. Det eneste som kreves er at senderen av meldingen får
+den offentlige nøkkelen til mottakeren på et tidspunkt før de skal kommunisere.
+I tillegg kan den ene offentlige nøkkelen benyttes av alle som ønsker å kommunisere
+med eieren.&lt;/p&gt;
+
+&lt;p&gt;Offentlig-nøkkel kryptering baserer seg på enveis falldør-funksjoner. En enveisfunksjon
+er en funksjon som er lett å regne ut men vanskelig å reversere. For eksempel
+er det lett å gange to primtall for å få et kompositt tall, men det er vanskelig
+å faktorisere et kompositt-tall til sine primtallkomponenter. En enveis falldør
+funksjon er lik, men den har en falldør. Det betyr at dersom en del av infomasjonen
+er kjent så blir det lett å reversere funksjonen. For eksempe dersom du har et
+tall som er faktoren av to primtall, så vil det å vite det ene primtallet gjøre
+det lett å regne seg frem til det andre. Gitt att offentlig-nøkkel kryptering
+baserer seg på primfaktorisering, den offentlige nøkkelen består av et kompositt-tall
+som er faktoren av to primtall og krypteringsalgoritmen bruker dette tallet for
+å kryptere meldingen. Algoritmen for å dekryptere meldingen krever at du vet begge
+primtallene så det å dekryptere er enkelt hvis du har den private nøkkelen som
+inneholder ett av primtallene men veldig vanskelig dersom du ikke har den.&lt;/p&gt;
+
+&lt;p&gt;Som med gode symmetriske algoritmer så ligger all sikkerheten til offentlig-nøkkel
+algoritmer i nøkkelen. Derfor er nøkkelelngde en måleenhet for systemets sikkerhet.
+Men du kan ikke sammenligne størrelsen på nøkkelene til en symmetrisk algoritme
+og en offentlig-nøkkel algoritme for å sammenligne sikkerheten til de to algoritmene.
+I et &lt;em&gt;brute-force&lt;/em&gt; angrep på en symmetrisk algoritme med en nøkkellengde på 80 bit, må
+angriperen forsøke opp til 2&lt;sup&gt;80&lt;/sup&gt; nøkler for å finne den riktige nøkkelen.
+I et &lt;em&gt;brute-force&lt;/em&gt; angrep på en offentlig-nøkkel algoritme med en nøkkelstørrelse på
+512 bit må angriperen faktorisere et kompositt-tall kodet i 512 bit (opp til 155 desimaltall).
+Arbeidsmengen til en angriper er fundamentalt anderledes avhengig av hvilken type
+algoritme han angriper. Mens 256 bit er tilstrekkelig for symmetrisk algoritmer,
+gitt dagens faktoriserings-teknologi offenlitge nøkler med 2048 bits er anbefalt
+for de fleste tilfeller.&lt;/p&gt;
+
+&lt;h3 id=&#34;hybride-systemer&#34;&gt;Hybride-systemer&lt;/h3&gt;
+
+&lt;p&gt;Offentlig-nøkkel algoritmer er ingen perfekt løsning. Menage symmetriske algoritmer
+er sterkere fra et sikkerhetsstandpunkt., og offentlig-nøkkel kryptering og
+dekryptering er mer krevende enn de tilsvarende operasjonene i en symmetrisk
+algoritme. Offentlig-nøkkel algoritmer er derimot et effektivt verktøy for å
+distribuere symmetriske krypteringsnøkler, og det er slik de benyttes i hybride
+systemer.&lt;/p&gt;
+
+&lt;p&gt;Et hybrid-system benytter både en symmetrisk algoritme og en offentlig-nøkkel
+algoritme. Det virker slik at det benytter en offentlig-nøkkel algoritme for å
+utveksle en nøkkel som brukes for den symmetriske algoritmen. Den faktiske
+maldingen er kryptert med en symmetrisk algoritme før den sendes til mottakeren.
+Siden utveksling av den symmetriske nøkkelen er sikker, er denne nøkkelen
+forskjellige for hver melding som sendes. Derfor kalles den ofte &lt;em&gt;sesjonsnøkkel&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;OpenPGP benytter hybride-systemer. Sesjonsnøkkelen, kryptert med den offentlige-
+nøkkelen og meldingen som sendes, kryptert med sesjonsnøkkelen er automatisk
+kobinert i en pakke. Mottakeren benytter sin private nøkkel for å dekryptere
+sesjonsnøkkelen som deretter benyttes for å dekryptere selve meldingen.&lt;/p&gt;
+
+&lt;p&gt;Et hybrid-system er ikke sikere enn den svakeste algoritmen som benyttes. I OpenPGP
+er muligens offentlig-nøkkel algoritmen den svakeste av de to. Heldigvis, hvis en
+angriper klarer å dekryptere en sesjonsnøkkel vil den bare klare å dekryptere
+en melding. Angriperen må så starte på nytt og dekryptere en sesjonsnøkkel til
+for å klare å lese en annen melding.&lt;/p&gt;
+
+&lt;h2 id=&#34;digitale-signaturer&#34;&gt;Digitale signaturer&lt;/h2&gt;
+
+&lt;p&gt;En sjekksum er en kort kode som brukes til å sjekke integriteten av data, eller
+den matematiske funksjonen av dataene, algoritmen, som genererer koden,
+ofte kalt hash-funksjon.&lt;/p&gt;
+
+&lt;p&gt;Et dokuments digitale signatur er resultatet av en hash-funksjon av dokumentet.
+For å være nytteig må en hash-funksjon ha to viktige egenskaper. For det første
+bør det være vanskelig å finne to dokumenter som resulterer i samme sjekksum. I
+tillegg bør det være vanskelig å gjennopprette det originale dokumentet ut fra en
+sjekksum.&lt;/p&gt;
+
+&lt;p&gt;Ved å bruke en slik hash-funksjon et dokument kan signeres ved å produsere en
+sjeksum, og denne er signaturen. En annen person kan sjekke signaturen ved å
+kjøre dokumentet gjennom samme hash-funksjon og sammenligne sin sjekksum men den
+som kom som signatur. Dersom de er like, er det nestne helt sikkert at dokumentene
+er identiske.&lt;/p&gt;
+
+&lt;p&gt;Problemet er å benytte en hahs-funksjon uten å tillate at en angiper interferer
+med signatur-kontrollen. Hvis dokumentet og signaturen er sendt ukryptert, så kan
+en angriper modifere dokumentet og generere en ny signatur uten at mottaker
+merker det. Dersom bare dokumentet er kryptert en angriper kan endre på signaturen
+og gjøre slik at kontrollen av signaturen feiler.&lt;/p&gt;
+
+&lt;p&gt;En algiritme som virker er å benytte en offentlig-nøkkel algoritme får å kryptere
+signaturen. Faktisk så krypteres sjekksummen med den private nøkkelen til personen
+som signerer, og hvem som helst kan kontrollere signaturen ved å benytte den offentlige
+signaturen. Det signerte dokumentet kan senes ved å benytte hvilken som helst
+annen krypteringsalgoritme, eller det kan sendes ukryptert. Hvis dokumentet
+modifiseres vil signaturkontrollen feile. &lt;em&gt;The Digital Signature Standard (DSA)&lt;/em&gt;
+er en offentlig-nøkkel algoritme som virker som akkurat beskrevet. DSA er en del
+av OpenPGP standaren, men RSA kan også benyttes til digitale signaturer.&lt;/p&gt;
+
+&lt;h2 id=&#34;eliptiske-kurver&#34;&gt;Eliptiske kurver&lt;/h2&gt;
+
+&lt;p&gt;Eliptiske kurver skal løse samme utfordring som tradisjonelle
+offentlig-nøkkel algoritmer. Nemmelig å lage en ennveis falldør-funksjon.
+Problemet med tradisjonelle offentlig-nøkkel algoritmer er at forholdet mellom
+nøkkelstørrelse og sikkerhet ikke er lineært. Det betyr at en dobling i
+nøkkelstørrelse ikke gir en dobling av sikkerheten, men tiden det tar for å
+kryptere / dekryptere i beste fall dobles. Det betyr at på et eller annet
+tidspunkt må vi gå over til en annen type falldør-funksjon.&lt;/p&gt;
+
+&lt;p&gt;Eliptiske kurver er spesielle kurver som kan gjennkjennes på sin symmetriske
+utforming. Under er et eksempel på noen kurver. Kurvene som benyttes i
+kryptering er mye mer komplekse, men disse eksemplene gjør det lett å se for seg
+hvordan det virker.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://kryptosikkerhet.no/images/ecc-lines.png&#34; alt=&#34;Eliptiske kurver&#34; /&gt;
+Eksempel på eliptiske kurver fra &lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve&#34;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eliptiske kurver har den egenskapen at dersom du trekker en ikke horisontal
+linje fra et punkt &lt;em&gt;A&lt;/em&gt; på kurven til et annet &lt;em&gt;B&lt;/em&gt; gjennom punkt &lt;em&gt;C&lt;/em&gt;. Så vil &lt;em&gt;C&lt;/em&gt;
+invertert være &lt;em&gt;A + B&lt;/em&gt;. Denne egenskapen er det vi benytter i eliptisk krurve
+kryptografi.&lt;/p&gt;
+
+&lt;p&gt;Meget forenklet kan det forklares slik: Vår private nøkkel er et tilfeldig valgt
+tall &lt;em&gt;n&lt;/em&gt; som vi ganger opp med et forhåndsbestemt punkt på kurven, &lt;em&gt;G&lt;/em&gt; for å få
+et annet punkt på kurven. Dette er vår offentlige nøkkel &lt;em&gt;K&lt;/em&gt;.  *K = n * G*.
+Dette er et eneklt regnestykke, men dersom du vet &lt;em&gt;K&lt;/em&gt; og &lt;em&gt;G&lt;/em&gt; og vil komme frem til
+&lt;em&gt;n&lt;/em&gt;, så er dette meget komplisert.&lt;/p&gt;
+
+&lt;p&gt;Ved å benytte eliptiske kurver i kryptografi kan man redusere nøkkellengden
+betraktelig i forhold til tradisjonell kryptering. Det sies at en 256 bit ECC nøkkel
+skal gi samme sikkerhet som en 3072 bit RSA nøkkel.&lt;/p&gt;
 </description>
     </item>
     
@@ -1230,10 +1350,9 @@ er ikke bare morsom, men også et veldig bra tips.&lt;/p&gt;
 
 &lt;p&gt;Det finnes flere måter å generere en passfrase. &lt;a href=&#34;http://world.std.com/~reinhold/diceware.html&#34;&gt;Diceware&lt;/a&gt;
 er kanskje en av de mest nerdete, men da får du et meget bra passord. Bitcoin
-lommebøker bruker en variant av Diceware. Jeg anbefaler &lt;a href=&#34;https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt&#34;&gt;følgende ordliste&lt;/a&gt;
+lommebøker bruker en variant av Diceware. Jeg anbefaler &lt;a href=&#34;https://gist.github.com/xqus/6f779b73b617aeb180800fe38965ac0e&#34;&gt;følgende ordliste&lt;/a&gt;
 hvis du vil lage deg en diceware passfrase. Denne ordlisten inneholder ikke ord
-som staves nesten likt. Dersom du vil generere en passfrase automatisk fra denne
-ordlisten finnes det et &lt;a href=&#34;https://iancoleman.github.io/bip39/&#34;&gt;online verktøy&lt;/a&gt;.&lt;/p&gt;
+som staves nesten likt.&lt;/p&gt;
 
 &lt;h3 id=&#34;metadata&#34;&gt;Metadata&lt;/h3&gt;
 
@@ -1778,22 +1897,6 @@ gpg&amp;gt; save
 &lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --send-keys 0x50AD20916F557D14
 gpg: sending key 0x50AD20916F557D14 to hkps server hkps.pool.sks-keyservers.net
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Grunnleggende sikkerhet</title>
-      <link>https://kryptosikkerhet.no/grunnleggende/</link>
-      <pubDate>Mon, 13 Mar 2017 12:24:00 +0100</pubDate>
-      
-      <guid>https://kryptosikkerhet.no/grunnleggende/</guid>
-      <description>
-
-&lt;h3 id=&#34;kapittel-1&#34;&gt;Kapittel 1&lt;/h3&gt;
-
-&lt;h1 id=&#34;grunnleggende-sikkerhet&#34;&gt;Grunnleggende sikkerhet&lt;/h1&gt;
-
-&lt;p&gt;Grunnleggende informasjonssikkerhet.&lt;/p&gt;
 </description>
     </item>
     

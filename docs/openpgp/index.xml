@@ -1010,10 +1010,9 @@ er ikke bare morsom, men også et veldig bra tips.&lt;/p&gt;
 
 &lt;p&gt;Det finnes flere måter å generere en passfrase. &lt;a href=&#34;http://world.std.com/~reinhold/diceware.html&#34;&gt;Diceware&lt;/a&gt;
 er kanskje en av de mest nerdete, men da får du et meget bra passord. Bitcoin
-lommebøker bruker en variant av Diceware. Jeg anbefaler &lt;a href=&#34;https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt&#34;&gt;følgende ordliste&lt;/a&gt;
+lommebøker bruker en variant av Diceware. Jeg anbefaler &lt;a href=&#34;https://gist.github.com/xqus/6f779b73b617aeb180800fe38965ac0e&#34;&gt;følgende ordliste&lt;/a&gt;
 hvis du vil lage deg en diceware passfrase. Denne ordlisten inneholder ikke ord
-som staves nesten likt. Dersom du vil generere en passfrase automatisk fra denne
-ordlisten finnes det et &lt;a href=&#34;https://iancoleman.github.io/bip39/&#34;&gt;online verktøy&lt;/a&gt;.&lt;/p&gt;
+som staves nesten likt.&lt;/p&gt;
 
 &lt;h3 id=&#34;metadata&#34;&gt;Metadata&lt;/h3&gt;
 

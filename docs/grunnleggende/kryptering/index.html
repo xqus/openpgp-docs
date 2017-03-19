@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Kort om kryptering</title>
+    <title>Kryptering</title>
     <link href="https://kryptosikkerhet.no//css/nucleus.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/hybrid.css" rel="stylesheet">
@@ -72,6 +72,14 @@
           
           
           
+            <li class="dd-item " data-nav-id="/grunnleggende/introduksjon/">
+              <a href="/grunnleggende/introduksjon/">
+                <span>Introduksjon     </i></span>
+              </a>
+            </li>
+          
+          
+          
             <li class="dd-item " data-nav-id="/grunnleggende/passord/">
               <a href="/grunnleggende/passord/">
                 <span>Gode passord     </i></span>
@@ -82,7 +90,7 @@
           
             <li class="dd-item active" data-nav-id="/grunnleggende/kryptering/">
               <a href="/grunnleggende/kryptering/">
-                <span>Kort om kryptering     </i></span>
+                <span>Kryptering     </i></span>
               </a>
             </li>
           
@@ -273,7 +281,7 @@
                 
                   
                 
-                <span itemprop="title"> Kort om kryptering</span>
+                <span itemprop="title"> Kryptering</span>
               </div>
               
                   <div class="progress">
@@ -282,9 +290,12 @@
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#symmetrisk-kryptering">Symmetrisk kryptering</a></li>
 <li><a href="#offentlig-nøkkel-kryptering">Offentlig-nøkkel kryptering</a></li>
 <li><a href="#hybride-systemer">Hybride-systemer</a></li>
+</ul></li>
 <li><a href="#digitale-signaturer">Digitale signaturer</a></li>
 <li><a href="#eliptiske-kurver">Eliptiske kurver</a></li>
 </ul></li>
@@ -299,30 +310,30 @@
             
     	        <div id="body-inner">
                 
-                <h1>Kort om kryptering</h1>
+                <h1>Kryptering</h1>
                 
 
 
 
-<h2 id="symmetrisk-kryptering">Symmetrisk kryptering</h2>
+<h3 id="symmetrisk-kryptering">Symmetrisk kryptering</h3>
 
 <p>En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og
 dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige
-om nøkkelen på forhånd. Så snart de er enige kryterer senderen en melding med
+om nøkkelen på forhånd. Så snart de er enige krypterer senderen en melding med
 nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den
-samme nøkkelen. For eksempel bruker den Tyske Enigma maskien symmetrisk algoritme,
+samme nøkkelen. For eksempel brukte den Tyske Enigma maskien symmetrisk algoritme,
 og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som
 sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.
-Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfisk og IDEA.</p>
+Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfish og IDEA.</p>
 
 <p>En god krypteringsalgoritme legger all sikkerheten i nøklene og ingen i selve
 algoritmen. Med andre ord skal det ikke være til hjelp for en angriper å vite
 hvilken algoritme som benyttes. Bare hvis han vet nøkkelen er behovet for å vite
-aloritmen viktig. Algiritmene som benyttes i OpenPGP har denne egenskapen.</p>
+aloritmen viktig. Algoritmene som benyttes i OpenPGP har denne egenskapen.</p>
 
 <p>Siden all sikkerheten er i nøkkelen er det svært viktig at det er veldig vanskelig
 å gjette nøkkelen. Med andre ord må antall mulige nøkler være mange. På engelsk
-kalles dette <em>key space</em>.</p>
+kalles antall mulig nøkler <em>key space</em>.</p>
 
 <p>Britene brukte maskiner til å gjette nøkler under 2. verdenskrig. Den Tyske
 Enigma maskinen hadde mange mulige nøkler, men britene bygget spesialiserte maskiner
@@ -335,17 +346,17 @@ er viktig i moderne kryptosystemer. Krypteringsalgoritmen DES bruker en 56-bit n
 som betyr at det er 2<sup>56</sup> mulige nøkler. 2<sup>56</sup> er 72 057 594 037 927 936
 nøkler. Dette er veldig mange nøkler, men en vanlig datamaskin kan prøve alle
 mulige nøkler i løpet av noen dager. En spesielisert datamaskin kan prøve de i
-løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfisk og IDEA
+løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfish og IDEA
 bruker 128-bit nøkler som betyr at det er 2<sup>128</sup> mulige nøkler.
 Dette er mange, mange, mange fler nøkler og selv om alle datamaskinene på
 planeten sammarbeidet ville de aldri klart å gjette seg frem til riktig nøkkel.</p>
 
-<h2 id="offentlig-nøkkel-kryptering">Offentlig-nøkkel kryptering</h2>
+<h3 id="offentlig-nøkkel-kryptering">Offentlig-nøkkel kryptering</h3>
 
 <p>Hovedproblemet med symmertrisk kryptering er ikke sikkerheten men utvekslingen
 av nøkler. Når sender og mottaker har utvekslet nøkler, så kan denne nøkkelen
 benyttes til å kommunisere sikkert. Men hvilken sikker kommunikasjonskanal ble
-benyttet for å utveksle nøkkelen. I virkeligeten vil det nok often være lettere
+benyttet for å utveksle nøkkelen. I virkeligeten vil det nok ofte være lettere
 for en angriper å snappe opp nøkkelen i steden for å gjette seg frem til riktig
 nøkkel.</p>
 
@@ -390,7 +401,7 @@ algoritme han angriper. Mens 256 bit er tilstrekkelig for symmetrisk algoritmer,
 gitt dagens faktoriserings-teknologi offenlitge nøkler med 2048 bits er anbefalt
 for de fleste tilfeller.</p>
 
-<h2 id="hybride-systemer">Hybride-systemer</h2>
+<h3 id="hybride-systemer">Hybride-systemer</h3>
 
 <p>Offentlig-nøkkel algoritmer er ingen perfekt løsning. Menage symmetriske algoritmer
 er sterkere fra et sikkerhetsstandpunkt., og offentlig-nøkkel kryptering og

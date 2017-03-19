@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kryptosikkerhet.no/grunnleggende/passord/</loc>
-    <lastmod>2017-03-13T12:24:25+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/grunnleggende/introduksjon/</loc>
+    <lastmod>2017-03-19T13:54:13+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://kryptosikkerhet.no/openpgp/hva-er-openpgp/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/grunnleggende/passord/</loc>
+    <lastmod>2017-03-13T12:24:25+01:00</lastmod>
   </url>
   
   <url>
@@ -22,12 +27,12 @@
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/grunnleggende/kryptering/</loc>
+    <loc>https://kryptosikkerhet.no/openpgp/nokler/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/openpgp/nokler/</loc>
+    <loc>https://kryptosikkerhet.no/grunnleggende/kryptering/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
@@ -89,7 +94,7 @@
   
   <url>
     <loc>https://kryptosikkerhet.no/</loc>
-    <lastmod>2017-03-13T12:24:25+01:00</lastmod>
+    <lastmod>2017-03-19T13:54:13+01:00</lastmod>
     <priority>0</priority>
   </url>
   

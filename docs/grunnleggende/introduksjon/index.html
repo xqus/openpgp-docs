@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Signering</title>
+    <title>Introduksjon</title>
     <link href="https://kryptosikkerhet.no//css/nucleus.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://kryptosikkerhet.no//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/openpgp/signering/">
+  <body class="" data-url="/grunnleggende/introduksjon/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -56,7 +56,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/grunnleggende/">
+      <li class="dd-item  parent" data-nav-id="/grunnleggende/">
         <a href="/grunnleggende/">
           <span>
             
@@ -72,7 +72,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/grunnleggende/introduksjon/">
+            <li class="dd-item active" data-nav-id="/grunnleggende/introduksjon/">
               <a href="/grunnleggende/introduksjon/">
                 <span>Introduksjon     </i></span>
               </a>
@@ -108,7 +108,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/openpgp/">
+      <li class="dd-item  " data-nav-id="/openpgp/">
         <a href="/openpgp/">
           <span>
             
@@ -164,7 +164,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/openpgp/signering/">
+            <li class="dd-item " data-nav-id="/openpgp/signering/">
               <a href="/openpgp/signering/">
                 <span>Signering     </i></span>
               </a>
@@ -253,7 +253,7 @@
                 
                 
               <div id="top-github-link">
-                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/signering.md" target="blank">
+                  <a class="github-link" href="https://github.com/xqus/openpgp-docs/edit/master/content/grunnleggende/introduksjon.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Rediger side
                   </a>
@@ -273,15 +273,15 @@
                 
                 
                   
-                
-                  
                     
                     
-                <a href="/openpgp/" itemprop="url"><span itemprop="title">Kom i gang med OpenPGP</span></a> <i class="fa fa-angle-right"></i>
+                <a href="/grunnleggende/" itemprop="url"><span itemprop="title">Grunnleggende sikkerhet</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
-                <span itemprop="title"> Signering</span>
+                  
+                
+                <span itemprop="title"> Introduksjon</span>
               </div>
               
                   <div class="progress">
@@ -292,9 +292,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#integrert-signatur">Integrert signatur</a></li>
-<li><a href="#klartekstsignatur">Klartekstsignatur</a></li>
-<li><a href="#frakoblet-signatur">Frakoblet signatur</a></li>
+<li><a href="#informasjonssikkerhet">Informasjonssikkerhet</a>
+<ul>
+<li><a href="#konfidensialitet">Konfidensialitet</a></li>
+<li><a href="#integritet">Integritet</a></li>
+<li><a href="#tilgjengelighet">Tilgjengelighet</a></li>
+</ul></li>
+<li><a href="#kommunikasjonssikkerhet">Kommunikasjonssikkerhet</a>
+<ul>
+<li><a href="#data-i-transit">Data i transit</a></li>
+<li><a href="#hvilende-data">Hvilende data</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -308,145 +316,101 @@
             
     	        <div id="body-inner">
                 
-                <h1>Signering</h1>
+                <h1>Introduksjon</h1>
                 
 
 
 
-<p>Et av kriteriene for sikker kommunikasjon er at man kan verifisere avsenderen
-og samtidig verifisere at innholdet ikke har blitt endret på veien.
-Digitale signaturer gir deg denne sikkerheten. En digital signatur kan brukes
-på meldinger som skal sendes til mange mottakere, der kryptering ikke nødvendigvis
-er et behov, eller ønskelig.</p>
+<h3 id="informasjonssikkerhet">Informasjonssikkerhet</h3>
 
-<p>OpenPGP lar deg signere meldinger med din private nøkkel. Mottakeren kan verifisere
-at du er avsenderen, og at meldingen ikke har blitt modifisert på veien ved å bruke
-din offentlige nøkkel.</p>
-
-<p>OpenPGP lar deg signere et dokument på tre forskjellige måter:</p>
+<p>Informasjonssikkerhet er et fellesbegrep for veldig mange ting. De aller fleste
+har et forhold til hva det betyr, selv om det å komme med en enkel definisjon er
+vanskelig. Kort sagt så er det tre hovedprisipper vi ønsker å oppnå med
+informasjonssikkerhet.</p>
 
 <ul>
-<li><a href="#integrert-signatur">Integrert signatur</a></li>
-<li><a href="#klartekstsignatur">Klartekstsignatur</a></li>
-<li><a href="#frakoblet-signatur">Frakoblet signatur</a></li>
+<li>Konfidensialitet</li>
+<li>Integritet</li>
+<li>Tilgjengelighet</li>
 </ul>
 
-<div class="notices tip" ><p>Alle de tre signaturtypene har ulike fordeler og ulemper, men gir samme sikkerhet.
-Bruk den signaturtypen som passer deg best i hvert tilfelle.</p>
-</div>
+<h4 id="konfidensialitet">Konfidensialitet</h4>
 
+<p>Konfidensialitet går ut på å skjule vår data fra andre enn den tiltenkte mottakgeren,
+enten det er oss selv, eller andre. Dette gjøres som regel med kryptering. Det
+finnes utallige typer kryptering, og hver type har også utallige algoritmer, eller
+formler for å skjule informasjonen fra uvedkommede.</p>
 
-<h3 id="integrert-signatur">Integrert signatur</h3>
+<h4 id="integritet">Integritet</h4>
 
-<p>Dette er standardvalget for signering av dokumenter i GnuPG. Denne måten å signere
-et dokument lager et nytt dokument som inneholder både din digitale signatur og det
-originale dokumentet. Dokumentet er komprimert og i binært formart.</p>
+<p>Integriteten til data er også viktig. Det å kunne stole på at en melding ikke
+har blitt endret med på veien, eller at ingen har tuklet med arkivet ditt over
+kontoutskrifter gir deg trygghet slik at du kan stole på informasjonen.</p>
 
-<pre><code>amnesia@amnesia:~$ gpg2 --sign test.txt &gt; test.sig
-</code></pre>
+<h4 id="tilgjengelighet">Tilgjengelighet</h4>
 
-<p>Dette produserer et signert dokument <code>test.txt.gpg</code>. Dokumentet inneholder både din
-digitale signatur og det originale dokumentet <code>test.txt</code>.
-Dokumentet er komprimert og i binært format.</p>
+<p>Tilgjengelighet går ut på at din data er tilgjengelig for deg når du trenger den.
+Vi skal ikke snakke så mye om dette punktet i denne håndboken da det i hovedsak
+berører de som drifter it-systemer. Det du skal huske på er <strong>sikkerhetskopiering</strong>, alltid.</p>
 
-<p>For å kontrollere signaturen på et signert dokument, samt for å gjennopprette det
-originale dokumentet bruker du <code>--decrypt</code> kommandoen (selv om dokumentet ikke er
-kryptert).</p>
+<h3 id="kommunikasjonssikkerhet">Kommunikasjonssikkerhet</h3>
 
-<pre><code>amnesia@amnesia:~$ gpg2 --output test.txt --decrypt test.txt.gpg
-gpg: Signature made Sat 25 Feb 2017 09:23:14 AM UTC
-gpg:                using RSA key 0x3E2A6E298A8C9B2C
-gpg: Good signature from &quot;Alice &lt;alice@example.com&gt;&quot; [ultimate]
-Primary key fingerprint: 52E9 0DB3 F32A E6B0 C7BD  C939 3E2A 6E29 8A8C 9B2C
-</code></pre>
+<p>Det meste i denne håndboken omhandler kommunikasjonssikkerhet. Kommunikasjonssikkerhet
+kan man se på som et samlebegrep for <strong>konfidensialitet</strong> og <strong>integritet</strong>.
+Hvis vi skal kommunisere sikkert med noen er vi helt avhengig av begge disse to.
+Det finnes mangen måter å oppnå konfidensialitet og integritet på, og metodene
+varierer med hvilken form for kommunikasjon vi driver med. Jeg liker å dele inn
+informasjon inn i to grupper, siden måten vi praktiserer kommunikasjonssikkerhet
+er veldig forskjellig basert på hvilken type data vi snakker om.</p>
 
-<p>Denne måten å signere dokumenter på er praktisk dersom du vet at mottakeren
-benytter OpenPGP, men det er fork eksempel ikke mulig å åpne det originale
-dokumentet uten å først verifisere signaturen.</p>
+<ul>
+<li>Hvilende data</li>
+<li>Data i transit</li>
+</ul>
 
-<h3 id="klartekstsignatur">Klartekstsignatur</h3>
+<h4 id="data-i-transit">Data i transit</h4>
 
-<p>Et vanlig bruksområde for digitale signaturer er epost eller andre digitale
-meldinger. I slike tilfeller er det ikke ønskelig å pakke inn meldingen i en
-binær fil. Til slike tilfeller kan man benytte en klartekstsignatur.
-En klartekstsignatur gjøres med <code>--clearsign</code> parameteren. Når man produserer en
-klartekstsignatur, lages en ASCII signatur som omgir det originale dokumentet i
-et nytt dokument <code>test.txt.asc</code>.</p>
+<p>Data i transit er kortlevd informasjon. Som for eksempel når du sender
+fødselsnummeret ditt til nettbanken din for å starte innloggingsprosessen.
+Data i transit er altså <strong>data som beveger seg fra en enhet til en annen</strong>. Mye av
+data i transit går over til hvilende data når den når sin destinasjon.
+De aller fleste kjenner igjen den grønne hengelåsen og informasjon om selskapet
+bak nettsiden i adressefeltet i nettleseren når vi besøker &ldquo;sikre&rdquo; nettsider.</p>
 
-<pre><code>amnesia@amnesia:~$ gpg2 --clearsign test.txt
+<p><img src="/images/https.png" alt="HTTPS" /></p>
 
-You need a passphrase to unlock the secret key for
-user: &quot;Alice &lt;alice@example.com&gt;&quot;
-2048-bit RSA key, ID 0x3E2A6E298A8C9B2C, created 2017-02-25
+<p>Denne hengelåsen forteller oss ingen ting om hvor sikkert et nettsted er. Det
+denne hengelåsen forteller oss er at informasjonen som sendes fra din nettleser
+til nettsiden er kryptert, og hvem som driver nettsiden. Dette gir oss
+<em>konfindeisalitet</em> og <em>integritet</em> på informasjonen i transit mellom nettleser og
+nettsiden. Den forteller ingen ting om hva som skjer med informasjonen på
+systemene til de som mottar den. Dersom denne informasjonen lagres på dette
+systemet liker jeg å se på den som <em>hvilende data</em>.</p>
 
-amnesia@amnesia:~$ cat test.txt.asc
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+<p>Data i transit bør sikres så godt man kan da denne informasjonen sendes over internett og passerer mange
+enhter. Disse enhetene eies av mange forskjellige firma og organisasjoner, og alle
+er utenfor din kontroll. Det betyr at man kan ikke vite hvordan disse behandler
+informasjonen dersom den ikke er kryptert. Ukryptert informasjon kan snappes opp og
+endres på veien. Man kan se på det som å sende et postkort i posten. Alle som
+jobber i posten i de forskjellige landene kortet passerer kan både lese det og
+endre innholdet uten at avsender eller mottaker merker det.</p>
 
-Hello World
------BEGIN PGP SIGNATURE-----
+<h4 id="hvilende-data">Hvilende data</h4>
 
-iQEcBAEBCgAGBQJYsU+HAAoJED4qbimKjJsssYUH/1mxNBPGv9uTb8hqTXj3G207
-RmKwEhSeuaNUjH+E/rxNVSVBhWBMSuEFfXth1YkCvdi/oo9rDB4pZaqUSocQyg8t
-nRsg2EWEg6qM3iaknVqdSCoKvQ2M0FwrnpqdTcUShrrYXgIQVXA3E8/yh3Y2ZJH2
-Vibt5QHYXZor5s2RbMsnT9+KXpHqAFbHgMxmi554tpGfdqSwTJhJdk2yoTjV03Ps
-4wdu3OkCVhK+54IpVVzWrZZCZ9fWshcU/AWzBs4KWtsJeE4v5nUCCpKGFB6NGi6O
-1ZpDTPqUI1jWSi7AVluh/n1S79So41ArhuRJOa4dnw7yV1J7TsnNZnjYUpISN+4=
-=4vOI
------END PGP SIGNATURE-----
-</code></pre>
+<p>Det finnes mange typer hvilende data. All data som lagres er egentlig hvilende
+data. Grunnen til at jeg liker å skille disse to datatypene er at de systemene
+som beskytter data i transit ikke beskytter hvilende data. Det betyr at selv om
+nettbutikker har en kryptert forbindelse til din nettleser (grønn hengelås) betyr
+ikke det at kredittkortinformasjonen din lagres på en slik måte at den er
+beskyttet. Krypteringssystemet som beskyttet kredittkortnummeret ditt på veien
+til nettbutikken vil ikke lenger være til hjelp etter at det er kommet frem.</p>
 
-<p>En slik signert melding kan enkelt sendes som epost, eller som en annen form for
-melding. Selv om ikke alle mottakerene bruker OpenPGP kan de uansett lese innholdet
-i meldingen.</p>
+<p>Hvilende data som er kryptert kan sendes fra en enhet til en annen uten at
+man trenger å benytte de systemene som skal beskytte data i transit.</p>
 
-<p>En klartekstsignatur verifiseres på samme måte som en vanlig signatur, med <code>--decrypt</code>.</p>
-
-<pre><code>amnesia@amnesia:~$ gpg2 --decrypt test.txt.asc
-Hello World
-gpg: Signature made Sat 25 Feb 2017 09:33:59 AM UTC
-gpg:                using RSA key 0x3E2A6E298A8C9B2C
-gpg: Good signature from &quot;Alice &lt;alice@example.com&gt;&quot; [ultimate]
-Primary key fingerprint: 52E9 0DB3 F32A E6B0 C7BD  C939 3E2A 6E29 8A8C 9B2C
-</code></pre>
-
-<h3 id="frakoblet-signatur">Frakoblet signatur</h3>
-
-<p>Begge de to måtene beskrevet over har begrenset nytteverdi, og begge metodene
-gjør endringer i det originale dokumentet. Derfor finnes det en tredje metode
-som lagrer signaturen i en separat fil, uten å gjøre endringer i det originale
-dokumentet. Dette gjøres med <code>--detach-sign</code> parameteren.
-Det kan være praktisk dersom du ønsker å distribuere for eksempel software som
-er signert.</p>
-
-<pre><code>amnesia@amnesia:~$ gpg2 --detach-sign test.txt
-
-You need a passphrase to unlock the secret key for
-user: &quot;Alice &lt;alice@example.com&gt;&quot;
-2048-bit RSA key, ID 0x3E2A6E298A8C9B2C, created 2017-02-25
-</code></pre>
-
-<p>Dette lager en signaturfil som har samme filnavn som det originale dokumentet
-etterfulgt av <code>.sig</code>.</p>
-
-<p>For å verfifisere signaturen trenger man både det originale dokumentet og
-signaturfilen.</p>
-
-<pre><code>amnesia@amnesia:~$ gpg2 --verify test.txt.sig test.txt
-gpg: Signature made Sat 25 Feb 2017 09:41:47 AM UTC
-gpg:                using RSA key 0x3E2A6E298A8C9B2C
-gpg: Good signature from &quot;Alice &lt;alice@example.com&gt;&quot; [ultimate]
-Primary key fingerprint: 52E9 0DB3 F32A E6B0 C7BD  C939 3E2A 6E29 8A8C 9B2C
-</code></pre>
-
-<p>Dersom man gjør endringer i det originale dokumentet vil signaturen bli ugyldig.</p>
-
-<pre><code>amnesia@amnesia:~$ echo &quot;Hello&quot; &gt;&gt; test.txt
-amnesia@amnesia:~$ gpg2 --verify test.txt.sig test.txt
-gpg: Signature made Sat 25 Feb 2017 09:41:47 AM UTC
-gpg:                using RSA key 0x3E2A6E298A8C9B2C
-gpg: BAD signature from &quot;Alice &lt;alice@example.com&gt;&quot; [ultimate]
-</code></pre>
+<p>Denne guiden handler i stor grad om OpenPGP / GnuPG som et system for kryptering
+av hvilende data. OpenPGP brukes i stor grad til kryptering av epost, samt digital
+signering av programvare.</p>
 
 
       
@@ -455,8 +419,8 @@ gpg: BAD signature from &quot;Alice &lt;alice@example.com&gt;&quot; [ultimate]
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://kryptosikkerhet.no//openpgp/noekkelring"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://kryptosikkerhet.no//openpgp/kryptering" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://kryptosikkerhet.no//grunnleggende"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://kryptosikkerhet.no//grunnleggende/passord" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>
