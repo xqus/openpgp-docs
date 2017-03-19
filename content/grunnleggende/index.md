@@ -1,5 +1,5 @@
 +++
-next = "/grunnleggende/passord/"
+next = "/grunnleggende/introduksjon/"
 #prev = "/prev/path"
 weight = 0
 title = "Grunnleggende sikkerhet"
