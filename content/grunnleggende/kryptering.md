@@ -12,13 +12,12 @@ aliases = [
 
 +++
 
-Symmetrisk kryptering
----------------------
+### Symmetrisk kryptering
 En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og
 dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige
-om nøkkelen på forhånd. Så snart de er enige kryterer senderen en melding med
+om nøkkelen på forhånd. Så snart de er enige krypterer senderen en melding med
 nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den
-samme nøkkelen. For eksempel bruker den Tyske Enigma maskien symmetrisk algoritme,
+samme nøkkelen. For eksempel brukte den Tyske Enigma maskien symmetrisk algoritme,
 og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som
 sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.
 Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfish og IDEA.
@@ -26,11 +25,11 @@ Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfish og IDE
 En god krypteringsalgoritme legger all sikkerheten i nøklene og ingen i selve
 algoritmen. Med andre ord skal det ikke være til hjelp for en angriper å vite
 hvilken algoritme som benyttes. Bare hvis han vet nøkkelen er behovet for å vite
-aloritmen viktig. Algiritmene som benyttes i OpenPGP har denne egenskapen.
+aloritmen viktig. Algoritmene som benyttes i OpenPGP har denne egenskapen.
 
 Siden all sikkerheten er i nøkkelen er det svært viktig at det er veldig vanskelig
 å gjette nøkkelen. Med andre ord må antall mulige nøkler være mange. På engelsk
-kalles dette *key space*.
+kalles antall mulig nøkler *key space*.
 
 Britene brukte maskiner til å gjette nøkler under 2. verdenskrig. Den Tyske
 Enigma maskinen hadde mange mulige nøkler, men britene bygget spesialiserte maskiner
@@ -43,17 +42,16 @@ er viktig i moderne kryptosystemer. Krypteringsalgoritmen DES bruker en 56-bit n
 som betyr at det er 2<sup>56</sup> mulige nøkler. 2<sup>56</sup> er 72 057 594 037 927 936
 nøkler. Dette er veldig mange nøkler, men en vanlig datamaskin kan prøve alle
 mulige nøkler i løpet av noen dager. En spesielisert datamaskin kan prøve de i
-løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfisk og IDEA
+løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfish og IDEA
 bruker 128-bit nøkler som betyr at det er 2<sup>128</sup> mulige nøkler.
 Dette er mange, mange, mange fler nøkler og selv om alle datamaskinene på
 planeten sammarbeidet ville de aldri klart å gjette seg frem til riktig nøkkel.
 
-Offentlig-nøkkel kryptering
----------------------------
+### Offentlig-nøkkel kryptering
 Hovedproblemet med symmertrisk kryptering er ikke sikkerheten men utvekslingen
 av nøkler. Når sender og mottaker har utvekslet nøkler, så kan denne nøkkelen
 benyttes til å kommunisere sikkert. Men hvilken sikker kommunikasjonskanal ble
-benyttet for å utveksle nøkkelen. I virkeligeten vil det nok often være lettere
+benyttet for å utveksle nøkkelen. I virkeligeten vil det nok ofte være lettere
 for en angriper å snappe opp nøkkelen i steden for å gjette seg frem til riktig
 nøkkel.
 
@@ -98,8 +96,7 @@ algoritme han angriper. Mens 256 bit er tilstrekkelig for symmetrisk algoritmer,
 gitt dagens faktoriserings-teknologi offenlitge nøkler med 2048 bits er anbefalt
 for de fleste tilfeller.
 
-Hybride-systemer
-----------------
+### Hybride-systemer
 Offentlig-nøkkel algoritmer er ingen perfekt løsning. Menage symmetriske algoritmer
 er sterkere fra et sikkerhetsstandpunkt., og offentlig-nøkkel kryptering og
 dekryptering er mer krevende enn de tilsvarende operasjonene i en symmetrisk
@@ -125,8 +122,7 @@ angriper klarer å dekryptere en sesjonsnøkkel vil den bare klare å dekryptere
 en melding. Angriperen må så starte på nytt og dekryptere en sesjonsnøkkel til
 for å klare å lese en annen melding.
 
-Digitale signaturer
--------------------
+## Digitale signaturer
 En sjekksum er en kort kode som brukes til å sjekke integriteten av data, eller
 den matematiske funksjonen av dataene, algoritmen, som genererer koden,
 ofte kalt hash-funksjon.
@@ -158,8 +154,7 @@ modifiseres vil signaturkontrollen feile. *The Digital Signature Standard (DSA)*
 er en offentlig-nøkkel algoritme som virker som akkurat beskrevet. DSA er en del
 av OpenPGP standaren, men RSA kan også benyttes til digitale signaturer.
 
-Eliptiske kurver
-----------------
+## Eliptiske kurver
 Eliptiske kurver skal løse samme utfordring som tradisjonelle
 offentlig-nøkkel algoritmer. Nemmelig å lage en ennveis falldør-funksjon.
 Problemet med tradisjonelle offentlig-nøkkel algoritmer er at forholdet mellom
