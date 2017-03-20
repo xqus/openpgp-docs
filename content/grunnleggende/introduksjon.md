@@ -8,6 +8,19 @@ toc = true
 
 +++
 
+### Hvorfor?
+Mange sier de ikke har noe skjule, og trenger derfor ikke å bry seg med
+informasjonssikkerhet. Dette er i beste fall naivt. Mange tror at de man skal
+skjule informasjon for er staten. Vi som bor i Norge har lite å frykte fra
+staten, men selv om dette kan endre seg i fremtiden er det i utgangspunktet
+kriminelle aktører og fremmede stater vi trenger å frykte.
+Forskere og ingeniører må forholde seg til trusselen om industrispionasje og
+journalister må verne om sine kilder.
+
+Informasjonssikkerhet handler like mye om å ikke føle seg overvåket, som det
+handler om skjule seg. Det handler om å beskytte dine data, for det er
+akkurat det de er: dine data.
+
 ### Informasjonssikkerhet
 Informasjonssikkerhet er et fellesbegrep for veldig mange ting. De aller fleste
 har et forhold til hva det betyr, selv om det å komme med en enkel definisjon er
