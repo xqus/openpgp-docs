@@ -1,7 +1,7 @@
 +++
 date = "2017-02-22T10:59:58+01:00"
 toc = true
-next = "/openpgp/wot"
+next = "/openpgp/fallgruver"
 prev = "/openpgp/signering"
 weight = 7
 title = "Kryptering"
