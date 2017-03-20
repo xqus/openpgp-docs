@@ -8,7 +8,8 @@ title = "Din nøkkelring"
 
 aliases = [
     "/kom-i-gang/noekkelring",
-    "/kom-i-gang/wot"
+    "/kom-i-gang/wot",
+    "/openpgp/wot"
 ]
 
 
@@ -101,9 +102,8 @@ filen finner du i `C:\Users\BRUKERNAVN\AppData\Roaming\gnupg` i Windows eller
 *pool.sks-keyservers.net* er et nettverk av nøkkelservere som synkroniserer seg
 selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.
 
-
     amnesia@amnesia:~$ gpg2 --search-keys alice@cyb.org
-    gpg: searching for "alice@cyb.org" from hkps server keys.drup.no
+    gpg: searching for "alice@cyb.org" from hkps server pool.sks-keyservers.net
     (1)     Alice (Rechtsanwältin) <alice@cyb.org>
               1024 bit DSA key FB5797A9, created: 2000-06-06
     Keys 1-1 of 1 for "alice@cyb.org".  Enter number(s), N)ext, or Q)uit >
@@ -113,7 +113,7 @@ med eieren til nøkkelen før du tar den i bruk.
 
 
     Keys 1-1 of 1 for "alice@cyb.org".  Enter number(s), N)ext, or Q)uit > 1
-    gpg: requesting key FB5797A9 from hkps server keys.drup.no
+    gpg: requesting key FB5797A9 from hkps server pool.sks-keyservers.net
     gpg: key FB5797A9: public key "Alice (Rechtsanwältin) <alice@cyb.org>" imported
     gpg: Total number processed: 1
     gpg:               imported: 1
@@ -136,7 +136,6 @@ sammen med ditt eget nøkkelpar når du bruker  `-k --fingerprint` kommandoen.
 
 Dersom du har mottat en offentlig nøkkel i for eksmepel et vedlegg til en epost
 kan du importere den med `--import` paramteren.
-
 
     amnesia@amnesia:~$ gpg2 --import -i key.asc
 
@@ -168,7 +167,7 @@ kan du også laste opp denne sertifiseringen. Da bruker du nøkkelid til den
 offentlige nøkkelen du sertifiserte.
 
     amnesia@amnesia:~$ gpg2 --send-keys 0x69CDDB86
-    gpg: sending key 69CDDB86 to hkps server keys.drup.no
+    gpg: sending key 69CDDB86 to hkps server pool.sks-keyservers.net
 
 {{% notice note %}}
 Når du kommuniserer med nøkkelservere må du benytte nøkkelid. For eksempel 0x69CDDB86.
@@ -273,7 +272,7 @@ Tillitsdatabasen kopieres med følgende kommando
 
 og importeres med denne kommandoen
 
-    C:\>gpg --import-ownertrust ownertrust-gpg.txt
+      amnesia@amnesia:~$ gpg2 --import-ownertrust ownertrust-gpg.txt
 
 #### Private nøkler
 
