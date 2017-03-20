@@ -188,14 +188,6 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp/noekkelpreferanser/">
-              <a href="/openpgp/noekkelpreferanser/">
-                <span>Nøkkelpreferanser     </i></span>
-              </a>
-            </li>
-          
-          
-          
             <li class="dd-item " data-nav-id="/openpgp/sikre-noekler/">
               <a href="/openpgp/sikre-noekler/">
                 <span>Sikker oppbevaring av nøkler     </i></span>
@@ -386,12 +378,19 @@ RSA keys may be between 1024 and 4096 bits long.
 What keysize do you want? (2048)
 </code></pre>
 
-<p>Deretter må du velge nøkkellengde. I utgangspunktet er både <code>2048</code> og <code>4096</code>
-greie valg. Større nøkler er i utganspunktet bedre, men dersom du for eksempel
-vil benytte en Yubikey for å lagre nøkkelen din må du velge <code>2048</code>.</p>
+<p>Deretter må du velge nøkkellengde. Standardvalget på <strong>2848</strong> er i de fleste
+tilfeller fornuftig, selv om større egentlig er bedre.</p>
 
-<pre><code>What keysize do you want? (2048) 4096
-Requested keysize is 4096 bits
+<div class="notices tip" ><p>GnuPG støtter RSA nøkler opp til 4096 bits men anbefalingen er RSA 2048.
+Grunnen til det er at RSA-4096 gir minimalt bedre sikkerhet enn RSA-2048 mens
+ytelsen reduseres drastisk med RSA-4096.
+Hvis du ikke føler at RSA-2048 er godt nok anbefales eliptisk-kurve-algoritmer.
+Se foreøvrig <a href="https://www.gnupg.org/faq/gnupg-faq.html#please_use_ecc">GnuPG.org sin FAQ</a>.</p>
+</div>
+
+
+<pre><code>What keysize do you want? (2048) 2048
+Requested keysize is 2048 bits
 Please specify how long the key should be valid.
        0 = key does not expire
     &lt;n&gt;  = key expires in n days

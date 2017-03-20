@@ -379,12 +379,19 @@ RSA keys may be between 1024 and 4096 bits long.
 What keysize do you want? (2048)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Deretter må du velge nøkkellengde. I utgangspunktet er både &lt;code&gt;2048&lt;/code&gt; og &lt;code&gt;4096&lt;/code&gt;
-greie valg. Større nøkler er i utganspunktet bedre, men dersom du for eksempel
-vil benytte en Yubikey for å lagre nøkkelen din må du velge &lt;code&gt;2048&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Deretter må du velge nøkkellengde. Standardvalget på &lt;strong&gt;2848&lt;/strong&gt; er i de fleste
+tilfeller fornuftig, selv om større egentlig er bedre.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;What keysize do you want? (2048) 4096
-Requested keysize is 4096 bits
+&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;GnuPG støtter RSA nøkler opp til 4096 bits men anbefalingen er RSA 2048.
+Grunnen til det er at RSA-4096 gir minimalt bedre sikkerhet enn RSA-2048 mens
+ytelsen reduseres drastisk med RSA-4096.
+Hvis du ikke føler at RSA-2048 er godt nok anbefales eliptisk-kurve-algoritmer.
+Se foreøvrig &lt;a href=&#34;https://www.gnupg.org/faq/gnupg-faq.html#please_use_ecc&#34;&gt;GnuPG.org sin FAQ&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;What keysize do you want? (2048) 2048
+Requested keysize is 2048 bits
 Please specify how long the key should be valid.
        0 = key does not expire
     &amp;lt;n&amp;gt;  = key expires in n days
@@ -1078,49 +1085,6 @@ kommuniserer med kan man rissikere at du krypterer meldinger med nøkler som
 er utgått eller tilbakekalt. I beste falle får du beskjed om å kryptere meldingen
 på nytt med mottakeren sin nye nøkkel. I værste fall kan meldingen havne i
 hendene til en angriper som har fått tilgang til den private nøkkelen.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Nøkkelpreferanser</title>
-      <link>https://kryptosikkerhet.no/openpgp/noekkelpreferanser/</link>
-      <pubDate>Wed, 22 Feb 2017 12:31:51 +0100</pubDate>
-      
-      <guid>https://kryptosikkerhet.no/openpgp/noekkelpreferanser/</guid>
-      <description>
-
-&lt;p&gt;Når du genererer dine OpenPGP nøkler har du mange forskjellige valg når det
-gjelder type nøkkel, funksjonen til nøklene og nøkkellengde. Hva som passer best
-for deg er vanskelig å si da hver enkelt har forskjellige behov. Jeg har alikavel
-forsøkt å oppsummere hva som er god praksis.&lt;/p&gt;
-
-&lt;h2 id=&#34;nøkkeltype&#34;&gt;Nøkkeltype&lt;/h2&gt;
-
-&lt;p&gt;Når du genererer nøkler kan du velge mellom RSA, DSA og Elgamal. Du kan også
-velge å bare generere signerings nøkler. Det vil si at det ikke er mulig å
-kryptere data til den offentlige nøkkelen. Dette kan være fornuftig dersom du
-ønsker å lagre din mesternøkkel på en datamaskin som du ikke bruker til daglig.
-I så fall må du lage en egen undernøkkel til bruk for kryptering.&lt;/p&gt;
-
-&lt;p&gt;I utgangspunktet anbefales RSA forran DSA av flere årsaker
-(se &lt;a href=&#34;https://www.gnupg.org/faq/gnupg-faq.html#recommended_ciphers&#34;&gt;GnuPG.org sin FAQ&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h2 id=&#34;undernøkler&#34;&gt;Undernøkler&lt;/h2&gt;
-
-&lt;p&gt;Det er mulig å opprette undernøkler til ditt masternøkkelpar. Du kan for eksempel
-opprette en signeringsnøkkel for hver enhet du sender e-post fra. Det er dersverre
-problematisk å ha flere undernøkler for kryptering da bare en av de vil bli brukt
-når data krypteres. Det vil si at meldingen bare kan dekrypteres på en enhet.&lt;/p&gt;
-
-&lt;h2 id=&#34;nøkkellengde&#34;&gt;Nøkkellengde&lt;/h2&gt;
-
-&lt;p&gt;GnuPG støtter RSA nøkler opp til 4096 bits men anbefalingen er RSA 2048.
-Grunnen til det er at RSA-4096 gir minimalt bedre sikkerhet enn RSA-2048 mens
-ytelsen reduseres drastisk med RSA-4096.&lt;/p&gt;
-
-&lt;p&gt;Hvis du ikke føler at RSA-2048 er godt nok anbefales eliptisk-kurve-algoritmer.&lt;/p&gt;
-
-&lt;p&gt;Se foreøvrig &lt;a href=&#34;https://www.gnupg.org/faq/gnupg-faq.html#please_use_ecc&#34;&gt;GnuPG.org sin FAQ&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
