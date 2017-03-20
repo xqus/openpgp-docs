@@ -313,7 +313,7 @@ riktig nøkkel.&lt;/p&gt;
 &lt;p&gt;Fingeravtrykket for din nøkkel vil være det samme uansett hvilke endringer du
 gjør med nøkkelen din.&lt;/p&gt;
 
-&lt;h2 id=&#34;offentlig-nøkkel&#34;&gt;Offentlig nøkkel&lt;/h2&gt;
+&lt;h3 id=&#34;offentlig-nøkkel&#34;&gt;Offentlig nøkkel&lt;/h3&gt;
 
 &lt;p&gt;Din offentlige nøkkel er den delen av nøkkelen du skal dele med andre. Denne
 benyttes til å kryptere meldinger som skal sendes til deg, og til å verifisere
@@ -323,7 +323,7 @@ meldinger du har signert med OpenPGP.&lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;h2 id=&#34;privat-nøkkel&#34;&gt;Privat nøkkel&lt;/h2&gt;
+&lt;h3 id=&#34;privat-nøkkel&#34;&gt;Privat nøkkel&lt;/h3&gt;
 
 &lt;p&gt;Din private nøkkel benyttes til å signere meldinger du sender, samt å dekryptere
 meldinger som er kryptert med din offentlige nøkkel. Det er mulig å ha flere
@@ -345,7 +345,7 @@ andre nøkler og av brukeridentiter.&lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;h2 id=&#34;brukeridentiteter&#34;&gt;Brukeridentiteter&lt;/h2&gt;
+&lt;h3 id=&#34;brukeridentiteter&#34;&gt;Brukeridentiteter&lt;/h3&gt;
 
 &lt;p&gt;Brukeridentiteter er det som tilegner et navn og en epostadresse til din nøkkel.
 Et nøkkelpar kan ha så mange brukeridentiteter man vil, men en av de vil være
@@ -353,7 +353,7 @@ primær og vil bli brukt for å gi navn til nøkkelen i OpenPGP verktøyene.
 En brukeridentitet består av &lt;code&gt;Navn (kommentar) &amp;lt;epost&amp;gt;&lt;/code&gt;. Kommentar og epost er
 i utgangspunktet frivillig.&lt;/p&gt;
 
-&lt;h2 id=&#34;generer-dine-egne-nøkler&#34;&gt;Generer dine egne nøkler&lt;/h2&gt;
+&lt;h3 id=&#34;generer-dine-egne-nøkler&#34;&gt;Generer dine egne nøkler&lt;/h3&gt;
 
 &lt;p&gt;For å generere dine nøkler starter du GnuPG med &lt;code&gt;--gen-key&lt;/code&gt; parameteren.
 Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
@@ -448,7 +448,7 @@ er opprettet.&lt;/p&gt;
 
 &lt;p&gt;Du kan se dine nøkkelpar med kommandoen &lt;code&gt;amnesia@amnesia:~$ gpg2 -K --fingerprint&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tilbakekallingssertifikat&#34;&gt;Tilbakekallingssertifikat&lt;/h2&gt;
+&lt;h3 id=&#34;tilbakekallingssertifikat&#34;&gt;Tilbakekallingssertifikat&lt;/h3&gt;
 
 &lt;p&gt;Et tilbakekallingssertifikat benyttes dersom du ikke lenger har kontroll over din
 private nøkkel. Dette kan brukes uten at du har tilgang til den private nøkkelen.
@@ -471,12 +471,85 @@ på dette. Dersom andre får tilgang til det kan de tilbakekalle dit nøkkelpar.
       <guid>https://kryptosikkerhet.no/openpgp/noekkelring/</guid>
       <description>
 
-&lt;p&gt;Din nøkkelring inneholder ikke bare dine egne offentlige og private nøkler,
+&lt;p&gt;Din nøkkelring er et begrep som brukes om de offentlige og private nøklene du
+har en kopi av på din datamaskin.
+Din nøkkelring inneholder ikke bare dine egne offentlige og private nøkler,
 men også de offentlige nøklene de du kommuniserer med. I tillegg til selve
-nøklene finnes det også annen informasjon i den. Du bør derfor jevnlig ta
-sikkerhetskopi av nøkkelringen. Denne bør du lagre på et trygt sted.&lt;/p&gt;
+nøklene finnes det også annen informasjon i den, som for eksmepel hvilke nøkler
+du har tillit til. Du bør derfor jevnlig ta sikkerhetskopi av nøkkelringen.
+Denne bør du lagre på et trygt sted.&lt;/p&gt;
 
-&lt;h2 id=&#34;importere-nøkler&#34;&gt;Importere nøkler&lt;/h2&gt;
+&lt;h3 id=&#34;hvilke-nøkler-skal-jeg-lagre-i-min-nøkkelring&#34;&gt;Hvilke nøkler skal jeg lagre i min nøkkelring?&lt;/h3&gt;
+
+&lt;p&gt;For det første må du ha din egen private nøekkel, og din offentlige nøkkel
+i nøkkelringen din. Disse trenger du for å kunne signere og dekryptere meldinger.
+I tillegg til dine egne nøkler må du ha de offentlige nøklene til de du kommuniserer
+med. Enten for å verifisere signaturer, eller for å kryptere meldinger.&lt;/p&gt;
+
+&lt;p&gt;Før du sender en kryptert melding må du være sikker på at den offentlige
+nøkkelen du bruker for å kryptere meldingen faktisk tilhører den personen du
+skal sende meldingen til. Hvem som helst kan lage et nøkkelpar og skrive hvilket
+navn og hvilken epostadresse de vil. Det er derfor essensielt at du verifiser
+fingeravtrykket til den offentlige nøkkelen før du bruker den. Det er flere måter
+å gjøre dette på, for eksempel SMS eller over telefon.&lt;/p&gt;
+
+&lt;p&gt;For å gjøre det hele litt lettere kan man sertifisere og sette tillit til nøkler.
+På denne måten bygger man seg et tillitsnett rundt nøklene. Dersom en nøkkel
+er sertifiert av en annen nøkkel du har tillit ti vil OpenPGP automatisk
+ha tillit til nøkkelen basert på sertifiseringen.
+Tillitsnettet (Web Of Trust) forsøker å skape et nettverk av nøkler du stoler på
+slik at man lettere kan knytte et nøkkelpar til en person.&lt;/p&gt;
+
+&lt;p&gt;For å holde styr på alle offentlige nøkler og sertifiseringer bruker OpenPGP
+noe som kalles nøkkeltjenere. Du kan se på den som en digital telefonkatalog med
+offentlige nøkler. Det finnes mange nøkkelservere, og de fleste sammarbeider om å holde seg
+oppdatert. Jeg anbefaler at du &lt;a href=&#34;#importere-nøkler&#34;&gt;bruker&lt;/a&gt; &lt;code&gt;hkps://hkps.pool.sks-keyservers.net&lt;/code&gt;
+som nøkkelserver. Dette er ikke en enkelt nøkkelserver men en samling av oppdaterte
+servere.&lt;/p&gt;
+
+&lt;p&gt;Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
+du kommuniserer med fra nøkkeltjenere. Dette er eneste måte å vite at nøkkelen for eksempel ikke
+er tilbakekalt. På samme måte er det viktig at du laster opp endringer i din
+offentlige nøkkel dersom du gjør endringer som:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Endret utløpsdato&lt;/li&gt;
+&lt;li&gt;Tilbakekalt nøkkel&lt;/li&gt;
+&lt;li&gt;Ny brukeridentitet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Tilstedeværelsen av en nøkkel på en nøkkelserver sier ikke noe om gyldigheten eller
+tilliten til en nøkkel. Husk å &lt;strong&gt;alltid&lt;/strong&gt; verifiser hele fingeravtrykket til en nøkkel
+før du bruker den.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h4 id=&#34;sertifisering&#34;&gt;Sertifisering&lt;/h4&gt;
+
+&lt;p&gt;Når du &lt;a href=&#34;https://kryptosikkerhet.no/openpgp/noekkelring/#sertifisere-nøkler&#34;&gt;sertifiserer en nøkkel&lt;/a&gt;
+forteller du omverden at du har verifisert sammenhengen mellom &lt;em&gt;navn&lt;/em&gt; og &lt;em&gt;epostadresse&lt;/em&gt;
+spesifisert i nøkkelen og den faktiske eieren av nøkkelen.&lt;/p&gt;
+
+&lt;p&gt;En sertifisering sier ikke noe om du kan stole på personen som eier nøkkelen eller
+ikke. Det eneste en sertifisering sier er at sammenhengen mellom den offentlige
+nøkkelen og brukeridentiteten er bekreftet.&lt;/p&gt;
+
+&lt;p&gt;Når du sertifiserer en offentlig nøkkel signerer du denne med din private nøkkel.
+Du kan velge å lage en &lt;em&gt;lokal signatur&lt;/em&gt;, denne vil lagres lokalt i din nøkkelring
+og kan ikke lastes opp til nøkkelservere. Det vanligste derimot er å sertifisere
+nøkler for så å laste opp sertifiseringen til nøkkelserverene.&lt;/p&gt;
+
+&lt;h4 id=&#34;tillit&#34;&gt;Tillit&lt;/h4&gt;
+
+&lt;p&gt;Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
+eieren til nøkkelen verifiserer at eieren til nøklene han/hun sertifiserer
+er den han/hun utgir seg for å være.
+Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert Alice sin nøkkel
+vil du automatisk også ha tillit til Alice sin nøkkel. Hvilke nøkler du har
+tillit til lagres bare lokalt i din nøkkelring. Ingen andre kan se hvem du har
+tillit til, og du kan ikke se hvem som har tillit til din nøkkel.&lt;/p&gt;
+
+&lt;h3 id=&#34;importere-nøkler&#34;&gt;Importere nøkler&lt;/h3&gt;
 
 &lt;p&gt;Det letteste når du skal importere offentlige nøkler er å søke på en nøkkelserver.
 For å søke etter en offentlig nøkkel på en nøkkelserver bruker du &lt;code&gt;--search-keys&lt;/code&gt;.&lt;/p&gt;
@@ -493,7 +566,7 @@ filen finner du i &lt;code&gt;C:\Users\BRUKERNAVN\AppData\Roaming\gnupg&lt;/code
 selv i mellom. Dette gir høy tilgjengelighet av nøkler, og er derfor anbefalt.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --search-keys alice@cyb.org
-gpg: searching for &amp;quot;alice@cyb.org&amp;quot; from hkps server keys.drup.no
+gpg: searching for &amp;quot;alice@cyb.org&amp;quot; from hkps server pool.sks-keyservers.net
 (1)     Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;
           1024 bit DSA key FB5797A9, created: 2000-06-06
 Keys 1-1 of 1 for &amp;quot;alice@cyb.org&amp;quot;.  Enter number(s), N)ext, or Q)uit &amp;gt;
@@ -503,7 +576,7 @@ Keys 1-1 of 1 for &amp;quot;alice@cyb.org&amp;quot;.  Enter number(s), N)ext, or
 med eieren til nøkkelen før du tar den i bruk.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Keys 1-1 of 1 for &amp;quot;alice@cyb.org&amp;quot;.  Enter number(s), N)ext, or Q)uit &amp;gt; 1
-gpg: requesting key FB5797A9 from hkps server keys.drup.no
+gpg: requesting key FB5797A9 from hkps server pool.sks-keyservers.net
 gpg: key FB5797A9: public key &amp;quot;Alice (Rechtsanwältin) &amp;lt;alice@cyb.org&amp;gt;&amp;quot; imported
 gpg: Total number processed: 1
 gpg:               imported: 1
@@ -533,7 +606,7 @@ kan du importere den med &lt;code&gt;--import&lt;/code&gt; paramteren.&lt;/p&gt;
 &lt;p&gt;Når nøklene er i din nøkkelring kan du benytte de til å kryptere meldinger og
 verifisere signaturer.&lt;/p&gt;
 
-&lt;h2 id=&#34;eksportere-nøkler&#34;&gt;Eksportere nøkler&lt;/h2&gt;
+&lt;h3 id=&#34;eksportere-nøkler&#34;&gt;Eksportere nøkler&lt;/h3&gt;
 
 &lt;p&gt;For at andre skal kunne kryptere meldinger til deg eller verifisere dine digitale
 signaturer er de avhengig å importert din offentlige nøkkel føsr.&lt;/p&gt;
@@ -552,18 +625,22 @@ w49DLEkc
 -----END PGP PUBLIC KEY BLOCK-----
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h3 id=&#34;laste-opp-nøkler-til-nøkkeltjenere&#34;&gt;Laste opp nøkler til nøkkeltjenere&lt;/h3&gt;
+
 &lt;p&gt;Du kan også laste opp nøkkelen din til en nøkkelserver slik at andre kan søke
-den opp og laste den ned der.&lt;/p&gt;
+den opp og laste den ned der. Dersom du har sertifisert en annen offentlig nøkkel
+kan du også laste opp denne sertifiseringen. Da bruker du nøkkelid til den
+offentlige nøkkelen du sertifiserte.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --send-keys 0x69CDDB86
-gpg: sending key 69CDDB86 to hkps server keys.drup.no
+gpg: sending key 69CDDB86 to hkps server pool.sks-keyservers.net
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Når du kommuniserer med nøkkelservere må du benytte nøkkelid. For eksempel 0x69CDDB86.&lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;h2 id=&#34;sette-tillit-til-nøkler&#34;&gt;Sette tillit til nøkler&lt;/h2&gt;
+&lt;h3 id=&#34;sette-tillit-til-nøkler&#34;&gt;Sette tillit til nøkler&lt;/h3&gt;
 
 &lt;p&gt;Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
 eieren til nøkkelen verifiserer at eieren til en nøkkel er den han/hun utgir
@@ -615,7 +692,7 @@ Your decision?
 
 &lt;p&gt;For å lagre endringene bruker vi &lt;code&gt;save&lt;/code&gt; kommandoen.&lt;/p&gt;
 
-&lt;h2 id=&#34;sertifisere-nøkler&#34;&gt;Sertifisere nøkler&lt;/h2&gt;
+&lt;h3 id=&#34;sertifisere-nøkler&#34;&gt;Sertifisere nøkler&lt;/h3&gt;
 
 &lt;p&gt;Sertifisering (eller signering) gjør man når man har verifisert sammenhengen
 mellom nøkkel og person. Når man sertifiserer en nøkkel signerer du den med din
@@ -635,7 +712,7 @@ slik at andre kan se at du har verifisert nøkkelen og identiten til eieren.&lt;
 gpg: sending key FB5797A9 to hkps server keys.drup.no
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;oppdatere-offentlige-nøkler&#34;&gt;Oppdatere offentlige nøkler&lt;/h2&gt;
+&lt;h3 id=&#34;oppdatere-offentlige-nøkler&#34;&gt;Oppdatere offentlige nøkler&lt;/h3&gt;
 
 &lt;p&gt;Nøkler kan tilbakekalles eller signeres av andre brukere uten at du nødvendigvis
 får vite det. Slike endringer er viktig at du får med deg. Derfor bør du synkronisere
@@ -644,7 +721,7 @@ din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med &lt;code&gt;--
 &lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --refresh-keys
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;sikkerhetkopiering&#34;&gt;Sikkerhetkopiering&lt;/h2&gt;
+&lt;h3 id=&#34;sikkerhetkopiering&#34;&gt;Sikkerhetkopiering&lt;/h3&gt;
 
 &lt;p&gt;Etterhvert som nøkkelringen vokser blir det viktigere å viktigere å ha en
 sikkerhetskopi av denne.&lt;/p&gt;
@@ -652,7 +729,7 @@ sikkerhetskopi av denne.&lt;/p&gt;
 &lt;p&gt;Det er tre ting som må sikkerhetkopieres: Offentlige nøkler, tillitsdatabasen og
 private nøkler.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Offentlige nøkler&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;offentlige-nøkler&#34;&gt;Offentlige nøkler&lt;/h4&gt;
 
 &lt;p&gt;For å sikkerhetskopiere de offentlige nøklene kopierer du bare filene
 &lt;code&gt;pubring.gpg&lt;/code&gt; og &lt;code&gt;pubring.kbx&lt;/code&gt; fra  &lt;code&gt;C:\Users\BRUKERNAVN\AppData\Roaming\gnupg&lt;/code&gt;
@@ -660,7 +737,7 @@ mappen på Windows eller i &lt;code&gt;~/.gnupg&lt;/code&gt; mappen på Linux/Un
 
 &lt;p&gt;Får gjennopprette disse kan du bare kopiere disse tilbake på samme sted.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Tillitsdatabase&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;tillitsdatabase&#34;&gt;Tillitsdatabase&lt;/h4&gt;
 
 &lt;p&gt;Tillitsdatabasen kopieres med følgende kommando&lt;/p&gt;
 
@@ -669,10 +746,10 @@ mappen på Windows eller i &lt;code&gt;~/.gnupg&lt;/code&gt; mappen på Linux/Un
 
 &lt;p&gt;og importeres med denne kommandoen&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt;gpg --import-ownertrust ownertrust-gpg.txt
+&lt;pre&gt;&lt;code&gt;  amnesia@amnesia:~$ gpg2 --import-ownertrust ownertrust-gpg.txt
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Private nøkler&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;private-nøkler&#34;&gt;Private nøkler&lt;/h4&gt;
 
 &lt;p&gt;Dine private nøkler eksporteres med &lt;code&gt;--export-secret-keys&lt;/code&gt;.&lt;/p&gt;
 
@@ -911,67 +988,6 @@ Hello World
 Hello
 amnesia@amnesia:~$
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tillitsnett</title>
-      <link>https://kryptosikkerhet.no/openpgp/wot/</link>
-      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
-      
-      <guid>https://kryptosikkerhet.no/openpgp/wot/</guid>
-      <description>
-
-&lt;p&gt;Før du sender en kryptert melding må du være sikker på at den offentlige
-nøkkelen du bruker for å kryptere meldingen faktisk tilhører den personen du
-skal sende meldingen til. Det at en nøkkel finnes på en nøkkelserver betyr ikke
-at den faktisk tilhører personen du vil kommunisere med. Hvem som helst kan lage
-et nøkkelpar og skrive hvilket navn og hvilken epostadresse de vil.
-Tillitsnettet (Web Of Trust) forsøker å skape et nettverk av nøkler du stoler på
-slik at man lettere kan knytte et nøkkelpar til en person.&lt;/p&gt;
-
-&lt;h3 id=&#34;sertifisering&#34;&gt;Sertifisering&lt;/h3&gt;
-
-&lt;p&gt;Når du &lt;a href=&#34;https://kryptosikkerhet.no/openpgp/noekkelring/#sertifisere-nøkler&#34;&gt;sertifiserer en nøkkel&lt;/a&gt;
-forteller du omverden at du har verifisert sammenhengen mellom &lt;em&gt;navn&lt;/em&gt; og &lt;em&gt;epostadresse&lt;/em&gt;
-spesifisert i nøkkelen og den faktiske eieren av nøkkelen.&lt;/p&gt;
-
-&lt;p&gt;En sertifisering sier ikke noe om du kan stole på personen som eier nøkkelen eller
-ikke. Det eneste en sertifisering betyr er at sammenhengen mellom den offentlige
-nøkkelen og brukeridentiteten er bekreftet.&lt;/p&gt;
-
-&lt;h3 id=&#34;tillit&#34;&gt;Tillit&lt;/h3&gt;
-
-&lt;p&gt;Når man snakker om tillit til en nøkkel mener man hvor mye man stoler på at
-eieren til nøkkelen verifiserer at eieren til nøklene han/hun sertifiserer
-er den han/hun utgir seg for å være.
-Dersom du har tillit til Bob sin nøkkel, og Bob har sertifisert Alice sin nøkkel
-vil du automatisk også ha tillit til Alice sin nøkkel.&lt;/p&gt;
-
-&lt;h3 id=&#34;nøkkelservere&#34;&gt;Nøkkelservere&lt;/h3&gt;
-
-&lt;p&gt;Nøkkelservere benyttes for å laste ned eller oppdatere offentlige nøkler.
-Det finnes mange nækkelservere, og de fleste sammarbeider om å holde seg
-oppdatert. Jeg anbefaler at du &lt;a href=&#34;https://kryptosikkerhet.no/openpgp/noekkelring/#importere-nøkler&#34;&gt;bruker&lt;/a&gt; &lt;code&gt;hkps://hkps.pool.sks-keyservers.net&lt;/code&gt;
-som nøkkelserver. Dette er ikke en enkelt nøkkelserver men en samling av oppdaterte
-servere.&lt;/p&gt;
-
-&lt;p&gt;Det er svært viktig at du regelmessig oppdaterer de offentlige nøklene til de
-du kommuniserer med. Dette er eneste måte å vite at nøkkelen for eksempel ikke
-er tilbakekalt. På samme måte er det viktig at du laster opp endringer i din
-offentlige nøkkel dersom du gjør endringer som:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Endret utløpsdato&lt;/li&gt;
-&lt;li&gt;Tilbakekalt nøkkel&lt;/li&gt;
-&lt;li&gt;Ny brukeridentitet&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Tilstedeværelsen av en nøkkel på en nøkkelserver sier ikke noe om gyldigheten eller
-tilliten til en nøkkel. Husk å &lt;strong&gt;alltid&lt;/strong&gt; verifiser hele fingeravtrykket til en nøkkel
-før du bruker den.&lt;/p&gt;
-&lt;/div&gt;
-
 </description>
     </item>
     

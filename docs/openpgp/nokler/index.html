@@ -180,14 +180,6 @@
           
           
           
-            <li class="dd-item " data-nav-id="/openpgp/wot/">
-              <a href="/openpgp/wot/">
-                <span>Tillitsnett     </i></span>
-              </a>
-            </li>
-          
-          
-          
             <li class="dd-item " data-nav-id="/openpgp/fallgruver/">
               <a href="/openpgp/fallgruver/">
                 <span>Fallgruver     </i></span>
@@ -290,11 +282,14 @@
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#offentlig-nøkkel">Offentlig nøkkel</a></li>
 <li><a href="#privat-nøkkel">Privat nøkkel</a></li>
 <li><a href="#brukeridentiteter">Brukeridentiteter</a></li>
 <li><a href="#generer-dine-egne-nøkler">Generer dine egne nøkler</a></li>
 <li><a href="#tilbakekallingssertifikat">Tilbakekallingssertifikat</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -325,7 +320,7 @@ riktig nøkkel.</p>
 <p>Fingeravtrykket for din nøkkel vil være det samme uansett hvilke endringer du
 gjør med nøkkelen din.</p>
 
-<h2 id="offentlig-nøkkel">Offentlig nøkkel</h2>
+<h3 id="offentlig-nøkkel">Offentlig nøkkel</h3>
 
 <p>Din offentlige nøkkel er den delen av nøkkelen du skal dele med andre. Denne
 benyttes til å kryptere meldinger som skal sendes til deg, og til å verifisere
@@ -335,7 +330,7 @@ meldinger du har signert med OpenPGP.</p>
 </div>
 
 
-<h2 id="privat-nøkkel">Privat nøkkel</h2>
+<h3 id="privat-nøkkel">Privat nøkkel</h3>
 
 <p>Din private nøkkel benyttes til å signere meldinger du sender, samt å dekryptere
 meldinger som er kryptert med din offentlige nøkkel. Det er mulig å ha flere
@@ -357,7 +352,7 @@ andre nøkler og av brukeridentiter.</p>
 </div>
 
 
-<h2 id="brukeridentiteter">Brukeridentiteter</h2>
+<h3 id="brukeridentiteter">Brukeridentiteter</h3>
 
 <p>Brukeridentiteter er det som tilegner et navn og en epostadresse til din nøkkel.
 Et nøkkelpar kan ha så mange brukeridentiteter man vil, men en av de vil være
@@ -365,7 +360,7 @@ primær og vil bli brukt for å gi navn til nøkkelen i OpenPGP verktøyene.
 En brukeridentitet består av <code>Navn (kommentar) &lt;epost&gt;</code>. Kommentar og epost er
 i utgangspunktet frivillig.</p>
 
-<h2 id="generer-dine-egne-nøkler">Generer dine egne nøkler</h2>
+<h3 id="generer-dine-egne-nøkler">Generer dine egne nøkler</h3>
 
 <p>For å generere dine nøkler starter du GnuPG med <code>--gen-key</code> parameteren.
 Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
@@ -460,7 +455,7 @@ er opprettet.</p>
 
 <p>Du kan se dine nøkkelpar med kommandoen <code>amnesia@amnesia:~$ gpg2 -K --fingerprint</code></p>
 
-<h2 id="tilbakekallingssertifikat">Tilbakekallingssertifikat</h2>
+<h3 id="tilbakekallingssertifikat">Tilbakekallingssertifikat</h3>
 
 <p>Et tilbakekallingssertifikat benyttes dersom du ikke lenger har kontroll over din
 private nøkkel. Dette kan brukes uten at du har tilgang til den private nøkkelen.
