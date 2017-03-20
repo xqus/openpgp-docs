@@ -25,9 +25,7 @@ riktig nøkkel.
 Fingeravtrykket for din nøkkel vil være det samme uansett hvilke endringer du
 gjør med nøkkelen din.
 
-Offentlig nøkkel
-----------------
-
+### Offentlig nøkkel
 Din offentlige nøkkel er den delen av nøkkelen du skal dele med andre. Denne
 benyttes til å kryptere meldinger som skal sendes til deg, og til å verifisere
 meldinger du har signert med OpenPGP.
@@ -36,9 +34,7 @@ meldinger du har signert med OpenPGP.
 Meldinger som er kryptert med din offentlige nøkkel kan bare dekrypteres med din private nøkkel.
 {{% /notice %}}
 
-Privat nøkkel
--------------
-
+### Privat nøkkel
 Din private nøkkel benyttes til å signere meldinger du sender, samt å dekryptere
 meldinger som er kryptert med din offentlige nøkkel. Det er mulig å ha flere
 undernøkler i ditt nøkkelpar, til forskjellig bruk eller til forskjellige
@@ -57,18 +53,14 @@ andre nøkler og av brukeridentiter.
 Gjør alt du kan for å holde din private nøkkel privat.
 {{% /notice %}}
 
-Brukeridentiteter
------------------
-
+### Brukeridentiteter
 Brukeridentiteter er det som tilegner et navn og en epostadresse til din nøkkel.
 Et nøkkelpar kan ha så mange brukeridentiteter man vil, men en av de vil være
 primær og vil bli brukt for å gi navn til nøkkelen i OpenPGP verktøyene.
 En brukeridentitet består av ``Navn (kommentar) <epost>``. Kommentar og epost er
 i utgangspunktet frivillig.
 
-Generer dine egne nøkler
-------------------------
-
+### Generer dine egne nøkler
 For å generere dine nøkler starter du GnuPG med `--gen-key` parameteren.
 Hvilken nøkkel du skal generere, og hvilke alternativer du skal velger
 er avhengig av bruken.
@@ -163,9 +155,7 @@ Nøkkelid består av de 8 (kort nøkkelid) eller 16 (lang nøkkelid) siste tegne
 
 Du kan se dine nøkkelpar med kommandoen `amnesia@amnesia:~$ gpg2 -K --fingerprint`
 
-Tilbakekallingssertifikat
--------------------------
-
+### Tilbakekallingssertifikat
 Et tilbakekallingssertifikat benyttes dersom du ikke lenger har kontroll over din
 private nøkkel. Dette kan brukes uten at du har tilgang til den private nøkkelen.
 Dersom du tilbakekaller nøkkelen din vil den ikke lenger kunne brukes til å
