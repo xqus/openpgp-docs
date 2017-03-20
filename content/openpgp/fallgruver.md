@@ -1,7 +1,7 @@
 +++
 date = "2017-02-24T16:09:30+01:00"
 toc = true
-next = "/openpgp/noekkelpreferanser"
+next = "/openpgp/sikre-noekler"
 prev = "/openpgp/kryptering"
 weight = 8
 title = "Fallgruver"

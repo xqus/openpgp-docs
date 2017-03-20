@@ -4,7 +4,7 @@ title = "Sikker oppbevaring av nøkler"
 date = "2017-02-22T12:31:51+01:00"
 toc = true
 next = "/openpgp/rotere-noekler"
-prev = "/openpgp/noekkelpreferanser"
+prev = "/openpgp/fallgruver"
 
 aliases = [
     "/kom-i-gang/sikre-noekler",

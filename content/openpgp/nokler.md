@@ -7,7 +7,10 @@ weight = 3
 title = "Dine nøkler"
 
 aliases = [
-    "/kom-i-gang/nokler"
+    "/kom-i-gang/nokler",
+    "/kom-i-gang/noekkelpreferanser",
+    "/riktig-bruk/noekkelpreferanser",
+    "/openpgp/noekkelpreferanser"
 ]
 
 +++
@@ -86,13 +89,19 @@ Du får da velg om hvilken nøkkel du ønsker. I utgangspunktet er valg 1 greit.
     RSA keys may be between 1024 and 4096 bits long.
     What keysize do you want? (2048)
 
-Deretter må du velge nøkkellengde. I utgangspunktet er både ``2048`` og ``4096``
-greie valg. Større nøkler er i utganspunktet bedre, men dersom du for eksempel
-vil benytte en Yubikey for å lagre nøkkelen din må du velge ``2048``.
+Deretter må du velge nøkkellengde. Standardvalget på **2848** er i de fleste
+tilfeller fornuftig, selv om større egentlig er bedre.
 
+{{% notice tip %}}
+GnuPG støtter RSA nøkler opp til 4096 bits men anbefalingen er RSA 2048.
+Grunnen til det er at RSA-4096 gir minimalt bedre sikkerhet enn RSA-2048 mens
+ytelsen reduseres drastisk med RSA-4096.
+Hvis du ikke føler at RSA-2048 er godt nok anbefales eliptisk-kurve-algoritmer.
+Se foreøvrig [GnuPG.org sin FAQ](https://www.gnupg.org/faq/gnupg-faq.html#please_use_ecc).
+{{% /notice %}}
 
-    What keysize do you want? (2048) 4096
-    Requested keysize is 4096 bits
+    What keysize do you want? (2048) 2048
+    Requested keysize is 2048 bits
     Please specify how long the key should be valid.
            0 = key does not expire
         <n>  = key expires in n days
