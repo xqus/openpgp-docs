@@ -249,6 +249,28 @@ din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med `--refresh-key
 
     amnesia@amnesia:~$ gpg2 --refresh-keys
 
+### Endre passfrase på din private nøkkel
+Din private nøkkel bør være beskyttet med en god [passfrase](/grunnleggende/passord/).
+Enten du vil endre passfrase, eller sette et for første gang er fremgangsmåten den samme.
+
+    amnesia@amnesia:~$ gpg2 --edit-key key@example.com
+    gpg (GnuPG) 2.1.13; Copyright (C) 2016 Free Software Foundation, Inc.
+    This is free software: you are free to change and redistribute it.
+    There is NO WARRANTY, to the extent permitted by law.
+
+    Secret key is available.
+
+    sec  rsa2048/B0B9158DFE7C1B96
+     created: 2017-04-12  expires: never       usage: SC  
+     trust: ultimate      validity: ultimate
+    ssb  rsa2048/D2CBD896A13B7B49
+     created: 2017-04-12  expires: never       usage: E   
+    [ultimate] (1). Example Key <key@example.com>
+
+    gpg> passwd
+
+    gpg> save
+
 ### Sikkerhetkopiering
 Etterhvert som nøkkelringen vokser blir det viktigere å viktigere å ha en
 sikkerhetskopi av denne.

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="generator" content="Hugo 0.19" />
     <meta name="description" content="Norsk OpenPGP guide">
 <meta name="author" content="Audun Larsen">
 
@@ -287,6 +287,7 @@
 <li><a href="#sette-tillit-til-nøkler">Sette tillit til nøkler</a></li>
 <li><a href="#sertifisere-nøkler">Sertifisere nøkler</a></li>
 <li><a href="#oppdatere-offentlige-nøkler">Oppdatere offentlige nøkler</a></li>
+<li><a href="#endre-passfrase-på-din-private-nøkkel">Endre passfrase på din private nøkkel</a></li>
 <li><a href="#sikkerhetkopiering">Sikkerhetkopiering</a>
 <ul>
 <li><a href="#offentlige-nøkler">Offentlige nøkler</a></li>
@@ -559,6 +560,30 @@ får vite det. Slike endringer er viktig at du får med deg. Derfor bør du synk
 din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med <code>--refresh-keys</code></p>
 
 <pre><code>amnesia@amnesia:~$ gpg2 --refresh-keys
+</code></pre>
+
+<h3 id="endre-passfrase-på-din-private-nøkkel">Endre passfrase på din private nøkkel</h3>
+
+<p>Din private nøkkel bør være beskyttet med en god <a href="/grunnleggende/passord/">passfrase</a>.
+Enten du vil endre passfrase, eller sette et for første gang er fremgangsmåten den samme.</p>
+
+<pre><code>amnesia@amnesia:~$ gpg2 --edit-key key@example.com
+gpg (GnuPG) 2.1.13; Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+sec  rsa2048/B0B9158DFE7C1B96
+ created: 2017-04-12  expires: never       usage: SC  
+ trust: ultimate      validity: ultimate
+ssb  rsa2048/D2CBD896A13B7B49
+ created: 2017-04-12  expires: never       usage: E   
+[ultimate] (1). Example Key &lt;key@example.com&gt;
+
+gpg&gt; passwd
+
+gpg&gt; save
 </code></pre>
 
 <h3 id="sikkerhetkopiering">Sikkerhetkopiering</h3>

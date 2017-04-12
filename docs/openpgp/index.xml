@@ -728,6 +728,30 @@ din nøkkelring mot nøkkelservere reglemessig. Dette gjøres med &lt;code&gt;--
 &lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --refresh-keys
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h3 id=&#34;endre-passfrase-på-din-private-nøkkel&#34;&gt;Endre passfrase på din private nøkkel&lt;/h3&gt;
+
+&lt;p&gt;Din private nøkkel bør være beskyttet med en god &lt;a href=&#34;https://kryptosikkerhet.no/grunnleggende/passord/&#34;&gt;passfrase&lt;/a&gt;.
+Enten du vil endre passfrase, eller sette et for første gang er fremgangsmåten den samme.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;amnesia@amnesia:~$ gpg2 --edit-key key@example.com
+gpg (GnuPG) 2.1.13; Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+sec  rsa2048/B0B9158DFE7C1B96
+ created: 2017-04-12  expires: never       usage: SC  
+ trust: ultimate      validity: ultimate
+ssb  rsa2048/D2CBD896A13B7B49
+ created: 2017-04-12  expires: never       usage: E   
+[ultimate] (1). Example Key &amp;lt;key@example.com&amp;gt;
+
+gpg&amp;gt; passwd
+
+gpg&amp;gt; save
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&#34;sikkerhetkopiering&#34;&gt;Sikkerhetkopiering&lt;/h3&gt;
 
 &lt;p&gt;Etterhvert som nøkkelringen vokser blir det viktigere å viktigere å ha en
