@@ -34,9 +34,21 @@ a:hover {
 }
 
 #sidebar hr {
+    border-bottom: 1px solid #7F8A8F;
+}
+
+hr {
     border-bottom: 4px solid #7F8A8F;
 }
 
 #footer {
     padding-top: 0;
+}
+
+.searchbox {
+    margin-top: 1rem;
+    position: relative;
+    border: 1px solid #7F8A8F;
+    background: #152932;
+    border-radius: 4px;
 }

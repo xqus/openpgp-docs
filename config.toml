@@ -4,7 +4,17 @@ baseURL = "https://kryptosikkerhet.no/"
 publishDir = "docs"
 theme = "hugo-theme-learn"
 
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
 [params]
-  editURL = "https://github.com/xqus/openpgp-docs/edit/master/content/"
-  description = "Norsk OpenPGP guide"
-  author = "Audun Larsen"
+editURL = "https://github.com/xqus/openpgp-docs/edit/master/content/"
+description = "Norsk OpenPGP guide"
+author = "Audun Larsen"
+showVisitedLinks = true
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-bullhorn'></i> Lisens"
+url = "/lisens"
+weight = 30

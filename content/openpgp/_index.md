@@ -1,6 +1,6 @@
 +++
 date = "2017-02-22T10:58:45+01:00"
-icon = "<b>2. </b>"
+pre = "<b>2. </b>"
 chapter = true
 next = "/openpgp/hva-er-openpgp"
 prev = "/grunnleggende/"
