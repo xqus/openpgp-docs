@@ -1,13 +1,12 @@
 +++
 date = "2017-02-22T10:59:58+01:00"
 toc = true
-next = "/kom-i-gang/"
-prev = "/grunnleggende/passord"
-weight = 3
-title = "Kryptering"
+weight = 1
+title = "Grunnleggende kryptografi"
 
 aliases = [
-    "/kom-i-gang/konsepter"
+    "/kom-i-gang/konsepter",
+    "/grunnleggende/kryptering/"
 ]
 
 +++

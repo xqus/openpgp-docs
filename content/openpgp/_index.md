@@ -4,7 +4,7 @@ pre = "<b>2. </b>"
 chapter = true
 next = "/openpgp/hva-er-openpgp"
 prev = "/grunnleggende/"
-weight = 0
+weight = 2
 title = "Kom i gang med OpenPGP"
 
 aliases = [

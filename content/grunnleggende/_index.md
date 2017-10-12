@@ -1,7 +1,7 @@
 +++
 next = "/grunnleggende/introduksjon/"
 #prev = "/prev/path"
-weight = 0
+weight = 1
 title = "Grunnleggende sikkerhet"
 date = "2017-03-13T12:24:00+01:00"
 pre = "<b>1. </b>"

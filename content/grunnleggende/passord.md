@@ -3,7 +3,7 @@ weight = 2
 title = "Gode passord"
 date = "2017-03-13T12:24:25+01:00"
 toc = true
-next = "/grunnleggende/kryptering"
+next = "/openpgp"
 prev = "/grunnleggende/introduksjon"
 
 +++
