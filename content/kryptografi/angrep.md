@@ -6,4 +6,10 @@ LastModifierDisplayName = "Audun Larsen"
 LastModifierEmail = "audun@larsn.no"
 +++
 
-Lorem Ipsum.
+### Brute-force
+
+### Chosen plaintext
+
+### Chosen ciphertext
+
+### Ciphertext only
