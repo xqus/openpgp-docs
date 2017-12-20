@@ -55,7 +55,7 @@ Alle sifferne som blir brukt i nummereringen av ordene i ordlisten er mellom 1 o
 6, slik at du kan bruke utfallet av terningene til å velge ord.
 
 Det finnes utallige ordlister, noen krever 5 terninger, andre krever 4. Antall ord
-i ordlisten sammen med antall ord i paafrasen vil avgjøre styrken til passordet.
+i ordlisten sammen med antall ord i passfrasen vil avgjøre styrken til passordet.
 
 Jeg har satt sammen en [Norsk ordliste](https://gist.github.com/xqus/6f779b73b617aeb180800fe38965ac0e) der
 vanskelige ord, og ord som ligner på hverandre er tatt ut.
