@@ -29,14 +29,14 @@ med eieren.
 
 Offentlig-nøkkel kryptering baserer seg på enveis falldør-funksjoner. En enveisfunksjon
 er en funksjon som er lett å regne ut men vanskelig å reversere. For eksempel
-er det lett å gange to primtall for å få et kompositt tall, men det er vanskelig
-å faktorisere et kompositt-tall til sine primtallkomponenter. En enveis falldør
-funksjon er lik, men den har en falldør. Det betyr at dersom en del av infomasjonen
-er kjent så blir det lett å reversere funksjonen. For eksempe dersom du har et
+er det lett å gange to primtall for å få et kompositt-tall, men det er vanskelig
+å faktorisere et kompositt-tall til sine primtallkomponenter. En enveis
+falldør-funksjon er lik, men den har en falldør. Det betyr at dersom en del av infomasjonen
+er kjent så blir det lett å reversere funksjonen. For eksempel dersom du har et
 tall som er faktoren av to primtall, så vil det å vite det ene primtallet gjøre
 det lett å regne seg frem til det andre. Gitt att offentlig-nøkkel kryptering
-baserer seg på primfaktorisering, den offentlige nøkkelen består av et kompositt-tall
-som er faktoren av to primtall og krypteringsalgoritmen bruker dette tallet for
+baserer seg på primfaktorisering, så består den offentlige nøkkelen av et kompositt-tall
+som er faktoren av to primtall. Krypteringsalgoritmen bruker dette tallet for
 å kryptere meldingen. Algoritmen for å dekryptere meldingen krever at du vet begge
 primtallene så det å dekryptere er enkelt hvis du har den private nøkkelen som
 inneholder ett av primtallene men veldig vanskelig dersom du ikke har den.
