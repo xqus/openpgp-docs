@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Norsk OpenPGP guide</title>
+    <title>Kryptohåndboken</title>
     <link>https://kryptosikkerhet.no/</link>
-    <description>Recent content on Norsk OpenPGP guide</description>
+    <description>Recent content on Kryptohåndboken</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
     <lastBuildDate>Sun, 19 Mar 2017 13:54:13 +0100</lastBuildDate>
@@ -31,12 +31,32 @@ OpenPGP benytter en krypteringsmetode som gjør at de partene som skal kommunise
     </item>
     
     <item>
+      <title>Symmetrisk kryptering</title>
+      <link>https://kryptosikkerhet.no/kryptografi/symmetrisk/</link>
+      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/kryptografi/symmetrisk/</guid>
+      <description>En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige om nøkkelen på forhånd. Så snart de er enige krypterer senderen en melding med nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den samme nøkkelen. For eksempel brukte den Tyske Enigma maskien symmetrisk algoritme, og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.</description>
+    </item>
+    
+    <item>
+      <title>Offentlig-nøkkel kryptering</title>
+      <link>https://kryptosikkerhet.no/kryptografi/offentlignokkel/</link>
+      <pubDate>Wed, 20 Dec 2017 10:46:00 +0200</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/kryptografi/offentlignokkel/</guid>
+      <description>Hovedproblemet med symmertrisk kryptering er ikke sikkerheten men utvekslingen av nøkler. Når sender og mottaker har utvekslet nøkler, så kan denne nøkkelen benyttes til å kommunisere sikkert. Men hvilken sikker kommunikasjonskanal ble benyttet for å utveksle nøkkelen. I virkeligeten vil det nok ofte være lettere for en angriper å snappe opp nøkkelen i steden for å gjette seg frem til riktig nøkkel.
+Offentlig-nøkkel kryptering ble funnet opp for å unngå hele nøkkelutvekslings-problemet.</description>
+    </item>
+    
+    <item>
       <title>Lisens</title>
       <link>https://kryptosikkerhet.no/lisens/</link>
       <pubDate>Thu, 12 Oct 2017 12:24:25 +0100</pubDate>
       
       <guid>https://kryptosikkerhet.no/lisens/</guid>
-      <description>Dette verk er lisensieret under en Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens.</description>
+      <description>Denne håndboken er skrevet av Audun Larsen (audun@larsn.no).
+ Dette verk er lisensieret under en Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens.</description>
     </item>
     
     <item>
@@ -71,6 +91,16 @@ Installer GnuPG Dersom du ikke har installert GnuPG enda følg veilednignen her.
     </item>
     
     <item>
+      <title>Hybride systemer</title>
+      <link>https://kryptosikkerhet.no/kryptografi/hybrid/</link>
+      <pubDate>Wed, 20 Dec 2017 10:48:00 +0200</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/kryptografi/hybrid/</guid>
+      <description>Offentlig-nøkkel algoritmer er ingen perfekt løsning. Mange symmetriske algoritmer er sterkere fra et sikkerhetsstandpunkt, og offentlig-nøkkel kryptering og dekryptering er mer krevende enn de tilsvarende operasjonene i en symmetrisk algoritme. Offentlig-nøkkel algoritmer er derimot et effektivt verktøy for å distribuere symmetriske krypteringsnøkler, og det er slik de benyttes i hybride systemer.
+Et hybrid-system benytter både en symmetrisk algoritme og en offentlig-nøkkel algoritme. Det virker slik at det benytter en offentlig-nøkkel algoritme for å utveksle en nøkkel som brukes for den symmetriske algoritmen.</description>
+    </item>
+    
+    <item>
       <title>Dine nøkler</title>
       <link>https://kryptosikkerhet.no/openpgp/nokler/</link>
       <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
@@ -81,12 +111,13 @@ Et OpenPGP nøkkelpar identifiseres med det som kalles et fingerprint eller fing
     </item>
     
     <item>
-      <title>Kryptering</title>
-      <link>https://kryptosikkerhet.no/grunnleggende/kryptering/</link>
-      <pubDate>Wed, 22 Feb 2017 10:59:58 +0100</pubDate>
+      <title>Digitale signaturer</title>
+      <link>https://kryptosikkerhet.no/kryptografi/signaturer/</link>
+      <pubDate>Wed, 20 Dec 2017 10:50:00 +0200</pubDate>
       
-      <guid>https://kryptosikkerhet.no/grunnleggende/kryptering/</guid>
-      <description>Symmetrisk kryptering En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige om nøkkelen på forhånd. Så snart de er enige krypterer senderen en melding med nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den samme nøkkelen. For eksempel brukte den Tyske Enigma maskien symmetrisk algoritme, og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.</description>
+      <guid>https://kryptosikkerhet.no/kryptografi/signaturer/</guid>
+      <description>En sjekksum er en kort kode som brukes til å sjekke integriteten av data, eller den matematiske funksjonen av dataene, algoritmen, som genererer koden, ofte kalt hash-funksjon.
+Et dokuments digitale signatur er resultatet av en hash-funksjon av dokumentet. For å være nytteig må en hash-funksjon ha to viktige egenskaper. For det første bør det være vanskelig å finne to dokumenter som resulterer i samme sjekksum. I tillegg bør det være vanskelig å gjennopprette det originale dokumentet ut fra en sjekksum.</description>
     </item>
     
     <item>
@@ -96,6 +127,15 @@ Et OpenPGP nøkkelpar identifiseres med det som kalles et fingerprint eller fing
       
       <guid>https://kryptosikkerhet.no/openpgp/noekkelring/</guid>
       <description>Din nøkkelring er et begrep som brukes om de offentlige og private nøklene du har en kopi av på din datamaskin. Din nøkkelring inneholder ikke bare dine egne offentlige og private nøkler, men også de offentlige nøklene de du kommuniserer med. I tillegg til selve nøklene finnes det også annen informasjon i den, som for eksmepel hvilke nøkler du har tillit til. Du bør derfor jevnlig ta sikkerhetskopi av nøkkelringen.</description>
+    </item>
+    
+    <item>
+      <title>Eliptiske kurver</title>
+      <link>https://kryptosikkerhet.no/kryptografi/eliptisk/</link>
+      <pubDate>Wed, 20 Dec 2017 10:51:00 +0200</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/kryptografi/eliptisk/</guid>
+      <description>Eliptiske kurver skal løse samme utfordring som tradisjonelle offentlig-nøkkel algoritmer. Nemmelig å lage en ennveis falldør-funksjon. Problemet med tradisjonelle offentlig-nøkkel algoritmer er at forholdet mellom nøkkelstørrelse og sikkerhet ikke er lineært. Det betyr at en dobling i nøkkelstørrelse ikke gir en dobling av sikkerheten, men tiden det tar for å kryptere / dekryptere i beste fall dobles. Det betyr at på et eller annet tidspunkt må vi gå over til en annen type falldør-funksjon.</description>
     </item>
     
     <item>
@@ -144,7 +184,25 @@ Dersom du mister din egen nøkkel vil du måtte generere nye, distribuere de til
       
       <guid>https://kryptosikkerhet.no/openpgp/rotere-noekler/</guid>
       <description>Dette kapittelet forutsetter at du har et offline nøkkelpar som beskrevet i kapittelet om Sikker oppbevaring av nøkler.
- Dersom dine undernøkler går tapt eller komprimiteres kan du enkelt tilbakekalle disse, og generere nye ved å bruke din minnepinne med Tails som har dine hovednøkler på. Når vi tilbakekaller nøklene sier vi til omverden av disse ikke lenger skal benyttes. Dersom noen signerer en melding med nøkler som er tilbakekalt vi ikke signaturen være gyldig.</description>
+Dersom dine undernøkler går tapt eller komprimiteres kan du enkelt tilbakekalle disse, og generere nye ved å bruke din minnepinne med Tails som har dine hovednøkler på. Når vi tilbakekaller nøklene sier vi til omverden av disse ikke lenger skal benyttes. Dersom noen signerer en melding med nøkler som er tilbakekalt vi ikke signaturen være gyldig.</description>
+    </item>
+    
+    <item>
+      <title>Lagre passord kryptert</title>
+      <link>https://kryptosikkerhet.no/openpgp/pass/</link>
+      <pubDate>Fri, 13 Oct 2017 09:05:31 +0200</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/openpgp/pass/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Angrepstyper</title>
+      <link>https://kryptosikkerhet.no/kryptografi/angrep/</link>
+      <pubDate>Thu, 12 Oct 2017 11:57:09 +0200</pubDate>
+      
+      <guid>https://kryptosikkerhet.no/kryptografi/angrep/</guid>
+      <description> Brute-force Chosen plaintext Chosen ciphertext Ciphertext only </description>
     </item>
     
   </channel>

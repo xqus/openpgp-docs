@@ -10,20 +10,20 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Kom i gang med OpenPGP :: Kryptohåndboken</title>
+    <title>Eliptiske kurver :: Kryptohåndboken</title>
     
     
-    <link href="/css/nucleus.css?1513764084" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1513764084" rel="stylesheet">
-    <link href="/css/hybrid.css?1513764084" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1513764084" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1513764084" rel="stylesheet">
-    <link href="/css/auto-complete.css?1513764084" rel="stylesheet">
-    <link href="/css/theme.css?1513764084" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1513764084" rel="stylesheet">
+    <link href="/css/nucleus.css?1513764085" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1513764085" rel="stylesheet">
+    <link href="/css/hybrid.css?1513764085" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1513764085" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1513764085" rel="stylesheet">
+    <link href="/css/auto-complete.css?1513764085" rel="stylesheet">
+    <link href="/css/theme.css?1513764085" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1513764085" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1513764084"></script>
+    <script src="/js/jquery-2.x.min.js?1513764085"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/openpgp/">
+  <body class="" data-url="/kryptografi/eliptisk/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1513764084"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1513764084"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1513764085"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1513764085"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kryptosikkerhet.no\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1513764084"></script>
+<script type="text/javascript" src="/js/search.js?1513764085"></script>
 
     
   </div>
@@ -151,8 +151,8 @@
   
     
     <li data-nav-id="/openpgp/" title="Kom i gang med OpenPGP" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/openpgp/">
@@ -394,7 +394,7 @@
   
     
     <li data-nav-id="/kryptografi/" title="Kryptografi" class="dd-item 
-        
+        parent
         
         
         ">
@@ -496,7 +496,7 @@
  
   
     
-      <li data-nav-id="/kryptografi/eliptisk/" title="Eliptiske kurver" class="dd-item ">
+      <li data-nav-id="/kryptografi/eliptisk/" title="Eliptiske kurver" class="dd-item active">
         <a href="/kryptografi/eliptisk/">
         Eliptiske kurver
         <i class="fa fa-check read-icon"></i>
@@ -589,7 +589,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/_index.md" target="blank">
+                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/kryptografi/eliptisk.md" target="blank">
                       <i class="fa fa-code-fork"></i>
                       <span id="top-github-link-text">Rediger denne siden</span>
                     </a>
@@ -604,6 +604,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -612,7 +614,13 @@
             
           
           
-            <a href='/'>Kryptohåndboken</a> > Kom i gang med OpenPGP
+            
+            
+          
+          
+            <a href='/'>Kryptohåndboken</a> > <a href='/kryptografi/'>Kryptografi</a> > Eliptiske kurver
+          
+         
           
          
           
@@ -620,34 +628,66 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Eliptiske kurver</h1>
           
 
         
 
 
+<p>Eliptiske kurver skal løse samme utfordring som tradisjonelle
+offentlig-nøkkel algoritmer. Nemmelig å lage en ennveis falldør-funksjon.
+Problemet med tradisjonelle offentlig-nøkkel algoritmer er at forholdet mellom
+nøkkelstørrelse og sikkerhet ikke er lineært. Det betyr at en dobling i
+nøkkelstørrelse ikke gir en dobling av sikkerheten, men tiden det tar for å
+kryptere / dekryptere i beste fall dobles. Det betyr at på et eller annet
+tidspunkt må vi gå over til en annen type falldør-funksjon.</p>
 
+<p>Eliptiske kurver er spesielle kurver som kan gjennkjennes på sin symmetriske
+utforming. Under er et eksempel på noen kurver. Kurvene som benyttes i
+kryptering er mye mer komplekse, men disse eksemplene gjør det lett å se for seg
+hvordan det virker.</p>
 
-<h3 id="kapittel-2">Kapittel 2</h3>
+<p><img src="/images/ecc-lines.png" alt="Eliptiske kurver" />
+Eksempel på eliptiske kurver fra <a href="https://en.wikipedia.org/wiki/Elliptic_curve">Wikipedia</a>.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<p>Eliptiske kurver har den egenskapen at dersom du trekker en ikke horisontal
+linje fra et punkt <em>A</em> på kurven til et annet <em>B</em> gjennom punkt <em>C</em>. Så vil <em>C</em>
+invertert være <em>A + B</em>. Denne egenskapen er det vi benytter i eliptisk krurve
+kryptografi.</p>
 
-<p>Grunnleggende innføring i bruk av GnuPG, og konseptene bak OpenPGP.</p>
+<p>Meget forenklet kan det forklares slik: Vår private nøkkel er et tilfeldig valgt
+tall <em>n</em> som vi ganger opp med et forhåndsbestemt punkt på kurven, <em>G</em> for å få
+et annet punkt på kurven. Dette er vår offentlige nøkkel <em>K</em>.  *K = n * G*.
+Dette er et eneklt regnestykke, men dersom du vet <em>K</em> og <em>G</em> og vil komme frem til
+<em>n</em>, så er dette meget komplisert.</p>
+
+<p>Ved å benytte eliptiske kurver i kryptografi kan man redusere nøkkellengden
+betraktelig i forhold til tradisjonell kryptering. Det sies at en 256 bit ECC nøkkel
+skal gi samme sikkerhet som en 3072 bit RSA nøkkel.</p>
 
 
 <footer class=" footline" >
 	
+	    <i class='fa fa-user'></i> <a href="mailto:audun@larsn.no">Audun Larsen</a>  <i class='fa fa-calendar'></i> 20/12/2017
+	    </div>
+	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -730,7 +770,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -738,25 +777,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -918,22 +938,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -950,19 +954,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -971,6 +962,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -978,14 +970,14 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1030,6 +1022,58 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1040,10 +1084,10 @@
 
 
         
-            <a class="nav nav-prev" href="/grunnleggende/passord/" title="Gode passord"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/kryptografi/signaturer/" title="Digitale signaturer"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/openpgp/hva-er-openpgp/" title="Hva er OpenPGP" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/kryptografi/angrep/" title="Angrepstyper" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1052,20 +1096,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1513764084"></script>
-    <script src="/js/perfect-scrollbar.min.js?1513764084"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1513764084"></script>
-    <script src="/js/jquery.sticky.js?1513764084"></script>
-    <script src="/js/featherlight.min.js?1513764084"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1513764084"></script>
-    <script src="/js/highlight.pack.js?1513764084"></script>
+    <script src="/js/clipboard.min.js?1513764085"></script>
+    <script src="/js/perfect-scrollbar.min.js?1513764085"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1513764085"></script>
+    <script src="/js/jquery.sticky.js?1513764085"></script>
+    <script src="/js/featherlight.min.js?1513764085"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1513764085"></script>
+    <script src="/js/highlight.pack.js?1513764085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1513764084"></script>
-    <script src="/js/learn.js?1513764084"></script>
-    <script src="/js/hugo-learn.js?1513764084"></script>
+    <script src="/js/modernizr.custom.71422.js?1513764085"></script>
+    <script src="/js/learn.js?1513764085"></script>
+    <script src="/js/hugo-learn.js?1513764085"></script>
 
-    <link href="/mermaid/mermaid.css?1513764084" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1513764084"></script>
+    <link href="/mermaid/mermaid.css?1513764085" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1513764085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -1073,3 +1117,4 @@
 
   </body>
 </html>
+

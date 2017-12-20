@@ -10,20 +10,20 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Kom i gang med OpenPGP :: Kryptohåndboken</title>
+    <title>Digitale signaturer :: Kryptohåndboken</title>
     
     
-    <link href="/css/nucleus.css?1513764084" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1513764084" rel="stylesheet">
-    <link href="/css/hybrid.css?1513764084" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1513764084" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1513764084" rel="stylesheet">
-    <link href="/css/auto-complete.css?1513764084" rel="stylesheet">
-    <link href="/css/theme.css?1513764084" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1513764084" rel="stylesheet">
+    <link href="/css/nucleus.css?1513764085" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1513764085" rel="stylesheet">
+    <link href="/css/hybrid.css?1513764085" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1513764085" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1513764085" rel="stylesheet">
+    <link href="/css/auto-complete.css?1513764085" rel="stylesheet">
+    <link href="/css/theme.css?1513764085" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1513764085" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1513764084"></script>
+    <script src="/js/jquery-2.x.min.js?1513764085"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/openpgp/">
+  <body class="" data-url="/kryptografi/signaturer/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1513764084"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1513764084"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1513764085"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1513764085"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kryptosikkerhet.no\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1513764084"></script>
+<script type="text/javascript" src="/js/search.js?1513764085"></script>
 
     
   </div>
@@ -151,8 +151,8 @@
   
     
     <li data-nav-id="/openpgp/" title="Kom i gang med OpenPGP" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/openpgp/">
@@ -394,7 +394,7 @@
   
     
     <li data-nav-id="/kryptografi/" title="Kryptografi" class="dd-item 
-        
+        parent
         
         
         ">
@@ -477,7 +477,7 @@
  
   
     
-      <li data-nav-id="/kryptografi/signaturer/" title="Digitale signaturer" class="dd-item ">
+      <li data-nav-id="/kryptografi/signaturer/" title="Digitale signaturer" class="dd-item active">
         <a href="/kryptografi/signaturer/">
         Digitale signaturer
         <i class="fa fa-check read-icon"></i>
@@ -589,7 +589,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/_index.md" target="blank">
+                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/kryptografi/signaturer.md" target="blank">
                       <i class="fa fa-code-fork"></i>
                       <span id="top-github-link-text">Rediger denne siden</span>
                     </a>
@@ -604,6 +604,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -612,7 +614,13 @@
             
           
           
-            <a href='/'>Kryptohåndboken</a> > Kom i gang med OpenPGP
+            
+            
+          
+          
+            <a href='/'>Kryptohåndboken</a> > <a href='/kryptografi/'>Kryptografi</a> > Digitale signaturer
+          
+         
           
          
           
@@ -620,34 +628,66 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Digitale signaturer</h1>
           
 
         
 
 
+<p>En sjekksum er en kort kode som brukes til å sjekke integriteten av data, eller
+den matematiske funksjonen av dataene, algoritmen, som genererer koden,
+ofte kalt hash-funksjon.</p>
 
+<p>Et dokuments digitale signatur er resultatet av en hash-funksjon av dokumentet.
+For å være nytteig må en hash-funksjon ha to viktige egenskaper. For det første
+bør det være vanskelig å finne to dokumenter som resulterer i samme sjekksum. I
+tillegg bør det være vanskelig å gjennopprette det originale dokumentet ut fra en
+sjekksum.</p>
 
-<h3 id="kapittel-2">Kapittel 2</h3>
+<p>Ved å bruke en slik hash-funksjon et dokument kan signeres ved å produsere en
+sjeksum, og denne er signaturen. En annen person kan sjekke signaturen ved å
+kjøre dokumentet gjennom samme hash-funksjon og sammenligne sin sjekksum men den
+som kom som signatur. Dersom de er like, er det nestne helt sikkert at dokumentene
+er identiske.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<p>Problemet er å benytte en hahs-funksjon uten å tillate at en angiper interferer
+med signatur-kontrollen. Hvis dokumentet og signaturen er sendt ukryptert, så kan
+en angriper modifere dokumentet og generere en ny signatur uten at mottaker
+merker det. Dersom bare dokumentet er kryptert en angriper kan endre på signaturen
+og gjøre slik at kontrollen av signaturen feiler.</p>
 
-<p>Grunnleggende innføring i bruk av GnuPG, og konseptene bak OpenPGP.</p>
+<p>En algiritme som virker er å benytte en offentlig-nøkkel algoritme får å kryptere
+signaturen. Faktisk så krypteres sjekksummen med den private nøkkelen til personen
+som signerer, og hvem som helst kan kontrollere signaturen ved å benytte den offentlige
+signaturen. Det signerte dokumentet kan senes ved å benytte hvilken som helst
+annen krypteringsalgoritme, eller det kan sendes ukryptert. Hvis dokumentet
+modifiseres vil signaturkontrollen feile. <em>The Digital Signature Standard (DSA)</em>
+er en offentlig-nøkkel algoritme som virker som akkurat beskrevet. DSA er en del
+av OpenPGP standaren, men RSA kan også benyttes til digitale signaturer.</p>
 
 
 <footer class=" footline" >
 	
+	    <i class='fa fa-user'></i> <a href="mailto:audun@larsn.no">Audun Larsen</a>  <i class='fa fa-calendar'></i> 20/12/2017
+	    </div>
+	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -730,7 +770,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -738,25 +777,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -918,22 +938,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -950,19 +954,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -970,6 +961,23 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1019,6 +1027,42 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1040,10 +1084,10 @@
 
 
         
-            <a class="nav nav-prev" href="/grunnleggende/passord/" title="Gode passord"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/kryptografi/hybrid/" title="Hybride systemer"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/openpgp/hva-er-openpgp/" title="Hva er OpenPGP" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/kryptografi/eliptisk/" title="Eliptiske kurver" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1052,20 +1096,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1513764084"></script>
-    <script src="/js/perfect-scrollbar.min.js?1513764084"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1513764084"></script>
-    <script src="/js/jquery.sticky.js?1513764084"></script>
-    <script src="/js/featherlight.min.js?1513764084"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1513764084"></script>
-    <script src="/js/highlight.pack.js?1513764084"></script>
+    <script src="/js/clipboard.min.js?1513764085"></script>
+    <script src="/js/perfect-scrollbar.min.js?1513764085"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1513764085"></script>
+    <script src="/js/jquery.sticky.js?1513764085"></script>
+    <script src="/js/featherlight.min.js?1513764085"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1513764085"></script>
+    <script src="/js/highlight.pack.js?1513764085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1513764084"></script>
-    <script src="/js/learn.js?1513764084"></script>
-    <script src="/js/hugo-learn.js?1513764084"></script>
+    <script src="/js/modernizr.custom.71422.js?1513764085"></script>
+    <script src="/js/learn.js?1513764085"></script>
+    <script src="/js/hugo-learn.js?1513764085"></script>
 
-    <link href="/mermaid/mermaid.css?1513764084" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1513764084"></script>
+    <link href="/mermaid/mermaid.css?1513764085" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1513764085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -1073,3 +1117,4 @@
 
   </body>
 </html>
+

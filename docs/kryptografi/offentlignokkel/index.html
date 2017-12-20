@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Kom i gang med OpenPGP :: Kryptohåndboken</title>
+    <title>Offentlig-nøkkel kryptering :: Kryptohåndboken</title>
     
     
     <link href="/css/nucleus.css?1513764084" rel="stylesheet">
@@ -34,7 +34,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/openpgp/">
+  <body class="" data-url="/kryptografi/offentlignokkel/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -151,8 +151,8 @@
   
     
     <li data-nav-id="/openpgp/" title="Kom i gang med OpenPGP" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/openpgp/">
@@ -394,7 +394,7 @@
   
     
     <li data-nav-id="/kryptografi/" title="Kryptografi" class="dd-item 
-        
+        parent
         
         
         ">
@@ -439,7 +439,7 @@
  
   
     
-      <li data-nav-id="/kryptografi/offentlignokkel/" title="Offentlig-nøkkel kryptering" class="dd-item ">
+      <li data-nav-id="/kryptografi/offentlignokkel/" title="Offentlig-nøkkel kryptering" class="dd-item active">
         <a href="/kryptografi/offentlignokkel/">
         Offentlig-nøkkel kryptering
         <i class="fa fa-check read-icon"></i>
@@ -589,7 +589,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/_index.md" target="blank">
+                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/kryptografi/offentlignokkel.md" target="blank">
                       <i class="fa fa-code-fork"></i>
                       <span id="top-github-link-text">Rediger denne siden</span>
                     </a>
@@ -604,6 +604,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -612,7 +614,13 @@
             
           
           
-            <a href='/'>Kryptohåndboken</a> > Kom i gang med OpenPGP
+            
+            
+          
+          
+            <a href='/'>Kryptohåndboken</a> > <a href='/kryptografi/'>Kryptografi</a> > Offentlig-nøkkel kryptering
+          
+         
           
          
           
@@ -620,34 +628,83 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Offentlig-nøkkel kryptering</h1>
           
 
         
 
 
+<p>Hovedproblemet med symmertrisk kryptering er ikke sikkerheten men utvekslingen
+av nøkler. Når sender og mottaker har utvekslet nøkler, så kan denne nøkkelen
+benyttes til å kommunisere sikkert. Men hvilken sikker kommunikasjonskanal ble
+benyttet for å utveksle nøkkelen. I virkeligeten vil det nok ofte være lettere
+for en angriper å snappe opp nøkkelen i steden for å gjette seg frem til riktig
+nøkkel.</p>
 
+<p>Offentlig-nøkkel kryptering ble funnet opp for å unngå hele nøkkelutvekslings-problemet.
+Offentlig-nøkkel kryptering benytter et par med nøkler for å sende meldinger.
+Begge nøklene tilhører personen som mottar meldingen. En nøkkel er den <em>offentlige nøkkelen</em>
+og kan deles med hvem som helst. Den andre nøkkelen er en <em>privat nøkkel</em> og
+holdes hemmelig av eieren. En sender krypterer en melding med den offentlige
+nøkkelen og når den er kryptert kan den bare dekrypteres med den private nøkkelen.</p>
 
-<h3 id="kapittel-2">Kapittel 2</h3>
+<p>Denne protokollen løser problemet med utveksling av nøkler som eksisterer med
+symmetrisk kryptering. Det er ikke behov for sender og mottaker å bli enige
+om en nøkkel på forhånd. Det eneste som kreves er at senderen av meldingen får
+den offentlige nøkkelen til mottakeren på et tidspunkt før de skal kommunisere.
+I tillegg kan den ene offentlige nøkkelen benyttes av alle som ønsker å kommunisere
+med eieren.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<p>Offentlig-nøkkel kryptering baserer seg på enveis falldør-funksjoner. En enveisfunksjon
+er en funksjon som er lett å regne ut men vanskelig å reversere. For eksempel
+er det lett å gange to primtall for å få et kompositt tall, men det er vanskelig
+å faktorisere et kompositt-tall til sine primtallkomponenter. En enveis falldør
+funksjon er lik, men den har en falldør. Det betyr at dersom en del av infomasjonen
+er kjent så blir det lett å reversere funksjonen. For eksempe dersom du har et
+tall som er faktoren av to primtall, så vil det å vite det ene primtallet gjøre
+det lett å regne seg frem til det andre. Gitt att offentlig-nøkkel kryptering
+baserer seg på primfaktorisering, den offentlige nøkkelen består av et kompositt-tall
+som er faktoren av to primtall og krypteringsalgoritmen bruker dette tallet for
+å kryptere meldingen. Algoritmen for å dekryptere meldingen krever at du vet begge
+primtallene så det å dekryptere er enkelt hvis du har den private nøkkelen som
+inneholder ett av primtallene men veldig vanskelig dersom du ikke har den.</p>
 
-<p>Grunnleggende innføring i bruk av GnuPG, og konseptene bak OpenPGP.</p>
+<p>Som med gode symmetriske algoritmer så ligger all sikkerheten til offentlig-nøkkel
+algoritmer i nøkkelen. Derfor er nøkkelelngde en måleenhet for systemets sikkerhet.
+Men du kan ikke sammenligne størrelsen på nøkkelene til en symmetrisk algoritme
+og en offentlig-nøkkel algoritme for å sammenligne sikkerheten til de to algoritmene.
+I et <em>brute-force</em> angrep på en symmetrisk algoritme med en nøkkellengde på 80 bit, må
+angriperen forsøke opp til 2<sup>80</sup> nøkler for å finne den riktige nøkkelen.
+I et <em>brute-force</em> angrep på en offentlig-nøkkel algoritme med en nøkkelstørrelse på
+512 bit må angriperen faktorisere et kompositt-tall kodet i 512 bit (opp til 155 desimaltall).
+Arbeidsmengen til en angriper er fundamentalt anderledes avhengig av hvilken type
+algoritme han angriper. Mens 256 bit er tilstrekkelig for symmetrisk algoritmer,
+gitt dagens faktoriserings-teknologi offenlitge nøkler med 2048 bits er anbefalt
+for de fleste tilfeller.</p>
 
 
 <footer class=" footline" >
 	
+	    <i class='fa fa-user'></i> <a href="mailto:audun@larsn.no">Audun Larsen</a>  <i class='fa fa-calendar'></i> 20/12/2017
+	    </div>
+	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -730,7 +787,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -738,25 +794,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -918,102 +955,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1033,6 +974,126 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -1040,10 +1101,10 @@
 
 
         
-            <a class="nav nav-prev" href="/grunnleggende/passord/" title="Gode passord"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/kryptografi/symmetrisk/" title="Symmetrisk kryptering"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/openpgp/hva-er-openpgp/" title="Hva er OpenPGP" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/kryptografi/hybrid/" title="Hybride systemer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1073,3 +1134,4 @@
 
   </body>
 </html>
+

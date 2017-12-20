@@ -8,8 +8,23 @@
   </url>
   
   <url>
+    <loc>https://kryptosikkerhet.no/grunnleggende/</loc>
+    <lastmod>2017-03-13T12:24:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kryptosikkerhet.no/openpgp/hva-er-openpgp/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/kryptografi/symmetrisk/</loc>
+    <lastmod>2017-02-22T10:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/kryptografi/offentlignokkel/</loc>
+    <lastmod>2017-12-20T10:46:00+02:00</lastmod>
   </url>
   
   <url>
@@ -33,18 +48,38 @@
   </url>
   
   <url>
+    <loc>https://kryptosikkerhet.no/openpgp/</loc>
+    <lastmod>2017-02-22T10:58:45+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/kryptografi/hybrid/</loc>
+    <lastmod>2017-12-20T10:48:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/kryptografi/</loc>
+    <lastmod>2017-10-12T11:51:17+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kryptosikkerhet.no/openpgp/nokler/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/grunnleggende/kryptering/</loc>
-    <lastmod>2017-02-22T10:59:58+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/kryptografi/signaturer/</loc>
+    <lastmod>2017-12-20T10:50:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://kryptosikkerhet.no/openpgp/noekkelring/</loc>
     <lastmod>2017-02-22T10:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kryptosikkerhet.no/kryptografi/eliptisk/</loc>
+    <lastmod>2017-12-20T10:51:00+02:00</lastmod>
   </url>
   
   <url>
@@ -73,13 +108,13 @@
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/grunnleggende/</loc>
-    <lastmod>2017-03-13T12:24:00+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/openpgp/pass/</loc>
+    <lastmod>2017-10-13T09:05:31+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kryptosikkerhet.no/openpgp/</loc>
-    <lastmod>2017-02-22T10:58:45+01:00</lastmod>
+    <loc>https://kryptosikkerhet.no/kryptografi/angrep/</loc>
+    <lastmod>2017-10-12T11:57:09+02:00</lastmod>
   </url>
   
   <url>

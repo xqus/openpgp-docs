@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Kom i gang med OpenPGP :: Kryptohåndboken</title>
+    <title>Symmetrisk kryptering :: Kryptohåndboken</title>
     
     
     <link href="/css/nucleus.css?1513764084" rel="stylesheet">
@@ -34,7 +34,7 @@
     <link href="/css/styles.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/openpgp/">
+  <body class="" data-url="/kryptografi/symmetrisk/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -151,8 +151,8 @@
   
     
     <li data-nav-id="/openpgp/" title="Kom i gang med OpenPGP" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/openpgp/">
@@ -394,7 +394,7 @@
   
     
     <li data-nav-id="/kryptografi/" title="Kryptografi" class="dd-item 
-        
+        parent
         
         
         ">
@@ -420,7 +420,7 @@
  
   
     
-      <li data-nav-id="/kryptografi/symmetrisk/" title="Symmetrisk kryptering" class="dd-item ">
+      <li data-nav-id="/kryptografi/symmetrisk/" title="Symmetrisk kryptering" class="dd-item active">
         <a href="/kryptografi/symmetrisk/">
         Symmetrisk kryptering
         <i class="fa fa-check read-icon"></i>
@@ -589,7 +589,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/openpgp/_index.md" target="blank">
+                    <a class="github-link" title='Rediger denne siden' href="https://github.com/xqus/openpgp-docs/edit/master/content/kryptografi/symmetrisk.md" target="blank">
                       <i class="fa fa-code-fork"></i>
                       <span id="top-github-link-text">Rediger denne siden</span>
                     </a>
@@ -604,6 +604,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -612,7 +614,13 @@
             
           
           
-            <a href='/'>Kryptohåndboken</a> > Kom i gang med OpenPGP
+            
+            
+          
+          
+            <a href='/'>Kryptohåndboken</a> > <a href='/kryptografi/'>Kryptografi</a> > Symmetrisk kryptering
+          
+         
           
          
           
@@ -620,34 +628,66 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Symmetrisk kryptering</h1>
           
 
         
 
 
+<p>En symmetrisk krypteringsalgoritme benytter samme nøkkel både til kryptering og
+dekryptering. To parter som kommuniserer med symmetrisk kryptering må bli enige
+om nøkkelen på forhånd. Så snart de er enige krypterer senderen en melding med
+nøkkelen og sender den til mottakeren. Mottakeren dekrypterer meldingen med den
+samme nøkkelen. For eksempel brukte den Tyske Enigma maskien symmetrisk algoritme,
+og nøklene ble distribuert som kodebøker. Hver dag ville en radiooperatør som
+sendte eller mottok meldinger slå opp i kodeboken for å finne dagens nøkkel.
+Moderne eksempler på symmetriske krypteringsalgoritmer er 3DES, Blowfish og IDEA.</p>
 
+<p>En god krypteringsalgoritme legger all sikkerheten i nøklene og ingen i selve
+algoritmen. Med andre ord skal det ikke være til hjelp for en angriper å vite
+hvilken algoritme som benyttes. Bare hvis han vet nøkkelen er behovet for å vite
+aloritmen viktig. Algoritmene som benyttes i OpenPGP har denne egenskapen.</p>
 
-<h3 id="kapittel-2">Kapittel 2</h3>
+<p>Siden all sikkerheten er i nøkkelen er det svært viktig at det er veldig vanskelig
+å gjette nøkkelen. Med andre ord må antall mulige nøkler være mange. På engelsk
+kalles antall mulig nøkler <em>key space</em>.</p>
 
-<h1 id="kom-i-gang-med-openpgp">Kom i gang med OpenPGP</h1>
+<p>Britene brukte maskiner til å gjette nøkler under 2. verdenskrig. Den Tyske
+Enigma maskinen hadde mange mulige nøkler, men britene bygget spesialiserte maskiner
+som gjettet seg frem til dagen nøkkel ved å prøve alle muligheter. Det betyr at
+noen dager fant de dagens nøkkel etter få timer mens andre dager fant de aldri
+riktig nøkkel.</p>
 
-<p>Grunnleggende innføring i bruk av GnuPG, og konseptene bak OpenPGP.</p>
+<p>Dagens datamaskiner kan gjette nøkler utrolig hurtig, og det er derfor nøkkellengde
+er viktig i moderne kryptosystemer. Krypteringsalgoritmen DES bruker en 56-bit nøkkel,
+som betyr at det er 2<sup>56</sup> mulige nøkler. 2<sup>56</sup> er 72 057 594 037 927 936
+nøkler. Dette er veldig mange nøkler, men en vanlig datamaskin kan prøve alle
+mulige nøkler i løpet av noen dager. En spesielisert datamaskin kan prøve de i
+løpet av timer. På en annen side nye algoritmer slik som 3DES, Blowfish og IDEA
+bruker 128-bit nøkler som betyr at det er 2<sup>128</sup> mulige nøkler.
+Dette er mange, mange, mange fler nøkler og selv om alle datamaskinene på
+planeten sammarbeidet ville de aldri klart å gjette seg frem til riktig nøkkel.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -730,7 +770,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -738,25 +777,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -918,22 +938,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -950,19 +954,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -970,6 +961,21 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -987,21 +993,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1030,6 +1023,54 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1040,10 +1081,10 @@
 
 
         
-            <a class="nav nav-prev" href="/grunnleggende/passord/" title="Gode passord"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/kryptografi/" title="Kryptografi"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/openpgp/hva-er-openpgp/" title="Hva er OpenPGP" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/kryptografi/offentlignokkel/" title="Offentlig-nøkkel kryptering" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1073,3 +1114,4 @@
 
   </body>
 </html>
+
